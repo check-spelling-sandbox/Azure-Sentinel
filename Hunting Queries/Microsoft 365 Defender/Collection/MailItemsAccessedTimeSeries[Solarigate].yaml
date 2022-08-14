@@ -19,7 +19,7 @@ query: |
   let timeframe = 1h;
   let scorethreshold = 1.5;
   let percentthreshold = 50;
-  // Preparing the time series data aggregated hourly count of MailItemsAccessd Operation in the form of multi-value array to use with time series anomaly function.
+  // Preparing the time series data aggregated hourly count of MailItemsAccessed Operation in the form of multi-value array to use with time series anomaly function.
   let TimeSeriesData =
       CloudAppEvents 
       | where Timestamp   between (startofday(ago(starttime))..startofday(ago(endtime)))
