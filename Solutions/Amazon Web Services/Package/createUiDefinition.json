@@ -201,7 +201,7 @@
                 "name": "analytic4-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Multi-Factor Authentication (MFA) helps you to prevent credential compromise. This alert identifies logins to the AWS Management Console without MFA.\nYou can limit this detection to trigger for adminsitrative accounts if you do not have MFA enabled on all accounts.\nThis is done by looking at the eventName ConsoleLogin and if the AdditionalEventData field indicates MFA was NOT used \nand the ResponseElements field indicates NOT a Failure. Thereby indicating that a non-MFA login was successful."
+                  "text": "Multi-Factor Authentication (MFA) helps you to prevent credential compromise. This alert identifies logins to the AWS Management Console without MFA.\nYou can limit this detection to trigger for administrative accounts if you do not have MFA enabled on all accounts.\nThis is done by looking at the eventName ConsoleLogin and if the AdditionalEventData field indicates MFA was NOT used \nand the ResponseElements field indicates NOT a Failure. Thereby indicating that a non-MFA login was successful."
                 }
               }
             ]
@@ -229,7 +229,7 @@
                 "name": "analytic6-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Identity and Access Management (IAM) securely manages access to AWS services and resources. \nIdentifies when a policy is created with Full Administrators Access (Allow-Action:*,Resource:*). \nThis policy can be attached to role,user or group and may be used by an adversary to escalate a normal user privileges to an adminsitrative level.\nAWS IAM Policy Grammar: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_grammar.html\nand AWS IAM API at https://docs.aws.amazon.com/IAM/latest/APIReference/API_Operations.html"
+                  "text": "Identity and Access Management (IAM) securely manages access to AWS services and resources. \nIdentifies when a policy is created with Full Administrators Access (Allow-Action:*,Resource:*). \nThis policy can be attached to role,user or group and may be used by an adversary to escalate a normal user privileges to an administrative level.\nAWS IAM Policy Grammar: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_grammar.html\nand AWS IAM API at https://docs.aws.amazon.com/IAM/latest/APIReference/API_Operations.html"
                 }
               }
             ]
@@ -967,7 +967,7 @@
                 "name": "huntingquery3-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Identity and Access Management (IAM) securely manages access to AWS services and resources. \nIdentifies when a Privileged role is attached to an existing instance or new instance at deployment. This instance may be used by an adversary to escalate a normal user privileges to an adminsitrative level.\nand AWS API AddRoleToInstanceProfile at https://docs.aws.amazon.com/IAM/latest/APIReference/API_AddRoleToInstanceProfile.html It depends on the AWS AWSS3 data connector and AWSCloudTrail AWSCloudTrail data type and AWS AWSS3 parser."
+                  "text": "Identity and Access Management (IAM) securely manages access to AWS services and resources. \nIdentifies when a Privileged role is attached to an existing instance or new instance at deployment. This instance may be used by an adversary to escalate a normal user privileges to an administrative level.\nand AWS API AddRoleToInstanceProfile at https://docs.aws.amazon.com/IAM/latest/APIReference/API_AddRoleToInstanceProfile.html It depends on the AWS AWSS3 data connector and AWSCloudTrail AWSCloudTrail data type and AWS AWSS3 parser."
                 }
               }
             ]
