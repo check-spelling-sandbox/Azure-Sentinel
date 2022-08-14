@@ -3067,7 +3067,7 @@
     "provider": "Microsoft"
   },
   {
-    "workbookKey": "vArmourAppContollerWorkbook",
+    "workbookKey": "vArmourAppControllerWorkbook",
     "logoFileName": "varmour-logo.svg",
     "description": "Sets the time name for analysis",
     "dataTypesDependencies": [
@@ -3096,7 +3096,7 @@
     ],
     "version": "1.0.0",
     "title": "vArmour Application Controller",
-    "templateRelativePath": "vArmour_AppContoller_Workbook.json",
+    "templateRelativePath": "vArmour_AppController_Workbook.json",
     "subtitle": "",
     "provider": "vArmour"
   },
