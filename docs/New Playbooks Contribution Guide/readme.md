@@ -1,6 +1,6 @@
 # Contribution guidelines
 
-This document guides how to contirubte a playbook template to a **Microsoft Sentinel Solution** or to the **playbook templates tab**.
+This document guides how to contribute a playbook template to a **Microsoft Sentinel Solution** or to the **playbook templates tab**.
 [See example.](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/IdentityProtection-TeamsBotResponse)
 
 # Main steps
