@@ -538,7 +538,7 @@
             "id": "98f0e009-27e3-451d-a105-5c40bc269c52",
             "version": "KqlParameterItem/1.0",
             "name": "AnomalyName",
-            "label": " Anoamly Name",
+            "label": " Anomaly Name",
             "type": 2,
             "isRequired": true,
             "multiSelect": true,

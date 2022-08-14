@@ -7,7 +7,7 @@ This will not impact production workloads and is designed to demonstrate results
 
 The package includes:
 1 - PS script with logic to ingest the simulated anomaly data 
-2 - A csv file with the corresponding anomoly preview events
+2 - A csv file with the corresponding anomaly preview events
 
 # Anomalies Preview Configuration Steps
 
