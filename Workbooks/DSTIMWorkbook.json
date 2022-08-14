@@ -1654,7 +1654,7 @@
                               "linkLabel": "{TIIPCount}",
                               "subTarget": "TIIP",
                               "preText": "{assetCounts} sensitive files were accessed from ",
-                              "postText": "IP addreses with TI match.",
+                              "postText": "IP addresses with TI match.",
                               "style": "link"
                             },
                             {
@@ -1712,7 +1712,7 @@
                               "linkLabel": "{TIIPCount}",
                               "subTarget": "TIIP",
                               "preText": "{assetCounts} sensitive files were accessed from ",
-                              "postText": "IP addreses with TI match.",
+                              "postText": "IP addresses with TI match.",
                               "style": "link"
                             }
                           ]
