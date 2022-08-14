@@ -94,7 +94,7 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
 23. Enter SentinelSharedkey.  Paste the Sentinel shared key.  Click Create.
 
 
-### Confiugure Settings for the Function
+### Configure Settings for the Function
 1. Go to the Azure Portal.
 2. Go to the resource group that was created.  Click the Function.
 3. Click Platform Features Tab.
