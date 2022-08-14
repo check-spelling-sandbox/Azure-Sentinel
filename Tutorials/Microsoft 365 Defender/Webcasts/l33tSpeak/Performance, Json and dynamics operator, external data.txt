@@ -330,7 +330,7 @@ EmailEvents
 
 
 // This is all well and good, but you might need to aggregate all of these individual rows
-// into a single row, right? This is where our aggrigation functions come in.
+// into a single row, right? This is where our aggregation functions come in.
 // makelist() is like makeset(), but without deduplication. Let's use makelist() to create
 // a list of e-mails in JSON format based on senders and their domain.
 

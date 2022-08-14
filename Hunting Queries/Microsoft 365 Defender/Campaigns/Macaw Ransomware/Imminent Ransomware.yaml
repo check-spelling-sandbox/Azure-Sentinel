@@ -15,7 +15,7 @@ query: |
   "-EnableControlledFolderAccess", "windefend", "onstart", "bcdedit", "Startup") 
   // Making list of found commands 
   | summarize ProcessCommandLine = make_set(ProcessCommandLine) by DeviceId, bin(Timestamp, 6h) 
-  // Extending columns for later aggregration, based on TTP 
+  // Extending columns for later aggregation, based on TTP 
   | extend StartUpExclusionPath = iff(ProcessCommandLine has_all("-ExclusionPath", "Startup"), 1, 0) 
   | extend DefenderTamp = iff(ProcessCommandLine has "Set-MpPreference" 
   and ProcessCommandLine has_any( 
