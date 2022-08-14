@@ -876,7 +876,7 @@
                                                 },
                                                 "expression": "@int(body('Parse_verdict_JSON')?['get-verdict-info']?['verdict'])",
                                                 "type": "Switch",
-                                                "description": "Conditon for verdict value"
+                                                "description": "Condition for verdict value"
                                             }
                                         }
                                     },
