@@ -10,7 +10,7 @@
             "3. Response from individual playbooks are returned to master playbook for incident comment. "
         ],
         "prerequisites": [
-            "Atlease one of the below mentioned nested playbooks must be deployed prior to deployment of this playbook under same subscription and same resource group. Capture the name of all deployed playbooks during deployment.",
+            "At least one of the below mentioned nested playbooks must be deployed prior to deployment of this playbook under same subscription and same resource group. Capture the name of all deployed playbooks during deployment.",
             "- EnrichIP-GeoFromIp-Nested is a nested playbook that handles enrichment for GeoIP",
             "- EnrichIP-HYAS-Insight-IP-C2-Attribution-Nested is a nested playbook that handles enrichment for HYAS Insights.",
             "- EnrichIP-RecordedFuture-IOCEnrichment-Nested is a nested playbook that handles enrichment for Recorded Future.",
