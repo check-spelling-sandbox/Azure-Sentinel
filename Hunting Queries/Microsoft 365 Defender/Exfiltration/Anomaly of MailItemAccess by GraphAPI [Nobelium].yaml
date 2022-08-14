@@ -24,9 +24,9 @@ query: |
   | project Timestamp,OperationCount , ClientAppId;
   let calculateNumberOfMailPerDay = allMailAccessByGraphAPI
   | summarize NumberOfMailPerDay =sum(toint(OperationCount)) by ClientAppId,format_datetime(Timestamp, 'y-M-d');
-  let calculteAvgAndStdev=calculateNumberOfMailPerDay
+  let calculateAvgAndStdev=calculateNumberOfMailPerDay
   | summarize avg=avg(NumberOfMailPerDay),stev=stdev(NumberOfMailPerDay) by ClientAppId;
-  calculteAvgAndStdev  | join calculateNumberOfMailPerDay on ClientAppId
+  calculateAvgAndStdev  | join calculateNumberOfMailPerDay on ClientAppId
   | sort by ClientAppId
   |  where NumberOfMailPerDay > avg + STDThreshold * stev
   | project ClientAppId,Timestamp,NumberOfMailPerDay,avg,stev 
