@@ -44,11 +44,11 @@ query: |
   by ResourceId, CallerIpAddress, Caller, OperationNameValue, Resource, ResourceGroup, PrincipalId, PrincipalType, Scope, RoleAddedDetails
   ) on CallerIpAddress, Caller
   | extend timestamp = StartTimeUtc, AccountCustomEntity = Caller, IPCustomEntity = CallerIpAddress;
-  let RoleAssignedActivitywithRoleDetails = RoleAssignedActivity
+  let RoleAssignedActivityWithRoleDetails = RoleAssignedActivity
   | extend RoleAssignedID = tostring(split(RoleAddedDetails, "/")[-1])
   | join kind = inner (AzureBuiltInRole 
   ) on $left.RoleAssignedID == $right.ID;
-  RoleAssignedActivitywithRoleDetails
+  RoleAssignedActivityWithRoleDetails
   | summarize arg_max(StartTimeUtc, *) by PrincipalId, RoleAssignedID
   | join kind = leftouter( IdentityInfo
   | summarize arg_max(TimeGenerated, *) by AccountObjectId
