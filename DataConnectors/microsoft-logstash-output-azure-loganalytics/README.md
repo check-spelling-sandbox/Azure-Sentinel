@@ -126,7 +126,7 @@ logger -p local4.warn -t CEF: "0|Microsoft|Device|cef-test|example|data|1|here i
 
 ```
 
-Alternativly you can use netcat to test your configuration:
+Alternatively you can use netcat to test your configuration:
 
 ```
 echo "test string" | netcat localhost 514
