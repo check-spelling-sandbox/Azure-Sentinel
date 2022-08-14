@@ -124,7 +124,7 @@
     "variables": {
         "Forcepoint_Connector": "[concat('ForcepointSMCApiConnector-','ForcepointPlaybooks')]",
         "ForcepointFUID_Connector": "[concat('ForcepointFUIDConnector-','ForcepointPlaybooks')]",
-        "azureSentinel_Connection": "[concat('azuresentienl-','ForcepointPlaybooks')]",
+        "azureSentinel_Connection": "[concat('azuresentinel-','ForcepointPlaybooks')]",
         "teams_connector": "[concat('teamsconnector-','ForcepointPlaybooks')]"
     },
     "resources": [

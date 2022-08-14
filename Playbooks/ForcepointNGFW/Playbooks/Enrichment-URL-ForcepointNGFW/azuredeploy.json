@@ -52,7 +52,7 @@
     },
     "variables": {
         "Forcepoint_Connector": "[concat('ForcepointSMCApiConnector-',parameters('PlaybookName'))]",
-        "azureSentinel_Connection": "[concat('azuresentienl-',parameters('PlaybookName'))]"
+        "azureSentinel_Connection": "[concat('azuresentinel-',parameters('PlaybookName'))]"
     },
     "resources": [
         {

@@ -73,7 +73,7 @@
         }
     },
     "variables": {
-        "AzureSentinelConnectionName": "[concat('azuresentienl-',parameters('MasterPlaybookName'))]",
+        "AzureSentinelConnectionName": "[concat('azuresentinel-',parameters('MasterPlaybookName'))]",
         "Defaultplaybookname": "MSDefaultNestedPlaybook",
         "GeoIPID": "[if(not(empty(parameters('GeoIPPlaybookName'))),parameters('GeoIPPlaybookName'),variables('Defaultplaybookname'))]",
         "HYASInsightsID": "[if(not(empty(parameters('HYASInsightsPlaybookName'))),parameters('HYASInsightsPlaybookName'),variables('Defaultplaybookname'))]",

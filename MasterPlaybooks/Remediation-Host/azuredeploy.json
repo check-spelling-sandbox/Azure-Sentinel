@@ -65,7 +65,7 @@
         }
     },
     "variables": {
-        "AzureSentinelConnectionName": "[concat('azuresentienl-',parameters('MasterPlaybookName'))]",
+        "AzureSentinelConnectionName": "[concat('azuresentinel-',parameters('MasterPlaybookName'))]",
         "Defaultplaybookname": "MSDefaultNestedPlaybook",
         "CarbonBlackID": "[ if(not(empty(parameters('CarbonBlackPlaybookName'))),parameters('CarbonBlackPlaybookName'),variables('Defaultplaybookname'))]",
         "CrowdstrikeID": "[ if(not(empty(parameters('CrowdstrikePlaybookName'))),parameters('CrowdstrikePlaybookName'),variables('Defaultplaybookname'))]",
