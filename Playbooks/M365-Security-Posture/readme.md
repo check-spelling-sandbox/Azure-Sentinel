@@ -29,7 +29,7 @@ To deploy, users will need:
 1. An Azure Subscription
 2. An Azure Sentinel workspace and instance
 3. A registered application within Azure Active Directory
-4. A user that has Azure Sentinel Contirbutor permissions on the Resource Group that Azure Sentinel is located in
+4. A user that has Azure Sentinel Contributor permissions on the Resource Group that Azure Sentinel is located in
 
 ## **Set Up**
 First, an application needs to registered in Azure AD and assigned API permissions.

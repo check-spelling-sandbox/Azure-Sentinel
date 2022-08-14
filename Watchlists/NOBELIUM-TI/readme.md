@@ -11,7 +11,7 @@ https://www.microsoft.com/security/blog/2021/05/27/new-sophisticated-email-based
 To deploy, users will need:
 1. An Azure Subscription.
 2. An Azure Sentinel workspace and instance.
-3. A user that has Azure Sentinel Contirbutor permissions on the Resource Group that Azure Sentinel is located in.
+3. A user that has Azure Sentinel Contributor permissions on the Resource Group that Azure Sentinel is located in.
 
 ## **Deployment Process**
 ## Option 1
