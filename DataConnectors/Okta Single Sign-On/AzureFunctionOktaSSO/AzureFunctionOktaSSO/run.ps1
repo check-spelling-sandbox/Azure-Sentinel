@@ -87,7 +87,7 @@ Function Post-LogAnalyticsData($customerId, $sharedKey, $body, $logType)
 $recordCount = $response.Count
 
 if ($recordCount -gt 0) {
-    Write-Output "$recordCount record(s) are avaliable as of $startDate"
+    Write-Output "$recordCount record(s) are available as of $startDate"
     $domain = [regex]::matches($uri, 'https:\/\/([\w\.\-]+)\/').captures.groups[1].value
     $response | Add-Member -MemberType NoteProperty -Name "Domain" -Value $domain
     $json = $response | ConvertTo-Json -Depth 5
@@ -95,7 +95,7 @@ if ($recordCount -gt 0) {
 }
 else{
 
-    Write-Output "No new Okta logs are avaliable as of $startDate"
+    Write-Output "No new Okta logs are available as of $startDate"
 }
 
 # Write an information log with the current time.

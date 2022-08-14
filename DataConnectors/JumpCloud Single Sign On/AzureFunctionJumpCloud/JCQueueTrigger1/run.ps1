@@ -119,7 +119,7 @@ do {
             $result = Invoke-WebRequest -Uri $uri -Method $method -ContentType $contentType -Headers $headers1 -Body $body -UseBasicParsing
     }
     else{
-        Write-Output "JumpCloud: No new $JCService JumpCloud logs are avaliable as at $currentUTCtime"
+        Write-Output "JumpCloud: No new $JCService JumpCloud logs are available as at $currentUTCtime"
         break
     }
     write-output " Limit: $JCLimit; ResultCount: $JCResultCount; Totalsofar: $totalrecordcount"
