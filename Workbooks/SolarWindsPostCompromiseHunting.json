@@ -1209,7 +1209,7 @@
           {
             "type": 1,
             "content": {
-              "json": "Several of these queries look for activity assocaited with later stage host activity as detailed in this report: https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/",
+              "json": "Several of these queries look for activity associated with later stage host activity as detailed in this report: https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/",
               "style": "info"
             },
             "customWidth": "50",

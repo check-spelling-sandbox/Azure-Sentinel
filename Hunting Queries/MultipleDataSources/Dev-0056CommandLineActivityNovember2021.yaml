@@ -29,7 +29,7 @@ query: |
     | mv-expand todynamic(Entities)
     | extend DeviceId = tostring(parse_json(Entities).MdatpDeviceId)
     | where isnotempty(DeviceId)
-    // Increase risk score further if alerts relate to malware assocaited with threat actor
+    // Increase risk score further if alerts relate to malware associated with threat actor
     | extend AlertRiskScore =iif(ThreatName has_any ("Backdoor:MSIL/ShellClient.A", "Backdoor:MSIL/ShellClient.A!dll", "Trojan:MSIL/Mimikatz.BA!MTB"), 1.0, 0.5)) on DeviceId
     | extend AlertRiskScore = iif(isempty(AlertRiskScore), 0.0 , AlertRiskScore)
     | project-reorder  TimeGenerated, DeviceName, DeviceId, ProcessCommandLine, AccountName
