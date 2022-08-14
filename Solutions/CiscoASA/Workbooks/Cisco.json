@@ -411,7 +411,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//allowd vs denied for in bound\r\nCommonSecurityLog\r\n| where DeviceProduct =~ 'ASA'\r\n| where DeviceVendor =~ 'Cisco'\r\n| where '{DeviceAddress:label}' == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where CommunicationDirection contains   'inbound'\r\n| where SimplifiedDeviceAction in ('Deny', 'Allow')\r\n| summarize TrafficVolume=count() by SimplifiedDeviceAction, TimeGenerated",
+        "query": "//allowed vs denied for in bound\r\nCommonSecurityLog\r\n| where DeviceProduct =~ 'ASA'\r\n| where DeviceVendor =~ 'Cisco'\r\n| where '{DeviceAddress:label}' == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where CommunicationDirection contains   'inbound'\r\n| where SimplifiedDeviceAction in ('Deny', 'Allow')\r\n| summarize TrafficVolume=count() by SimplifiedDeviceAction, TimeGenerated",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Inbound traffic events, by time",
