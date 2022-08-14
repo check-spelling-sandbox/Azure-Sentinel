@@ -21,7 +21,7 @@ queryPeriod: 15m
 triggerOperator: gt
 triggerThreshold: 0
 tactics:
-    - CommandandControl
+    - CommandAndControl
 query: |
     let threatCategory="Cryptominer";
     let knownUserAgentsIndicators = materialize(externaldata(UserAgent:string, Category:string)
