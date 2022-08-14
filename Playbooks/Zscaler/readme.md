@@ -24,7 +24,7 @@ General info about this product and the core values of this integration. <br>
 | Action | Description |
 | --------- | -------------- |
 | **Add IP to category** | Add an IP to a Zscaler block category |
-| **Add Url to catogory** | Add an URL to a Zscaler block category |
+| **Add Url to category** | Add an URL to a Zscaler block category |
 | **Get sandbox report for hash** | Get a Zscaler sandbox report for a file hash |
 | **Url category lookup** | Lookup for Zscaler blocking categories for a given url |
 | **Authentication** | Playbook to support the Zscaler authentication process |
