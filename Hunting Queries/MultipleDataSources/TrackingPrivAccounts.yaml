@@ -168,11 +168,11 @@ query: |
   ) on DomainSlashAccount)
   );
   a_Related
-  | project Type, RareActivtyStartTimeUtc = ra_StartTime, RareActivityEndTimeUtc = ra_EndTime, RareActivityCount = ra_Count,
+  | project Type, RareActivityStartTimeUtc = ra_StartTime, RareActivityEndTimeUtc = ra_EndTime, RareActivityCount = ra_Count,
   AccountName, WinSecEventDomain, EventType, RareServiceOrSystem, RelatedActivityStartTimeUtc = rel_StartTime,
   RelatedActivityEndTimeUtc = rel_EndTime, RelatedActivityEventType = rel_EventType, RelatedActivityClientIPSet = rel_ClientIPSet,
   RelatedActivityServiceOrSystemCount = rel_ServiceOrSystemCount, RelatedActivityServiceOrSystemSet = rel_ServiceOrSystemSet, RelatedActivityCount = rel_Count
-  | extend timestamp = RareActivtyStartTimeUtc, AccountCustomEntity = AccountName
+  | extend timestamp = RareActivityStartTimeUtc, AccountCustomEntity = AccountName
 version: 1.0.0
 metadata:
     source:

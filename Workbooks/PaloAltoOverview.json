@@ -950,7 +950,7 @@
         "query": "CommonSecurityLog\r\n| where DeviceProduct has 'PAN-OS'\r\n| where DeviceVendor =~ 'Palo Alto Networks'\r\n| where \"{Destination_IP:lable}\"==\"All\" or DestinationIP in ({Destination_IP}) \r\n| where \"{Source_IP:lable}\" == \"All\" or SourceIP in ({Source_IP})\r\n| where Activity =~ 'THREAT'\r\n| where DeviceEventClassID =~ 'url'\r\n| summarize ActionCount=count() by DeviceAction, TimeGenerated\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
-        "title": "Web filter ativity, by time",
+        "title": "Web filter activity, by time",
         "timeContext": {
           "durationMs": 0
         },
@@ -986,7 +986,7 @@
         }
       },
       "customWidth": "33",
-      "name": "Web filter ativity by time"
+      "name": "Web filter activity by time"
     },
     {
       "type": 3,

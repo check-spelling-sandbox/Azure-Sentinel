@@ -2309,7 +2309,7 @@
           {
             "type": 1,
             "content": {
-              "json": "If an Sentinel Workspace has been enabled for less than 30days is likely to be in the Free Trial period.  The report above shows when a Workspace was first created and when Sentinel was associated with it.\r\nAlso on this Page\r\n- Top 10 Operations actions from the AzureActicity log for Sentinel.  \r\n- Select a Table (only Sentinel ones are listed) to see more details. ",
+              "json": "If an Sentinel Workspace has been enabled for less than 30days is likely to be in the Free Trial period.  The report above shows when a Workspace was first created and when Sentinel was associated with it.\r\nAlso on this Page\r\n- Top 10 Operations actions from the AzureActivity log for Sentinel.  \r\n- Select a Table (only Sentinel ones are listed) to see more details. ",
               "style": "info"
             },
             "conditionalVisibilities": [
