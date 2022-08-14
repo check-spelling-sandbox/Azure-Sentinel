@@ -881,7 +881,7 @@
                     "query": "SecurityAlert\r\n| where TimeGenerated {TimeRange}\r\n| where \"{AlertSeverity}\" has AlertSeverity or isempty(\"{AlertSeverity}\")\r\n| where AlertType startswith \"KV_\"\r\n| where ResourceId in ({KeyVault})\r\n| make-series Count=count() on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by ResourceId\r\n//| summarize Count=count() by ResourceId, bin(TimeGenerated,{TimeRange:grain})\r\n",
                     "size": 0,
                     "title": "Key vault alerts",
-                    "noDataMessage": "No alrets from Azure Defender for Key Vaults",
+                    "noDataMessage": "No alerts from Azure Defender for Key Vaults",
                     "timeContext": {
                       "durationMs": 7776000000
                     },
