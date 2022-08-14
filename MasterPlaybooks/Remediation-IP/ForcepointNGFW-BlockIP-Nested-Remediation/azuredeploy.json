@@ -665,7 +665,7 @@
                                                             "name": "Error",
                                                             "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                         },
-                                                        "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                        "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                                     },
                                                     "Terminate_if_login_is_unsuccessful": {
                                                         "runAfter": {
