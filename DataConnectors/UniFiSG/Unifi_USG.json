@@ -129,7 +129,7 @@
                                     "WorkspaceId",
                                     "PrimaryKey"
                                 ],
-                                "label": "Run the following command to download the provided NetFlow configuartion",
+                                "label": "Run the following command to download the provided NetFlow configuration",
                                 "value": "sudo /usr/share/logstash/bin/logstash-plugin install microsoft-logstash-output-azure-loganalytics\nsudo wget -o /etc/logstash/conf.d/ui-netflow-logstash.conf https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/UnifiSG/ui-netflow-logstash.conf\nsudo sed -i 's/\"workspaceid\"/\"{0}\"/g' /etc/logstash/conf.d/ui-netflow-logstash.conf\nsudo sed -i 's/\"workspacekey\"/\"{1}\"/g' /etc/logstash/conf.d/ui-netflow-logstash.conf",
                                 "rows": 11
                             },

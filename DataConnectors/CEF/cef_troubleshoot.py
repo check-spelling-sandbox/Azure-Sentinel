@@ -343,7 +343,7 @@ def check_file_in_directory(file_name, path):
 def locate_check(process_name):
     '''
     Check if the process_name is installed using the locate command
-    :param process_name:onfiguration under the nam
+    :param process_name:Configuration under the nam
     :return: True if locate has returned a valid value else False
     '''
     try:
