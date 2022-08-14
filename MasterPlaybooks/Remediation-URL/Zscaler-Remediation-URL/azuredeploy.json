@@ -30,7 +30,7 @@
                 "description": "Name of the Logic App/Playbook"
             }
         },
-        "Zscaler Authentation Playbook": {
+        "Zscaler Authentication Playbook": {
             "defaultValue": "Zscaler-Authentication-Playbook",
             "type": "String",
             "metadata": {
@@ -53,7 +53,7 @@
         }
     },
     "variables": {
-        "ZscalerAuthenticationFlow": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Logic/workflows/', parameters('Zscaler Authentation Playbook'))]"
+        "ZscalerAuthenticationFlow": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Logic/workflows/', parameters('Zscaler Authentication Playbook'))]"
     },
     "resources": [
         {

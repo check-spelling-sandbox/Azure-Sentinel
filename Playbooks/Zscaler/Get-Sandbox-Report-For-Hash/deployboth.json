@@ -100,7 +100,7 @@
         },
         "parameters": {
           "Playbook name": { "value": "[parameters('Playbook name')]" },
-          "Zscaler Authentation Playbook": { "value": "[variables('Zscaler Authentication Playbook Name')]" },
+          "Zscaler Authentication Playbook": { "value": "[variables('Zscaler Authentication Playbook Name')]" },
           "Zscaler Admin Url": { "value": "[parameters('Zscaler Admin Url')]" }
         }
       }

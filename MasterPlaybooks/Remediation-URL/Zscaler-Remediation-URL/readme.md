@@ -29,6 +29,6 @@ To deploy Cisco Meraki Custom connector click on the below button.
  | Parameter  | Description |
 | ------------- | ------------- |
 | **Playbook Name** | Enter the playbook name without spaces |
-| **Zscaler Authentation Playbook**|Enter the name of Zscaler Authentation Playbook without spaces |
+| **Zscaler Authentication Playbook**|Enter the name of Zscaler Authentication Playbook without spaces |
 | **Zscaler Admin Url** | Enter Zscaler Admin Url |
 | **Block Category**| Zscaler block category | 

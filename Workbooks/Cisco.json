@@ -993,7 +993,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//Authentocation Success\r\nCommonSecurityLog\r\n| where DeviceProduct =~ 'ASA'\r\n| where DeviceVendor =~ 'Cisco'\r\n| where '{DeviceAddress:label}' == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where DeviceEventClassID == '113012'\r\n| extend UserName= extract('%ASA-6-113012:.*: user = (.*)$',1,Message)\r\n| summarize UserCount=count() by UserName\r\n| top 5 by UserCount desc\r\n",
+        "query": "//Authentication Success\r\nCommonSecurityLog\r\n| where DeviceProduct =~ 'ASA'\r\n| where DeviceVendor =~ 'Cisco'\r\n| where '{DeviceAddress:label}' == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where DeviceEventClassID == '113012'\r\n| extend UserName= extract('%ASA-6-113012:.*: user = (.*)$',1,Message)\r\n| summarize UserCount=count() by UserName\r\n| top 5 by UserCount desc\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Top 5 successfully authenticated users",
