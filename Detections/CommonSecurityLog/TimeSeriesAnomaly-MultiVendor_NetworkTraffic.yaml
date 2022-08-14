@@ -1,7 +1,7 @@
 id: 06a9b845-6a95-4432-a78b-83919b28c375
 name: Time series anomaly detection for total volume of traffic
 description: |
-  'Identifies anamalous spikes in network traffic logs as compared to baseline or normal historical patterns.
+  'Identifies anomalous spikes in network traffic logs as compared to baseline or normal historical patterns.
   The query leverages a KQL built-in anomaly detection algorithm to find large deviations from baseline patterns.
   Sudden increases in network traffic volume may be an indication of data exfiltration attempts and should be investigated.
   The higher the score, the further it is from the baseline value.

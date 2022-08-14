@@ -18,7 +18,7 @@ query: |
   let threshold = 10;
   let baseline = 10000;
   let diff = 5;
-  let anomolous_users = (
+  let anomalous_users = (
   LAQueryLogs
   | where TimeGenerated between(startofday(ago(lookback))..starttime)
   | summarize score=sum(ResponseRowCount) by AADEmail
@@ -32,7 +32,7 @@ query: |
   | project AADEmail);
   LAQueryLogs
   | where TimeGenerated between(starttime..endtime)
-  | where AADEmail in(anomolous_users)
+  | where AADEmail in(anomalous_users)
   | extend timestamp = TimeGenerated, AccountCustomEntity = AADEmail
   // Comment out the line below to see the queries run by users.
   | summarize total_rows = sum(ResponseRowCount), NoQueries = count(), AvgQuerySize = sum(ResponseRowCount)/count() by AADEmail
