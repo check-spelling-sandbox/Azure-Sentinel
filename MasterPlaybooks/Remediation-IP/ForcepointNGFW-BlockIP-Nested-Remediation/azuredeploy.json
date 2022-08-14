@@ -430,7 +430,7 @@
                                                                         "columns": [
                                                                             {
                                                                                 "header": "IP-Address",
-                                                                                "value": "@item()?['IPAddres']"
+                                                                                "value": "@item()?['IPAddress']"
                                                                             },
                                                                             {
                                                                                 "header": "IP-List-Name",
@@ -491,7 +491,7 @@
                                                                                         "name": "Consolidatevrbl",
                                                                                         "value": {
                                                                                             "Action": "Already blocked",
-                                                                                            "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                            "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                             "IPStatus": "Blocked",
                                                                                             "IncidentSeverity": ""
                                                                                         }
@@ -534,7 +534,7 @@
                                                                                             "name": "Consolidatevrbl",
                                                                                             "value": {
                                                                                                 "Action": "Blocked by playbook",
-                                                                                                "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                                "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                                 "IPStatus": "Blocked",
                                                                                                 "IncidentSeverity": ""
                                                                                             }

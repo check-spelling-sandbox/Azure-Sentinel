@@ -24,7 +24,7 @@ query: |
   AuditLogs
   | where OperationName has "Delete partner specific cross-tenant access setting"
   | extend InitiatedByActionUserInformation = iff(isnotempty(InitiatedBy.user.userPrincipalName), InitiatedBy.user.userPrincipalName, InitiatedBy.app.displayName)
-  | extend InitiatedByIPAdress = InitiatedBy.user.ipAddress
+  | extend InitiatedByIPAddress = InitiatedBy.user.ipAddress
   | extend ExtTenantDeleted = TargetResources[0].modifiedProperties[0].oldValue
 entityMappings:
   - entityType: Account
@@ -38,6 +38,6 @@ entityMappings:
   - entityType: IP
     fieldMappings:
       - identifier: Address
-        columnName: InitiatedByIPAdress
+        columnName: InitiatedByIPAddress
 version: 1.0.0
 kind: Scheduled

@@ -240,7 +240,7 @@
                                                                                                 "name": "Consolidatevrbl",
                                                                                                 "value": {
                                                                                                     "Action": "Blocked by SOC",
-                                                                                                    "IPAddres": "@{items('For_each_IP_Address')?['Address']}",
+                                                                                                    "IPAddress": "@{items('For_each_IP_Address')?['Address']}",
                                                                                                     "IPStatus": "Blocked",
                                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                                 }
@@ -351,7 +351,7 @@
                                                                                                 "name": "Consolidatevrbl",
                                                                                                 "value": {
                                                                                                     "Action": "Unblocked by SOC",
-                                                                                                    "IPAddres": "@{items('For_each_IP_Address')?['Address']}",
+                                                                                                    "IPAddress": "@{items('For_each_IP_Address')?['Address']}",
                                                                                                     "IPStatus": "Unblocked",
                                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                                 }
@@ -480,7 +480,7 @@
                                                                                                     "name": "Consolidatevrbl",
                                                                                                     "value": {
                                                                                                         "Action": "Ignored by SOC",
-                                                                                                        "IPAddres": "@{items('For_each_IP_Address')?['Address']}",
+                                                                                                        "IPAddress": "@{items('For_each_IP_Address')?['Address']}",
                                                                                                         "IPStatus": "Blocked",
                                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                                     }
@@ -565,7 +565,7 @@
                                                                                                         "name": "Consolidatevrbl",
                                                                                                         "value": {
                                                                                                             "Action": "Ignored by SOC",
-                                                                                                            "IPAddres": "@{items('For_each_IP_Address')?['Address']}",
+                                                                                                            "IPAddress": "@{items('For_each_IP_Address')?['Address']}",
                                                                                                             "IPStatus": "Unblocked",
                                                                                                             "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                                         }
@@ -840,7 +840,7 @@
                                                                 "columns": [
                                                                     {
                                                                         "header": "IP-Address",
-                                                                        "value": "@item()?['IPAddres']"
+                                                                        "value": "@item()?['IPAddress']"
                                                                     },
                                                                     {
                                                                         "header": "IP-List-Name",
@@ -978,7 +978,7 @@
                                                                                 "name": "Consolidatevrbl",
                                                                                 "value": {
                                                                                     "Action": "Already blocked",
-                                                                                    "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                    "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                     "IPStatus": "Blocked",
                                                                                     "IncidentSeverity": ""
                                                                                 }
@@ -1085,7 +1085,7 @@
                                                                                     "name": "Consolidatevrbl",
                                                                                     "value": {
                                                                                         "Action": "IP does not exist in policy",
-                                                                                        "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                        "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                         "IPStatus": "Unblocked",
                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                     }

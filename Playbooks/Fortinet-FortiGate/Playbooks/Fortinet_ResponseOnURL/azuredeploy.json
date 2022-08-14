@@ -809,55 +809,55 @@
                             "type": "string"
                           },
                           "associated-interface": {
-                            "description": "associated-interface of  of an address address object",
+                            "description": "associated-interface of  of an address object",
                             "type": "string"
                           },
                           "cache-ttl": {
-                            "description": "cache-ttl of  of an address address object",
+                            "description": "cache-ttl of  of an address object",
                             "type": "integer"
                           },
                           "clearpass-spt": {
-                            "description": "clearpass-spt of  of an address address object",
+                            "description": "clearpass-spt of  of an address object",
                             "type": "string"
                           },
                           "color": {
-                            "description": "color of  of an address address object",
+                            "description": "color of  of an address object",
                             "type": "integer"
                           },
                           "comment": {
-                            "description": "comment of  of an address address object",
+                            "description": "comment of  of an address object",
                             "type": "string"
                           },
                           "country": {
-                            "description": "country of  of an address address object",
+                            "description": "country of  of an address object",
                             "type": "string"
                           },
                           "end-mac": {
-                            "description": "end-mac of  of an address address object",
+                            "description": "end-mac of  of an address object",
                             "type": "string"
                           },
                           "fabric-object": {
-                            "description": "fabric-object of  of an address address object",
+                            "description": "fabric-object of  of an address object",
                             "type": "string"
                           },
                           "filter": {
-                            "description": "filter of  of an address address object",
+                            "description": "filter of  of an address object",
                             "type": "string"
                           },
                           "fqdn": {
-                            "description": "fqdc of  of an address address object",
+                            "description": "fqdc of  of an address object",
                             "type": "string"
                           },
                           "fsso-group": {
-                            "description": "fsso-group of  of an address address object",
+                            "description": "fsso-group of  of an address object",
                             "type": "array"
                           },
                           "interface": {
-                            "description": "interface of  of an address address object",
+                            "description": "interface of  of an address object",
                             "type": "string"
                           },
                           "list": {
-                            "description": "list of  of an address address object",
+                            "description": "list of  of an address object",
                             "type": "array"
                           },
                           "name": {
@@ -865,43 +865,43 @@
                             "type": "string"
                           },
                           "obj-id": {
-                            "description": "obj-id of  of an address address object",
+                            "description": "obj-id of  of an address object",
                             "type": "string"
                           },
                           "obj-type": {
-                            "description": "obj-type of  of an address address object",
+                            "description": "obj-type of  of an address object",
                             "type": "string"
                           },
                           "q_origin_key": {
-                            "description": "q_origin_key of  of an address address object",
+                            "description": "q_origin_key of  of an address object",
                             "type": "string"
                           },
                           "sdn": {
-                            "description": "sdn of  of an address address object",
+                            "description": "sdn of  of an address object",
                             "type": "string"
                           },
                           "sdn-addr-type": {
-                            "description": "sdn-addr-type of  of an address address object",
+                            "description": "sdn-addr-type of  of an address object",
                             "type": "string"
                           },
                           "start-mac": {
-                            "description": "start-mac of  of an address address object",
+                            "description": "start-mac of  of an address object",
                             "type": "string"
                           },
                           "sub-type": {
-                            "description": "sub-type of  of an address address object",
+                            "description": "sub-type of  of an address object",
                             "type": "string"
                           },
                           "tagging": {
-                            "description": "tagging of  of an address address object",
+                            "description": "tagging of  of an address object",
                             "type": "array"
                           },
                           "type": {
-                            "description": "type of  of an address address object",
+                            "description": "type of  of an address object",
                             "type": "string"
                           },
                           "uuid": {
-                            "description": "uuid of  of an address address object",
+                            "description": "uuid of  of an address object",
                             "type": "string"
                           }
                         },

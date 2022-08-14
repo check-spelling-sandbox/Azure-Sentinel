@@ -177,7 +177,7 @@
                                                         "columns": [
                                                             {
                                                                 "header": "IP-Address",
-                                                                "value": "@item()?['IPAddres']"
+                                                                "value": "@item()?['IPAddress']"
                                                             },
                                                             {
                                                                 "header": "IP-Element-Name",
@@ -423,7 +423,7 @@
                                                                             "value": {
                                                                                 "Action": "Not Found in any policy and IP address is unblocked state",
                                                                                 "Elementname": "--",
-                                                                                "IPAddres": "@{outputs('IP')?['Address']}",
+                                                                                "IPAddress": "@{outputs('IP')?['Address']}",
                                                                                 "IPStatus": "Unblocked",
                                                                                 "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
                                                                                 "Policy": "--",
@@ -455,7 +455,7 @@
                                                             "type": "Query",
                                                             "inputs": {
                                                                 "from": "@variables('Arrayforallactions')",
-                                                                "where": "@contains(item()?['IPAddres'], outputs('IP')?['Address'])"
+                                                                "where": "@contains(item()?['IPAddress'], outputs('IP')?['Address'])"
                                                             }
                                                         },
                                                         "IP": {
@@ -507,7 +507,7 @@
                                                                                         "value": {
                                                                                             "Action": "Found in policy and IP address is blocked state",
                                                                                             "Elementname": "@{items('For_each_element')?['Element']}",
-                                                                                            "IPAddres": "@{items('For_each_element')?['IPaddress']}",
+                                                                                            "IPAddress": "@{items('For_each_element')?['IPaddress']}",
                                                                                             "IPStatus": "Blocked",
                                                                                             "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
                                                                                             "Policy": "@{items('For_each_element_type')?['name']}",
@@ -548,7 +548,7 @@
                                                                                             "name": "Consolidatevrbl",
                                                                                             "value": {
                                                                                                 "Elementname": "@{outputs('Bind_element_type')}",
-                                                                                                "IPAddres": "@{items('For_each_element')?['IPaddress']}",
+                                                                                                "IPAddress": "@{items('For_each_element')?['IPaddress']}",
                                                                                                 "Name": "@{items('For_each_element_type')?['name']}",
                                                                                                 "Type": "@{items('For_each_element')?['Type']}"
                                                                                             }

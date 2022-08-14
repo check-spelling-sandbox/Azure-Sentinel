@@ -213,7 +213,7 @@
                                                                 "columns": [
                                                                     {
                                                                         "header": "URL",
-                                                                        "value": "@item()?['URLAddres']"
+                                                                        "value": "@item()?['URLAddress']"
                                                                     },
                                                                     {
                                                                         "header": "URL-List-Name",
@@ -275,7 +275,7 @@
                                                                                 "value": {
                                                                                     "Action": "Already blocked",
                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
-                                                                                    "URLAddres": "@{items('Looping_URLs')?['Url']}",
+                                                                                    "URLAddress": "@{items('Looping_URLs')?['Url']}",
                                                                                     "URLStatus": "Blocked"
                                                                                 }
                                                                             }
@@ -318,7 +318,7 @@
                                                                                     "value": {
                                                                                         "Action": "Blocked by playbook",
                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
-                                                                                        "URLAddres": "@{items('Looping_URLs')?['Url']}",
+                                                                                        "URLAddress": "@{items('Looping_URLs')?['Url']}",
                                                                                         "URLStatus": "Blocked"
                                                                                     }
                                                                                 },

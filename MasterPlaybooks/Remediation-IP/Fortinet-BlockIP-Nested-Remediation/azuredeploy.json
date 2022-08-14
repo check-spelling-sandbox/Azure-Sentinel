@@ -694,7 +694,7 @@
                                                                 "type": "string"
                                                             },
                                                             "color": {
-                                                                "description": "color of an adddress object",
+                                                                "description": "color of an address object",
                                                                 "type": "integer"
                                                             },
                                                             "comment": {

@@ -343,7 +343,7 @@
                                                                     "name": "Consolidatevrbl",
                                                                     "value": {
                                                                         "Action": "@{items('Appending_Usernames')} does not have IP address",
-                                                                        "IPAddres": "",
+                                                                        "IPAddress": "",
                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                     }
                                                                 },
@@ -420,7 +420,7 @@
                                                             "name": "Consolidatevrbl",
                                                             "value": {
                                                                 "Action": "@{items('Appending_Usernames')} does not exist",
-                                                                "IPAddres": "",
+                                                                "IPAddress": "",
                                                                 "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                             }
                                                         }
@@ -610,7 +610,7 @@
                                                                     },
                                                                     {
                                                                         "header": "IP-Address",
-                                                                        "value": "@item()?['IPAddres']"
+                                                                        "value": "@item()?['IPAddress']"
                                                                     },
                                                                     {
                                                                         "header": "IP-List-Name",
@@ -671,7 +671,7 @@
                                                                                 "name": "Consolidatevrbl",
                                                                                 "value": {
                                                                                     "Action": "Already blocked",
-                                                                                    "IPAddres": "@{items('Looping_IP_Address')['IPaddress']}",
+                                                                                    "IPAddress": "@{items('Looping_IP_Address')['IPaddress']}",
                                                                                     "IPStatus": "Blocked",
                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
                                                                                     "Username": "@{items('Looping_IP_Address')['Usernames']}"
@@ -715,7 +715,7 @@
                                                                                     "name": "Consolidatevrbl",
                                                                                     "value": {
                                                                                         "Action": "Blocked by playbook",
-                                                                                        "IPAddres": "@{items('Looping_IP_Address')['IPaddress']}",
+                                                                                        "IPAddress": "@{items('Looping_IP_Address')['IPaddress']}",
                                                                                         "IPStatus": "Blocked",
                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
                                                                                         "Username": "@{items('Looping_IP_Address')['Usernames']}"

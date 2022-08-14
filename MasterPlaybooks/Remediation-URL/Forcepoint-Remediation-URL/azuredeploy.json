@@ -189,7 +189,7 @@
                                                                 "columns": [
                                                                     {
                                                                         "header": "URL",
-                                                                        "value": "@item()?['URLAddres']"
+                                                                        "value": "@item()?['URLAddress']"
                                                                     },
                                                                     {
                                                                         "header": "URL-List-Name",

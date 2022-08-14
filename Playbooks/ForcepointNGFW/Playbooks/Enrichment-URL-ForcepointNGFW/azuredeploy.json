@@ -177,7 +177,7 @@
                                                         "columns": [
                                                             {
                                                                 "header": "URL",
-                                                                "value": "@item()?['URLAddres']"
+                                                                "value": "@item()?['URLAddress']"
                                                             },
                                                             {
                                                                 "header": "URL-Element-Name",
@@ -339,7 +339,7 @@
                                                                                             "Policy": "@{items('For_each_element_type')?['name']}",
                                                                                             "Policytype": "@{outputs('Bind_element_type')}",
                                                                                             "Type": "@{items('For_each_element')?['Type']}",
-                                                                                            "URLAddres": "@{items('For_each_element')?['URL']}",
+                                                                                            "URLAddress": "@{items('For_each_element')?['URL']}",
                                                                                             "URLStatus": "Blocked"
                                                                                         }
                                                                                     },
@@ -378,7 +378,7 @@
                                                                                                 "Elementname": "@{outputs('Bind_element_type')}",
                                                                                                 "Name": "@{items('For_each_element_type')?['name']}",
                                                                                                 "Type": "@{items('For_each_element')?['Type']}",
-                                                                                                "URLAddres": "@{items('For_each_element')?['URL']}"
+                                                                                                "URLAddress": "@{items('For_each_element')?['URL']}"
                                                                                             }
                                                                                         },
                                                                                         "description": "Set consolidate variable if URL is present list or host"
@@ -496,7 +496,7 @@
                                                                                 "Policy": "--",
                                                                                 "Policytype": "--",
                                                                                 "Type": "--",
-                                                                                "URLAddres": "@{outputs('URL')?['Url']}",
+                                                                                "URLAddress": "@{outputs('URL')?['Url']}",
                                                                                 "URLStatus": "unblocked"
                                                                             }
                                                                         }
@@ -524,7 +524,7 @@
                                                             "type": "Query",
                                                             "inputs": {
                                                                 "from": "@variables('Arrayforallactions')",
-                                                                "where": "@contains(item()?['URLAddres'], outputs('URL')?['Url'])"
+                                                                "where": "@contains(item()?['URLAddress'], outputs('URL')?['Url'])"
                                                             }
                                                         },
                                                         "URL": {
