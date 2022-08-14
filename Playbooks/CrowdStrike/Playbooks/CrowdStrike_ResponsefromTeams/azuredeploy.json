@@ -823,7 +823,7 @@
                   "type": "Switch",
                   "expression": "@body('Parse_JSON_device_information_response')?['resources']?[0]?['status']",
                   "cases": {
-                    "Case_-_conatined": {
+                    "Case_-_contained": {
                       "case": "contained",
                       "actions": {
                         "Append_to_array_variable_adaptive_card_body_if_host_is_contained": {
