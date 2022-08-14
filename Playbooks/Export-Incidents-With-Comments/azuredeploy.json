@@ -110,7 +110,7 @@
                                            "Additional Comments": "@{trim(variables('CommentHolder'))}",
                                            "Alert Name": "@{items('For_each')?['properties']?['title']}",
                                            "Alerts": "@{items('For_each')?['properties']?['additionalData']?['alertsCount']}",
-                                           "Clasification": "@{items('For_each')?['properties']?['classification']}",
+                                           "Classification": "@{items('For_each')?['properties']?['classification']}",
                                            "Closure Comment": "@{items('For_each')?['properties']?['classificationComment']}",
                                            "Created Time": "@{items('For_each')?['properties']?['createdTimeUtc']}",
                                            "Id": "@{items('For_each')?['properties']?['incidentNumber']}",
