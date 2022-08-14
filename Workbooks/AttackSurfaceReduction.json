@@ -155,7 +155,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "// Agregate all Attack Surface Reduction rules events in Block mode, in 1h time chunks to display in time line chart.\r\nDeviceEvents\r\n| where ActionType startswith \"Asr\"\r\n| where ActionType endswith \"{Mode}\"\r\n| where ActionType startswith iff(isnull(\"{ASRRule}\"), \"\", \"{ASRRule}\")\r\n| where DeviceName startswith iff(isnull(\"{DeviceName}\"), \"\", \"{DeviceName}\")\r\n| where AccountName startswith iff(isnull(\"{User}\"), \"\", \"{User}\")\r\n| summarize count() by ActionType, bin(TimeGenerated, 1h)\r\n| render timechart",
+        "query": "// Aggregate all Attack Surface Reduction rules events in Block mode, in 1h time chunks to display in time line chart.\r\nDeviceEvents\r\n| where ActionType startswith \"Asr\"\r\n| where ActionType endswith \"{Mode}\"\r\n| where ActionType startswith iff(isnull(\"{ASRRule}\"), \"\", \"{ASRRule}\")\r\n| where DeviceName startswith iff(isnull(\"{DeviceName}\"), \"\", \"{DeviceName}\")\r\n| where AccountName startswith iff(isnull(\"{User}\"), \"\", \"{User}\")\r\n| summarize count() by ActionType, bin(TimeGenerated, 1h)\r\n| render timechart",
         "size": 0,
         "title": "ASR Events Timeline",
         "timeContextFromParameter": "TimeRange",

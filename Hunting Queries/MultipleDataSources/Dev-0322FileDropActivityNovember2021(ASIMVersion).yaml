@@ -37,7 +37,7 @@ query: |
     | extend AlertRiskScore = iif(ThreatName has_any ("Zebracon", "Trojan:MSIL/Gacker.A!dha", "Backdoor:MSIL/Kokishell.A!dha"), 1.0, 0.5)
     | project DvcId, AlertRiskScore) on DvcId
     | extend AlertRiskScore = iif(isempty(AlertRiskScore), 0.0, AlertRiskScore)
-    // Create agregate risk score
+    // Create aggregate risk score
     | extend RiskScore = RiskScore + AlertRiskScore
     | extend timestamp = TimeGenerated, HostCustomEntity = Dvc, AccountCustomEntity = AccountName
 entityMappings:
