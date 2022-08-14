@@ -1115,7 +1115,7 @@
     "provider": "Microsoft Sentinel community"
   },
   {
-    "workbookKey": "EventAnalyzerwWorkbook",
+    "workbookKey": "EventAnalyzerWorkbook",
     "logoFileName": "",
     "description": "The Event Analyzer workbook allows to explore, audit and speed up analysis of Windows Event Logs, including all event details and attributes, such as security, application, system, setup, directory service, DNS and others.",
     "dataTypesDependencies": [

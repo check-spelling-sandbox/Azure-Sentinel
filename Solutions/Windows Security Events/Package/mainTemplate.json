@@ -383,7 +383,7 @@
     "huntingQueryId43": "[resourceId('Microsoft.OperationalInsights/savedSearches', variables('_huntingQuerycontentId43'))]",
     "huntingQueryTemplateSpecName43": "[concat(parameters('workspace'),'-hq-',uniquestring(variables('_huntingQuerycontentId43')))]",
     "workbookVersion1": "1.0.0",
-    "workbookContentId1": "EventAnalyzerwWorkbook",
+    "workbookContentId1": "EventAnalyzerWorkbook",
     "workbookId1": "[resourceId('Microsoft.Insights/workbooks', variables('workbookContentId1'))]",
     "workbookTemplateSpecName1": "[concat(parameters('workspace'),'-wb-',uniquestring(variables('_workbookContentId1')))]",
     "_workbookContentId1": "[variables('workbookContentId1')]",
@@ -7167,7 +7167,7 @@
               "apiVersion": "2022-01-01-preview",
               "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/',concat('Workbook-', last(split(variables('workbookId1'),'/'))))]",
               "properties": {
-                "description": "@{workbookKey=EventAnalyzerwWorkbook; logoFileName=; description=The Event Analyzer workbook allows to explore, audit and speed up analysis of Windows Event Logs, including all event details and attributes, such as security, application, system, setup, directory service, DNS and others.; dataTypesDependencies=System.Object[]; dataConnectorsDependencies=System.Object[]; previewImagesFileNames=System.Object[]; version=1.0.0; title=Event Analyzer; templateRelativePath=EventAnalyzer.json; subtitle=; provider=Microsoft Sentinel community}.description",
+                "description": "@{workbookKey=EventAnalyzerWorkbook; logoFileName=; description=The Event Analyzer workbook allows to explore, audit and speed up analysis of Windows Event Logs, including all event details and attributes, such as security, application, system, setup, directory service, DNS and others.; dataTypesDependencies=System.Object[]; dataConnectorsDependencies=System.Object[]; previewImagesFileNames=System.Object[]; version=1.0.0; title=Event Analyzer; templateRelativePath=EventAnalyzer.json; subtitle=; provider=Microsoft Sentinel community}.description",
                 "parentId": "[variables('workbookId1')]",
                 "contentId": "[variables('_workbookContentId1')]",
                 "kind": "Workbook",
