@@ -180,7 +180,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "let data = CommonSecurityLog\r\n| where DeviceProduct has 'PAN-OS'\r\n| where DeviceVendor =~ 'Palo Alto Networks'\r\n| where \"{Destination_IP:lable}\"==\"All\" or DestinationIP in ({Destination_IP})\r\n| where \"{Source_IP:lable}\" == \"All\" or SourceIP in ({Source_IP})\r\n| where \"{EventClass:lable}\" == \"All\" or \"{EventClass:lable}\" == \"All\" or DeviceEventClassID in ({EventClass});\r\ndata\r\n| summarize Count = count() by Activity\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by Activity)\r\n on Activity\r\n| project-away Activity1, TimeGenerated\r\n| extend Activitys = Activity\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend Activity = 'All', Activitys = '*' \r\n)\r\n| order by Count desc\r\n| take 10",
+        "query": "let data = CommonSecurityLog\r\n| where DeviceProduct has 'PAN-OS'\r\n| where DeviceVendor =~ 'Palo Alto Networks'\r\n| where \"{Destination_IP:lable}\"==\"All\" or DestinationIP in ({Destination_IP})\r\n| where \"{Source_IP:lable}\" == \"All\" or SourceIP in ({Source_IP})\r\n| where \"{EventClass:lable}\" == \"All\" or \"{EventClass:lable}\" == \"All\" or DeviceEventClassID in ({EventClass});\r\ndata\r\n| summarize Count = count() by Activity\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by Activity)\r\n on Activity\r\n| project-away Activity1, TimeGenerated\r\n| extend Activities = Activity\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend Activity = 'All', Activities = '*' \r\n)\r\n| order by Count desc\r\n| take 10",
         "size": 4,
         "exportFieldName": "Activity",
         "exportParameterName": "activities",
@@ -220,7 +220,7 @@
               }
             },
             {
-              "columnMatch": "Activitys",
+              "columnMatch": "Activities",
               "formatter": 5,
               "formatOptions": {
                 "showIcon": true
