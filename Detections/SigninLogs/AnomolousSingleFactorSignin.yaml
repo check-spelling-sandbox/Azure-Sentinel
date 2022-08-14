@@ -2,7 +2,7 @@ id: f7c3f5c8-71ea-49ff-b8b3-148f0e346291
 name: Anomalous Single Factor Signin
 description: |
   'Detects successful signins using single factor authentication where the device, location, and ASN are abnormal.
-    Single factor authentications pose an opportunity to access compromised accounts, investigate these for anomalous occurrencess.
+    Single factor authentications pose an opportunity to access compromised accounts, investigate these for anomalous occurrences.
     Ref: https://docs.microsoft.com/azure/active-directory/fundamentals/security-operations-devices#non-compliant-device-sign-in'
 severity: Low
 requiredDataConnectors:
