@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
         "metadata":{
-        "comments": "This playbook sends an email to the SOC with user risk history and allows to comfirm or dismiss risky user.",
+        "comments": "This playbook sends an email to the SOC with user risk history and allows to confirm or dismiss risky user.",
         "author": "Lior Tamir"
     },
     "parameters": {
