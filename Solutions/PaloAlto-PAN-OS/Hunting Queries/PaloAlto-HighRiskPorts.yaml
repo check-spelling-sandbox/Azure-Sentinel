@@ -84,7 +84,7 @@ query: |
     CommonSecurityLog
     | where DeviceVendor == "Palo Alto Networks" and Activity == "TRAFFIC" and DeviceAction != "deny"
     | where SentBytes > 0 and ReceivedBytes > 0
-    //Remove private IP communation from DestinationIP
+    //Remove private IP communication from DestinationIP
     | extend result = ipv4_is_private(DestinationIP) 
     | where result == 0
     | summarize
