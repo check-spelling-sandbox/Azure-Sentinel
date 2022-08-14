@@ -37,7 +37,7 @@ query: |
   ipData 
   | join (FileData) on VendorOriginalId 
   | summarize by TimeGenerated, AttackerIP, AttackerCountry, DisplayName, ResourceId, AlertType, MaliciousFileDirectory, MaliciousFileName, MaliciousFileHashes
-  //Create a type column so we can track if it was a File storage or blobl storage upload 
+  //Create a type column so we can track if it was a File storage or blob storage upload 
   | extend type = iff(DisplayName has "file", "File", "Blob") 
   | join (
     union
