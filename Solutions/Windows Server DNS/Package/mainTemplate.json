@@ -1281,7 +1281,7 @@
                 "tags": [
                   {
                     "name": "description",
-                    "value": "Clients with a high NXDomain count could be indicative of a DGA (cycling through possible C2 domains\nwhere most C2s are not live). Based on quartile precent analysis aglorithm."
+                    "value": "Clients with a high NXDomain count could be indicative of a DGA (cycling through possible C2 domains\nwhere most C2s are not live). Based on quartile precent analysis algorithm."
                   },
                   {
                     "name": "tactics",

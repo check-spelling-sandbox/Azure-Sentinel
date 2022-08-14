@@ -274,7 +274,7 @@
                 "name": "huntingquery4-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Clients with a high NXDomain count could be indicative of a DGA (cycling through possible C2 domains\nwhere most C2s are not live). Based on quartile precent analysis aglorithm. It depends on the DNS data connector and DnsEvents data type and DNS parser."
+                  "text": "Clients with a high NXDomain count could be indicative of a DGA (cycling through possible C2 domains\nwhere most C2s are not live). Based on quartile precent analysis algorithm. It depends on the DNS data connector and DnsEvents data type and DNS parser."
                 }
               }
             ]
