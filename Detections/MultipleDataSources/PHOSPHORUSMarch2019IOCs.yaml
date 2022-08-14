@@ -70,7 +70,7 @@ query: |
   "message-serviceprovider.info","notificationapp.info","notification-manager.info","recognized-activity.info","recover-customers-service.info","recovery-session-change.info",
   "service-recovery-session.info","service-session-continue.info","session-mail-customers.info","session-managment.info","session-verify-user.info","shop-sellwear.info",
   "supportmailservice.info","terms-service-notification.info","user-activity-issues.info","useridentity-confirm.info","users-issue-services.info","verify-user-session.info",
-  "login-gov.info","notification-signal-agnecy.info","notifications-center.info","identifier-services-sessions.info","customers-manager.info","session-manager.info",
+  "login-gov.info","notification-signal-agency.info","notifications-center.info","identifier-services-sessions.info","customers-manager.info","session-manager.info",
   "customer-managers.info","confirmation-recovery-options.info","service-session-confirm.info","session-recovery-options.info","services-session-confirmation.info",
   "notification-managers.info","activities-services-notification.info","activities-recovery-options.info","activity-session-recovery.info","customers-services.info",
   "sessions-notification.info","download-teamspeak.info","services-issue-notification.info","microsoft-upgrade.mobi","broadcastnews.pro","mobile-messengerplus.network"]);
