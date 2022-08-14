@@ -2289,7 +2289,7 @@
                   {
                     "columnId": "properties_sku_name",
                     "label": "Workspace SKU name",
-                    "comment": "Log Analyitcs licence SKU"
+                    "comment": "Log Analytics licence SKU"
                   },
                   {
                     "columnId": "properties_sku_lastSkuUpdate",

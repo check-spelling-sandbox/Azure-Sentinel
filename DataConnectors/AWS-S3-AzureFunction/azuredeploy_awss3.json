@@ -67,7 +67,7 @@
 		"AWSAccessKeyId":"AWSAccessKeyId",
 		"AWSSecretAccessKey":"AWSSecretAccessKey",
 		"StorageSuffix":"[environment().suffixes.storage]",
-		"LogAnaltyicsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceId')), '.ods.opinsights'))]"
+		"LogAnalyticsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceId')), '.ods.opinsights'))]"
     },
     "resources": [
         {
@@ -219,7 +219,7 @@
 						"S3Bucket": "[parameters('S3BucketURI')]",						
 						"Schedule":"0 */10 * * * *",
 						"FreshEventTimeStamp":"10",
-						"LAURI": "[variables('LogAnaltyicsUri')]",
+						"LAURI": "[variables('LogAnalyticsUri')]",
 						"S3Folder": "[parameters('S3FolderName')]",
                         "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinel-AWS-S3-AzureFunction-functionapp"
                     }

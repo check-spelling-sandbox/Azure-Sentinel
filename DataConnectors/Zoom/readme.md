@@ -1,5 +1,5 @@
 # Deploy a Function App for collecting Zoom data into Azure Sentinel
-This function app will listen for Zoom API events and will write them to Log Analyitcs on arrival.
+This function app will listen for Zoom API events and will write them to Log Analytics on arrival.
 
 ### Deploy the Function App
 The easiest way is via the provided ARM templates:

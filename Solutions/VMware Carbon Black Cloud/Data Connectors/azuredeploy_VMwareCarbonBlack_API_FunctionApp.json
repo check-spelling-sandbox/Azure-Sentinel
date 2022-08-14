@@ -115,7 +115,7 @@
            "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",
            "StorageSuffix":"[environment().suffixes.storage]",
            "logTypes": "[substring(string(parameters('CarbonBlackLogTypes')),1,sub(length(parameters('CarbonBlackLogTypes')), 1))]",
-           "LogAnaltyicsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
+           "LogAnalyticsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
       },
       "resources": [
           {
@@ -263,7 +263,7 @@
                           "apiKey": "[parameters('APIKey')]",
                           "apiId": "[parameters('APIId')]",
                           "uri": "[parameters('Uri')]",
-                          "logAnalyticsUri": "[variables('LogAnaltyicsUri')]",
+                          "logAnalyticsUri": "[variables('LogAnalyticsUri')]",
                           "timeInterval": "[parameters('TimeInterval')]",
                           "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinelcarbonblackazurefunctionzip",
                           "SIEMapiKey":"[parameters('SIEMapiKey')]",
