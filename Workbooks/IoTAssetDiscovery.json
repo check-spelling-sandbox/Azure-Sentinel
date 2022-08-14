@@ -67,7 +67,7 @@
             "id": "5ddc812c-1dd9-4e4f-84a4-ab9f9a5e7def",
             "cellValue": "selectedTab",
             "linkTarget": "parameter",
-            "linkLabel": "Destination coutries communication",
+            "linkLabel": "Destination countries communication",
             "subTarget": "countries",
             "style": "link"
           },
