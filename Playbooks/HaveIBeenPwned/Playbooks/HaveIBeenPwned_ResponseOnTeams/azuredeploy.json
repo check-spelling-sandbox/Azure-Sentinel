@@ -762,7 +762,7 @@
                       "type": "TextBlock"
                     }
                   },
-                  "description": "select breached account names to be displayed in the adptive card"
+                  "description": "select breached account names to be displayed in the adaptive card"
                 }
               },
               "runAfter": {
