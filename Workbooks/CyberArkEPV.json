@@ -52,7 +52,7 @@
         "query": "CommonSecurityLog\r\n| where DeviceVendor == \"Cyber-Ark\" \n| where DeviceProduct == \"Vault\" \n| where DeviceEventClassID == 7| where SourceUserName contains \"administrator\"| distinct SourceHostName, DeviceAddress, TimeGenerated | summarize count() by SourceHostName, DeviceAddress, TimeGenerated | render timechart",
         "size": 0,
         "title": "Logins by the Administrator account",
-        "noDataMessage": "There have been no logins by the Adminstrator account",
+        "noDataMessage": "There have been no logins by the Administrator account",
         "timeContext": {
           "durationMs": 604800000
         },

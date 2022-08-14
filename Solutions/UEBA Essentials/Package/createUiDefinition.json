@@ -306,7 +306,7 @@
                 "name": "huntingquery17-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Adversaries may steal the credentials of a specific user or service account using Credential Access techniques or capture credentials earlier in their reconnaissance process through social engineering for means of gaining Initial Access. APT33, for example, has used valid accounts for initial access and privilege escalation. The query below generates an output of all administator users performing an interactive logon (4624:2) where one or more features of the activity deviates from the user, his peers or the tenant profile. It depends on the BehaviorAnalytics data connector and BehaviorAnalytics data type and BehaviorAnalytics parser."
+                  "text": "Adversaries may steal the credentials of a specific user or service account using Credential Access techniques or capture credentials earlier in their reconnaissance process through social engineering for means of gaining Initial Access. APT33, for example, has used valid accounts for initial access and privilege escalation. The query below generates an output of all administrator users performing an interactive logon (4624:2) where one or more features of the activity deviates from the user, his peers or the tenant profile. It depends on the BehaviorAnalytics data connector and BehaviorAnalytics data type and BehaviorAnalytics parser."
                 }
               }
             ]
