@@ -120,7 +120,7 @@
                           },
                           "type": "Query",
                           "inputs": {
-                            "from": "@variables('ConsolidatedAccountBreachees')",
+                            "from": "@variables('ConsolidatedAccountBreaches')",
                             "where": "@equals(item()?['AccountName'], outputs('Compose_current_item'))"
                           },
                           "description": "This composes breach info in coma separated values"
@@ -279,7 +279,7 @@
                             },
                             "type": "Query",
                             "inputs": {
-                              "from": "@variables('ConsolidatedAccountBreachees')",
+                              "from": "@variables('ConsolidatedAccountBreaches')",
                               "where": "@equals(item()?['AccountName'], outputs('Compose_current_account_item'))"
                             },
                             "description": "This composes breach info in coma separated values"
@@ -565,7 +565,7 @@
                               },
                               "type": "AppendToArrayVariable",
                               "inputs": {
-                                "name": "ConsolidatedAccountBreachees",
+                                "name": "ConsolidatedAccountBreaches",
                                 "value": "@variables('AccountBreach')"
                               },
                               "description": "This appends consolidated account breach information for all breached accounts"
@@ -942,7 +942,7 @@
               "inputs": {
                 "variables": [
                   {
-                    "name": "ConsolidatedAccountBreachees",
+                    "name": "ConsolidatedAccountBreaches",
                     "type": "array"
                   }
                 ]
