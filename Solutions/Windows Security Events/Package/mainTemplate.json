@@ -6335,7 +6335,7 @@
                 "tags": [
                   {
                     "name": "description",
-                    "value": "ooking for suspiciopus interactive logon events which are outside normal logon hours for the user. Current day logon events are comapred with last 14 days activity\nand filtered for events which are above or below of historical logon hour range seen for the user"
+                    "value": "ooking for suspiciopus interactive logon events which are outside normal logon hours for the user. Current day logon events are compared with last 14 days activity\nand filtered for events which are above or below of historical logon hour range seen for the user"
                   },
                   {
                     "name": "tactics",
