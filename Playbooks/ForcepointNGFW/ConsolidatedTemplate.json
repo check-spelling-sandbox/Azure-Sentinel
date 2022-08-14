@@ -1503,9 +1503,9 @@
                                                             "type": "string",
                                                             "description": "log_level"
                                                         },
-                                                        "log_payload_additionnal": {
+                                                        "log_payload_additional": {
                                                             "type": "boolean",
-                                                            "description": "log_payload_additionnal"
+                                                            "description": "log_payload_additional"
                                                         },
                                                         "log_payload_excerpt": {
                                                             "type": "boolean",
