@@ -27,9 +27,9 @@
   ],
   "Playbooks": [
     "Playbooks/CustomConnector/azuredeploy.json",
-    "Playbooks/ZeroNetworksAcccessOrchestrator-AddAssettoProtection/azuredeploy.json",
-    "Playbooks/ZeroNetworksAcccessOrchestrator-AddBlockOutboundRule/azuredeploy.json",
-    "Playbooks/ZeroNetworksAcccessOrchestrator-EnrichIncident/azuredeploy.json"
+    "Playbooks/ZeroNetworksAccessOrchestrator-AddAssettoProtection/azuredeploy.json",
+    "Playbooks/ZeroNetworksAccessOrchestrator-AddBlockOutboundRule/azuredeploy.json",
+    "Playbooks/ZeroNetworksAccessOrchestrator-EnrichIncident/azuredeploy.json"
   ],
   "BasePath": "https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/ZeroNetworks/",
   "Version": "1.0.0",

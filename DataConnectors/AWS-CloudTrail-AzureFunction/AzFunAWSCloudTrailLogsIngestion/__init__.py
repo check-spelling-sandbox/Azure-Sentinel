@@ -23,7 +23,7 @@ import azure.functions as func
 sentinel_customer_id = os.environ.get('WorkspaceID')
 sentinel_shared_key = os.environ.get('WorkspaceKey')
 aws_access_key_id = os.environ.get('AWSAccessKeyId')
-aws_secret_acces_key = os.environ.get('AWSSecretAccessKey')
+aws_secret_access_key = os.environ.get('AWSSecretAccessKey')
 aws_s3_bucket = os.environ.get('S3Bucket')
 aws_region_name = os.environ.get('AWSRegionName')
 cloud_trail_folder = os.environ.get('CloudTrailFolderName')
@@ -54,7 +54,7 @@ def main(mytimer: func.TimerRequest) -> None:
 
     logging.info('Starting program')
     
-    cli = S3Client(aws_access_key_id, aws_secret_acces_key, aws_region_name, aws_s3_bucket)
+    cli = S3Client(aws_access_key_id, aws_secret_access_key, aws_region_name, aws_s3_bucket)
     ts_from, ts_to = cli.get_time_interval()
     print("From:{0}".format(ts_from))
     print("To:{0}".format(ts_to))
@@ -207,9 +207,9 @@ def main(mytimer: func.TimerRequest) -> None:
 
 
 class S3Client:
-    def __init__(self, aws_access_key_id, aws_secret_acces_key, aws_region_name, aws_s3_bucket):
+    def __init__(self, aws_access_key_id, aws_secret_access_key, aws_region_name, aws_s3_bucket):
         self.aws_access_key_id = aws_access_key_id
-        self.aws_secret_acces_key = aws_secret_acces_key
+        self.aws_secret_access_key = aws_secret_access_key
         self.aws_region_name = aws_region_name
         self.aws_s3_bucket = self._get_s3_bucket_name(aws_s3_bucket)
         self.aws_s3_prefix = self._get_s3_prefix(aws_s3_bucket)        
@@ -220,7 +220,7 @@ class S3Client:
         self.s3 = boto3.client(
             's3',
             aws_access_key_id=self.aws_access_key_id,
-            aws_secret_access_key=self.aws_secret_acces_key,
+            aws_secret_access_key=self.aws_secret_access_key,
             region_name=self.aws_region_name
         )       
        
@@ -228,7 +228,7 @@ class S3Client:
         self.sts = boto3.client(
             "sts", 
             aws_access_key_id=self.aws_access_key_id, 
-            aws_secret_access_key=self.aws_secret_acces_key,
+            aws_secret_access_key=self.aws_secret_access_key,
             region_name=self.aws_region_name
         )    
         return self.sts.get_caller_identity()["Account"]
