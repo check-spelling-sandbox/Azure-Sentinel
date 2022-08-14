@@ -767,7 +767,7 @@
                                     }
                                   }
                                 },
-                                "Set_variable_success_from_crowdstirke_in_case_of_host_is_already_contained": {
+                                "Set_variable_success_from_crowdstrike_in_case_of_host_is_already_contained": {
                                   "runAfter": {
                                     "Append_to_string_variable_comment_if_host_is_contained": [
                                       "Succeeded"
@@ -817,7 +817,7 @@
                                     }
                                   }
                                 },
-                                "Set_variable_success_from_crowdstirke_in_case_of_containment_pending": {
+                                "Set_variable_success_from_crowdstrike_in_case_of_containment_pending": {
                                   "runAfter": {
                                     "Append_to_string_variable_comment_if_host_status_is_containment_pending": [
                                       "Succeeded"
@@ -867,7 +867,7 @@
                                     }
                                   }
                                 },
-                                "Set_variable_success_from_crowdstirke_in_case_of_lift_containment_pending": {
+                                "Set_variable_success_from_crowdstrike_in_case_of_lift_containment_pending": {
                                   "runAfter": {
                                     "Append_to_string_variable_comment_if_host_status_is_lift_containment_pending": [
                                       "Succeeded"
@@ -919,7 +919,7 @@
                                         }
                                       }
                                     },
-                                    "Set_variable_success_from_crowdstirke_in_case_of_success": {
+                                    "Set_variable_success_from_crowdstrike_in_case_of_success": {
                                       "runAfter": {
                                         "Append_to_string_variable_comment_if_host_is_contained_by_playbook": [
                                           "Succeeded"
@@ -930,7 +930,7 @@
                                         "name": "Successfromcrowdstike",
                                         "value": "Success"
                                       },
-                                      "description": "This sets variable success from crowdstirke in case of success"
+                                      "description": "This sets variable success from crowdstrike in case of success"
                                     }
                                   },
                                   "runAfter": {
@@ -983,7 +983,7 @@
                                           "name": "Successfromcrowdstike",
                                           "value": "Failure"
                                         },
-                                        "description": "This sets variable success from crowdstirke in case of Failure"
+                                        "description": "This sets variable success from crowdstrike in case of Failure"
                                       }
                                     }
                                   },
