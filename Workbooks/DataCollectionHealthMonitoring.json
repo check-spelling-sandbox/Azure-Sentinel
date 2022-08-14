@@ -2959,7 +2959,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "union withsource= _TableName *\r\n| where _TableName == '{Table}'\r\n| make-series Trend = count() on TimeGenerated from {AnomaliesTimeRange:start} to {AnomaliesTimeRange:end} step {SampleInterval:value}  by _TableName, _ResourceId, SourceSystem\r\n| extend (anomalies, score, baseline) = series_decompose_anomalies(Trend, 1.5, 7, 'linefit', 1, 'ctukey', 0.01)\r\n| where anomalies[-1] == 1 or anomalies[-1] == -1  \r\n| extend Score = score[-1]\r\n| where Score >= {PositiveAlertThreshold:value} or Score <= {NegativeAlertThreshold:value}\r\n| project _ResourceId, SourceSystem, expectedCounts=baseline[-1], actualCount=Trend[-1], score = round(todouble(score[-1]),2), Trend, Baselaine = baseline",
+                    "query": "union withsource= _TableName *\r\n| where _TableName == '{Table}'\r\n| make-series Trend = count() on TimeGenerated from {AnomaliesTimeRange:start} to {AnomaliesTimeRange:end} step {SampleInterval:value}  by _TableName, _ResourceId, SourceSystem\r\n| extend (anomalies, score, baseline) = series_decompose_anomalies(Trend, 1.5, 7, 'linefit', 1, 'ctukey', 0.01)\r\n| where anomalies[-1] == 1 or anomalies[-1] == -1  \r\n| extend Score = score[-1]\r\n| where Score >= {PositiveAlertThreshold:value} or Score <= {NegativeAlertThreshold:value}\r\n| project _ResourceId, SourceSystem, expectedCounts=baseline[-1], actualCount=Trend[-1], score = round(todouble(score[-1]),2), Trend, Baseline = baseline",
                     "size": 0,
                     "title": "Anomalies by source system and resource",
                     "noDataMessage": "No anomalies found",
@@ -3017,7 +3017,7 @@
                           }
                         },
                         {
-                          "columnMatch": "Baselaine",
+                          "columnMatch": "Baseline",
                           "formatter": 21,
                           "formatOptions": {
                             "min": 0,
@@ -3051,7 +3051,7 @@
                           "columnId": "Trend"
                         },
                         {
-                          "columnId": "Baselaine",
+                          "columnId": "Baseline",
                           "label": "Baseline"
                         }
                       ]
