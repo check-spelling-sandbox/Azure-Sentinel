@@ -50,7 +50,7 @@ Authentication methods this connector supports- [API Key authentication](https:/
 
 ### Prerequisites for using and deploying Custom Connector
 
-- Function app must deploy before deploying consloidated template 
+- Function app must deploy before deploying consolidated template 
 - Fortinet end point should be known. [Fortinet Console](https://{https://fndn.fortinet.net/index.php?/category/1-fortianswers/})
 - Generate an API key ([learn how](https://www.insoftservices.uk/fortigate-rest-api-token-authentication)).
 - Create the key vaults and capture secret identifier

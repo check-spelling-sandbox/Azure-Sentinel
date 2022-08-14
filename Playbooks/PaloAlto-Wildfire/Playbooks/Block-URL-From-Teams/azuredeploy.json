@@ -230,7 +230,7 @@
                                             }
                                         ],
                                         "format": "HTML",
-                                        "from": "@variables('ConsoildatedverdictArray')"
+                                        "from": "@variables('ConsolidatedverdictArray')"
                                     },
                                     "description": "To create html table for incident comment"
                                 }
@@ -245,7 +245,7 @@
                                     {
                                         "not": {
                                             "equals": [
-                                                "@variables('ConsoildatedverdictArray')",
+                                                "@variables('ConsolidatedverdictArray')",
                                                 "@null"
                                             ]
                                         }
@@ -304,7 +304,7 @@
                                 ]
                             },
                             "type": "Compose",
-                            "inputs": "@replace(replace(replace(replace(replace(replace(replace(string(\r\nvariables('ConsoildatedverdictArray')),'[',''),']',''),'\"',''),'{',''),'},','                   '),'\"',''),'}','\r\n')",
+                            "inputs": "@replace(replace(replace(replace(replace(replace(replace(string(\r\nvariables('ConsolidatedverdictArray')),'[',''),']',''),'\"',''),'{',''),'},','                   '),'\"',''),'}','\r\n')",
                             "description": "consolidated array in string format"
                         },
                         "Entities_-_Get_URLs": {
@@ -403,7 +403,7 @@
                                                                 },
                                                                 "type": "AppendToArrayVariable",
                                                                 "inputs": {
-                                                                    "name": "ConsoildatedverdictArray",
+                                                                    "name": "ConsolidatedverdictArray",
                                                                     "value": "@variables('VerdictObject')"
                                                                 },
                                                                 "description": "To append verdict object"
@@ -577,7 +577,7 @@
                                                                         },
                                                                         "type": "AppendToArrayVariable",
                                                                         "inputs": {
-                                                                            "name": "ConsoildatedverdictArray",
+                                                                            "name": "ConsolidatedverdictArray",
                                                                             "value": "@variables('VerdictObject')"
                                                                         },
                                                                         "description": "To append verdict object"
@@ -1054,7 +1054,7 @@
                             "inputs": {
                                 "variables": [
                                     {
-                                        "name": "ConsoildatedverdictArray",
+                                        "name": "ConsolidatedverdictArray",
                                         "type": "array"
                                     }
                                 ]
