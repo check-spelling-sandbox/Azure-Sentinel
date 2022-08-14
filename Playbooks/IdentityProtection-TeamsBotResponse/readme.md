@@ -15,7 +15,7 @@ Card to be sent by Microsoft Teams bot: <br>
 ![](./images/TeamsCard.png)
 
 Response Part:<br>
-![](./images/commmentLight.png)
+![](./images/commentLight.png)
 
 Documentation references:
 <li>Azure AD Identity Protection:
