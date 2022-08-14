@@ -408,7 +408,7 @@
                                         "body": {
                                             "classification": {
                                                 "ClassificationAndReason": "True Positive - Suspicious Activity",
-                                                "ClassificationReasonText": "IPs in incident automaticly blocked"
+                                                "ClassificationReasonText": "IPs in incident automatically blocked"
                                             },
                                             "incidentArmId": "@triggerBody()?['object']?['id']",
                                             "status": "Closed"
