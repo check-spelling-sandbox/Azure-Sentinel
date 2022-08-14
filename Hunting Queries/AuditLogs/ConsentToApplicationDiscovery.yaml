@@ -3,7 +3,7 @@ name: Consent to Application discovery
 description: |
   'This query looks at the last 14 days for any "Consent to application" operation
   occurs by a user or app. This could indicate that permissions to access the listed AzureApp
-  was provided to a malicious actor. Consent to appliction, Add service principal and
+  was provided to a malicious actor. Consent to application, Add service principal and
   Add OAuth2PermissionGrant events should be rare. If available, additional context is added
   from the AuditLogs based on CorrleationId from the same account that performed "Consent to
   application".

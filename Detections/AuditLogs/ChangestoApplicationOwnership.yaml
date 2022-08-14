@@ -1,7 +1,7 @@
 id: cc5780ce-3245-4bba-8bc1-e9048c2257ce
 name: Changes to Application Ownership
 description: |
-  'Detects changes to the ownership of an appplicaiton.
+  'Detects changes to the ownership of an application.
     Monitor these changes to make sure that they were authorized.
     Ref: https://docs.microsoft.com/azure/active-directory/fundamentals/security-operations-applications#new-owner'
 severity: Medium
