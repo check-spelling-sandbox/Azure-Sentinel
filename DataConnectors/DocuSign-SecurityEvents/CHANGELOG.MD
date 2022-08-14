@@ -8,7 +8,7 @@
 - Implemented logic to generate JWT Token and then get Access Token to interact with DocuSign API
 - Implemented logic to ingest DocuSign Users into Log Analytics Table
 - Added logic to update base uri to retrive users using Environment Variable
-- Created single ARM Template to support both Azure Commerical & Azure Gov (.US) Tenants
+- Created single ARM Template to support both Azure Commercial & Azure Gov (.US) Tenants
 - Updated README.MD
 
 
