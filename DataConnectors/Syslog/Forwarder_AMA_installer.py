@@ -37,8 +37,8 @@ rsyslog_module_udp_content = "# provides UDP syslog reception\nmodule(load=\"imu
 rsyslog_module_tcp_content = "# provides TCP syslog reception\nmodule(load=\"imtcp\")\ninput(type=\"imtcp\" port=\"" + daemon_default_incoming_port + "\")\n"
 rsyslog_old_config_udp_content = "# provides UDP syslog reception\n$ModLoad imudp\n$UDPServerRun " + daemon_default_incoming_port + "\n"
 rsyslog_old_config_tcp_content = "# provides TCP syslog reception\n$ModLoad imtcp\n$InputTCPServerRun " + daemon_default_incoming_port + "\n"
-syslog_ng_documantation_path = "https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.26/administration-guide/34#TOPIC-1431029"
-rsyslog_documantation_path = "https://www.rsyslog.com/doc/master/configuration/actions.html"
+syslog_ng_documentation_path = "https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.26/administration-guide/34#TOPIC-1431029"
+rsyslog_documentation_path = "https://www.rsyslog.com/doc/master/configuration/actions.html"
 
 
 def print_error(input_str):
@@ -306,11 +306,11 @@ def print_full_disk_warning():
 
     if process_check(rsyslog_daemon_name):
         if process_check(syslog_ng_daemon_name):
-            print_warning(warn_message + '\n' + rsyslog_documantation_path + '\n' + syslog_ng_documantation_path)
+            print_warning(warn_message + '\n' + rsyslog_documentation_path + '\n' + syslog_ng_documentation_path)
         else:
-            print_warning(warn_message + '\n' + rsyslog_documantation_path)
+            print_warning(warn_message + '\n' + rsyslog_documentation_path)
     elif process_check(syslog_ng_daemon_name):
-        print_warning(warn_message + '\n' + syslog_ng_documantation_path)
+        print_warning(warn_message + '\n' + syslog_ng_documentation_path)
     else:
         print_warning("No daemon was found on the machine")
 

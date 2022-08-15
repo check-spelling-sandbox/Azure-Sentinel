@@ -63,7 +63,7 @@
                         ],
                         "customs": [ {
                                 "name": "Include custom pre-requisites if the connectivity requires like API key etc. info - else delete customs",
-                                "description": "Description for any custom pre-requisite with link to docuemntation on how to get this pre-requisite fulfilled."
+                                "description": "Description for any custom pre-requisite with link to documentation on how to get this pre-requisite fulfilled."
                             }
                         ]
                     },

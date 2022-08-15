@@ -55,8 +55,8 @@ rsyslog_daemon_name = "rsyslog.d"
 rsyslog_process_name = "rsyslogd"
 syslog_ng_process_name = "syslog-ng"
 syslog_ng_default_config_path = "/etc/syslog-ng/syslog-ng.conf"
-syslog_ng_documantation_path = "https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.26/administration-guide/34#TOPIC-1431029"
-rsyslog_documantation_path = "https://www.rsyslog.com/doc/master/configuration/actions.html"
+syslog_ng_documentation_path = "https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.26/administration-guide/34#TOPIC-1431029"
+rsyslog_documentation_path = "https://www.rsyslog.com/doc/master/configuration/actions.html"
 log_forwarder_deployment_documentation = "https://docs.microsoft.com/azure/sentinel/connect-cef-agent?tabs=rsyslog"
 OMI_patch_docs_path = "https://msrc-blog.microsoft.com/2021/09/16/additional-guidance-regarding-omi-vulnerabilities-within-azure-vm-management-extensions/"
 tcpdump_time_restriction = 60
@@ -744,11 +744,11 @@ def print_full_disk_warning():
 
     if check_daemon(rsyslog_process_name):
         if check_daemon(syslog_ng_process_name):
-            print_warning(warn_message + '\n' + rsyslog_documantation_path + '\n' + syslog_ng_documantation_path)
+            print_warning(warn_message + '\n' + rsyslog_documentation_path + '\n' + syslog_ng_documentation_path)
         else:
-            print_warning(warn_message + '\n' + rsyslog_documantation_path)
+            print_warning(warn_message + '\n' + rsyslog_documentation_path)
     elif check_daemon(syslog_ng_process_name):
-        print_warning(warn_message + '\n' + syslog_ng_documantation_path)
+        print_warning(warn_message + '\n' + syslog_ng_documentation_path)
     else:
         print_warning("No daemon was found on the machine")
 
