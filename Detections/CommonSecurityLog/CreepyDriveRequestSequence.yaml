@@ -2,7 +2,7 @@ id: eda260eb-f4a1-4379-ad98-452604da9b3e
 name: CreepyDrive request URL sequence
 description: |
   'CreepyDrive uses OneDrive for command and control, however, it makes regular requests to predicatable paths.
-  This detecton will alert when over 20 sequences are observed in a single day.'
+  This detection will alert when over 20 sequences are observed in a single day.'
 severity: High
 requiredDataConnectors:
   - connectorId: Zscaler
