@@ -6,7 +6,7 @@ This Azure Function App will connect to the JumpCloud Rest-API using your JumpCl
 The Azure Function has bee setup to trigger once every 5 minutes and trigger a seperate execution for each log type listed in the configuration you setup. 
 
 ### Prerequisites
-Before deplying this Arm Template 
+Before deploying this Arm Template 
 1. Decide which of the JumpCloud logs you want to ingest into Azure Sentinel, details on the log types available are found in their documentation [**here**](https://jumpcloud-insights.api-docs.io/1.0/how-to-use-the-directory-insights-api/json-post-request-body). You can choose any combination of event type for ingestion **However Do not mix 'ALL' type with any other or duplicate events will be ingested.**
 2. You may need a JumpCloud license that enables Directory Insights to be able to access the Rest-API.
 3. Follow the instructions on the [JumpCloud docs](https://jumpcloud-insights.api-docs.io/1.0/authentication-and-authorization/authentication) on how to access your API Key.

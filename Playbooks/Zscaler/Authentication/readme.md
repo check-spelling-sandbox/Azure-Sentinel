@@ -31,7 +31,7 @@ This folder contains 1 playbook:
 
 You can choose to deploy one ore more playbooks.
 
-1. Deploy a playbook by clicking on "Deploy to Azure" button. This will take you to deplyoing an ARM Template wizard.
+1. Deploy a playbook by clicking on "Deploy to Azure" button. This will take you to deploying an ARM Template wizard.
 2. Fill in the required parameters:
     * Resource group
     * Region

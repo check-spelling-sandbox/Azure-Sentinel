@@ -1,6 +1,6 @@
 # ARM template version
 
-The ARM template in this folder allows you to delploy your Azure Sentinel environments in a few clicks. The template is very easy to use as it comes with a wizard interface that guides you through the setup steps.
+The ARM template in this folder allows you to deploy your Azure Sentinel environments in a few clicks. The template is very easy to use as it comes with a wizard interface that guides you through the setup steps.
 
 The template performs the following tasks:
 
