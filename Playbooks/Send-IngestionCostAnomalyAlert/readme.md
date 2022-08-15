@@ -21,7 +21,7 @@ Click on edit to make the connections to Log Analytics and Office 365
 
 ![04-editapp](../Send-IngestionCostAnomalyAlert/images/04-editapp.png)
 
-Defince the frequency the playbook should execute. Default is daily so you get alerted at the earliest sign of an ingestion anomaly
+Defiance the frequency the playbook should execute. Default is daily so you get alerted at the earliest sign of an ingestion anomaly
 
 ![05-recurrence](../Send-IngestionCostAnomalyAlert/images/05-recurrence.png)
 
