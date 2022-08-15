@@ -37,9 +37,9 @@ query: |
   | extend encodedCommand = iff(encodedCommand has " ", tostring(split(encodedCommand, " ")[0]), encodedCommand)
   // Note: currently the base64_decode_tostring function is limited to supporting UTF8
   | extend decodedCommand = translate('\0','', base64_decode_tostring(substring(encodedCommand, 0, strlen(encodedCommand) -  (strlen(encodedCommand) %8)))), encodedCommand, CommandLine , strlen(encodedCommand)
-  | extend EfectiveCommand = iff(isnotempty(encodedCommand), decodedCommand, CommandLine)
-  | where EfectiveCommand matches regex regexEmpire
-  | project TimeGenerated, Computer, Account = SubjectUserName, AccountDomain = SubjectDomainName, FileName = Process, EfectiveCommand, decodedCommand, encodedCommand, CommandLine, ParentProcessName
+  | extend EffectiveCommand = iff(isnotempty(encodedCommand), decodedCommand, CommandLine)
+  | where EffectiveCommand matches regex regexEmpire
+  | project TimeGenerated, Computer, Account = SubjectUserName, AccountDomain = SubjectDomainName, FileName = Process, EffectiveCommand, decodedCommand, encodedCommand, CommandLine, ParentProcessName
   | extend timestamp = TimeGenerated, AccountCustomEntity = Account, HostCustomEntity = Computer
   ),
   (WindowsEvent
@@ -59,13 +59,13 @@ query: |
   | extend encodedCommand = iff(encodedCommand has " ", tostring(split(encodedCommand, " ")[0]), encodedCommand)
   // Note: currently the base64_decode_tostring function is limited to supporting UTF8
   | extend decodedCommand = translate('\0','', base64_decode_tostring(substring(encodedCommand, 0, strlen(encodedCommand) -  (strlen(encodedCommand) %8)))), encodedCommand, CommandLine , strlen(encodedCommand)
-  | extend EfectiveCommand = iff(isnotempty(encodedCommand), decodedCommand, CommandLine)
-  | where EfectiveCommand matches regex regexEmpire
+  | extend EffectiveCommand = iff(isnotempty(encodedCommand), decodedCommand, CommandLine)
+  | where EffectiveCommand matches regex regexEmpire
   | extend SubjectUserName = tostring(EventData.SubjectUserName)
   | extend SubjectDomainName = tostring(EventData.SubjectDomainName)
   | extend NewProcessName = tostring(EventData.NewProcessName)
   | extend Process=tostring(split(NewProcessName, '\\')[-1])
-  | project TimeGenerated, Computer, Account = SubjectUserName, AccountDomain = SubjectDomainName, FileName = Process, EfectiveCommand, decodedCommand, encodedCommand, CommandLine, ParentProcessName
+  | project TimeGenerated, Computer, Account = SubjectUserName, AccountDomain = SubjectDomainName, FileName = Process, EffectiveCommand, decodedCommand, encodedCommand, CommandLine, ParentProcessName
   | extend timestamp = TimeGenerated, AccountCustomEntity = Account, HostCustomEntity = Computer
   ))
 entityMappings:
