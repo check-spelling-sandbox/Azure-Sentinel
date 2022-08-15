@@ -106,7 +106,7 @@
     {
       "type": 1,
       "content": {
-        "json": "## IoT Devices communicating externally to diffrent countries\r\n\r\n---\r\n"
+        "json": "## IoT Devices communicating externally to different countries\r\n\r\n---\r\n"
       },
       "conditionalVisibility": {
         "parameterName": "selectedTab",

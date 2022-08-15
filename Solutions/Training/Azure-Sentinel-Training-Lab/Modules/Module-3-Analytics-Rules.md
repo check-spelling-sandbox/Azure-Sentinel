@@ -5,7 +5,7 @@
 
 ## Objectives
 
-This module guides you through the Analytics Rule part in Microsoft Sentinel, and shows you how to create diffrent type of rules (Security Detections)
+This module guides you through the Analytics Rule part in Microsoft Sentinel, and shows you how to create different type of rules (Security Detections)
 
 #### Prerequisites
 
