@@ -698,7 +698,7 @@
         "query": "McasShadowItReporting\r\n| where '{Tags}' == '' or AppTags has \"{Tags}\"\r\n| where AppCategory == '{AppCategoryFilter}' or '{AppCategoryFilter}' == \"All\"\r\n| where UserName == '{UserNameFilter}' or '{UserNameFilter}' == \"All\"\r\n| where AppScore in ({Score}) or '{Score:label}' == \"All\"\r\n| where AppId == '{AppId}' or '{AppId}' == \"All\"\r\n| where  StreamName in ({DataStream}) or '{DataStream:label}' == \"All\"\r\n| summarize count() by AppName, UserName, IpAddress, AppScore, UploadedBytes, DownloadedBytes, bin(TimeGenerated, {TimeRange:grain})\r\n| order by AppScore asc",
         "size": 0,
         "exportToExcelOptions": "visible",
-        "title": "Descovery logs, by score",
+        "title": "Discovery logs, by score",
         "timeContext": {
           "durationMs": 0
         },
