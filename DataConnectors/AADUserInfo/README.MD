@@ -80,4 +80,4 @@ Note: You will need to prepare VS code for Azure function development.  See http
 11. Click Save.
 
 If successfully deployed you should start to see events appear in your Azure Sentinel workspace as soon as they are generated.
-If you run into issues there are a number of options for [monitoring](https://docs.microsoft.com/azure/azure-functions/functions-monitoring?tabs=cmd) and [deugging](https://docs.microsoft.com/azure/azure-functions/functions-debug-powershell-local) your Function App.
+If you run into issues there are a number of options for [monitoring](https://docs.microsoft.com/azure/azure-functions/functions-monitoring?tabs=cmd) and [debugging](https://docs.microsoft.com/azure/azure-functions/functions-debug-powershell-local) your Function App.

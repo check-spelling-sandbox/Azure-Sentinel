@@ -169,4 +169,4 @@ Note: You will need to prepare VS code for Azure function development. See https
 
 12. After you completed the manual Deployment [Configure your One Login WebHook](#configure-your-one-login-webhook)
 
-If you run into issues there are a number of options for [functions monitoring](https://docs.microsoft.com/azure/azure-functions/functions-monitoring?tabs=cmd) and [functions deugging powershell](https://docs.microsoft.com/azure/azure-functions/functions-debug-powershell-local) your Function App.
+If you run into issues there are a number of options for [functions monitoring](https://docs.microsoft.com/azure/azure-functions/functions-monitoring?tabs=cmd) and [functions debugging powershell](https://docs.microsoft.com/azure/azure-functions/functions-debug-powershell-local) your Function App.

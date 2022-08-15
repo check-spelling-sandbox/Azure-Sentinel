@@ -98,4 +98,4 @@ Once you have done this you need to add your verification code to your previousl
 5. Restart your function app.
 
 If sucessfully deployed you should start to see events appear in your Azure Sentinel workpsace as soon as they are generated.
-If you run into issues there are a number of options for [monitoring](https://docs.microsoft.com/en-us/azure/azure-functions/functions-monitoring?tabs=cmd) and [deugging](https://docs.microsoft.com/en-us/azure/azure-functions/functions-debug-powershell-local) your Function App.
+If you run into issues there are a number of options for [monitoring](https://docs.microsoft.com/en-us/azure/azure-functions/functions-monitoring?tabs=cmd) and [debugging](https://docs.microsoft.com/en-us/azure/azure-functions/functions-debug-powershell-local) your Function App.
