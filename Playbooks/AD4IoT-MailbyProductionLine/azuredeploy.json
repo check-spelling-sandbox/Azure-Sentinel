@@ -63,7 +63,7 @@
                     "Send_an_email_(V2)": {
                         "inputs": {
                             "body": {
-                                "Body": "<p>@{triggerBody()?['object']?['properties']?['title']} was detcted on IP address @{body('Parse_JSON')?['SourceDeviceAddress']}<br>\n<br>\n@{triggerBody()?['object']?['properties']?['description']}<br>\nView full incident in Azure Sentinel: @{triggerBody()?['object']?['properties']?['incidentUrl']}</p>",
+                                "Body": "<p>@{triggerBody()?['object']?['properties']?['title']} was detected on IP address @{body('Parse_JSON')?['SourceDeviceAddress']}<br>\n<br>\n@{triggerBody()?['object']?['properties']?['description']}<br>\nView full incident in Azure Sentinel: @{triggerBody()?['object']?['properties']?['incidentUrl']}</p>",
                                 "Subject": "@{triggerBody()?['object']?['properties']?['title']} detected",
                                 "To": "@{outputs('Compose_-_Owner_email_address')}"
                             },
