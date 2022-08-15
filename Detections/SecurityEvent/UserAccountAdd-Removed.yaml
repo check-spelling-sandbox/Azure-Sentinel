@@ -85,8 +85,8 @@ query: |
   )); 
   AC_Add 
   | join kind= inner AC_Remove on $left.AccountAdded_GroupAddedTo_AddingAccount == $right.AccountRemoved_GroupRemovedFrom_RemovingAccount 
-  | extend DurationinSecondAfter_Removed = datetime_diff ('second', AccountRemovedTime, AccountAddedTime)
-  | where DurationinSecondAfter_Removed > 0
+  | extend DurationInSecondAfter_Removed = datetime_diff ('second', AccountRemovedTime, AccountAddedTime)
+  | where DurationInSecondAfter_Removed > 0
   | project-away AccountRemoved_GroupRemovedFrom_RemovingAccount
   | extend timestamp = AccountAddedTime, AccountCustomEntity = RemovedAccountId, HostCustomEntity = Computer
 entityMappings:
