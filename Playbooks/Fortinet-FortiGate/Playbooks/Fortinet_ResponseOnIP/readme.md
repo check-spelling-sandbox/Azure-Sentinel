@@ -5,7 +5,7 @@
 This playbook allows the SOC users to automatically response to Azure Sentinel incidents which includes IPs, by adding/removing the IPs to the Sentinel IP blocked group.
  [Learn more about Threat Intelligence in Fortinet policy](https://www.fortinet.com/fortiguard/threat-intelligence/threat-research)
 
-![Fortinet](./DesginerIPResponse.png)<br>
+![Fortinet](./DesignerIPResponse.png)<br>
 
 
 **This is the adaptive card SOC will receive when playbook is triggered for each risky IP for taking actions like block/unblock/ignore:**<br><br>
