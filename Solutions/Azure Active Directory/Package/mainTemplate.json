@@ -7035,7 +7035,7 @@
           ],
           "metadata": {
             "title": "Block AAD user - Alert",
-            "description": "For each account entity included in the alert, this playbook will disable the user in Azure Active Directoy, add a comment to the incident that contains this alert and notify manager if available. Note: This playbook will not disable admin user!",
+            "description": "For each account entity included in the alert, this playbook will disable the user in Azure Active Directory, add a comment to the incident that contains this alert and notify manager if available. Note: This playbook will not disable admin user!",
             "prerequisites": [
               "None"
             ],
@@ -7468,7 +7468,7 @@
           ],
           "metadata": {
             "title": "Block AAD user - Incident",
-            "description": "For each account entity included in the incident, this playbook will disable the user in Azure Active Directoy, add a comment to the incident that contains this alert and notify manager if available. Note: This playbook will not disable admin user!",
+            "description": "For each account entity included in the incident, this playbook will disable the user in Azure Active Directory, add a comment to the incident that contains this alert and notify manager if available. Note: This playbook will not disable admin user!",
             "prerequisites": [
               "None"
             ],
