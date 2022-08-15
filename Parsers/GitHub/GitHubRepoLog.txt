@@ -35,7 +35,7 @@ GitHubRepoLogs_CL
     ForkCount=columnifexists('forks_count_d',""),
     Count=columnifexists('count_d,',""),
     UniqueUsersCount=columnifexists('uniques_d',""),
-    DismmisedAt=columnifexists('dismissedAt_t',""),
+    DismissedAt=columnifexists('dismissedAt_t',""),
     Reason=columnifexists('dismissReason_s',""),
     vulnerableManifestFilename = columnifexists('vulnerableManifestFilename_s',""),
     Description=columnifexists('securityAdvisory_description_s',""),

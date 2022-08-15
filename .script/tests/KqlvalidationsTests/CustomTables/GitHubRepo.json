@@ -10,7 +10,7 @@
       "Type": "String"
     },
     {
-      "Name": "DismmisedAt",
+      "Name": "DismissedAt",
       "Type": "DateTime"
     },
     {
