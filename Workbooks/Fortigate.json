@@ -760,7 +760,7 @@
         "query": "CommonSecurityLog\r\n| where DeviceVendor == \"Fortinet\" \r\n| where DeviceProduct contains \"Fortigate\"\r\n| where Activity contains \"forward\" \r\n| where DeviceInboundInterface == \"port1\"\r\n| where \"{DestinationIP:lable}\" == \"All\" or DestinationIP in ({DestinationIP}) \r\n| where \"{DestinationPort:lable}\" == \"All\" or DestinationPort in ({DestinationPort}) \r\n| where DestinationPort > 0\r\n| extend DestinationPorts= tostring(DestinationPort) \r\n| summarize TopDestinationPortsCount= count() by DestinationPorts\r\n| top 5 by TopDestinationPortsCount  desc \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
-        "title": "Top 5 inbound dstination ports",
+        "title": "Top 5 inbound destination ports",
         "timeContext": {
           "durationMs": 0
         },
