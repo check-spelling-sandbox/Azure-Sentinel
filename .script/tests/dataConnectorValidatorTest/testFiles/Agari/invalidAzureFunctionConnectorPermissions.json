@@ -120,7 +120,7 @@
             ]
         },
         {
-            "title": "Choose a deployement option",
+            "title": "Choose a deployment option",
             "description": ""
         },
         {    "title": "Option 1: Deploy using the Azure Resource Manager (ARM) Template",
