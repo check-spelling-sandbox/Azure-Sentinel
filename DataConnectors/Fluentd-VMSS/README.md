@@ -15,7 +15,7 @@ The ARM template will deploy everything needed:
 
 The ARM template includes the cloud init files which runs commands on the VM instance when it is deployed.
 
-***NOTE: You will need to register for the Free GeoLite Database and provide a URL that cloud-init can download the datebase (GeoLite2-City.mmdb) it from.  See https://dev.maxmind.com/geoip/geoip2/geolite2/***
+***NOTE: You will need to register for the Free GeoLite Database and provide a URL that cloud-init can download the database (GeoLite2-City.mmdb) it from.  See https://dev.maxmind.com/geoip/geoip2/geolite2/***
 
 
 ## Deploy RedHat VMSS
