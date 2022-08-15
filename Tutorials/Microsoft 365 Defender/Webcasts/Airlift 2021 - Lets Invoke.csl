@@ -304,7 +304,7 @@ let DetectMasqueradeAnomaly = (SourceData:(Key:string, Value:string), MaxResults
     | extend MScore = (SampleSize * (Average - Instances) / (Instances * DistinctValueCount)) // Run the masquerade detection calculation
     | where MScore > 0  // Remove values that are more normal than the average
     | top MaxResults by MScore desc // Strip entries beyond the defined result count threshold
-    | join kind=inner hint.strategy=shuffle ( // Join back on PairCount to deteremine most common value for the pair
+    | join kind=inner hint.strategy=shuffle ( // Join back on PairCount to determine most common value for the pair
         PairCount 
         | summarize MostCommonValueInstances = max(Instances) by Key // In this case, we need to know which key had the max number of instances
         | join kind=inner hint.strategy=shuffle PairCount on Key // Bring it back together with the Key to Value data
@@ -371,7 +371,7 @@ let DetectMasqueradeAnomaly = (SourceData:(Key:string, Value:string), MaxResults
     | extend MScore = (SampleSize * (Average - Instances) / (Instances * DistinctValueCount)) // Run the masquerade detection calculation
     | where MScore > 0  // Remove values that are more normal than the average
     | top MaxResults by MScore desc // Strip entries beyond the defined result count threshold
-    | join kind=inner hint.strategy=shuffle ( // Join back on PairCount to deteremine most common value for the pair
+    | join kind=inner hint.strategy=shuffle ( // Join back on PairCount to determine most common value for the pair
         PairCount 
         | summarize MostCommonValueInstances = max(Instances) by Key // In this case, we need to know which key had the max number of instances
         | join kind=inner hint.strategy=shuffle PairCount on Key // Bring it back together with the Key to Value data
@@ -403,7 +403,7 @@ let DetectMasqueradeAnomaly = (SourceData:(Key:string, Value:string), MaxResults
     | extend MScore = (SampleSize * (Average - Instances) / (Instances * DistinctValueCount)) // Run the masquerade detection calculation
     | where MScore > 0  // Remove values that are more normal than the average
     | top MaxResults by MScore desc // Strip entries beyond the defined result count threshold
-    | join kind=inner hint.strategy=shuffle ( // Join back on PairCount to deteremine most common value for the pair
+    | join kind=inner hint.strategy=shuffle ( // Join back on PairCount to determine most common value for the pair
         PairCount 
         | summarize MostCommonValueInstances = max(Instances) by Key // In this case, we need to know which key had the max number of instances
         | join kind=inner hint.strategy=shuffle PairCount on Key // Bring it back together with the Key to Value data
@@ -442,7 +442,7 @@ let DetectMasqueradeAnomaly = (SourceData:(Key:string, Value:long), MaxResults:i
     | extend MScore = (SampleSize * (Average - Instances) / (Instances * DistinctValueCount)) // Run the masquerade detection calculation
     | where MScore > 0  // Remove values that are more normal than the average
     | top MaxResults by MScore desc // Strip entries beyond the defined result count threshold
-    | join kind=inner hint.strategy=shuffle ( // Join back on PairCount to deteremine most common value for the pair
+    | join kind=inner hint.strategy=shuffle ( // Join back on PairCount to determine most common value for the pair
         PairCount 
         | summarize MostCommonValueInstances = max(Instances) by Key // In this case, we need to know which key had the max number of instances
         | join kind=inner hint.strategy=shuffle PairCount on Key // Bring it back together with the Key to Value data
