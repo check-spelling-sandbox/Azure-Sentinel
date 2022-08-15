@@ -33,7 +33,7 @@ query: |
   | mv-expand Total to typeof(double), EventTime to typeof(datetime), anomalies to typeof(double), score to typeof(double), baseline to typeof(long)
   | where anomalies > 0
   | project EventTime, Total, baseline, anomalies, score;
-  // Joining the flagged outlier from the previous step with the original dataset to present contextual information during the anomalyhour to analysts to conduct investigation or informed decistions.
+  // Joining the flagged outlier from the previous step with the original dataset to present contextual information during the anomalyhour to analysts to conduct investigation or informed decisions.
   TimeSeriesAlerts
   | join
   (
