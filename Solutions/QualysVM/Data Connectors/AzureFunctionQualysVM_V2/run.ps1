@@ -160,7 +160,7 @@ Function Post-LogAnalyticsData($customerId, $sharedKey, $body, $logType)
 Function Parse-and-Send($qualysResponse){
 	$detections = @()
 	$results = "NA"
-	#iterate over the HOST LIST AND DETECTION LIST to have gerenralised detections
+	#iterate over the HOST LIST AND DETECTION LIST to have generalised detections
 	$qualysResponse.HOST_LIST_VM_DETECTION_OUTPUT.RESPONSE.HOST_LIST.HOST | ForEach-Object {
         $hostObject = New-Object -TypeName PSObject
         Add-Member -InputObject $hostObject -MemberType NoteProperty -Name "HostId" -Value $_.ID
