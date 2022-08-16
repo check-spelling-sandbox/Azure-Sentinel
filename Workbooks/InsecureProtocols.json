@@ -1654,7 +1654,7 @@
                 "durationMs": 604800000
               },
               "timeContextFromParameter": "TimeRange",
-              "timeBrushParameterName": "KeberosTimeBrush",
+              "timeBrushParameterName": "KerberosTimeBrush",
               "queryType": 0,
               "resourceType": "microsoft.operationalinsights/workspaces",
               "crossComponentResources": [
@@ -1676,11 +1676,11 @@
               "query": "SecurityEvent\r\n| where EventID == 4768 or EventID == 4769\r\n| where Level == 8\r\n| parse EventData with * '\"TicketEncryptionType\">' TicketEncryptionType '<' *\r\n| where TicketEncryptionType != \"0x12\" and TicketEncryptionType != \"0x11\" //AES128/256, this filter needs to be activated\r\n| parse EventData with * '\"IpAddress\">' IpAddress '<' *\r\n| parse EventData with * '\"TargetUserName\">' TargetUserName '<' *\r\n| parse EventData with * '\"ServiceName\">' ServiceName '<' *\r\n| extend Cipher=replace('0x18$', 'RC4-HMAC-EXP', replace('0x12$', 'AES256-CTS-HMAC-SHA1', replace('0x11$', 'AES128-CTS-HMAC-SHA1', replace('0x1$', 'DES_CBC_CRC', replace('0x2$', 'DES_CBC_MD4', replace('0x7$', 'DES3_CBC_SHA1', replace('0x5$', 'DES3_CBC_MD5', replace('0x3$', 'DES_CBC_MD5', replace('0x17$', 'RC4_HMAC', TicketEncryptionType)))))))))\r\n| summarize Count=count() by Cipher, IpAddress, TargetUserName , ServiceName, Computer, Activity\r\n| sort by Count desc\r\n",
               "size": 0,
               "showAnalytics": true,
-              "title": "Kerberos weak ciphers event details: {KeberosTimeBrush:label} - select TargetUserName for details",
+              "title": "Kerberos weak ciphers event details: {KerberosTimeBrush:label} - select TargetUserName for details",
               "timeContext": {
                 "durationMs": 0
               },
-              "timeContextFromParameter": "KeberosTimeBrush",
+              "timeContextFromParameter": "KerberosTimeBrush",
               "exportFieldName": "TargetUserName",
               "exportParameterName": "targetUserNameKerberosParameter",
               "exportDefaultValue": "All",
@@ -1739,11 +1739,11 @@
               "query": "SecurityEvent\r\n| where EventID == 4768 or EventID == 4769\r\n| where Level == 8\r\n| parse EventData with * '\"TicketEncryptionType\">' TicketEncryptionType '<' *\r\n| where TicketEncryptionType != \"0x12\" and TicketEncryptionType != \"0x11\" //AES128/256, this filter needs to be activated\r\n| parse EventData with * '\"IpAddress\">' IpAddress '<' *\r\n| extend IpAddress = tostring(split(IpAddress,\"f:\").[1])\r\n| parse EventData with * '\"TargetUserName\">' TargetUserName '<' *\r\n| parse EventData with * '\"ServiceName\">' ServiceName '<' *\r\n| extend Cipher=replace('0x18$', 'RC4-HMAC-EXP', replace('0x12$', 'AES256-CTS-HMAC-SHA1', replace('0x11$', 'AES128-CTS-HMAC-SHA1', replace('0x1$', 'DES_CBC_CRC', replace('0x2$', 'DES_CBC_MD4', replace('0x7$', 'DES3_CBC_SHA1', replace('0x5$', 'DES3_CBC_MD5', replace('0x3$', 'DES_CBC_MD5', replace('0x17$', 'RC4_HMAC', TicketEncryptionType)))))))))\r\n//| where TargetUserName in ('{targetUserNameKerberosParameter}')\r\n| where TargetUserName == '{targetUserNameKerberosParameter:escape}' or  '{targetUserNameKerberosParameter:escape}' == \"All\"\r\n| summarize OldestRecord = min(TimeGenerated), NewestRecord = max(TimeGenerated), Count=count() by TargetUserName, Cipher, IpAddress , ServiceName, Computer, Activity\r\n| sort by Count desc\r\n",
               "size": 0,
               "showAnalytics": true,
-              "title": "Kerberos weak ciphers event details: {targetUserNameKerberosParameter}, {KeberosTimeBrush:label}",
+              "title": "Kerberos weak ciphers event details: {targetUserNameKerberosParameter}, {KerberosTimeBrush:label}",
               "timeContext": {
                 "durationMs": 0
               },
-              "timeContextFromParameter": "KeberosTimeBrush",
+              "timeContextFromParameter": "KerberosTimeBrush",
               "showExportToExcel": true,
               "queryType": 0,
               "resourceType": "microsoft.operationalinsights/workspaces",
