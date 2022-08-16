@@ -76,7 +76,7 @@ Automation for JIRA is an integrated plugin that is free to use for JIRA Service
 This document will describe the different automation rules that are necessary to trigger the correct Logic Apps/Functions.
 
 In almost every rule, the step 're-fetch issue data' is used. This will make sure we are using the most up to date information in our Logic Apps.
-If you are not using this, you might encouter failures.
+If you are not using this, you might encounter failures.
 
 Navigate to the project settings, then go to Automation to create rules.
 
