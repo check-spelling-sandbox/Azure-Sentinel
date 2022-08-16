@@ -91,8 +91,8 @@ function Convertto-DuoRequest() {
     $ASCII = [System.BitConverter]::ToString($hmacsha1.Hash).Replace("-", "").ToLower()
 
     #Create the new header and combing it with our iKey to use it as Authentication
-    $AuthHeadder = $iKey + ":" + $ASCII
-    [byte[]]$ASCIBytes = [System.Text.Encoding]::ASCII.GetBytes($AuthHeadder)
+    $AuthHeader = $iKey + ":" + $ASCII
+    [byte[]]$ASCIBytes = [System.Text.Encoding]::ASCII.GetBytes($AuthHeader)
 
     #Create our Parameters for the webrequest - Easy @Splatting!
     $DUOWebRequestParams = @{
