@@ -489,7 +489,7 @@
           {
             "type": 1,
             "content": {
-              "json": "## Amount of incidents by rule \nFor each of the selected rules the total incidents number genereted on the selected time period by closing status "
+              "json": "## Amount of incidents by rule \nFor each of the selected rules the total incidents number generated on the selected time period by closing status "
             },
             "conditionalVisibility": {
               "parameterName": "prop",
