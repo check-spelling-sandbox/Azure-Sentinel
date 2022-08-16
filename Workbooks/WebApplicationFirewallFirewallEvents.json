@@ -84,7 +84,7 @@
             "multiSelect": true,
             "quote": "'",
             "delimiter": ",",
-            "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| summarize Count=count() by Resource\r\n| order by Count desc, Resource asc\r\n| project Value = Resource, Lable = strcat(Resource, \" - \", Count)",
+            "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| summarize Count=count() by Resource\r\n| order by Count desc, Resource asc\r\n| project Value = Resource, Label = strcat(Resource, \" - \", Count)",
             "value": [
               "value::all"
             ],
@@ -108,7 +108,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:lable}\" == \"All\" or Resource in ({WAF}))\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where action_s == \"Blocked\" or action_s == \"Detected\" \r\n| summarize count() by requestUri_s \r\n| top 10 by count_ desc ",
+        "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:label}\" == \"All\" or Resource in ({WAF}))\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where action_s == \"Blocked\" or action_s == \"Detected\" \r\n| summarize count() by requestUri_s \r\n| top 10 by count_ desc ",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Blocked URL addresses",
@@ -127,7 +127,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:lable}\" == \"All\" or Resource in ({WAF}))\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| summarize number = count() by action_s",
+        "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:label}\" == \"All\" or Resource in ({WAF}))\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| summarize number = count() by action_s",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "WAF actions",
@@ -146,7 +146,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where  (\"{WAF:lable}\" == \"All\" or Resource in ({WAF}))\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| where OperationName == \"ApplicationGatewayFirewall\" \r\n| summarize number = count() by instanceId_s, TimeGenerated\r\n| where instanceId_s contains \"role\"\r\n| extend roulenumber = extract(\"ApplicationGateway([a-zA-Z_a-zA-Z_0-9]*)\", 1, instanceId_s) \r\n| project roulenumber , number , TimeGenerated \r\n",
+        "query": "AzureDiagnostics\r\n| where  (\"{WAF:label}\" == \"All\" or Resource in ({WAF}))\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| where OperationName == \"ApplicationGatewayFirewall\" \r\n| summarize number = count() by instanceId_s, TimeGenerated\r\n| where instanceId_s contains \"role\"\r\n| extend roulenumber = extract(\"ApplicationGateway([a-zA-Z_a-zA-Z_0-9]*)\", 1, instanceId_s) \r\n| project roulenumber , number , TimeGenerated \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Role use, by time",
@@ -165,7 +165,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where \"{WAF:lable}\" == \"All\" or Resource in ({WAF})\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| summarize count() by Message\r\n| top 10 by count_ \r\n",
+        "query": "AzureDiagnostics\r\n| where \"{WAF:label}\" == \"All\" or Resource in ({WAF})\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| summarize count() by Message\r\n| top 10 by count_ \r\n",
         "size": 0,
         "exportFieldName": "Message",
         "exportParameterName": "Selected",
@@ -215,7 +215,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where \"{WAF:lable}\" == \"All\" or Resource in ({WAF})\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where ('{Selected}' == Message) or '{Selected}'==\"*\"\r\n| summarize count() by Message, TimeGenerated",
+        "query": "AzureDiagnostics\r\n| where \"{WAF:label}\" == \"All\" or Resource in ({WAF})\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where ('{Selected}' == Message) or '{Selected}'==\"*\"\r\n| summarize count() by Message, TimeGenerated",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Messages, by time",
@@ -255,7 +255,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where \"{WAF:lable}\" == \"All\" or Resource in ({WAF})\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where '{Selected}' == Message or '{Selected}' == \"*\"\r\n| extend Role =  extract(\"ApplicationGateway([a-zA-Z_a-zA-Z_0-9]*)\",1,instanceId_s) \r\n| project Message, TimeGenerated, SourceSystem, hostname_s, ResourceId, ResourceGroup, ResourceProvider, Category, Role, action_s, site_s, details_message_s, details_file_s, clientIp_s, requestUri_s\r\n| sort by TimeGenerated\r\n",
+        "query": "AzureDiagnostics\r\n| where \"{WAF:label}\" == \"All\" or Resource in ({WAF})\r\n| where ResourceType == \"APPLICATIONGATEWAYS\"\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where '{Selected}' == Message or '{Selected}' == \"*\"\r\n| extend Role =  extract(\"ApplicationGateway([a-zA-Z_a-zA-Z_0-9]*)\",1,instanceId_s) \r\n| project Message, TimeGenerated, SourceSystem, hostname_s, ResourceId, ResourceGroup, ResourceProvider, Category, Role, action_s, site_s, details_message_s, details_file_s, clientIp_s, requestUri_s\r\n| sort by TimeGenerated\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Message, full details",
@@ -280,7 +280,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:lable}\" == \"All\" or Resource in ({WAF}))\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where Message contains \"attack\"\r\n| extend Role =  extract(\"ApplicationGateway([a-zA-Z_a-zA-Z_0-9]*)\",1,instanceId_s) \r\n| summarize Amount = count() by Message, bin(TimeGenerated, 1h), hostName = hostname_s, ResourceId, Category, Role\r\n| project Amount, Message, TimeGenerated, hostName, ResourceId, Category, Role\r\n| order by Amount desc",
+        "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:label}\" == \"All\" or Resource in ({WAF}))\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where Message contains \"attack\"\r\n| extend Role =  extract(\"ApplicationGateway([a-zA-Z_a-zA-Z_0-9]*)\",1,instanceId_s) \r\n| summarize Amount = count() by Message, bin(TimeGenerated, 1h), hostName = hostname_s, ResourceId, Category, Role\r\n| project Amount, Message, TimeGenerated, hostName, ResourceId, Category, Role\r\n| order by Amount desc",
         "size": 0,
         "exportFieldName": "",
         "exportParameterName": "MessageFilter",
@@ -839,7 +839,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "let SelectedMS = dynamic({MessageFilter}); // reference to the above list of messages (Event trigger)\r\nlet Child = SelectedMS.childRows; // Used to choose a group of messages - redirects to the message which was grouped\r\nAzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:lable}\" == \"All\" or Resource in ({WAF}))\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where Message contains \"attack\"\r\n| where SelectedMS.Message == Message or SelectedMS.Message == \"*\" or Message == Child[0].Message\r\n| summarize count() by Message, TimeGenerated",
+        "query": "let SelectedMS = dynamic({MessageFilter}); // reference to the above list of messages (Event trigger)\r\nlet Child = SelectedMS.childRows; // Used to choose a group of messages - redirects to the message which was grouped\r\nAzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:label}\" == \"All\" or Resource in ({WAF}))\r\n| where OperationName == \"ApplicationGatewayFirewall\"\r\n| where Message contains \"attack\"\r\n| where SelectedMS.Message == Message or SelectedMS.Message == \"*\" or Message == Child[0].Message\r\n| summarize count() by Message, TimeGenerated",
         "size": 0,
         "exportParameterName": "Message",
         "exportDefaultValue": "{ \"Name\":\"\", \"Type\":\"*\"}",
@@ -860,7 +860,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:lable}\" == \"All\" or Resource in ({WAF}))\r\n| where Message contains \"SQL Injection\" \r\n| summarize count() by hostname_s, Message\r\n| order by count_ desc ",
+        "query": "AzureDiagnostics\r\n| where ResourceType == \"APPLICATIONGATEWAYS\" and (\"{WAF:label}\" == \"All\" or Resource in ({WAF}))\r\n| where Message contains \"SQL Injection\" \r\n| summarize count() by hostname_s, Message\r\n| order by count_ desc ",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "SQL injection, by host name",

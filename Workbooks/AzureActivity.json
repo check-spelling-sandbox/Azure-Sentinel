@@ -129,7 +129,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "let data = AzureActivity\r\n| where \"{Caller:lable}\" == \"All\" or \"{Caller:lable}\" == \"All\" or Caller in ({Caller})\r\n| where \"{ResourceGroup:lable}\" == \"All\" or \"{ResourceGroup:lable}\" == \"All\" or ResourceGroup in ({ResourceGroup});\r\ndata\r\n| summarize Count = count() by ResourceGroup\r\n| join kind = fullouter (datatable(ResourceGroup:string)['Medium', 'high', 'low']) on ResourceGroup\r\n| project ResourceGroup = iff(ResourceGroup == '', ResourceGroup1, ResourceGroup), Count = iff(ResourceGroup == '', 0, Count)\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by ResourceGroup)\r\n on ResourceGroup\r\n| project-away ResourceGroup1, TimeGenerated\r\n| extend ResourceGroups = ResourceGroup\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend ResourceGroup = 'All', ResourceGroups = '*' \r\n)\r\n| order by Count desc\r\n| take 10",
+        "query": "let data = AzureActivity\r\n| where \"{Caller:label}\" == \"All\" or \"{Caller:label}\" == \"All\" or Caller in ({Caller})\r\n| where \"{ResourceGroup:label}\" == \"All\" or \"{ResourceGroup:label}\" == \"All\" or ResourceGroup in ({ResourceGroup});\r\ndata\r\n| summarize Count = count() by ResourceGroup\r\n| join kind = fullouter (datatable(ResourceGroup:string)['Medium', 'high', 'low']) on ResourceGroup\r\n| project ResourceGroup = iff(ResourceGroup == '', ResourceGroup1, ResourceGroup), Count = iff(ResourceGroup == '', 0, Count)\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by ResourceGroup)\r\n on ResourceGroup\r\n| project-away ResourceGroup1, TimeGenerated\r\n| extend ResourceGroups = ResourceGroup\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend ResourceGroup = 'All', ResourceGroups = '*' \r\n)\r\n| order by Count desc\r\n| take 10",
         "size": 4,
         "exportToExcelOptions": "visible",
         "title": "Top 10 active resource groups",
@@ -180,7 +180,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureActivity\r\n| where \"{Caller:lable}\" == \"All\" or Caller in ({Caller})\r\n| where \"{ResourceGroup:lable}\" == \"All\" or ResourceGroup in ({ResourceGroup})\r\n| summarize deletions = countif(OperationNameValue hassuffix \"delete\"), creations = countif(OperationNameValue hassuffix \"write\"), updates = countif(OperationNameValue hassuffix \"write\"), Activities = count(OperationNameValue) by bin_at(TimeGenerated, 1h, now())\r\n",
+        "query": "AzureActivity\r\n| where \"{Caller:label}\" == \"All\" or Caller in ({Caller})\r\n| where \"{ResourceGroup:label}\" == \"All\" or ResourceGroup in ({ResourceGroup})\r\n| summarize deletions = countif(OperationNameValue hassuffix \"delete\"), creations = countif(OperationNameValue hassuffix \"write\"), updates = countif(OperationNameValue hassuffix \"write\"), Activities = count(OperationNameValue) by bin_at(TimeGenerated, 1h, now())\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Activities over time",
@@ -202,7 +202,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureActivity\r\n| where \"{Caller:lable}\" == \"All\" or Caller in ({Caller})\r\n| where \"{ResourceGroup:lable}\" == \"All\" or ResourceGroup in ({ResourceGroup})\r\n| summarize deletions = countif(OperationNameValue hassuffix \"Delete\"), creations = countif(OperationNameValue hassuffix \"write\"), updates = countif(OperationNameValue hassuffix \"write\"), Activities = count() by Caller\r\n",
+        "query": "AzureActivity\r\n| where \"{Caller:label}\" == \"All\" or Caller in ({Caller})\r\n| where \"{ResourceGroup:label}\" == \"All\" or ResourceGroup in ({ResourceGroup})\r\n| summarize deletions = countif(OperationNameValue hassuffix \"Delete\"), creations = countif(OperationNameValue hassuffix \"write\"), updates = countif(OperationNameValue hassuffix \"write\"), Activities = count() by Caller\r\n",
         "size": 1,
         "exportToExcelOptions": "visible",
         "title": "Caller activities",
@@ -282,7 +282,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureActivity \r\n| where \"{Caller:lable}\" == \"All\" or Caller in ({Caller})\r\n| where \"{ResourceGroup:lable}\" == \"All\" or ResourceGroup in ({ResourceGroup})\r\n| summarize Informational = countif(Level == \"Informational\"), Warning = countif(Level == \"Warning\"), Error = countif(Level == \"Error\") by bin_at(TimeGenerated, 1h, now())\r\n",
+        "query": "AzureActivity \r\n| where \"{Caller:label}\" == \"All\" or Caller in ({Caller})\r\n| where \"{ResourceGroup:label}\" == \"All\" or ResourceGroup in ({ResourceGroup})\r\n| summarize Informational = countif(Level == \"Informational\"), Warning = countif(Level == \"Warning\"), Error = countif(Level == \"Error\") by bin_at(TimeGenerated, 1h, now())\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "color": "redBright",

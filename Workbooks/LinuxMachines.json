@@ -176,7 +176,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "Syslog\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| where SeverityLevel in (\"emerg\")\r\n| summarize count() by Computer, TimeGenerated\r\n",
+        "query": "Syslog\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| where SeverityLevel in (\"emerg\")\r\n| summarize count() by Computer, TimeGenerated\r\n",
         "size": 1,
         "exportToExcelOptions": "visible",
         "title": "\"Emergency\" level events, by computer",
@@ -196,7 +196,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "Syslog\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| where SeverityLevel in (\"crit\")\r\n| summarize count() by Computer, TimeGenerated\r\n",
+        "query": "Syslog\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| where SeverityLevel in (\"crit\")\r\n| summarize count() by Computer, TimeGenerated\r\n",
         "size": 1,
         "exportToExcelOptions": "visible",
         "title": "\"Critical\" level events, by computer",
@@ -216,7 +216,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "Syslog\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| where SeverityLevel in (\"alert\")\r\n| summarize count() by Computer, TimeGenerated\r\n",
+        "query": "Syslog\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| where SeverityLevel in (\"alert\")\r\n| summarize count() by Computer, TimeGenerated\r\n",
         "size": 1,
         "exportToExcelOptions": "visible",
         "title": "\"Alert\" level events, by computer",
@@ -311,7 +311,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "Syslog\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| summarize count() by SyslogMessage\r\n",
+        "query": "Syslog\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| summarize count() by SyslogMessage\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Syslog messages of events",
@@ -331,7 +331,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "Syslog\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| summarize count() by Facility, ProcessName\r\n| project Process = strcat(ProcessName, ' (', Facility, ')'), Count = count_  \r\n",
+        "query": "Syslog\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| summarize count() by Facility, ProcessName\r\n| project Process = strcat(ProcessName, ' (', Facility, ')'), Count = count_  \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Process names of events",
@@ -350,7 +350,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "Syslog\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| summarize count() by Facility, SeverityLevel\r\n",
+        "query": "Syslog\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| summarize count() by Facility, SeverityLevel\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Event distribution, by facility",
@@ -370,7 +370,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "Syslog\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| summarize count() by Facility, SeverityLevel",
+        "query": "Syslog\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| extend Severity = iif(SeverityLevel == 'emerg' or SeverityLevel == 'panic', 'Emergency', iif(SeverityLevel == 'alert', 'Alert', iif(SeverityLevel == 'crit', 'Critical', iif(SeverityLevel == 'err' or SeverityLevel == 'error', 'Error', iif(SeverityLevel == 'warning' or SeverityLevel == 'warn', 'Warning', iif(SeverityLevel == 'notice', 'Notice', iif(SeverityLevel == 'info', 'Informational', iif(SeverityLevel == 'debug', 'Debug', 'Unknown'))))))))\r\n| where \"*\" in ({Severity}) or Severity in ({Severity})\r\n| summarize count() by Facility, SeverityLevel",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Severity levels, by facility",

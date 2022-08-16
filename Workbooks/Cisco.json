@@ -113,7 +113,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//Count by Action\r\nlet data = CommonSecurityLog\r\n| where DeviceProduct =~ 'ASA'\r\n| where DeviceVendor =~ 'Cisco'\r\n| where DeviceAction != ''\r\n| where \"{DeviceAddress:lable}\" == \"All\" or DeviceAddress in ({DeviceAddress});\r\ndata\r\n| summarize Count = count() by SimplifiedDeviceAction\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by SimplifiedDeviceAction)\r\n on SimplifiedDeviceAction\r\n| project-away SimplifiedDeviceAction1, TimeGenerated\r\n| extend SimplifiedDeviceActions = SimplifiedDeviceAction\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend SimplifiedDeviceAction = 'All', SimplifiedDeviceActions = '*' \r\n)\r\n| order by Count desc\r\n| take 10",
+        "query": "//Count by Action\r\nlet data = CommonSecurityLog\r\n| where DeviceProduct =~ 'ASA'\r\n| where DeviceVendor =~ 'Cisco'\r\n| where DeviceAction != ''\r\n| where \"{DeviceAddress:label}\" == \"All\" or DeviceAddress in ({DeviceAddress});\r\ndata\r\n| summarize Count = count() by SimplifiedDeviceAction\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by SimplifiedDeviceAction)\r\n on SimplifiedDeviceAction\r\n| project-away SimplifiedDeviceAction1, TimeGenerated\r\n| extend SimplifiedDeviceActions = SimplifiedDeviceAction\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend SimplifiedDeviceAction = 'All', SimplifiedDeviceActions = '*' \r\n)\r\n| order by Count desc\r\n| take 10",
         "size": 3,
         "exportFieldName": "SimplifiedDeviceAction",
         "exportParameterName": "SelectedDeviceAction",
@@ -167,7 +167,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//Count by Severity\r\nlet data = CommonSecurityLog\r\n| where DeviceProduct =~ 'ASA'\r\n| where DeviceVendor =~ 'Cisco'\r\n| where \"{DeviceAddress:lable}\" == \"All\" or DeviceAddress in ({DeviceAddress});\r\ndata\r\n| summarize Count = count() by LogSeverity\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by LogSeverity)\r\n on LogSeverity\r\n| project-away LogSeverity1, TimeGenerated\r\n| extend LogSeveritys = LogSeverity\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend LogSeverity = 'All', LogSeveritys = '*' \r\n)\r\n| order by Count desc, LogSeverity asc\r\n| take 10",
+        "query": "//Count by Severity\r\nlet data = CommonSecurityLog\r\n| where DeviceProduct =~ 'ASA'\r\n| where DeviceVendor =~ 'Cisco'\r\n| where \"{DeviceAddress:label}\" == \"All\" or DeviceAddress in ({DeviceAddress});\r\ndata\r\n| summarize Count = count() by LogSeverity\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by LogSeverity)\r\n on LogSeverity\r\n| project-away LogSeverity1, TimeGenerated\r\n| extend LogSeveritys = LogSeverity\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend LogSeverity = 'All', LogSeveritys = '*' \r\n)\r\n| order by Count desc, LogSeverity asc\r\n| take 10",
         "size": 3,
         "exportFieldName": "LogSeverity",
         "exportParameterName": "SelectedLogSeverity",
@@ -223,7 +223,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//volume by time\r\nCommonSecurityLog\r\n| where DeviceVendor =~ 'Cisco'\r\n| where DeviceProduct =~ 'ASA'\r\n| where \"{DeviceAddress:lable}\" == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where '{SelectedDeviceAction}' == \"All\" or '{SelectedDeviceAction}' == SimplifiedDeviceAction\r\n| where '{SelectedLogSeverity}' == \"All\" or '{SelectedLogSeverity}' == LogSeverity\r\n| summarize Volme=count() by bin(TimeGenerated,{TimeRange:grain})",
+        "query": "//volume by time\r\nCommonSecurityLog\r\n| where DeviceVendor =~ 'Cisco'\r\n| where DeviceProduct =~ 'ASA'\r\n| where \"{DeviceAddress:label}\" == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where '{SelectedDeviceAction}' == \"All\" or '{SelectedDeviceAction}' == SimplifiedDeviceAction\r\n| where '{SelectedLogSeverity}' == \"All\" or '{SelectedLogSeverity}' == LogSeverity\r\n| summarize Volme=count() by bin(TimeGenerated,{TimeRange:grain})",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Event trends, by time",
@@ -242,7 +242,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//volume by time\r\nCommonSecurityLog\r\n| where DeviceVendor =~ 'Cisco'\r\n| where DeviceProduct =~ 'ASA'\r\n| where \"{DeviceAddress:lable}\" == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where '{SelectedDeviceAction}' == \"All\" or '{SelectedDeviceAction}' == SimplifiedDeviceAction\r\n| where '{SelectedLogSeverity}' == \"All\" or '{SelectedLogSeverity}' == LogSeverity\r\n| summarize Volume=count() by LogSeverity, bin(TimeGenerated, {TimeRange:grain})",
+        "query": "//volume by time\r\nCommonSecurityLog\r\n| where DeviceVendor =~ 'Cisco'\r\n| where DeviceProduct =~ 'ASA'\r\n| where \"{DeviceAddress:label}\" == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where '{SelectedDeviceAction}' == \"All\" or '{SelectedDeviceAction}' == SimplifiedDeviceAction\r\n| where '{SelectedLogSeverity}' == \"All\" or '{SelectedLogSeverity}' == LogSeverity\r\n| summarize Volume=count() by LogSeverity, bin(TimeGenerated, {TimeRange:grain})",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Event severity, by time",

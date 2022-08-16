@@ -235,7 +235,7 @@
             "version": "KqlParameterItem/1.0",
             "name": "resourceGroup",
             "type": 1,
-            "query": "resources\r\n| where type =~ 'microsoft.operationalinsights/workspaces'\r\n| where id == \"{Workspace:lable}\"\r\n| project resourceGroup",
+            "query": "resources\r\n| where type =~ 'microsoft.operationalinsights/workspaces'\r\n| where id == \"{Workspace:label}\"\r\n| project resourceGroup",
             "crossComponentResources": [
               "{Subscription}"
             ],
