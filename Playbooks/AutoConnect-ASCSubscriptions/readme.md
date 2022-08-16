@@ -7,7 +7,7 @@ It is running as a Managed Service Identity - MSI, which monitors a certain mana
 For each subscription this Logic App has access to, if the subscription doesn't have an Azure Security Center connection enabled, a connection to Azure Sentinel is created, and Bi-directional sync is enabled.<br><br>
 ### See expanded guidance in the following blogpost: [Azure Security Center Auto-connect to Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/azure-security-center-auto-connect-to-sentinel/ba-p/1387539)
 <br><br>
-The Logic App as a Managed Service Indetity - MSI needs to have the following RBAC Roles:
+The Logic App as a Managed Service Identity - MSI needs to have the following RBAC Roles:
 
 1. Security Admin Role on the Management Group which ASC subscriptions are under.
 This is required for listing all available subscriptions, including new ones which are not connected yet. In addition subscriptions will be enabled for Bi-directional sync. In some organizations, it is the Root Management Group.
