@@ -232,7 +232,7 @@
                                                 "inputs": {
                                                     "body": {
                                                         "incidentArmId": "@body('Alert_-_Get_incident')?['id']",
-                                                        "message": "<p>Virus Total File Report found for @{items('For_each')?['Url']}<br>\nReputation is: @{body('Get_Domain_report')?['data']?['attributes']?['reputation']}which indicates likely malicous<br>\nQuery: VTURLReport_CL | where id_s == \"@{items('For_each')?['Url']}\"</p>"
+                                                        "message": "<p>Virus Total File Report found for @{items('For_each')?['Url']}<br>\nReputation is: @{body('Get_Domain_report')?['data']?['attributes']?['reputation']}which indicates likely malicious<br>\nQuery: VTURLReport_CL | where id_s == \"@{items('For_each')?['Url']}\"</p>"
                                                     },
                                                     "host": {
                                                         "connection": {

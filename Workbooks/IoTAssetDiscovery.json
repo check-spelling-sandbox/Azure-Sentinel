@@ -83,7 +83,7 @@
             "id": "bb0011be-d85f-4c50-b9a9-8f1cce576124",
             "cellValue": "selectedTab",
             "linkTarget": "parameter",
-            "linkLabel": "IoT malicios indiactions",
+            "linkLabel": "IoT malicious indiactions",
             "subTarget": "malicious",
             "style": "link"
           }
@@ -118,7 +118,7 @@
     {
       "type": 1,
       "content": {
-        "json": "## IoT Devices communicating with malicios sources\r\n\r\n---"
+        "json": "## IoT Devices communicating with malicious sources\r\n\r\n---"
       },
       "conditionalVisibility": {
         "parameterName": "selectedTab",

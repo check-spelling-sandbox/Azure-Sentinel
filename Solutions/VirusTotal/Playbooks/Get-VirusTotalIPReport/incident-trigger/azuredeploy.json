@@ -162,7 +162,7 @@
                                                 "inputs": {
                                                     "body": {
                                                         "incidentArmId": "@triggerBody()?['object']?['id']",
-                                                        "message": "<p>Virus Total IP Report found for @{items('For_each')?['Address']}<br>\nReputation is: @{body('Get_an_IP_report')?['data']?['attributes']?['reputation']} which indicates likely malicous<br>\nQuery: VTIPReport_CL | where id_s == \"@{items('For_each')?['Address']}\"</p>"
+                                                        "message": "<p>Virus Total IP Report found for @{items('For_each')?['Address']}<br>\nReputation is: @{body('Get_an_IP_report')?['data']?['attributes']?['reputation']} which indicates likely malicious<br>\nQuery: VTIPReport_CL | where id_s == \"@{items('For_each')?['Address']}\"</p>"
                                                     },
                                                     "host": {
                                                         "connection": {
