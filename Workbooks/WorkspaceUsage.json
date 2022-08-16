@@ -481,7 +481,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "// This isn't a frequest operation, so you may have to go back a long way in the logs (if you have them)\r\nOperation\r\n| where  OperationCategory == \"Workspace Configuration\"\r\n| extend msg = split(Detail,\".\").[0], reason = split(Detail,\".\").[1]",
+              "query": "// This isn't a frequent operation, so you may have to go back a long way in the logs (if you have them)\r\nOperation\r\n| where  OperationCategory == \"Workspace Configuration\"\r\n| extend msg = split(Detail,\".\").[0], reason = split(Detail,\".\").[1]",
               "size": 4,
               "title": "Troubleshoot Workspace: Configuration changes",
               "timeContextFromParameter": "TimeRange",
