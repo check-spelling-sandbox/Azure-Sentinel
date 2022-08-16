@@ -52,7 +52,7 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
 4. Create a Azure Key vault to store sensitive keys. 
 
 #### 1: Deploy via Visual Studio
-1. Download the solution artefacts of Azure Funciton app from Github.
+1. Download the solution artefacts of Azure Function app from Github.
 2. Open Solution using Visual Studio (Express and above)
 3. Build the solution.
 4. Publish the function app, using publish profile downloaded in previous section step. 
