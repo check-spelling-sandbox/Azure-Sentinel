@@ -24,7 +24,7 @@ A MCAS API Token is required. See the documentation to learn more about the [API
 3. Enter the following value in the ARM template deployment
 	```
 	"APIToken": This is the MCAS API Token​  
-	"MCASURL": This is the MCAS URL.  See About in the portal for specfici url.
+	"MCASURL": This is the MCAS URL.  See About in the portal for specific url.
 	"Workspace Id": The Sentinel Log Analytics Workspace Id  
 	"Workspace Key": The Sentinel Log Analytics Workspace Key  
 	"Function Schedule": The `TimerTrigger` makes it incredibly easy to have your functions executed on a schedule  

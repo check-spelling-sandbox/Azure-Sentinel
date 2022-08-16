@@ -10,7 +10,7 @@ There are a number of configuration steps required to deploy the Logic App playb
 2. Deploy the ARM template and fill in the parameters.
 ```
 "APIToken": This is the MCAS API Token​
-"MCASURL": This is the MCAS URL.  See About in the portal for specfici url.
+"MCASURL": This is the MCAS URL.  See About in the portal for specific url.
 "workspaceId": The Sentinel Workspace ID​
 "workSpaceKey": The Sentinel Workspace Key
  ```
