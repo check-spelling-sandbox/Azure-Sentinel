@@ -243,7 +243,7 @@
                 "name": "analytic7-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "A Security Group acts as a virtual firewall of an instance to control inbound and outbound traffic. \n Hence, ingress and egress settings changes to AWS Security Group should be monitored as these can expose the enviornment to new attack vectors.\nMore information: https://medium.com/@GorillaStack/the-most-important-aws-cloudtrail-security-events-to-track-a5b9873f8255."
+                  "text": "A Security Group acts as a virtual firewall of an instance to control inbound and outbound traffic. \n Hence, ingress and egress settings changes to AWS Security Group should be monitored as these can expose the environment to new attack vectors.\nMore information: https://medium.com/@GorillaStack/the-most-important-aws-cloudtrail-security-events-to-track-a5b9873f8255."
                 }
               }
             ]
