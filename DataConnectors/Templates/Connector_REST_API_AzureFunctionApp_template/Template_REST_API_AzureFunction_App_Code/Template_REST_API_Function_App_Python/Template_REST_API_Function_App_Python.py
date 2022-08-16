@@ -35,8 +35,8 @@ def main(mytimer: func.TimerRequest) -> None:
 
 # The following variables are required by the Log Analytics Data Collector API functions below. Reference: https://docs.microsoft.com/azure/azure-monitor/platform/data-collector-api
 customer_id = os.environ['workspaceId'] 
-shared_key = os.envviron['workspaceKey']
-log_type = os.envviron['tableName']
+shared_key = os.environ['workspaceKey']
+log_type = os.environ['tableName']
 logAnalyticsUri = os.environ.get('logAnalyticsUri')
 if ((logAnalyticsUri in (None, '') or str(logAnalyticsUri).isspace())):    
     logAnalyticsUri = 'https://' + customerId + '.ods.opinsights.azure.com'
