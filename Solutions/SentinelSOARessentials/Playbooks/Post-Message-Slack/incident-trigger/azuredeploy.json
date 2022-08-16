@@ -115,7 +115,7 @@
                                 "path": "/chat.postMessage",
                                 "queries": {
                                     "channel": "",
-                                    "text": "New Incident: @{triggerBody()?['object']?['properties']?['title']}\nDescription: @{triggerBody()?['object']?['properties']?['description']}\nIncident Severity: @{triggerBody()?['object']?['properties']?['severity']}\nSubscription: @{triggerBody()?['workspaceInfo']?['SubscriptionId']}\nIncident Entites: @{triggerBody()?['object']?['properties']?['relatedEntities']}\n\nPlease Investigate.\n\n"
+                                    "text": "New Incident: @{triggerBody()?['object']?['properties']?['title']}\nDescription: @{triggerBody()?['object']?['properties']?['description']}\nIncident Severity: @{triggerBody()?['object']?['properties']?['severity']}\nSubscription: @{triggerBody()?['workspaceInfo']?['SubscriptionId']}\nIncident Entities: @{triggerBody()?['object']?['properties']?['relatedEntities']}\n\nPlease Investigate.\n\n"
                                 }
                             }
                         }

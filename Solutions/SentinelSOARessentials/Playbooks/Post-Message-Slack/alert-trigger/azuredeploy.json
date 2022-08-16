@@ -132,7 +132,7 @@
                                 "path": "/chat.postMessage",
                                 "queries": {
                                     "channel": "",
-                                    "text": "New Incident: @{body('Alert_-_Get_incident')?['properties']?['title']}\nDescription: @{body('Alert_-_Get_incident')?['properties']?['description']}\nIncident Severity: @{body('Alert_-_Get_incident')?['properties']?['severity']}\nSubscription: @{triggerBody()?['WorkspaceSubscriptionId']}\nIncident Entites: @{triggerBody()?['Entities']}\n\nPlease Investigate.\n\n"
+                                    "text": "New Incident: @{body('Alert_-_Get_incident')?['properties']?['title']}\nDescription: @{body('Alert_-_Get_incident')?['properties']?['description']}\nIncident Severity: @{body('Alert_-_Get_incident')?['properties']?['severity']}\nSubscription: @{triggerBody()?['WorkspaceSubscriptionId']}\nIncident Entities: @{triggerBody()?['Entities']}\n\nPlease Investigate.\n\n"
                                 }
                             }
                         }

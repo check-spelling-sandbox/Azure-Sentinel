@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "metadata": {
-        "comments": "This playbook will take Storage Account host entites from triggered incident and search for matches in the enterprises subscriptions. An email for approval will be sent to isolate Azure Storage Account. Upon approval, the Storage Account firewall virtualNetworkRules and ipRules will be cleared, bypass rule set to None, and defaultAction set to Deny.",
+        "comments": "This playbook will take Storage Account host entities from triggered incident and search for matches in the enterprises subscriptions. An email for approval will be sent to isolate Azure Storage Account. Upon approval, the Storage Account firewall virtualNetworkRules and ipRules will be cleared, bypass rule set to None, and defaultAction set to Deny.",
         "author": "Ryan Graham"
     },
     "parameters": {
