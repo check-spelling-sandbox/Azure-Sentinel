@@ -134,7 +134,7 @@
           "Type":"String"
        },
        {
-          "Name":"SrcIntefaceName",
+          "Name":"SrcInterfaceName",
           "Type":"String"
        },
        {
