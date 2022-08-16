@@ -130,7 +130,7 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
    * Container name where blobs will be stored, depending on EnableArchiving flag 
 
    * EnableDirectInjestionToWorkSpace = true/false,
-   * Indicates if the audit logs to be directly injested to analytics workspace
+   * Indicates if the audit logs to be directly ingested to analytics workspace
 
 
    * SentinelCustomerId = "Sentinel workspace Id"
