@@ -7,7 +7,7 @@ This document guides how to contribute a playbook template to a **Microsoft Sent
 
 Once you have created a playbook that you want to export to share, please follow the following guidelines:
 
-1. [Playbook conventions and guidlines](#playbook-conventions-and-guidlines)
+1. [Playbook conventions and guidelines](#playbook-conventions-and-guidelines)
 2. [Create ARM Template](#create-arm-template)
 3. [Add metadata to the ARM Template](#add-metadata)
 4. [Create Screenshots](#create-screenshots)
@@ -15,7 +15,7 @@ Once you have created a playbook that you want to export to share, please follow
 6. [Create a Pull Request](#create-a-pull-request) (For GitHub/Playbook templates tab contribution)
 
 
-## Playbook conventions and guidlines
+## Playbook conventions and guidelines
 
 * **Trigger choice:** please use **Microsoft Sentinel Incident** trigger, unless there is a strong use case for the alert trigger. [Learn more](https://docs.microsoft.com/azure/sentinel/playbook-triggers-actions#microsoft-sentinel-triggers-summary)
 * **Use parameters**<br> For example, if playbook sends an email to the SOC shared inbox, this field should be supplied as a parameter to the playbook.To do so:
