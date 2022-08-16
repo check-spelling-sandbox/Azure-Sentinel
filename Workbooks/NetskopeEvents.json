@@ -2554,7 +2554,7 @@
                     "version": "KqlItem/1.0",
                     "query": "Netskope_Alerts_CL\n| where alert_type_s == \"DLP\"\n| where dlp_rule_severity_s == '{severity}'\n| project TimeGenerated, dlp_rule_s, dlp_rule_severity_s, dlp_file_s, object_type_s, activity_s, user_s, from_user_s",
                     "size": 2,
-                    "title": "DLP Incididents Details by Severity",
+                    "title": "DLP Incidents Details by Severity",
                     "noDataMessage": "Select Severity",
                     "timeContextFromParameter": "TimeRange",
                     "queryType": 0,
@@ -2598,7 +2598,7 @@
                       ]
                     }
                   },
-                  "name": "DLP Incididents Details by Severity"
+                  "name": "DLP Incidents Details by Severity"
                 },
                 {
                   "type": 3,

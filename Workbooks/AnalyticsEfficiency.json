@@ -411,7 +411,7 @@
               "parameterName": "prop",
               "comparison": "isNotEqualTo"
             },
-            "name": "Incindets sum text"
+            "name": "Incidents sum text"
           },
           {
             "type": 1,
@@ -430,7 +430,7 @@
                 "comparison": "isNotEqualTo"
               }
             ],
-            "name": "Incindets sum text help"
+            "name": "Incidents sum text help"
           },
           {
             "type": 3,

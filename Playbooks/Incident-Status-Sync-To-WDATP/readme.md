@@ -15,7 +15,7 @@ Author: Mahmoud Elsayed
 
 This playbook is applicable in following scenario:
 - MDATP connector is enabled in Azure sentinel
-- An analytic rule is configured to log incidenets in sentinel based on received information from MDATP
+- An analytic rule is configured to log incidents in sentinel based on received information from MDATP
 
 In this scenario when an incident status changes for example when an incident gets closed or re-opened, the incident status doesn't get propagated and reflected in MDATP.
 
