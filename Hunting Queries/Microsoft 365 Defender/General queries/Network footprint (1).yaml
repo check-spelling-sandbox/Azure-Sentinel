@@ -10,7 +10,7 @@ requiredDataConnectors:
   - DeviceNetworkEvents
 query: |
   // Query 2 shows you any network communication that happened from endpoints through a specific file to an Remote IP or Remote URL
-  //Ensure to update RemoteIP, RemoteURL and InitatingProcessFileName
+  //Ensure to update RemoteIP, RemoteURL and InitiatingProcessFileName
   // For questions @MiladMSFT on Twitter or milad.aslaner@microsoft.com by email
   let IP = "IP ADDRESS GOES HERE";
   let DNS = "DNS ENTRY GOES HERE";
