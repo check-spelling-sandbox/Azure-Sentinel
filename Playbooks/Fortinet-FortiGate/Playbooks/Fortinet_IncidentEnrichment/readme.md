@@ -3,7 +3,7 @@
 ## Summary
 This playbook enriches the incident with address object and address group.
 
-![Fortinet](./Inicdent_Enrichment.PNG)<br>
+![Fortinet](./Incident_Enrichment.PNG)<br>
  ![Fortinet](./Enrichment.PNG)<br>
 
 When a new Azure Sentinel is created, this playbook gets triggered and performs below actions:
@@ -58,7 +58,7 @@ Iterates on the IPs found in this incident (probably one) and performs the follo
 
 ## Enrich Incident with address object and address groups details look as follows
 
- ![Fortinet](./Inicdent_Enrichment.PNG)<br>
+ ![Fortinet](./Incident_Enrichment.PNG)<br>
     
 ## Known Issues and Limitations
 - When pre-defined group reaches the max limit user must create the new pre-defined group and change in the play book
