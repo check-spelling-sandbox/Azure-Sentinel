@@ -90,7 +90,7 @@
             },
             {
                 "name": "(Optional) Microsoft Security Graph API",
-                "description": "The Agari Function App has the ability to share threat intelleigence with Sentinel via the Security Graph API. To use this feature, you will need to enable the [Sentinel Threat Intelligence Platforms connector](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence) as well as register an application in Azure Active Directory. "
+                "description": "The Agari Function App has the ability to share threat intelligence with Sentinel via the Security Graph API. To use this feature, you will need to enable the [Sentinel Threat Intelligence Platforms connector](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence) as well as register an application in Azure Active Directory. "
             }
         ]
        },
