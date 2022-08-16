@@ -881,7 +881,7 @@
                   },
                   {
                     "columnId": "QueryCount",
-                    "label": "Number of Insedcure Binds"
+                    "label": "Number of Insecure Binds"
                   }
                 ]
               },
