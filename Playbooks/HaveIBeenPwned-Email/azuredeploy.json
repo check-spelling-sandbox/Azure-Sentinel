@@ -217,7 +217,7 @@
                                                 "type": "ApiConnection",
                                                 "inputs": {
                                                     "body": {
-                                                        "Value": "@{variables('FullEmailAddress')} has been identifed as a compromised account by haveibeenpwned."
+                                                        "Value": "@{variables('FullEmailAddress')} has been identified as a compromised account by haveibeenpwned."
                                                     },
                                                     "host": {
                                                         "connection": {
