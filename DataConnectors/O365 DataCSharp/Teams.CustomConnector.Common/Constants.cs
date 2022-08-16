@@ -68,7 +68,7 @@
         public static string KeyVaultBaseUrl = "KeyVaultBaseUrl";
         public static string KeyVaultEnabled = "KeyVaultEnabled";
 
-        public static string EnableDirectInjestionToWorkSpace = "EnableDirectInjestionToWorkSpace";
+        public static string EnableDirectIngestionToWorkSpace = "EnableDirectIngestionToWorkSpace";
         public static string SentinelCustomerId = "SentinelCustomerId";
         public static string SentinelSharedkey = "SentinelSharedkey";
 

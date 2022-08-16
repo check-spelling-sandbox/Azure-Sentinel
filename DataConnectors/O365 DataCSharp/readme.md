@@ -129,7 +129,7 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
    * DataContainerName = "data"
    * Container name where blobs will be stored, depending on EnableArchiving flag 
 
-   * EnableDirectInjestionToWorkSpace = true/false,
+   * EnableDirectIngestionToWorkSpace = true/false,
    * Indicates if the audit logs to be directly ingested to analytics workspace
 
 
