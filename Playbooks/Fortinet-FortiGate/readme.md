@@ -65,7 +65,7 @@ Authentication methods this connector supports- [API Key authentication](https:/
 
 | Parameter  | Description |
 | ------------- | ------------- |
-| **Endpoint URL**  | Enter the Fortinet end point (e.g. https://{FortnetTrafficManager})  |
+| **Endpoint URL**  | Enter the Fortinet end point (e.g. https://{FortinetTrafficManager})  |
 | **Secret identifier** | Enter the Secret identifier which is captured in key vaults secret |
 | **Fortinet-ResponseOnIP Playbook Name** | Enter the playbook name here for ResponseOnIP playbook (e.g. Fortinet-ResponseOnIP) |
 | **Fortinet-ResponseOnUrl Playbook Name** | Enter the playbook name here for ResponseOnURL (e.g. Fortinet-ResponseOnUrl) |
