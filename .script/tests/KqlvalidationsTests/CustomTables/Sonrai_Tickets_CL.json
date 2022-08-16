@@ -38,7 +38,7 @@
         "Type": "String"
     },
     {
-        "Name": "digest_envidence_path_s",
+        "Name": "digest_evidence_path_s",
         "Type": "String"
     },
     {
