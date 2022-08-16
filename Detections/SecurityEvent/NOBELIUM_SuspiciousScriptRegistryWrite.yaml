@@ -1,7 +1,7 @@
 id: 00cb180c-08a8-4e55-a276-63fb1442d5b5
 name: NOBELIUM - Script payload stored in Registry
 description: |
-  'This query idenifies when a process execution commandline indicates that a registry value is written to allow for later execution a malicious script
+  'This query identifies when a process execution commandline indicates that a registry value is written to allow for later execution a malicious script
    References: https://www.microsoft.com/security/blog/2021/03/04/goldmax-goldfinder-sibot-analyzing-nobelium-malware/'
 severity: Medium
 requiredDataConnectors:
