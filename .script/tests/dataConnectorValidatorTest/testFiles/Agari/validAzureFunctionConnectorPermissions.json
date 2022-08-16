@@ -106,7 +106,7 @@
         
         {
             "title": "STEP 2 - (Optional) Enable the Security Graph API",
-            "description": "Follow the instrcutions found on article [Connect Azure Sentinel to your threat intelligence platform](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence#connect-azure-sentinel-to-your-threat-intelligence-platform). Once the application is created you will need to record the Tenant ID, Client ID and Client Secret." 
+            "description": "Follow the instructions found on article [Connect Azure Sentinel to your threat intelligence platform](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence#connect-azure-sentinel-to-your-threat-intelligence-platform). Once the application is created you will need to record the Tenant ID, Client ID and Client Secret." 
         },
         {
             "title": "STEP 3 - Deploy the connector and the associated Azure Function",
