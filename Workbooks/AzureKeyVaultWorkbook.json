@@ -1449,7 +1449,7 @@
                               "type": 3,
                               "content": {
                                 "version": "KqlItem/1.0",
-                                "query": "AzureDiagnostics\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| extend User = identity_claim_http_schemas_xmlsoap_org_ws_2005_05_identity_claims_upn_s\r\n| extend ObjectId = identity_claim_http_schemas_microsoft_com_identity_claims_objectidentifier_g\r\n| extend ApplicationId = identity_claim_appid_g\r\n| summarize EventCount=count() by Identiy = iif(isempty(User), ObjectId, User)",
+                                "query": "AzureDiagnostics\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| extend User = identity_claim_http_schemas_xmlsoap_org_ws_2005_05_identity_claims_upn_s\r\n| extend ObjectId = identity_claim_http_schemas_microsoft_com_identity_claims_objectidentifier_g\r\n| extend ApplicationId = identity_claim_appid_g\r\n| summarize EventCount=count() by Identity = iif(isempty(User), ObjectId, User)",
                                 "size": 0,
                                 "title": "Events, by Identity distribution",
                                 "timeContext": {
@@ -1932,7 +1932,7 @@
                               "type": 3,
                               "content": {
                                 "version": "KqlItem/1.0",
-                                "query": "AzureDiagnostics\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| where HttpStatusCode = tostring(httpStatusCode_d) !startswith \"20\"\r\n| extend User = identity_claim_http_schemas_xmlsoap_org_ws_2005_05_identity_claims_upn_s\r\n| extend ObjectId = identity_claim_http_schemas_microsoft_com_identity_claims_objectidentifier_g\r\n| extend ApplicationId = identity_claim_appid_g\r\n| summarize EventCount=count() by Identiy = iif(isempty(User), ObjectId, User)",
+                                "query": "AzureDiagnostics\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| where HttpStatusCode = tostring(httpStatusCode_d) !startswith \"20\"\r\n| extend User = identity_claim_http_schemas_xmlsoap_org_ws_2005_05_identity_claims_upn_s\r\n| extend ObjectId = identity_claim_http_schemas_microsoft_com_identity_claims_objectidentifier_g\r\n| extend ApplicationId = identity_claim_appid_g\r\n| summarize EventCount=count() by Identity = iif(isempty(User), ObjectId, User)",
                                 "size": 0,
                                 "title": "Events, by Identity distribution",
                                 "timeContext": {
