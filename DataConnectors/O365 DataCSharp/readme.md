@@ -136,6 +136,6 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
    * SentinelCustomerId = "Sentinel workspace Id"
    * If keyvault is enabled then leave blank
    * SentinelSharedkey = "Shared key"
-   * If keyvalut is enabled then leave blank
+   * If keyvault is enabled then leave blank
 12. Click Save
 13. Go back to the function and click start under the overview blade.

@@ -9,7 +9,7 @@
         "description": "Function App name is global uniqueness should not contain any special symbol"
       }
     },
-    "Secret Identifier of Keyvalut": {
+    "Secret Identifier of Keyvault": {
       "type": "string",
       "defaultValue": "",
       "metadata": {
@@ -38,7 +38,7 @@
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'azfunctions')]",
     "StorageAccount": "Standard_LRS",
     "functionWorkerRuntime": "dotnet",
-    "SecretIdentifierofKeyvalut": "[parameters('Secret Identifier of Keyvalut')]",
+    "SecretIdentifierofKeyvault": "[parameters('Secret Identifier of Keyvault')]",
     "location": "[resourceGroup().location]",
     "appInsightsLocation": "[resourceGroup().location]",
     "Endpoint": "[parameters('service_EndPoint')]",
@@ -118,7 +118,7 @@
             },
             {
               "name": "Authorization",
-              "value": "[concat('@','Microsoft.KeyVault(SecretUri=',variables('SecretIdentifierofKeyvalut'),')')]"
+              "value": "[concat('@','Microsoft.KeyVault(SecretUri=',variables('SecretIdentifierofKeyvault'),')')]"
 
             },
             {
