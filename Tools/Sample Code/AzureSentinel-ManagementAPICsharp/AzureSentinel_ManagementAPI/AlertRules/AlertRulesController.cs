@@ -32,7 +32,7 @@ namespace AzureSentinel_ManagementAPI.AlertRules
         }
 
         /// <summary>
-        /// Create funsion alert rule for all instances or for a single instance
+        /// Create fusion alert rule for all instances or for a single instance
         /// </summary>
         /// <returns></returns>
         public async Task CreateFusionAlertRule(int insId = -1)
@@ -51,7 +51,7 @@ namespace AzureSentinel_ManagementAPI.AlertRules
         }
 
         /// <summary>
-        /// Create funsion alert rule for a single instance
+        /// Create fusion alert rule for a single instance
         /// </summary>
         /// <param name="i"></param>
         /// <returns></returns>
@@ -297,7 +297,7 @@ namespace AzureSentinel_ManagementAPI.AlertRules
         }
 
         /// <summary>
-        /// Get funsion alert rule by id
+        /// Get fusion alert rule by id
         /// </summary>
         /// <param name="ruleId"></param>
         /// <returns></returns>
