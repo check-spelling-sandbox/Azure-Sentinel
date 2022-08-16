@@ -139,7 +139,7 @@ Click on the “Edit” button. This will bring us into the Logic Apps Designer.
 
 ![Edit](Images/logicappedit.png)
 
-Click on the bar labled “Connections”.  
+Click on the bar labeled “Connections”.  
 
 ![Logicapp1](Images/logicapp1.png)
 
