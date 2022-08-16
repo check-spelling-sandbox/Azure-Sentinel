@@ -1,7 +1,7 @@
 // GitLab Enterprise Edition Application Logs Data Parser
 // Last Updated Date: Nov 30, 2021
 //
-// This parser parses GitLab standalone Enterprise Edition application logs extract the infromation required for NGINX access logs on GitLab. 
+// This parser parses GitLab standalone Enterprise Edition application logs extract the information required for NGINX access logs on GitLab. 
 // It is assumed that the syslog data connector to ingest GitLab application entry data into Sentinel is enabled
 //
 // Parser Notes:

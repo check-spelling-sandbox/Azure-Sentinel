@@ -333,7 +333,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### Azure Firewall Prem - IDPS - Change Log\r\n|Version|Description|\r\n|---|---|\r\n|V1.0.0 | Initial Version\r\n|V1.2.0 | Added IDPS Logs to the investgation experience, Added in GeoLocation infromation. Updated the KQL logic to be faster for large data volume."
+              "json": "### Azure Firewall Prem - IDPS - Change Log\r\n|Version|Description|\r\n|---|---|\r\n|V1.0.0 | Initial Version\r\n|V1.2.0 | Added IDPS Logs to the investgation experience, Added in GeoLocation information. Updated the KQL logic to be faster for large data volume."
             },
             "conditionalVisibilities": [
               {

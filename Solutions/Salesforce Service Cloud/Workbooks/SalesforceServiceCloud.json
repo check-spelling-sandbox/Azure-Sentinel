@@ -272,7 +272,7 @@
             {
               "type": 1,
               "content": {
-                "json": "To leverage infomation about Malicious IP, Threat Indicator solution should be configured and ThreatIntelligenceIndicator table should have information of malicious IP.",
+                "json": "To leverage information about Malicious IP, Threat Indicator solution should be configured and ThreatIntelligenceIndicator table should have information of malicious IP.",
                 "style": "info"
               },
               "customWidth": "10",

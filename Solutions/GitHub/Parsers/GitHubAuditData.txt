@@ -1,7 +1,7 @@
 // GitHub Enterprise Audit Entry Data Parser
 // Last Updated Date: Feb 16, 2022
 //
-//This parser parses GitHub Enterprise Audit and extract the infromation from their various components. It is assumed that you are using officially supported Github connector (installed from Content hub)
+//This parser parses GitHub Enterprise Audit and extract the information from their various components. It is assumed that you are using officially supported Github connector (installed from Content hub)
 //
 // Parser Notes:
 // 1. This parser assumes logs are collected into a custom log table entitled GitHubAuditLogPolling_CL

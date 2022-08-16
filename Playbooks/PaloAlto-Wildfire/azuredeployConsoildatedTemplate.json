@@ -2074,7 +2074,7 @@
                                         "method": "post",
                                         "path": "/get/verdict"
                                     },
-                                    "description": " Get verdict infomation for the URL "
+                                    "description": " Get verdict information for the URL "
                                 },
                                 "Parse_verdict_JSON": {
                                     "runAfter": {
@@ -2098,7 +2098,7 @@
                                                             "type": "string"
                                                         },
                                                         "valid": {
-                                                            "description": "Valid Infomation of the URL",
+                                                            "description": "Valid Information of the URL",
                                                             "type": "string"
                                                         },
                                                         "verdict": {
@@ -3156,7 +3156,7 @@
                                         "method": "post",
                                         "path": "/get/verdict"
                                     },
-                                    "description": "Get verdict infomation for the URL"
+                                    "description": "Get verdict information for the URL"
                                 },
                                 "Parse_verdict_JSON": {
                                     "runAfter": {
@@ -3180,7 +3180,7 @@
                                                             "type": "string"
                                                         },
                                                         "valid": {
-                                                            "description": "Valid infomation of the URL",
+                                                            "description": "Valid information of the URL",
                                                             "type": "string"
                                                         },
                                                         "verdict": {
