@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "metadata": {
-        "comments": "This playbook will call the collect invesitgation package in MDE.  It will then loop until thats complete, once complete it will add a comment to the incident and post a message in teams with the URL to download the package.",
+        "comments": "This playbook will call the collect investigation package in MDE.  It will then loop until thats complete, once complete it will add a comment to the incident and post a message in teams with the URL to download the package.",
         "author": "Nicholas DiCola"
     },
     "parameters": {
@@ -202,7 +202,7 @@
                                                 "content": "<p>The investigation package is ready for download at @{body('Actions_-_Get_investigation_package_download_URI')?['value']}</p>",
                                                 "contentType": "html"
                                             },
-                                            "subject": "MDATP Investgation Package for  is Ready"
+                                            "subject": "MDATP Investigation Package for  is Ready"
                                         },
                                         "host": {
                                             "connection": {
