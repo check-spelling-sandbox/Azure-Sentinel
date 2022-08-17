@@ -67,7 +67,7 @@
           {
             "type": 1,
             "content": {
-              "json": "## FindTrace\r\n\r\n\r\nThis tab is useful to find out any occuranes of the collected IOC in the existing workspace.\r\nThis loads the list of curated IOCs listed in \r\n\r\nhttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/Log4j_IOC_List.csv\r\n\r\nBased on the selection of one it loads the tables having any occurance of the selected IOCs.\r\n\r\nBased on a table selected it loads the raw logs from the table."
+              "json": "## FindTrace\r\n\r\n\r\nThis tab is useful to find out any occuranes of the collected IOC in the existing workspace.\r\nThis loads the list of curated IOCs listed in \r\n\r\nhttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/Log4j_IOC_List.csv\r\n\r\nBased on the selection of one it loads the tables having any occurrence of the selected IOCs.\r\n\r\nBased on a table selected it loads the raw logs from the table."
             },
             "name": "text - 0"
           },
