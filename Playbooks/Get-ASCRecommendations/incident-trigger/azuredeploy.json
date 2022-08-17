@@ -90,7 +90,7 @@
                                                     "inputs": {
                                                         "body": {
                                                             "incidentArmId": "@triggerBody()?['object']?['id']",
-                                                            "message": "<p>ASC Recommedations found for Host: @{items('For_each')?['HostName']} / AzureID: @{items('For_each')?['AzureID']} -<br>\n @{variables('RecommendationsList')}</p>"
+                                                            "message": "<p>ASC Recommendations found for Host: @{items('For_each')?['HostName']} / AzureID: @{items('For_each')?['AzureID']} -<br>\n @{variables('RecommendationsList')}</p>"
                                                         },
                                                         "host": {
                                                             "connection": {
