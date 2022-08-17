@@ -6,7 +6,7 @@ description: |
   Below references talk about suspicious use of adfind by adversaries.
   1. AdFind Recon
   2. Navigating the MAZE: Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents
-  3. Analyzing Solorigate, the compromised DLL file that started a sophisticated cyberattack, and how Microsoft Defender helps protect customers
+  3. Analyzing Solarigate, the compromised DLL file that started a sophisticated cyberattack, and how Microsoft Defender helps protect customers
   This query is inspired by a Azure Sentinel detection.
 requiredDataConnectors:
 - connectorId: MicrosoftThreatProtection

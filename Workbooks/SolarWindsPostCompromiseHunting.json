@@ -4,7 +4,7 @@
     {
       "type": 1,
       "content": {
-        "json": "## Solorigate Post Compromise Hunting\n---\n\nThis hunting workbook is intended to help identify activity related to the SolarWinds compromise and subsequent attacks discovered in December 2020.This activity is refered to a Solorigate and UNC2452.<br>\nMore details can be found in the following reports:\n - https://aka.ms/solorigate\n - https://aka.ms/sentinelsolorigatehunt\n - https://techcommunity.microsoft.com/t5/azure-active-directory-identity/understanding-quot-solorigate-quot-s-identity-iocs-for-identity/ba-p/2007610\n - https://www.microsoft.com/security/blog/2020/12/21/advice-for-incident-responders-on-recovery-from-systemic-identity-compromises/\n - https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html\n - https://www.fireeye.com/blog/products-and-services/2020/12/global-intrusion-campaign-leverages-software-supply-chain-compromise.html\n - https://www.solarwinds.com/securityadvisory\n - https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/\n - https://www.fireeye.com/content/dam/collateral/en/wp-m-unc2452.pdf"
+        "json": "## Solarigate Post Compromise Hunting\n---\n\nThis hunting workbook is intended to help identify activity related to the SolarWinds compromise and subsequent attacks discovered in December 2020.This activity is refered to a Solarigate and UNC2452.<br>\nMore details can be found in the following reports:\n - https://aka.ms/solorigate\n - https://aka.ms/sentinelsolorigatehunt\n - https://techcommunity.microsoft.com/t5/azure-active-directory-identity/understanding-quot-solorigate-quot-s-identity-iocs-for-identity/ba-p/2007610\n - https://www.microsoft.com/security/blog/2020/12/21/advice-for-incident-responders-on-recovery-from-systemic-identity-compromises/\n - https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html\n - https://www.fireeye.com/blog/products-and-services/2020/12/global-intrusion-campaign-leverages-software-supply-chain-compromise.html\n - https://www.solarwinds.com/securityadvisory\n - https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/\n - https://www.fireeye.com/content/dam/collateral/en/wp-m-unc2452.pdf"
       },
       "name": "text - 2"
     },
@@ -1003,7 +1003,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "SecurityAlert\r\n| where ProviderName in (\"MDATP\", \"Azure Security Center\")\r\n| extend ThreatName_ = tostring(parse_json(ExtendedProperties).ThreatName)\r\n| where ThreatName_ contains \"Solorigate\"\r\n| summarize min(TimeGenerated) by CompromisedEntity",
+              "query": "SecurityAlert\r\n| where ProviderName in (\"MDATP\", \"Azure Security Center\")\r\n| extend ThreatName_ = tostring(parse_json(ExtendedProperties).ThreatName)\r\n| where ThreatName_ contains \"Solarigate\"\r\n| summarize min(TimeGenerated) by CompromisedEntity",
               "size": 0,
               "title": "Hosts with Defender Alerts for Compromised SolarWinds Binaries",
               "timeContext": {
@@ -1056,7 +1056,7 @@
               "version": "KqlItem/1.0",
               "query": "(union isfuzzy=true\r\n  (Event\r\n  | where Source == \"Microsoft-Windows-Sysmon\"\r\n  | where EventID in (17,18)\r\n  | extend EvData = parse_xml(EventData)\r\n  | extend EventDetail = EvData.DataItem.EventData.Data\r\n  | extend NamedPipe = EventDetail.[5].[\"#text\"]\r\n  | extend ProcessDetail = EventDetail.[6].[\"#text\"]\r\n  | where NamedPipe contains '583da945-62af-10e8-4902-a8f205c72b2e'\r\n  | extend Account = UserName\r\n  | project-away EventDetail, EvData\r\n  ),\r\n  (\r\n   SecurityEvent\r\n  | where EventID == '5145'\r\n  | where AccessList has '%%4418'     // presence of CreatePipeInstance value \r\n  | where RelativeTargetName contains '583da945-62af-10e8-4902-a8f205c72b2e'\r\n  )\r\n  )",
               "size": 0,
-              "title": "Known Solorigate Named Pipe Detected",
+              "title": "Known Solarigate Named Pipe Detected",
               "timeContext": {
                 "durationMs": 2592000000
               },
@@ -1311,7 +1311,7 @@
               "version": "KqlItem/1.0",
               "query": "let solorigate_domains = dynamic([\"avsvmcloud.com\",\"aimsecurity.net\",\"datazr.com\",\"ervsystem.com\",\"financialmarket.org\",\"gallerycenter.org\",\"infinitysoftwares.com\",\"mobilnweb.com\",\"olapdatabase.com\",\"swipeservice.com\",\"techiefly.com\"]);\r\n(union isfuzzy=true\r\n(\r\nCommonSecurityLog\r\n| where DestinationHostName has_any (solorigate_domains) or RequestURL has_any (solorigate_domains)),\r\n(\r\nDeviceNetworkEvents\r\n| where RemoteUrl has_any (solorigate_domains)),\r\n(\r\nDnsEvents\r\n| where Name has_any (solorigate_domains)))\r\n",
               "size": 0,
-              "title": "Network Connections to Solorigate Domains",
+              "title": "Network Connections to Solarigate Domains",
               "timeContext": {
                 "durationMs": 0
               },
@@ -1325,7 +1325,7 @@
           {
             "type": 1,
             "content": {
-              "json": "\r\n\r\n\r\nThis query looks across multiple data sources for network activity relating to domains known to be associated with Solorigate activity. This can be a large amount of data. If the query fails to load select a smaller Hunting Time Frame to run the workbook in. If you do not have DnsEvent logging in your workspace you may see an error relating to an unknown table or column, despite this warning the query has run sucessfully.",
+              "json": "\r\n\r\n\r\nThis query looks across multiple data sources for network activity relating to domains known to be associated with Solarigate activity. This can be a large amount of data. If the query fails to load select a smaller Hunting Time Frame to run the workbook in. If you do not have DnsEvent logging in your workspace you may see an error relating to an unknown table or column, despite this warning the query has run sucessfully.",
               "style": "info"
             },
             "customWidth": "30",
@@ -1340,7 +1340,7 @@
               "version": "KqlItem/1.0",
               "query": " let cloudApiTerms = dynamic([\"api\", \"east\", \"west\"]);\r\n  DnsEvents\r\n  | where IPAddresses != \"\" and IPAddresses != \"127.0.0.1\"\r\n  | where Name endswith \".com\" or Name endswith \".org\" or Name endswith \".net\"\r\n  | extend domain_split = split(Name, \".\")\r\n  | where tostring(domain_split[-5]) != \"\" and tostring(domain_split[-6]) == \"\"\r\n  | extend sub_domain = tostring(domain_split[0])\r\n  | where sub_domain !contains \"-\"\r\n  | extend sub_directories = strcat(domain_split[-3], \" \", domain_split[-4])\r\n  | where sub_directories has_any(cloudApiTerms)\r\n  //Based on sample communications the subdomain is always between 20 and 30 bytes\r\n  | where strlen(sub_domain) < 32 or strlen(sub_domain) > 20\r\n  | extend domain = strcat(tostring(domain_split[-2]), \".\", tostring(domain_split[-1])) \r\n  | extend subdomain_no = countof(sub_domain, @\"(\\d)\", \"regex\")\r\n  | extend subdomain_ch = countof(sub_domain, @\"([a-z])\", \"regex\")\r\n  | where subdomain_no > 1\r\n  | extend percentage_numerical = toreal(subdomain_no) / toreal(strlen(sub_domain)) * 100\r\n  | where percentage_numerical < 50 and percentage_numerical > 5\r\n  | summarize count(), make_set(Name), FirstSeen=min(TimeGenerated), LastSeen=max(TimeGenerated) by Name\r\n  | order by count_ asc",
               "size": 0,
-              "title": "Solorigate DNS Pattern",
+              "title": "Solarigate DNS Pattern",
               "timeContext": {
                 "durationMs": 2592000000
               },

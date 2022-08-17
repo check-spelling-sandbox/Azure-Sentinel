@@ -22,7 +22,7 @@ tactics:
 relevantTechniques:
   - T1078
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
   let aadFunc = (tableName:string){

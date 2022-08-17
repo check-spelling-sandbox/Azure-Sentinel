@@ -31,7 +31,7 @@ tactics:
 relevantTechniques:
   - T1005
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query:  |
   (union isfuzzy=true 

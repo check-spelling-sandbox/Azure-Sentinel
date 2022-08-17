@@ -115,13 +115,13 @@
             {
               "name": "analytic1",
               "type": "Microsoft.Common.Section",
-              "label": "Solorigate Network Beacon",
+              "label": "Solarigate Network Beacon",
               "elements": [
                 {
-                  "name": "Solorigate Network Beacon",
+                  "name": "Solarigate Network Beacon",
                   "type": "Microsoft.Common.TextBlock",
                   "options": {
-                    "text": "Identifies a match across various data feeds for domains IOCs related to the Solorigate incident."
+                    "text": "Identifies a match across various data feeds for domains IOCs related to the Solarigate incident."
                   }
                 }
               ]

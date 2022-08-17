@@ -1,8 +1,8 @@
 id: 644a6cea-7662-45db-89d0-a9136a9a5da6
 name: locate-dll-created-locally[Nobelium]
 description: |
-  This query was originally published in the threat analytics report, Solorigate supply chain attack. Please note that these attacks are currently known as the Nobelium campaign.
-  Microsoft detects the 2020 SolarWinds supply chain attack implant and its other components as part of a campaign by the Nobelium activity group. Nobelium is the threat actor behind the attack against SolarWinds, which was previously referred to as Solorigate.
+  This query was originally published in the threat analytics report, Solarigate supply chain attack. Please note that these attacks are currently known as the Nobelium campaign.
+  Microsoft detects the 2020 SolarWinds supply chain attack implant and its other components as part of a campaign by the Nobelium activity group. Nobelium is the threat actor behind the attack against SolarWinds, which was previously referred to as Solarigate.
   Nobelium silently added malicious code to legitimate software updates for Orion, which is IT monitoring software provided by SolarWinds. In this way, malicious dynamic link libraries (DLLs) were distributed to SolarWinds customers.
   The following query locates malicious Nobelium-associated DLLs that have been created in the system or locally.
   More Nobelium-related queries can be found listed under the See also section of this document.

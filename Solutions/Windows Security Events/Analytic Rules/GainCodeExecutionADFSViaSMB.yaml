@@ -20,7 +20,7 @@ tactics:
 relevantTechniques:
   - T1210
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
   let timeframe = 1d;

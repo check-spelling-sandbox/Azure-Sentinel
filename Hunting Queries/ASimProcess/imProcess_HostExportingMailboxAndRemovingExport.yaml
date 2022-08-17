@@ -12,7 +12,7 @@ tactics:
 relevantTechniques:
   - T1114
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
 

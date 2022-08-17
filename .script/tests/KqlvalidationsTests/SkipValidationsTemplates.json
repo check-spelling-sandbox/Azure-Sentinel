@@ -751,12 +751,12 @@
   },
   {
     "id": "ef055f03-858e-496e-8029-b99c59273966",
-    "templateName": "Solorigate-DNS-Pattern.yaml",
+    "templateName": "Solarigate-DNS-Pattern.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {
     "id": "82c41ab6-3ec7-44f8-80fd-8b829a4b390d",
-    "templateName": "Solorigate-Encoded-Domain-URL.yaml",
+    "templateName": "Solarigate-Encoded-Domain-URL.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {

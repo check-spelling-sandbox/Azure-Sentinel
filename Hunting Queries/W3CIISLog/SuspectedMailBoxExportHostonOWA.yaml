@@ -14,7 +14,7 @@ tactics:
 relevantTechniques:
   - T1567
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
 

@@ -2013,7 +2013,7 @@
   {
     "workbookKey": "SolarWindsPostCompromiseHuntingWorkbook",
     "logoFileName": "MSTIC-Logo.svg",
-    "description": "This hunting workbook is intended to help identify activity related to the Solorigate compromise and subsequent attacks discovered in December 2020",
+    "description": "This hunting workbook is intended to help identify activity related to the Solarigate compromise and subsequent attacks discovered in December 2020",
     "dataTypesDependencies": [
       "CommonSecurityLog",
       "SigninLogs",
