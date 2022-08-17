@@ -291,7 +291,7 @@ Do {
 			}else{
 				Write-Output "All data fetched!"
 				[bool] $keep_running = $false
-			}# end of pegination if
+			}# end of pagination if
 		}
 	} catch{
 		$exp = $_.Exception
