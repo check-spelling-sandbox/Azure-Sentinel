@@ -810,7 +810,7 @@
     "provider": "Microsoft Sentinel community"
   },
   {
-    "workbookKey": "ASC-ComplianceandProtection",
+    "workbookKey": "ASC-ComplianceAndProtection",
     "logoFileName": "",
     "description": "Gain insight into regulatory compliance, alert trends, security posture, and more with this workbook based on Azure Security Center data.",
     "dataTypesDependencies": [ "SecurityAlert", "ProtectionStatus", "SecurityRecommendation", "SecurityBaseline", "SecurityBaselineSummary", "Update", "ConfigurationChange" ],
@@ -818,7 +818,7 @@
     "previewImagesFileNames": [ "ASCCaPBlack.png", "ASCCaPWhite.png" ],
     "version": "1.2.0",
     "title": "ASC Compliance and Protection",
-    "templateRelativePath": "ASC-ComplianceandProtection.json",
+    "templateRelativePath": "ASC-ComplianceAndProtection.json",
     "subtitle": "",
     "provider": "Microsoft Sentinel community",
     "support": {

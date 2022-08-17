@@ -2034,6 +2034,6 @@
     }
   ],
   "styleSettings": {},
-  "fromTemplateId": "ASC-ComplianceandProtection",
+  "fromTemplateId": "ASC-ComplianceAndProtection",
   "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
 }
