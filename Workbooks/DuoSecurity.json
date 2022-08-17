@@ -164,7 +164,7 @@
       "conditionalVisibility": {
         "parameterName": "selectedTab",
         "comparison": "isEqualTo",
-        "value": "Overvie"
+        "value": "Overview"
       },
       "customWidth": "50",
       "name": "query - 2",
