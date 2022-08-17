@@ -124,7 +124,7 @@
                 "name": "analytic2-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Identifies mass secret retrieval from Azure Key Vault observed by a single user. \nMass secret retrival crossing a certain threshold is an indication of credential dump operations or mis-configured applications. \nYou can tweak the EventCountThreshold based on average count seen in your environment \nand also filter any known sources (IP/Account) and useragent combinations based on historical analysis to further reduce noise"
+                  "text": "Identifies mass secret retrieval from Azure Key Vault observed by a single user. \nMass secret retrieval crossing a certain threshold is an indication of credential dump operations or mis-configured applications. \nYou can tweak the EventCountThreshold based on average count seen in your environment \nand also filter any known sources (IP/Account) and useragent combinations based on historical analysis to further reduce noise"
                 }
               }
             ]
