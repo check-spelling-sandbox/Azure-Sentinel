@@ -995,7 +995,7 @@
                   ]
                 }
               },
-              "name": "netwrok-connection-query",
+              "name": "network-connection-query",
               "styleSettings": {
                 "progressStyle": "loader"
               }
