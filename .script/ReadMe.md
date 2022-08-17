@@ -45,7 +45,7 @@ By default, the logs color is white. In case you want another color you can use 
      - checkOptions:  the object you create in the earlier step 2  
      - fileKinds: file kind filter, there are 3 kinds- "Added", "Modified", "Deleted"
      - fileTypeSuffixes : file type filter, example: ["yaml", "yml"]
-     - filePathFolderPreffixes: folder path filter, example: ["Detections"]
+     - filePathFolderPrefixes: folder path filter, example: ["Detections"]
    - Run prettier command to fix type script files format.  
      - install "npm install -g prettier" if needed
      - Run cmd: prettier --write --print-width 200 ".script/**/*.ts"
