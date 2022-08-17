@@ -142,7 +142,7 @@ Function Get-BearerToken {
         return $bearerToken
     }
     catch {
-        Write-Log -Message "Error occured in Obtain-Token :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in Obtain-Token :$($_)" -LogFileName $LogFileName -Severity Error
         exit
     }
 }
@@ -168,7 +168,7 @@ Function Send-DataToDCE {
         Write-Log -Message "Status : $IngestionStatus" -LogFileName $LogFileName -Severity Information
     }
     catch {
-        Write-Log -Message "Error occured in Send-DataToDCE :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in Send-DataToDCE :$($_)" -LogFileName $LogFileName -Severity Error
     }
 }
 #endregion

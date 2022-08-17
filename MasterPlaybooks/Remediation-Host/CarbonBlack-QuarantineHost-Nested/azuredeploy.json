@@ -159,7 +159,7 @@
                       ]
                     },
                     "type": "Compose",
-                    "inputs": "@{outputs('Compose')}  CarbonBlack QuarantineDevice Playbook\n\nException occured while Quarantining the Device. Please find the below exception information:\n\n@{body('Create_HTML_table')}"
+                    "inputs": "@{outputs('Compose')}  CarbonBlack QuarantineDevice Playbook\n\nException occurred while Quarantining the Device. Please find the below exception information:\n\n@{body('Create_HTML_table')}"
                   },
                   "Create_HTML_table": {
                     "runAfter": {

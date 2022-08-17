@@ -161,7 +161,7 @@ Function Get-FolderName {
         } 
     }
     catch {
-        Write-Log -Message "Error occured in Get-FolderName :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in Get-FolderName :$($_)" -LogFileName $LogFileName -Severity Error
         exit
     }
 } #end function Get-FolderName
@@ -243,7 +243,7 @@ Function FixJsonIndentation ($jsonOutput) {
         return $newString
     }
     catch {
-        Write-Log -Message "Error occured in FixJsonIndentation :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in FixJsonIndentation :$($_)" -LogFileName $LogFileName -Severity Error
     }
 }
 
@@ -343,7 +343,7 @@ Function GetPlaybookResource() {
         return $playbookResource
     }
     Catch {
-        Write-Log -Message "Error occured in GetPlaybookResource :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in GetPlaybookResource :$($_)" -LogFileName $LogFileName -Severity Error
     }
 }
 
@@ -434,7 +434,7 @@ Function HandlePlaybookApiConnectionReference($apiConnectionReference, $playbook
         }
     }
     Catch {
-        Write-Log -Message "Error occured in HandlePlaybookApiConnectionReference :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in HandlePlaybookApiConnectionReference :$($_)" -LogFileName $LogFileName -Severity Error
     }
 }
 
@@ -471,7 +471,7 @@ Function BuildArmTemplate($playbookResource) {
         return $armTemplate
     }
     Catch {
-        Write-Log -Message "Error occured in BuildArmTemplate :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in BuildArmTemplate :$($_)" -LogFileName $LogFileName -Severity Error
     }
 }
 

@@ -101,6 +101,6 @@ try {
     }
 }
 catch {
-    Write-Warning "An error occured while trying to add actions: $($_.Exception.Message)"
+    Write-Warning "An error occurred while trying to add actions: $($_.Exception.Message)"
     break
 }
