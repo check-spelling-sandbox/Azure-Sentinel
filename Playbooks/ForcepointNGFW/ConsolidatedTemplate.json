@@ -3337,7 +3337,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -4528,7 +4528,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -5234,7 +5234,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -5899,7 +5899,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on URL. And If result ouput is having some information related to URL then there is a policy with respect to URL"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on URL. And If result output is having some information related to URL then there is a policy with respect to URL"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -6614,7 +6614,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -7422,7 +7422,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on  URL. And If result ouput is having some information related to URL then there is a policy with respect to URL"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on  URL. And If result output is having some information related to URL then there is a policy with respect to URL"
                                                                 }
                                                             },
                                                             "runAfter": {
