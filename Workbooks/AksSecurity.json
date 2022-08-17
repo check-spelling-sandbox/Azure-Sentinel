@@ -423,7 +423,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### Seucirty alerts details\r\n\r\nTo filter, press on the severities below.\r\nYou can also filter based on a specific resource."
+              "json": "### Security alerts details\r\n\r\nTo filter, press on the severities below.\r\nYou can also filter based on a specific resource."
             },
             "name": "text - 18"
           },

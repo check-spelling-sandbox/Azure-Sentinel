@@ -4191,7 +4191,7 @@
                 {
                   "type": 1,
                   "content": {
-                    "json": "The following two charts help you understand Microsoft Defender for Cloud / **SecuityEvent** data if its present.\r\n- Top 10 computers, sending that SecuityEvent logs information & the capacity SecuityEvent \r\n- The final chart shows the potential allowance (each Defender for Cloud licence allows for 500MB/day). \r\n\t\r\n\t- Defender for Cloud / a.k.a \"Azure Defender ON\" was formally \"ASC standard\". \r\n\t- You can see what was Used vs. Allowed  (where allowed = 500MB * < count of servers>) "
+                    "json": "The following two charts help you understand Microsoft Defender for Cloud / **SecurityEvent** data if its present.\r\n- Top 10 computers, sending that SecurityEvent logs information & the capacity SecurityEvent \r\n- The final chart shows the potential allowance (each Defender for Cloud licence allows for 500MB/day). \r\n\t\r\n\t- Defender for Cloud / a.k.a \"Azure Defender ON\" was formally \"ASC standard\". \r\n\t- You can see what was Used vs. Allowed  (where allowed = 500MB * < count of servers>) "
                   },
                   "conditionalVisibility": {
                     "parameterName": "Help",
@@ -4567,7 +4567,7 @@
                 {
                   "type": 1,
                   "content": {
-                    "json": "The following three charts help you understand SecuityEvent data if its present.\r\n- SecurityEvents are captured in Groups: All, Common, Minimal and None\r\n- Using https://docs.microsoft.com/azure/data-explorer/kusto/query/series-decompose-anomaliesfunction we will look at this data\r\n- There are displays for Activity and EventIds that are captured in _Minimal_ and _Common_. Note _Minimal_ is a subset of _Common_\r\n- _\"All\"_ is a special case, as there isn't a list of those, I have listed any EventIds found, but only those not within _Common_\r\n- Using anomoliesfunction, we look at the expected count, actual count, give that a score (the higer varienences are marked in Red), a baseline and Trend for the TimeRange ",
+                    "json": "The following three charts help you understand SecurityEvent data if its present.\r\n- SecurityEvents are captured in Groups: All, Common, Minimal and None\r\n- Using https://docs.microsoft.com/azure/data-explorer/kusto/query/series-decompose-anomaliesfunction we will look at this data\r\n- There are displays for Activity and EventIds that are captured in _Minimal_ and _Common_. Note _Minimal_ is a subset of _Common_\r\n- _\"All\"_ is a special case, as there isn't a list of those, I have listed any EventIds found, but only those not within _Common_\r\n- Using anomoliesfunction, we look at the expected count, actual count, give that a score (the higer varienences are marked in Red), a baseline and Trend for the TimeRange ",
                     "style": "info"
                   },
                   "conditionalVisibilities": [

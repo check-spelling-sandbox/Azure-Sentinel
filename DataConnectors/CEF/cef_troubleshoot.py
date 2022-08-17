@@ -40,7 +40,7 @@ syslog_ng_security_config_omsagent_conf_content_tokens = ["f_oms_filter", "oms_d
                                                           "source", "s_src", "oms_destination"]
 oms_agent_configuration_content_tokens = [daemon_port, "127.0.0.1"]
 oms_agent_process_name = "opt/microsoft/omsagent"
-oms_agent_plugin_securiy_config = '/opt/microsoft/omsagent/plugin/security_lib.rb'
+oms_agent_plugin_security_config = '/opt/microsoft/omsagent/plugin/security_lib.rb'
 oms_agent_field_mapping_configuration = '/opt/microsoft/omsagent/plugin/filter_syslog_security.rb'
 oms_agent_omsconfig_directory = "/etc/opt/omi/conf/omsconfig/"
 oms_agent_selinux_documentation = "https://docs.microsoft.com/azure/azure-monitor/platform/agent-linux"
@@ -418,13 +418,13 @@ def check_omsagent_cisco_asa_configuration(workspace_id):
         :return: True if the configuration is updated, false otherwise
         '''
         grep = subprocess.Popen(["grep", "-i", "return ident if ident.include?('%ASA')",
-                                 oms_agent_plugin_securiy_config], stdout=subprocess.PIPE)
+                                 oms_agent_plugin_security_config], stdout=subprocess.PIPE)
         o, e = grep.communicate()
         if not o:
             print_warning("Warning: Current content of the omsagent security configuration doesn't support"
                           " Cisco ASA parsing.\nTo enable Cisco ASA firewall events parsing run the following: \n"
                           "\"sed -i \"s|return \'%ASA\' if ident.include?(\'%ASA\')"
-                          "|return ident if ident.include?(\'%ASA\')|g\" " + oms_agent_plugin_securiy_config +
+                          "|return ident if ident.include?(\'%ASA\')|g\" " + oms_agent_plugin_security_config +
                           " && sudo /opt/microsoft/omsagent/bin/service_control restart " + workspace_id + "\"\n")
             return False
         else:
