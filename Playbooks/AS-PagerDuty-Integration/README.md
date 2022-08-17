@@ -36,7 +36,7 @@ Select an escalation policy for your service. In this example, the default is us
 ![PagerDuty_Create_Integration_Key_3](Images/PagerDuty_Create_Integration_Key_3.png)
 
 
-Select a noise reduction option for your service. The "**Intelligent**" option is reccomended.
+Select a noise reduction option for your service. The "**Intelligent**" option is recommended.
 
 ![PagerDuty_Create_Integration_Key_3.5](Images/PagerDuty_Create_Integration_Key_3.5.png)
 
