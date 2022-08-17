@@ -2538,7 +2538,7 @@
                 {
                   "type": 1,
                   "content": {
-                    "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span>\r\n\r\n- Updating the Total Retention in Days will automatically update estimated costs. \r\n- Ensure you have updated your the price paramaters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
+                    "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span>\r\n\r\n- Updating the Total Retention in Days will automatically update estimated costs. \r\n- Ensure you have updated your the price parameters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
                     "style": "upsell"
                   },
                   "conditionalVisibility": {
@@ -2985,7 +2985,7 @@
           {
             "type": 1,
             "content": {
-              "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span> \r\n- Ensure you have updated your the price paramaters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
+              "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span> \r\n- Ensure you have updated your the price parameters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
               "style": "upsell"
             },
             "conditionalVisibility": {
@@ -3462,7 +3462,7 @@
                 {
                   "type": 1,
                   "content": {
-                    "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span>\r\n\r\n- Updating the Total Retention in Days will automatically update estimated costs. \r\n- Ensure you have updated your the price paramaters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
+                    "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span>\r\n\r\n- Updating the Total Retention in Days will automatically update estimated costs. \r\n- Ensure you have updated your the price parameters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
                     "style": "upsell"
                   },
                   "name": "text - 5 - Copy - Copy"
