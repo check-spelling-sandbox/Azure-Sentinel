@@ -330,7 +330,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//trend by sevearity\r\nCommonSecurityLog\r\n| where DeviceProduct has 'PAN-OS'\r\n| where DeviceVendor =~ 'Palo Alto Networks'\r\n| where \"{Destination_IP:label}\"==\"All\" or DestinationIP in ({Destination_IP}) \r\n| where \"{Source_IP:label}\" == \"All\" or SourceIP in ({Source_IP})\r\n| where \"{EventClass:label}\" == \"All\" or DeviceEventClassID in ({EventClass})\r\n| where '{activities}' == \"All\" or Activity == '{activities}'\r\n| summarize count() by bin_at(TimeGenerated, {TimeRange:grain},{TimeRange:start}), LogSeverity\r\n",
+        "query": "//trend by severity\r\nCommonSecurityLog\r\n| where DeviceProduct has 'PAN-OS'\r\n| where DeviceVendor =~ 'Palo Alto Networks'\r\n| where \"{Destination_IP:label}\"==\"All\" or DestinationIP in ({Destination_IP}) \r\n| where \"{Source_IP:label}\" == \"All\" or SourceIP in ({Source_IP})\r\n| where \"{EventClass:label}\" == \"All\" or DeviceEventClassID in ({EventClass})\r\n| where '{activities}' == \"All\" or Activity == '{activities}'\r\n| summarize count() by bin_at(TimeGenerated, {TimeRange:grain},{TimeRange:start}), LogSeverity\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Events severity, by time",
