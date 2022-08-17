@@ -2346,7 +2346,7 @@
                             "runAfter": {},
                             "description": "This appends action summary if no script is selected"
                           },
-                          "Append_to_string_variable_action_taken_if_no_script_seleted_to_run": {
+                          "Append_to_string_variable_action_taken_if_no_script_selected_to_run": {
                             "type": "AppendToStringVariable",
                             "inputs": {
                               "name": "ActionTaken",
