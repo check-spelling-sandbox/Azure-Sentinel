@@ -56,7 +56,7 @@ ParserQuery: |
     , DvcIpAddr = extract(@'\d{1,3}\.\d{1.3}\.\d{1,3}\.\d{1,3}', 1, Computer)
     , TargetUsernameType = 'Simple'
     , TargetUsername = extract(@'user=(.*?)\sdatabase', 1, RawData)
-    , EventOriginalRestultDetails = 'Connection authorized'
+    , EventOriginalResultDetails = 'Connection authorized'
   // ********************** <Postfilterring> **********************************
     | where (targetusername_has=='*' or TargetUsername has targetusername_has)
   // ********************** </Postfilterring> *********************************
@@ -99,7 +99,7 @@ ParserQuery: |
     , TargetUsernameType = 'Simple'
     , TargetUsername = extract(@'for user\s"(.*?)"', 1, RawData)
     , EventResultDetails = 'No such user or password'
-    , EventOriginalRestultDetails = 'User authentication failed'
+    , EventOriginalResultDetails = 'User authentication failed'
   // ********************** <Postfilterring> **********************************
     | where (targetusername_has=='*' or TargetUsername has targetusername_has)
   // ********************** </Postfilterring> **********************************
@@ -142,7 +142,7 @@ ParserQuery: |
     , TargetUsernameType = 'Simple'
     , TargetUsername = extract(@'role\s"(.*?)"\sdoes', 1, RawData)
     , EventResultDetails = 'No such user or password'
-    , EventOriginalRestultDetails = 'Role does not exist'
+    , EventOriginalResultDetails = 'Role does not exist'
     | project-away Computer, MG, ManagementGroupName, RawData, SourceSystem, TenantId
   // ********************** <Postfilterring> **********************************
     | where (targetusername_has=='*' or TargetUsername has targetusername_has)
@@ -187,7 +187,7 @@ ParserQuery: |
     , TargetUsername = extract(@'user\s"(.*?)",', 1, RawData)
     , SrcIpAddr = extract(@'host\s"(.*?)",', 1, RawData)
     , EventResultDetails = 'No such user or password'
-    , EventOriginalRestultDetails = 'No entry for user'
+    , EventOriginalResultDetails = 'No entry for user'
   // ********************** <Postfilterring> **********************************
     | where (targetusername_has=='*' or TargetUsername has targetusername_has)
   // ********************** </Postfilterring> **********************************
@@ -231,7 +231,7 @@ ParserQuery: |
     , TargetUsername = extract(@'user=(.*?)\sdatabase', 1, RawData)
     , SrcIpAddr = extract(@'host=\[?(.*?)\]?', 1, RawData)
     , EventResultDetails = 'Session expired'
-    , EventOriginalRestultDetails = 'User session closed'
+    , EventOriginalResultDetails = 'User session closed'
   // ********************** <Postfilterring> **********************************
     | where (targetusername_has=='*' or TargetUsername has targetusername_has)
   // ********************** </Postfilterring> **********************************
