@@ -257,7 +257,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### Azure Firewall - App Rules - Change Log\r\n|Version|Description|\r\n|---|---|\r\n|v1.0.0 | Initial Version\r\n|V1.2.0 | Added in new Querires for Azure Firewall features, parsing is now used differently. Added Web Category."
+              "json": "### Azure Firewall - App Rules - Change Log\r\n|Version|Description|\r\n|---|---|\r\n|v1.0.0 | Initial Version\r\n|V1.2.0 | Added in new Queries for Azure Firewall features, parsing is now used differently. Added Web Category."
             },
             "conditionalVisibilities": [
               {
@@ -276,7 +276,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### Azure Firewall - Network Rule - Change Log\r\n|Version|Description|\r\n|---|---|\r\n|V1.0.0 | Initial Version\r\n|V1.2.0 | Added in new Querires for Azure Firewall features, parsing is now used differently. Added in GeoLocation queries, updated main query to use GeoLocation data."
+              "json": "### Azure Firewall - Network Rule - Change Log\r\n|Version|Description|\r\n|---|---|\r\n|V1.0.0 | Initial Version\r\n|V1.2.0 | Added in new Queries for Azure Firewall features, parsing is now used differently. Added in GeoLocation queries, updated main query to use GeoLocation data."
             },
             "conditionalVisibilities": [
               {
