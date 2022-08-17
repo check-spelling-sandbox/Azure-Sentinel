@@ -4234,7 +4234,7 @@
                                         },
                                         "Get_IP_Address_by_Domain_and_Username_-_Forcepoint_FUID": {
                                             "runAfter": {
-                                                "Seperator": [
+                                                "Separator": [
                                                     "Succeeded"
                                                 ]
                                             },
@@ -4250,10 +4250,10 @@
                                                     }
                                                 },
                                                 "method": "get",
-                                                "path": "/api/uid/@{encodeURIComponent(variables('FUID Version'))}/user/ntlm-identity/@{encodeURIComponent(split(last(split(items('Appending_Usernames')?['AadUserId'],'@')),'.')[0],outputs('Seperator'),split(items('Appending_Usernames')?['AadUserId'],'@')[0])}"
+                                                "path": "/api/uid/@{encodeURIComponent(variables('FUID Version'))}/user/ntlm-identity/@{encodeURIComponent(split(last(split(items('Appending_Usernames')?['AadUserId'],'@')),'.')[0],outputs('Separator'),split(items('Appending_Usernames')?['AadUserId'],'@')[0])}"
                                             }
                                         },
-                                        "Seperator": {
+                                        "Separator": {
                                             "runAfter": {},
                                             "type": "Compose",
                                             "inputs": "\\"
