@@ -15,7 +15,7 @@ query: |
       | where Timestamp > ago(7d) //Adjust your desired date range here and set the data/time picker to 30 days 
       | where FolderPath !startswith @"C:\Windows\system32\" and FolderPath !startswith @"C:\Windows\SysWOW64\" and isnotempty(MD5)
       and FileName !in~ ("MpSigStub.exe","GACUtil_20.exe");
-  //Get a list of MD5s of all procceses run from system32 or SysWOW64
+  //Get a list of MD5s of all processes run from system32 or SysWOW64
   let systemProcessHashes = 
       DeviceProcessEvents 
       | where Timestamp > ago(30d) //Keep this at 30 days so it uses all available data to compile the list of hashes
