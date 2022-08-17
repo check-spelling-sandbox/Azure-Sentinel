@@ -1377,7 +1377,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "ProtectionStatus\r\n| where ProtectionStatusRank != 150\r\n| extend Protection = case( ProtectionStatusRank == 250, \"Signatures out of date\"\r\n                            , ProtectionStatusRank == 270, \"No real-time protction detected\"\r\n                            , ProtectionStatusRank == 470, \"No endpoint protection detected\"\r\n                            , ProtectionStatusRank == 550, \"Threat detected\"\r\n                            , \"No threats detected\"\r\n                            )\r\n| summarize count() by DeviceName, Protection\r\n| sort by count_ desc ",
+              "query": "ProtectionStatus\r\n| where ProtectionStatusRank != 150\r\n| extend Protection = case( ProtectionStatusRank == 250, \"Signatures out of date\"\r\n                            , ProtectionStatusRank == 270, \"No real-time protection detected\"\r\n                            , ProtectionStatusRank == 470, \"No endpoint protection detected\"\r\n                            , ProtectionStatusRank == 550, \"Threat detected\"\r\n                            , \"No threats detected\"\r\n                            )\r\n| summarize count() by DeviceName, Protection\r\n| sort by count_ desc ",
               "size": 0,
               "title": "Most Vulnerable Machines",
               "timeContext": {
