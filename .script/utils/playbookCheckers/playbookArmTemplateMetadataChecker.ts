@@ -9,8 +9,8 @@ export function validateTemplateMetadata(filePath: string, playbookARMTemplate: 
     }
 
     validateMetadataMandatoryFieldsAreNotEmpty(filePath, playbookARMTemplate);
-    validateMetdataLastUpdateTimeIsValidTimestamp(filePath, playbookARMTemplate)
-    validateMetdataEntitiesContainsValidEntityTypes(filePath, playbookARMTemplate)
+    validateMetadataLastUpdateTimeIsValidTimestamp(filePath, playbookARMTemplate)
+    validateMetadataEntitiesContainsValidEntityTypes(filePath, playbookARMTemplate)
 }
 
 function validateMetadataMandatoryFieldsAreNotEmpty(filePath: string, playbookARMTemplate: ArmTemplate<PlaybookTemplateMetadata>): void {
@@ -31,14 +31,14 @@ function validateMetadataMandatoryFieldsAreNotEmpty(filePath: string, playbookAR
     }
 }
 
-function validateMetdataLastUpdateTimeIsValidTimestamp(filePath: string, playbookARMTemplate: ArmTemplate<PlaybookTemplateMetadata>): void {
+function validateMetadataLastUpdateTimeIsValidTimestamp(filePath: string, playbookARMTemplate: ArmTemplate<PlaybookTemplateMetadata>): void {
     let parsedLastUpdateTime: Date = new Date(playbookARMTemplate.metadata.lastUpdateTime);
     if (isNaN(parsedLastUpdateTime.getTime())) {
         throw new PlaybookValidationError(`Playbook template '${filePath}' metadata field 'lastUpdateTime' is not a valid timestamp.`);
     }
 }
 
-function validateMetdataEntitiesContainsValidEntityTypes(filePath: string, playbookARMTemplate: ArmTemplate<PlaybookTemplateMetadata>): void {
+function validateMetadataEntitiesContainsValidEntityTypes(filePath: string, playbookARMTemplate: ArmTemplate<PlaybookTemplateMetadata>): void {
     if (!playbookARMTemplate.metadata.entities) {
         return;
     }
