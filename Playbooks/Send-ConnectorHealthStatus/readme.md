@@ -8,7 +8,7 @@ This enhanced solution builds on the existing “Connector Health Workbook” de
 
 ### The Logic App is activated by a Recurrence trigger whose frequency of execution can be adjusted to your requirements:
 
-![1-Reccurence](../Send-ConnectorHealthStatus/images/1-Reccurence.png)
+![1-Recurrence](../Send-ConnectorHealthStatus/images/1-Recurrence.png)
 
 ### In the “Set rule logic” section paste the query below and adjust the “UpperThreshold” & “LowerThreshold” variables as needed:
 
