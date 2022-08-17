@@ -171,7 +171,7 @@ The API currently has some limitations, and here are a few things to note regard
         {
             "properties": {
             "triggerUri": "<enter_Trigger_URI_of_your_playbook>",
-            "logicAppResourceId": "/subscriptions/<subscrition-ID>/resourceGroups/<resource-group-name>/providers/Microsoft.Logic/workflows/<logic-app-name>"
+            "logicAppResourceId": "/subscriptions/<subscription-ID>/resourceGroups/<resource-group-name>/providers/Microsoft.Logic/workflows/<logic-app-name>"
             }
         },
     ```

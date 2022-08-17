@@ -23,7 +23,7 @@ After deployment, you can run this playbook manually on an alert or attach it to
 
 ## Prerequisites
 
-- This playbook uses a managed identity to access the API.  You will need to add the managed identity that is created by the logic app to the subscripton(s) of management group with Security Reader permissions.
+- This playbook uses a managed identity to access the API.  You will need to add the managed identity that is created by the logic app to the subscription(s) of management group with Security Reader permissions.
 
 ## Screenshots
 **Incident Trigger**<br>

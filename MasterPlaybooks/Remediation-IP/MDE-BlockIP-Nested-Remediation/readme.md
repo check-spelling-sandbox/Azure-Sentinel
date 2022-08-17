@@ -16,7 +16,7 @@ This playbook will take IP entities and generate alert and block threat indicato
 ```powershell
 
 $MIGuid = "<Enter your managed identity guid here>"
-$SubscriptionId = "<Enter your subsciption id here>"
+$SubscriptionId = "<Enter your subscription id here>"
 $ResourceGroup = "<Enter your resource group here>"
 $MI = Get-AzureADServicePrincipal -ObjectId $MIGuid
 

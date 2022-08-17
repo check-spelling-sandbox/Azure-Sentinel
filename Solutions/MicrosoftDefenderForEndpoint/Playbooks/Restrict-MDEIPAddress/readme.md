@@ -26,7 +26,7 @@ After deployment, you can run this playbook manually on an alert or attach it to
 ```powershell
 
 $MIGuid = "<Enter your managed identity guid here>"
-$SubscriptionId = "<Enter your subsciption id here>"
+$SubscriptionId = "<Enter your subscription id here>"
 $ResourceGroup = "<Enter your resource group here>"
 $MI = Get-AzureADServicePrincipal -ObjectId $MIGuid
 

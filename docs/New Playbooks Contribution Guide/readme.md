@@ -123,9 +123,9 @@ Example for workflow level parameters *Note that the "defaultValue" refer the pa
         "$connections": {
             "value": {
                 "azuresentinel": {
-                    "connectionId": "/subscriptions/{subsriptionId}/resourceGroups/{resourceGroups}/providers/Microsoft.Web/connections/azuresentinel",
+                    "connectionId": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroups}/providers/Microsoft.Web/connections/azuresentinel",
                     "connectionName": "azuresentinel",
-                    "id": "/subscriptions/{subsriptionId}/providers/Microsoft.Web/locations/{locations}/managedApis/azuresentinel"
+                    "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Web/locations/{locations}/managedApis/azuresentinel"
                 }
             }
         }
