@@ -384,7 +384,7 @@
     {
       "type": 1,
       "content": {
-        "json": "----\n## AuditLogs\n\nThese tables give an Azure administrators the information they needs to make sure that the services and user operations are successfully executed. <br>\nIt also benefits the security operator by seeing which operations are perfomed by which users or services. Therefore he can act quickly on a suspicious operation."
+        "json": "----\n## AuditLogs\n\nThese tables give an Azure administrators the information they needs to make sure that the services and user operations are successfully executed. <br>\nIt also benefits the security operator by seeing which operations are performed by which users or services. Therefore he can act quickly on a suspicious operation."
       },
       "name": "text - 9"
     },
