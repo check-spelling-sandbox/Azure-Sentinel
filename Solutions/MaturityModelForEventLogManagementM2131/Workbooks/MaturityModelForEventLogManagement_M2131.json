@@ -19773,7 +19773,7 @@
                     "size": 0,
                     "aggregation": 3,
                     "showAnalytics": true,
-                    "title": "Bytes Recieved Rate (Last Week)",
+                    "title": "Bytes Received Rate (Last Week)",
                     "noDataMessage": "There is no data for this counter, either enable the counter or onboard machines to this workspace",
                     "timeContextFromParameter": "TimeRange",
                     "showExportToExcel": true,

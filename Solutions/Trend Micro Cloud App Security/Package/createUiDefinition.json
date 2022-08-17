@@ -229,7 +229,7 @@
                 "name": "analytic7-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Detects when unexpected file recieved via mail."
+                  "text": "Detects when unexpected file received via mail."
                 }
               }
             ]
@@ -351,7 +351,7 @@
                 "name": "huntingquery4-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Query searches for rare files recieved via email services. It depends on the TrendMicroCAS data connector and TrendMicroCAS data type and TrendMicroCAS parser."
+                  "text": "Query searches for rare files received via email services. It depends on the TrendMicroCAS data connector and TrendMicroCAS data type and TrendMicroCAS parser."
                 }
               }
             ]
@@ -407,7 +407,7 @@
                 "name": "huntingquery8-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Query searches for top files recieved via email services. It depends on the TrendMicroCAS data connector and TrendMicroCAS data type and TrendMicroCAS parser."
+                  "text": "Query searches for top files received via email services. It depends on the TrendMicroCAS data connector and TrendMicroCAS data type and TrendMicroCAS parser."
                 }
               }
             ]

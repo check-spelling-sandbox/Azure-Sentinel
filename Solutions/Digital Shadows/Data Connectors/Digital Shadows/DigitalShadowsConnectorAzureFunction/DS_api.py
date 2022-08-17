@@ -11,7 +11,7 @@ class api:
     def __init__(self, id, key, secret, url):
         """ 
             constructer initializes the DS creds and creates passkey.
-            Parses the url recieved from user.
+            Parses the url received from user.
         """
         u = urlparse(url)
 

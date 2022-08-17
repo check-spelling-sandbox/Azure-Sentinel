@@ -8,7 +8,7 @@
 
     DESCRIPTION
     This Function App calls the Qualys Vulnerability Management (VM) API (https://www.qualys.com/docs/qualys-api-vmpc-user-guide.pdf) specifically for Host List Detection data (/api/2.0/fo/asset/host/vm/detection/).
-    The response from the Qualys API is recieved in XML format. This function will parse the XML into JSON format, build the signature and authorization header needed to post the data
+    The response from the Qualys API is received in XML format. This function will parse the XML into JSON format, build the signature and authorization header needed to post the data
     to the Log Analytics workspace via the HTTP Data Connector API. The Function App will omit API responses that with an empty host list, which indicates there were no records for that
     time interval. Often, there are Hosts with numerous scan detections, which causes the record submitted to the Data Connector API to be truncated and improperly ingested, The Function App
     will also identify those records greater than the 32Kb limit per record and seperate them into individual records.
@@ -156,7 +156,7 @@ Function Post-LogAnalyticsData($customerId, $sharedKey, $body, $logType)
 
 } # Post-LogAnalyticsData
 
-# Iterate through each detection recieved from the API call and assign the variables (Column Names in LA) to each XML variable
+# Iterate through each detection received from the API call and assign the variables (Column Names in LA) to each XML variable
 Function Parse-and-Send($qualysResponse){
 	$detections = @()
 	$results = "NA"

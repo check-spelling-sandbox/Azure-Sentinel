@@ -828,7 +828,7 @@
                         "formatter": 1
                       },
                       "centerContent": {
-                        "columnMatch": "Recived MB",
+                        "columnMatch": "Received MB",
                         "formatter": 1,
                         "numberFormat": {
                           "unit": 17,
@@ -920,7 +920,7 @@
                         "formatter": 1
                       },
                       "centerContent": {
-                        "columnMatch": "Recived MB",
+                        "columnMatch": "Received MB",
                         "formatter": 1,
                         "numberFormat": {
                           "unit": 17,

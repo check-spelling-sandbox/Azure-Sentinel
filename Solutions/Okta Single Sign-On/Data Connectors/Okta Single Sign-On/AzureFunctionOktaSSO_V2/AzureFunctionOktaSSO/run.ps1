@@ -21,7 +21,7 @@
 
 
     DESCRIPTION
-    This Function App calls the Okta System Log API (https://developer.okta.com/docs/reference/api/system-log/) to pull the Okta System logs. The response from the Okta API is recieved in JSON format. 
+    This Function App calls the Okta System Log API (https://developer.okta.com/docs/reference/api/system-log/) to pull the Okta System logs. The response from the Okta API is received in JSON format. 
     This function will build the signature and authorization header needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. 
     The Function App will post the Okta logs to the Okta_CL table in the Log Analytics workspace.
 

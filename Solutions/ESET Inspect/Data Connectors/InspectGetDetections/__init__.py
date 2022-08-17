@@ -9,7 +9,7 @@
 # This Function App calls the ESET Inspect API (https://help.eset.com/ei_navigate/latest/en-US/api.html)
 # and gathers all new detections that have been triggered.
 #
-# The response from the ESET Inspect API is recieved in JSON format. This function will build
+# The response from the ESET Inspect API is received in JSON format. This function will build
 # the signature and authorization header needed to post the data to the Log Analytics workspace via
 # the HTTP Data Connector API. The Function App will will post all detections to the ESETInspect_CL
 # table in Log Analytivs.

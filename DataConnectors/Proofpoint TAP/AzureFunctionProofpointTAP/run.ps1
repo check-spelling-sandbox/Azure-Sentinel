@@ -8,7 +8,7 @@
 
     DESCRIPTION
     This Function App calls the Proofpoint Targeted Attack Protection (TAP) API (https://help.proofpoint.com/Threat_Insight_Dashboard/API_Documentation/SIEM_API) to pull the Proofpoint
-    Message Blocked, Message Delivered, Clicks Blocked, and Clicks Permitted logs. The response from the Proofpoint API is recieved in JSON format. This function will build the signature and authorization header 
+    Message Blocked, Message Delivered, Clicks Blocked, and Clicks Permitted logs. The response from the Proofpoint API is received in JSON format. This function will build the signature and authorization header 
     needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. The Function App will post each log type to their individual tables in Log Analytics, for example,
     ProofPointMessageBlocked_CL, ProofPointMessageDelivered_CL, ProofPointClicksPermitted_CL, ProofPointClicksBlocked_CL.
 #>

@@ -951,7 +951,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "union withsource=TableName1 *\r\n| where TimeGenerated {TimeRange:query}\r\n| project _BilledSize, _IsBillable, TimeGenerated, TableName1\r\n| summarize Entries = count(), Size = sum(_BilledSize), last_log = datetime_diff(\"second\",now(), max(TimeGenerated)), estimate  = sumif(_BilledSize, _IsBillable==true)  by TableName1, _IsBillable\r\n| project ['Table Name'] = TableName1, ['Table Size'] = Size, ['Table Entries'] = Entries,\r\n          ['Size per Entry'] = 1.0 * Size / Entries, ['IsBillable'] = _IsBillable, ['Latest Record Created'] =  last_log //, ['Latest Record Recieved'] =last_ingestion\r\n | order by ['Table Size']  desc\r\n\r\n ",
+              "query": "union withsource=TableName1 *\r\n| where TimeGenerated {TimeRange:query}\r\n| project _BilledSize, _IsBillable, TimeGenerated, TableName1\r\n| summarize Entries = count(), Size = sum(_BilledSize), last_log = datetime_diff(\"second\",now(), max(TimeGenerated)), estimate  = sumif(_BilledSize, _IsBillable==true)  by TableName1, _IsBillable\r\n| project ['Table Name'] = TableName1, ['Table Size'] = Size, ['Table Entries'] = Entries,\r\n          ['Size per Entry'] = 1.0 * Size / Entries, ['IsBillable'] = _IsBillable, ['Latest Record Created'] =  last_log //, ['Latest Record Received'] =last_ingestion\r\n | order by ['Table Size']  desc\r\n\r\n ",
               "size": 0,
               "showAnalytics": true,
               "title": "{Workspace:name} Status for {TimeRange:label}, Billable Tables have an  average use of: {GBperday} GB per day, Billable Tables have a Total size of {GBtotal} GB",
@@ -1063,7 +1063,7 @@
                     }
                   },
                   {
-                    "columnMatch": "Latest Record Recieved",
+                    "columnMatch": "Latest Record Received",
                     "formatter": 8,
                     "formatOptions": {
                       "palette": "greenRed"

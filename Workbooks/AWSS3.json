@@ -2185,7 +2185,7 @@
             },
             {
               "columnId": "minsSinceLastLogReceived",
-              "label": "Time Since Last Log Recieved"
+              "label": "Time Since Last Log Received"
             },
             {
               "columnId": "count_",

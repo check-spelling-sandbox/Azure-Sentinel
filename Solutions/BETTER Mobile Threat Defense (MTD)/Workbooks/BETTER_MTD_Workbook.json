@@ -672,7 +672,7 @@
         "query": "\nunion withsource=LogTableName *\n| where LogTableName == \"BetterMTDAppLog_CL\" or LogTableName == \"BetterMTDDeviceLog_CL\" or LogTableName == \"BetterMTDIncidentLog_CL\" or LogTableName == \"BetterMTDNetflowLog_CL\"\n| summarize count() by LogTableName\n| render piechart",
         "size": 1,
         "title": "BETTER MTD Log Count by Type",
-        "noDataMessage": "No Logs Recieved from BETTER MTD",
+        "noDataMessage": "No Logs Received from BETTER MTD",
         "timeContext": {
           "durationMs": 7776000000
         },

@@ -617,7 +617,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "// Data sent outbound vs inbound\r\nCommonSecurityLog\r\n| where DeviceProduct has 'PAN-OS'\r\n| where DeviceVendor =~ 'Palo Alto Networks'\r\n| where \"{Destination_IP:label}\"==\"All\" or DestinationIP in ({Destination_IP}) \r\n| where \"{Source_IP:label}\" == \"All\" or SourceIP in ({Source_IP})\r\n| where Activity =~ 'TRAFFIC'\r\n| extend Direction=iff(DeviceCustomString4=~'Trust','Outbound' ,'Inbound' )\r\n| summarize DataSentOutBoundMB=sumif(SentBytes, Direction=~'Outbound')/1048576,   DataRecievedInboundMB=sumif(ReceivedBytes, Direction=~'Inbound')/1048576 by TimeGenerated\r\n",
+        "query": "// Data sent outbound vs inbound\r\nCommonSecurityLog\r\n| where DeviceProduct has 'PAN-OS'\r\n| where DeviceVendor =~ 'Palo Alto Networks'\r\n| where \"{Destination_IP:label}\"==\"All\" or DestinationIP in ({Destination_IP}) \r\n| where \"{Source_IP:label}\" == \"All\" or SourceIP in ({Source_IP})\r\n| where Activity =~ 'TRAFFIC'\r\n| extend Direction=iff(DeviceCustomString4=~'Trust','Outbound' ,'Inbound' )\r\n| summarize DataSentOutBoundMB=sumif(SentBytes, Direction=~'Outbound')/1048576,   DataReceivedInboundMB=sumif(ReceivedBytes, Direction=~'Inbound')/1048576 by TimeGenerated\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Sent and received data, by volume",

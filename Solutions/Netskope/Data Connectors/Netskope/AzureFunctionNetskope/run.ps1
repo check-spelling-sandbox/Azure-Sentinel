@@ -7,7 +7,7 @@
     Comment:        Initial Release
 
     DESCRIPTION
-    This Function App calls the Netskope Platform API (https://innovatechcloud.goskope.com/docs/Netskope_Help/en/rest-api-v2-overview.html) to pull alert and events data. The response from the Netskope API is recieved in JSON format. This function will build the signature and authorization header
+    This Function App calls the Netskope Platform API (https://innovatechcloud.goskope.com/docs/Netskope_Help/en/rest-api-v2-overview.html) to pull alert and events data. The response from the Netskope API is received in JSON format. This function will build the signature and authorization header
     needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. The Function App will post to the Netskope_CL table in the Log Analytics workspace.
 #>
 
@@ -122,7 +122,7 @@ function GetUrl ($uri, $ApiKey, $StartTime, $EndTime, $LogType, $Page, $Skip){
                     #$alleventobjs += $netskopeevents
                     $allEventsLength = $netskopeevents.Length
                     $responseCode = ProcessData -allEventsLength $allEventsLength -alleventobjs $netskopeevents -checkPointFile $checkPointFile -logtype $logtype -endTime $endTime
-                    # If the API response length for the given log type is equal to the page limit, it indicates there are subsquent pages, continue while loop, and increment the skip value by the records already recieved for the subquent API requests
+                    # If the API response length for the given log type is equal to the page limit, it indicates there are subsquent pages, continue while loop, and increment the skip value by the records already received for the subquent API requests
                     if($allEventsLength -eq $pageLimit){
                         $skip = $skip + $pageLimit
                     }

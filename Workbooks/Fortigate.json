@@ -443,7 +443,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Fortinet'\r\n| where DeviceProduct contains 'Fortigate'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| extend Category= extract('(.*):(.*)$',1,Activity)\r\n| extend B= extract('(.*):(.*$)',2,Activity)\r\n| extend SubCategory= extract('([a-zA-Z/-]*).*$',1,B)\r\n| extend SubType= extract('([a-zA-Z/-]*) (.*)$',2,B)\r\n| where Category == '{CategoryFilter}' or '{CategoryFilter}' == \"All\"\r\n| where SubCategory == '{SubCategoryFilter}' or '{SubCategoryFilter}' == \"All\"\r\n| where \"{Action:label}\" == \"All\" or SubType in ({Action})\r\n| where SubType == '{SubTypeFilter}' or '{SubTypeFilter}' == \"All\"\r\n| where ApplicationProtocol != \"\"\r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataRecievedMB =sum(ReceivedBytes)/1048576, Amount = count() by ApplicationProtocol, DestinationPort\r\n| order by Amount, SentDataMB, DataRecievedMB\r\n\r\n",
+        "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Fortinet'\r\n| where DeviceProduct contains 'Fortigate'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| extend Category= extract('(.*):(.*)$',1,Activity)\r\n| extend B= extract('(.*):(.*$)',2,Activity)\r\n| extend SubCategory= extract('([a-zA-Z/-]*).*$',1,B)\r\n| extend SubType= extract('([a-zA-Z/-]*) (.*)$',2,B)\r\n| where Category == '{CategoryFilter}' or '{CategoryFilter}' == \"All\"\r\n| where SubCategory == '{SubCategoryFilter}' or '{SubCategoryFilter}' == \"All\"\r\n| where \"{Action:label}\" == \"All\" or SubType in ({Action})\r\n| where SubType == '{SubTypeFilter}' or '{SubTypeFilter}' == \"All\"\r\n| where ApplicationProtocol != \"\"\r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataReceivedMB =sum(ReceivedBytes)/1048576, Amount = count() by ApplicationProtocol, DestinationPort\r\n| order by Amount, SentDataMB, DataReceivedMB\r\n\r\n",
         "size": 0,
         "exportFieldName": "ApplicationProtocol",
         "exportParameterName": "ApplicationProtocolFilter",
@@ -473,7 +473,7 @@
               }
             },
             {
-              "columnMatch": "DataRecievedMB",
+              "columnMatch": "DataReceivedMB",
               "formatter": 4,
               "formatOptions": {
                 "showIcon": true
@@ -499,7 +499,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Fortinet'\r\n| where DeviceProduct contains 'Fortigate'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| extend Category= extract('(.*):(.*)$',1,Activity)\r\n| extend B= extract('(.*):(.*$)',2,Activity)\r\n| extend SubCategory= extract('([a-zA-Z/-]*).*$',1,B)\r\n| extend SubType= extract('([a-zA-Z/-]*) (.*)$',2,B)\r\n| where Category == '{CategoryFilter}' or '{CategoryFilter}' == \"All\"\r\n| where SubCategory == '{SubCategoryFilter}' or '{SubCategoryFilter}' == \"All\"\r\n| where \"{Action:label}\" == \"All\" or SubType in ({Action})\r\n| where SubType == '{SubTypeFilter}' or '{SubTypeFilter}' == \"All\"\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\"\r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataRecievedMB =sum(ReceivedBytes)/1048576 by bin(TimeGenerated, 1d)\r\n",
+        "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Fortinet'\r\n| where DeviceProduct contains 'Fortigate'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| extend Category= extract('(.*):(.*)$',1,Activity)\r\n| extend B= extract('(.*):(.*$)',2,Activity)\r\n| extend SubCategory= extract('([a-zA-Z/-]*).*$',1,B)\r\n| extend SubType= extract('([a-zA-Z/-]*) (.*)$',2,B)\r\n| where Category == '{CategoryFilter}' or '{CategoryFilter}' == \"All\"\r\n| where SubCategory == '{SubCategoryFilter}' or '{SubCategoryFilter}' == \"All\"\r\n| where \"{Action:label}\" == \"All\" or SubType in ({Action})\r\n| where SubType == '{SubTypeFilter}' or '{SubTypeFilter}' == \"All\"\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\"\r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataReceivedMB =sum(ReceivedBytes)/1048576 by bin(TimeGenerated, 1d)\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Data flow (MB)",
@@ -518,7 +518,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Fortinet'\r\n| where DeviceProduct contains 'Fortigate'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| extend Category= extract('(.*):(.*)$',1,Activity)\r\n| extend B= extract('(.*):(.*$)',2,Activity)\r\n| extend SubCategory= extract('([a-zA-Z/-]*).*$',1,B)\r\n| extend SubType= extract('([a-zA-Z/-]*) (.*)$',2,B)\r\n| where Category == '{CategoryFilter}' or '{CategoryFilter}' == \"All\"\r\n| where SubCategory == '{SubCategoryFilter}' or '{SubCategoryFilter}' == \"All\"\r\n| where \"{Action:label}\" == \"All\" or SubType in ({Action})\r\n| where SubType == '{SubTypeFilter}' or '{SubTypeFilter}' == \"All\"\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\"\r\n| extend EventResult= extract(';FortinetFortiGatelogdesc=(.*?);',1, AdditionalExtensions) \r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataRecievedMB =sum(ReceivedBytes)/1048576, Amount = count() by Category, Type = SubCategory, Action = SubType, DeviceEventClassID, LogSeverity, EventResult , DestinationUserName, SourceIP, DestinationIP, DestinationPort, ApplicationProtocol, Message\r\n| order by Amount\r\n",
+        "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Fortinet'\r\n| where DeviceProduct contains 'Fortigate'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| extend Category= extract('(.*):(.*)$',1,Activity)\r\n| extend B= extract('(.*):(.*$)',2,Activity)\r\n| extend SubCategory= extract('([a-zA-Z/-]*).*$',1,B)\r\n| extend SubType= extract('([a-zA-Z/-]*) (.*)$',2,B)\r\n| where Category == '{CategoryFilter}' or '{CategoryFilter}' == \"All\"\r\n| where SubCategory == '{SubCategoryFilter}' or '{SubCategoryFilter}' == \"All\"\r\n| where \"{Action:label}\" == \"All\" or SubType in ({Action})\r\n| where SubType == '{SubTypeFilter}' or '{SubTypeFilter}' == \"All\"\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\"\r\n| extend EventResult= extract(';FortinetFortiGatelogdesc=(.*?);',1, AdditionalExtensions) \r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataReceivedMB =sum(ReceivedBytes)/1048576, Amount = count() by Category, Type = SubCategory, Action = SubType, DeviceEventClassID, LogSeverity, EventResult , DestinationUserName, SourceIP, DestinationIP, DestinationPort, ApplicationProtocol, Message\r\n| order by Amount\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "timeContext": {
@@ -621,7 +621,7 @@
               }
             },
             {
-              "columnMatch": "DataRecievedMB",
+              "columnMatch": "DataReceivedMB",
               "formatter": 0,
               "formatOptions": {
                 "showIcon": true
@@ -719,7 +719,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "CommonSecurityLog\r\n| where DeviceVendor == \"Fortinet\" \r\n| where DeviceProduct contains \"Fortigate\"\r\n| where \"{DestinationIP:label}\" == \"All\" or DestinationIP in ({DestinationIP}) \r\n| where \"{DestinationPort:label}\" == \"All\" or DestinationPort in ({DestinationPort}) \r\n| summarize SentDataMB = sumif(SentBytes,Activity contains \"forward\" )/1048576 , DataRecievedMB =sumif(ReceivedBytes, Activity contains \"forward\")/1048576 by TimeGenerated \r\n",
+        "query": "CommonSecurityLog\r\n| where DeviceVendor == \"Fortinet\" \r\n| where DeviceProduct contains \"Fortigate\"\r\n| where \"{DestinationIP:label}\" == \"All\" or DestinationIP in ({DestinationIP}) \r\n| where \"{DestinationPort:label}\" == \"All\" or DestinationPort in ({DestinationPort}) \r\n| summarize SentDataMB = sumif(SentBytes,Activity contains \"forward\" )/1048576 , DataReceivedMB =sumif(ReceivedBytes, Activity contains \"forward\")/1048576 by TimeGenerated \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Forward data flow volume. by time",

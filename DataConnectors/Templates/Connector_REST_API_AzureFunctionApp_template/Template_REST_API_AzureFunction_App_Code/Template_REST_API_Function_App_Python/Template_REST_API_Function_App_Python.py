@@ -69,7 +69,7 @@ json_data = response.text.encode('utf8')
 
 */
 
-/* Used this block to transform the data recieved from the <PROVIDER NAME APPLIANCE NAME> API into JSON format, which is acceptable format for the Azure Log Analytics Data Collector API
+/* Used this block to transform the data received from the <PROVIDER NAME APPLIANCE NAME> API into JSON format, which is acceptable format for the Azure Log Analytics Data Collector API
 
 For example:
 body = json.dumps(json_data)

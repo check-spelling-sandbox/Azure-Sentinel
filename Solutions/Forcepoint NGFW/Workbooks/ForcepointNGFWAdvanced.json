@@ -412,7 +412,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Forcepoint'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| where ApplicationProtocol != \"\"\r\n| where DestinationPort != \"\"\r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataRecievedMB =sum(ReceivedBytes)/1048576, Amount = count() by ApplicationProtocol, DestinationPort\r\n| order by Amount, SentDataMB, DataRecievedMB\r\n\r\n",
+              "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Forcepoint'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| where ApplicationProtocol != \"\"\r\n| where DestinationPort != \"\"\r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataReceivedMB =sum(ReceivedBytes)/1048576, Amount = count() by ApplicationProtocol, DestinationPort\r\n| order by Amount, SentDataMB, DataReceivedMB\r\n\r\n",
               "size": 0,
               "title": "Application protocol activities",
               "timeContext": {
@@ -434,7 +434,7 @@
                     }
                   },
                   {
-                    "columnMatch": "DataRecievedMB",
+                    "columnMatch": "DataReceivedMB",
                     "formatter": 4,
                     "formatOptions": {
                       "showIcon": true
@@ -459,7 +459,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Forcepoint'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\"\r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataRecievedMB =sum(ReceivedBytes)/1048576 by bin(TimeGenerated, 1h)\r\n",
+              "query": "CommonSecurityLog\r\n| where DeviceVendor =~ 'Forcepoint'\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\"\r\n| summarize SentDataMB = sum(SentBytes)/1048576 , DataReceivedMB =sum(ReceivedBytes)/1048576 by bin(TimeGenerated, 1h)\r\n",
               "size": 0,
               "title": "Data flow (MB)",
               "timeContext": {
@@ -471,7 +471,7 @@
               "visualization": "timechart",
               "chartSettings": {
                 "yAxis": [
-                  "DataRecievedMB",
+                  "DataReceivedMB",
                   "SentDataMB"
                 ],
                 "ySettings": {
@@ -492,7 +492,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "CommonSecurityLog\r\n| where DeviceVendor == 'FORCEPOINT'\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\"\r\n| where DeviceFacility == \"Inspection\"\r\n| where Activity == \"URL_Category-Accounting\"\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| extend URL= extract('requestURL=(.*)',1, AdditionalExtensions) \r\n| summarize  DataRecievedMB =sum(ReceivedBytes)/1048576 by SourceIP, DestinationIP ,VirtualEngine=DeviceExternalID, ApplicationProtocol, URL\r\n| order by DataRecievedMB desc\r\n//hint.strategy = shuffle\r\n",
+              "query": "CommonSecurityLog\r\n| where DeviceVendor == 'FORCEPOINT'\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\"\r\n| where DeviceFacility == \"Inspection\"\r\n| where Activity == \"URL_Category-Accounting\"\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| extend URL= extract('requestURL=(.*)',1, AdditionalExtensions) \r\n| summarize  DataReceivedMB =sum(ReceivedBytes)/1048576 by SourceIP, DestinationIP ,VirtualEngine=DeviceExternalID, ApplicationProtocol, URL\r\n| order by DataReceivedMB desc\r\n//hint.strategy = shuffle\r\n",
               "size": 0,
               "title": "Aggregated Connections",
               "timeContext": {
