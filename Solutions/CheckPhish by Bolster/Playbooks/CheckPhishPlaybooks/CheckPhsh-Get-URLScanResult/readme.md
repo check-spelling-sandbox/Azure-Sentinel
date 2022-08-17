@@ -1,7 +1,7 @@
 # CheckPhish- Get Reputation of URL
  ## Summary
  
- Once a new sentinal incident is created, this playbook gets triggered and performs the following actions:
+ Once a new sentinel incident is created, this playbook gets triggered and performs the following actions:
 
     1. Gets Information from CheckPhish by URL, provided in the alert custom entities.
     2. Enriches the incident with the obtained info.

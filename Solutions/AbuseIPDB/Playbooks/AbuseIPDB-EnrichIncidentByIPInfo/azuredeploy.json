@@ -3,7 +3,7 @@
    "contentVersion":"1.0.0.0",
    "metadata": {
     "title": "AbuseIPDB Enrich Incident By IP Info",
-    "description": "Once a new sentinal incident is created, this playbook gets triggered and performs the following actions:\n 1. [Gets Information](https://docs.abuseipdb.com/#check-endpoint) from AbuseIPDB by IP`s, provided in the alert custom entities. \n 2. Enriches the incident with the obtained info.",
+    "description": "Once a new sentinel incident is created, this playbook gets triggered and performs the following actions:\n 1. [Gets Information](https://docs.abuseipdb.com/#check-endpoint) from AbuseIPDB by IP`s, provided in the alert custom entities. \n 2. Enriches the incident with the obtained info.",
    
     "prerequisites": [
       "1. AbuseIPDBAPI Custom Connector has to be deployed prior to the deployment of this playbook under the same subscription."

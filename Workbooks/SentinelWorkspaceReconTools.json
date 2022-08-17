@@ -8522,7 +8522,7 @@
                   "name": "MDFC",
                   "label": "Shared MDFC?",
                   "type": 10,
-                  "description": "Do Senitnel and MDFC share the same workspace?",
+                  "description": "Do Sentinel and MDFC share the same workspace?",
                   "isRequired": true,
                   "value": "Yes",
                   "typeSettings": {

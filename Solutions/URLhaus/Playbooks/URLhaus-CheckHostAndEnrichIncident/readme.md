@@ -1,6 +1,6 @@
 # URLhaus-CheckHostAndEnrichIncident
  ## Summary
- Once a new sentinal incident is created, this playbook gets triggered and performs the following actions:
+ Once a new sentinel incident is created, this playbook gets triggered and performs the following actions:
  1. [Gets Information](https://urlhaus-api.abuse.ch/#hostinfo) from URLhaus by hosts, provided in the alert custom entities. 
  2. Enriches the incident with the obtained info.
 
