@@ -20,7 +20,7 @@ StartDate 	: 09/11/2021 02:00 AM
 EndDate 	: 09/12/2021 12:00 PM
 ```
 
-The script generates a kql query .yaml file and opens the file in notepade.exe.
+The script generates a kql query .yaml file and opens the file in notepad.exe.
 
 ```
 externaldata(TenantId:string, AttachmentCount:int, ConfidenceLevel:string, Connectors:string, DetectionMethods:string, DeliveryAction:string, DeliveryLocation:string, EmailClusterId:long, EmailDirection:string, EmailLanguage:string, EmailAction:string, EmailActionPolicy:string, EmailActionPolicyGuid:string, OrgLevelAction:string, OrgLevelPolicy:string, InternetMessageId:string, NetworkMessageId:string, RecipientEmailAddress:string, RecipientObjectId:string, ReportId:string, SenderDisplayName:string, SenderObjectId:string, SenderIPv4:string, SenderIPv6:string, SenderMailFromAddress:string, SenderMailFromDomain:string, Subject:string, ThreatTypes:string, ThreatNames:string, TimeGenerated:datetime, Timestamp:datetime, UrlCount:int, UserLevelAction:string, UserLevelPolicy:string, SourceSystem:string, Type:string)
