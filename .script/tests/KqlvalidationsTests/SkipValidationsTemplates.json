@@ -626,7 +626,7 @@
   },
    {
     "id": "733c3919-d4f9-430c-8d38-92a8f595439d",
-    "templateName": "ADOInternalUpstreamPacakgeFeedAdded.yaml",
+    "templateName": "ADOInternalUpstreamPackageFeedAdded.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
    {
