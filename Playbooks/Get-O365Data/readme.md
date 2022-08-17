@@ -29,7 +29,7 @@ In order to collected Audit events from an Office 365 subscription you first nee
 1. Open Powershell
 2. Populate the following commands with the required elements (in <>) and run.
 
-```powerhshell
+```powershell
 $ClientID = "<AAD App clientID>"
 $ClientSecret = "<AAD App clientSecret>"
 $loginURL = "https://login.microsoftonline.com/"

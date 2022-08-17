@@ -23,7 +23,7 @@ This function app will poll O365 Activity Management API every 10 mins for logs.
 1. Open Powershell
 2. Run the following commands
 
-```powerhshell
+```powershell
 $ClientID = "<GUID> from AAD App Registration"
 $ClientSecret = "<clientSecret> from AAD App Registrtion"
 $loginURL = "https://login.microsoftonline.com/"
