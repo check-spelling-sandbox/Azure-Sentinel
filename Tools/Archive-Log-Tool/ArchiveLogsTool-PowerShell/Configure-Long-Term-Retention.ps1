@@ -83,7 +83,7 @@ function Get-RequiredModules {
     Get-Required is used to install and then import a specified PowerShell module.
     
     .PARAMETER Module
-    parameter specifices the PowerShell module to install. 
+    parameter specifies the PowerShell module to install. 
     #>
 
     [CmdletBinding()]

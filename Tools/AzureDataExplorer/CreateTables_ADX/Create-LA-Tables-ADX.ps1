@@ -117,7 +117,7 @@ function Get-RequiredModules {
     Get-Required is used to install and then import a specified PowerShell module.
     
     .PARAMETER Module
-    parameter specifices the PowerShell module to install. 
+    parameter specifies the PowerShell module to install. 
     #>
 
     [CmdletBinding()]
@@ -166,7 +166,7 @@ function Invoke-KustoCLI {
     Invoke-KustoCLI is used to execute the KustoCLI with the specified AdxCommandsFile.
     
     .PARAMETER AdxCommandsFile
-    parameter specifices the path the the file that includes the commands to execute 
+    parameter specifies the path the the file that includes the commands to execute 
     #>
 
     [CmdletBinding()]
@@ -215,7 +215,7 @@ function New-AdxRawMappingTables {
     New-AdxRawMappingTables is used to create raw mapping tables
     
     .PARAMETER LaTables
-    Parameter specifices the Log Analytics tables to create 
+    Parameter specifies the Log Analytics tables to create 
     #>
     [CmdletBinding()]
     param (        
