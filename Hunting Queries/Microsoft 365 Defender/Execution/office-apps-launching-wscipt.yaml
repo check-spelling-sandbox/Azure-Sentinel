@@ -1,5 +1,5 @@
 id: 1d438d7a-be4b-4bee-a116-fac9a2a621c7
-name: office-apps-launching-wscipt
+name: office-apps-launching-wscript
 description: |
   This query was originally published in the threat analytics report, Trickbot: Pervasive & underestimated.
   Trickbot is a very prevalent piece of malware with an array of malicious capabilities. Originally designed to steal banking credentials, it has since evolved into a modular trojan that can deploy other malware, disable security software, and perform command-and-control (C2) operations.
