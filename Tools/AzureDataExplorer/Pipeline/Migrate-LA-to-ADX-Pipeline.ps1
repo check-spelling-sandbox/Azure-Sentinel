@@ -675,7 +675,7 @@ try {
     } 
 }
 catch {    
-    Write-Log -Message "Error occurred in retreiving Log Analytics workspace: $LogAnalyticsWorkspaceName" -LogFileName $LogFileName -Severity Error
+    Write-Log -Message "Error occurred in retrieving Log Analytics workspace: $LogAnalyticsWorkspaceName" -LogFileName $LogFileName -Severity Error
 }
 
 #region ADXTableCreation
