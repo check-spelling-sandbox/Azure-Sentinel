@@ -1,5 +1,5 @@
 # Deploy Function App for getting Office 365 Management API data into Azure Sentinel
-This function app will poll O365 Activity Managment API every 10 mins for logs.  It is designed to get Teams events under Audit.General.
+This function app will poll O365 Activity Management API every 10 mins for logs.  It is designed to get Teams events under Audit.General.
 
 ## Deployment and Configuration
 ### Add AAD App Permissions

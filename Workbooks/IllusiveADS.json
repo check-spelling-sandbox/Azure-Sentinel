@@ -42,7 +42,7 @@
             "name": "ManagementIP",
             "label": "Management IP",
             "type": 2,
-            "description": "Filter managment ip",
+            "description": "Filter management ip",
             "isRequired": true,
             "multiSelect": true,
             "quote": "'",
