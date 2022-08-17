@@ -188,7 +188,7 @@ function Get-O365Data{
                 $data.Count
                 #Loop through each Record in the Content
                 foreach($event in $data){
-                    #Filtering for Recrord types
+                    #Filtering for Record types
                     #Get all Record Types
                     if($env:recordTypes -eq "0"){
                         #We dont need Cloud App Security Alerts due to MCAS connector
