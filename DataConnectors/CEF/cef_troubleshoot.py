@@ -488,8 +488,8 @@ def sudo_read_file_contains_string(file_tokens, file_path):
 
 
 def check_token(tokens, file_content):
-    splited_tokens = tokens.split("|")
-    return any(token in file_content for token in splited_tokens)
+    splitted_tokens = tokens.split("|")
+    return any(token in file_content for token in splitted_tokens)
 
 
 def test_daemon_configuration(daemon_name):

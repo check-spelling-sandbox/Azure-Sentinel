@@ -556,7 +556,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "\nProofpointPOD\n| where EventType == \"message\"\n| where FilterIsMsgEncrypted == \"false\"\n| where TimeGenerated {TimeRange} \n| extend splited=split(MsgHeaderTo,\",\") | mv-expand splited | extend Domain = extract(\"(.*@)([a-zA-z0-9.-]*)\", 2, tostring(splited))\n| where isnotempty(Domain)\n| summarize Count=dcount(MsgNormalizedHeaderMessageId) by Domain | top 10 by Count\n",
+        "query": "\nProofpointPOD\n| where EventType == \"message\"\n| where FilterIsMsgEncrypted == \"false\"\n| where TimeGenerated {TimeRange} \n| extend splitted=split(MsgHeaderTo,\",\") | mv-expand splitted | extend Domain = extract(\"(.*@)([a-zA-z0-9.-]*)\", 2, tostring(splitted))\n| where isnotempty(Domain)\n| summarize Count=dcount(MsgNormalizedHeaderMessageId) by Domain | top 10 by Count\n",
         "size": 0,
         "title": "Top 10 Recipient domains not using TLS",
         "queryType": 0,
