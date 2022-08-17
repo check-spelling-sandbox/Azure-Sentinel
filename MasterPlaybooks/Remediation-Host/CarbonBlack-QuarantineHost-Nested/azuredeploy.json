@@ -152,7 +152,7 @@
               },
               "else": {
                 "actions": {
-                  "Compose_HTTP_Failed_Resposne": {
+                  "Compose_HTTP_Failed_Response": {
                     "runAfter": {
                       "Create_HTML_table": [
                         "Succeeded"
@@ -189,14 +189,14 @@
                   },
                   "Response_if_playbook_get(s)_failed": {
                     "runAfter": {
-                      "Compose_HTTP_Failed_Resposne": [
+                      "Compose_HTTP_Failed_Response": [
                         "Succeeded"
                       ]
                     },
                     "type": "Response",
                     "kind": "Http",
                     "inputs": {
-                      "body": "@outputs('Compose_HTTP_Failed_Resposne')",
+                      "body": "@outputs('Compose_HTTP_Failed_Response')",
                       "statusCode": 500
                     },
                     "operationOptions": "Asynchronous"

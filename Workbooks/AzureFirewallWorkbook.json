@@ -1823,7 +1823,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Responce_Code \" \" Responce_Flags \" \" Responce_Size \" \" Response_Duration\r\n| project Resource, TimeGenerated\r\n| summarize count() by Resource, bin(TimeGenerated,{TimeRange:grain})\r\n",
+        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Response_Code \" \" Response_Flags \" \" Response_Size \" \" Response_Duration\r\n| project Resource, TimeGenerated\r\n| summarize count() by Resource, bin(TimeGenerated,{TimeRange:grain})\r\n",
         "size": 0,
         "title": "DNSProxy Traffic by count per Firewall: Query Time({$queryTime}) ",
         "noDataMessage": "There are no DNS Proxy logs within the selected workspaces. If you believe the selection is correct, confirm DNS Proxy logs are enabled for the Azure Firewall and feeding into this selected workspace. Reference Docs: https://docs.microsoft.com/azure/firewall/",
@@ -1870,7 +1870,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Responce_Code \" \" Responce_Flags \" \" Responce_Size \" \" Response_Duration\r\n| project-away msg_s\r\n| summarize count() by Request_Name\r\n| sort by count_ desc",
+        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Response_Code \" \" Response_Flags \" \" Response_Size \" \" Response_Duration\r\n| project-away msg_s\r\n| summarize count() by Request_Name\r\n| sort by count_ desc",
         "size": 0,
         "title": "DNSProxy count by Request Name, filterable by Request_Name",
         "noDataMessage": "There are no DNS Proxy logs within the selected workspaces. If you believe the selection is correct, confirm DNS Proxy logs are enabled for the Azure Firewall and feeding into this selected workspace. Reference Docs: https://docs.microsoft.com/azure/firewall/",
@@ -1919,7 +1919,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Responce_Code \" \" Responce_Flags \" \" Responce_Size \" \" Response_Duration\r\n| project-away msg_s\r\n| where '{DNSRequestName}' == Request_Name or '{DNSRequestName}' == \"*\"\r\n| summarize count() by ClientIP\r\n| sort by count_ desc",
+        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Response_Code \" \" Response_Flags \" \" Response_Size \" \" Response_Duration\r\n| project-away msg_s\r\n| where '{DNSRequestName}' == Request_Name or '{DNSRequestName}' == \"*\"\r\n| summarize count() by ClientIP\r\n| sort by count_ desc",
         "size": 0,
         "title": "DNSProxy Request count by ClientIP, filterable by ClientIP",
         "noDataMessage": "There are no DNS Proxy logs within the selected workspaces. If you believe the selection is correct, confirm DNS Proxy logs are enabled for the Azure Firewall and feeding into this selected workspace. Reference Docs: https://docs.microsoft.com/azure/firewall/",
@@ -1968,7 +1968,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Responce_Code \" \" Responce_Flags \" \" Responce_Size \" \" Response_Duration\r\n| project-away msg_s\r\n| where '{DNSClientIP}' == ClientIP or '{DNSClientIP}' == \"*\"\r\n| where '{DNSRequestName}' == Request_Name or '{DNSRequestName}' == \"*\"\r\n| summarize count() by ClientIP, bin(TimeGenerated, {TimeRange:grain})\r\n",
+        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Response_Code \" \" Response_Flags \" \" Response_Size \" \" Response_Duration\r\n| project-away msg_s\r\n| where '{DNSClientIP}' == ClientIP or '{DNSClientIP}' == \"*\"\r\n| where '{DNSRequestName}' == Request_Name or '{DNSRequestName}' == \"*\"\r\n| summarize count() by ClientIP, bin(TimeGenerated, {TimeRange:grain})\r\n",
         "size": 0,
         "title": "DNS Proxy Request over time by ClientIP",
         "noDataMessage": "There are no DNS Proxy logs within the selected workspaces. If you believe the selection is correct, confirm DNS Proxy logs are enabled for the Azure Firewall and feeding into this selected workspace. Reference Docs: https://docs.microsoft.com/azure/firewall/",
@@ -1996,7 +1996,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Responce_Code \" \" Responce_Flags \" \" Responce_Size \" \" Response_Duration\r\n| project-away msg_s\r\n| where '{DNSClientIP}' == ClientIP or '{DNSClientIP}' == \"*\"\r\n| where '{DNSRequestName}' == Request_Name or '{DNSRequestName}' == \"*\"\r\n| summarize by TimeGenerated, ResourceId, ClientIP, ClientPort, QueryID, Request_Type, Request_Class, Request_Name, Request_Protocol, Request_Size, EDNSO_DO, EDNS0_Buffersize, Responce_Code, Responce_Flags, Responce_Size, Response_Duration, SubscriptionId",
+        "query": "AzureDiagnostics\r\n| where Category == \"AzureFirewallDnsProxy\"\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| parse msg_s with \"DNS Request: \" ClientIP \":\" ClientPort \" - \" QueryID \" \" Request_Type \" \" Request_Class \" \" Request_Name \". \" Request_Protocol \" \" Request_Size \" \" EDNSO_DO \" \" EDNS0_Buffersize \" \" Response_Code \" \" Response_Flags \" \" Response_Size \" \" Response_Duration\r\n| project-away msg_s\r\n| where '{DNSClientIP}' == ClientIP or '{DNSClientIP}' == \"*\"\r\n| where '{DNSRequestName}' == Request_Name or '{DNSRequestName}' == \"*\"\r\n| summarize by TimeGenerated, ResourceId, ClientIP, ClientPort, QueryID, Request_Type, Request_Class, Request_Name, Request_Protocol, Request_Size, EDNSO_DO, EDNS0_Buffersize, Response_Code, Response_Flags, Response_Size, Response_Duration, SubscriptionId",
         "size": 0,
         "showAnalytics": true,
         "title": "DNS Proxy Information: Query Time({$queryTime}) : Total Rows({$rowCount})",

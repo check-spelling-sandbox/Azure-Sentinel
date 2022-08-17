@@ -28,7 +28,7 @@
 5. To run a script user needs to be an RTR Active Responder and RTR Administrator in the falcon console.[Understand and assign Real Time Responder roles](https://falcon.crowdstrike.com/support/documentation/71/real-time-response-and-network-containment#rtr_roles)
 6. The following needs to be done on the host to run a script:
    *  Configure [Response Policies](https://falcon.crowdstrike.com/support/documentation/71/real-time-response-and-network-containment#rtr-policy-config) - create policies and assign host groups to them
-   * 	Enable the toggle real time functionality and enable custom scripts toggle to run them in [Real time resonse policy settings](https://falcon.crowdstrike.com/support/documentation/71/real-time-response-and-network-containment#rtr-policy-config)
+   * 	Enable the toggle real time functionality and enable custom scripts toggle to run them in [Real time response policy settings](https://falcon.crowdstrike.com/support/documentation/71/real-time-response-and-network-containment#rtr-policy-config)
 
 
 ### Deployment instructions 
