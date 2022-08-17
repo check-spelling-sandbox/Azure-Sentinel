@@ -8,7 +8,7 @@
     "prerequisites": [
       "1. Carbon Black connector needs to be deployed prior to the deployment of this playbook under the same subscription.",
       "2. Generate an API key to connect with carbon black connector. ",
-      "3. Find Organziation key by refering this link [ Find Organization key by refering this link ](https://defense.conferdeploy.net/settings/connectors) "
+      "3. Find Organization key by refering this link [ Find Organization key by refering this link ](https://defense.conferdeploy.net/settings/connectors) "
     ],
     "lastUpdateTime": "2022-08-29T10:43:00Z",
     "entities": [ "Host" ],

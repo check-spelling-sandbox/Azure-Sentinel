@@ -14,7 +14,7 @@ When  this playbook gets triggered and performs the following actions:
 
 1. Prior to the deployment of this playbook, Cisco Umbrella Management API Connector needs to be deployed under the same subscription.
 2. Obtain Cisco Umbrella Management API credentials. Refer to Cisco Umbrella Management API Custom Connector documentation.
-3. Obtain Cisco Umbrella Organiztion Id.
+3. Obtain Cisco Umbrella Organization Id.
 
 ### Deployment instructions
 
