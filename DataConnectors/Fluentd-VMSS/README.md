@@ -1,7 +1,7 @@
 # Scaleable SYSLOG CEF Collection using FluentD and VMSS
 author: Nicholas DiCola
 
-Sample is an ARM template that will deploy a Linux (RedHat or Unbuntu) Virtual Machine Scale Set with FluentD installed with a basic config.  The FluentD config will listen on 5514 for SYSLOG CEF formatted messages.  It will then get the GEOIP information for src or dst IP Addresses and copy the send time to agentRecieptTime.  Lastly, it will output to the local Microsoft Monitoring Agent for ingestion to Azure Sentinel.
+Sample is an ARM template that will deploy a Linux (RedHat or Unbuntu) Virtual Machine Scale Set with FluentD installed with a basic config.  The FluentD config will listen on 5514 for SYSLOG CEF formatted messages.  It will then get the GEOIP information for src or dst IP Addresses and copy the send time to agentReceiptTime.  Lastly, it will output to the local Microsoft Monitoring Agent for ingestion to Azure Sentinel.
 
 The ARM template will deploy everything needed:
 * Virtual Machine Scale
