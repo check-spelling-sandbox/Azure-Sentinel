@@ -311,7 +311,7 @@ class DCRConfigurationVerifications:
     DCR_doc = "https://docs.microsoft.com/azure/azure-monitor/agents/data-collection-rule-overview"
     DCRA_doc = "https://docs.microsoft.com/rest/api/monitor/data-collection-rule-associations"
     CEF_stream_name = "SECURITY_CEF_BLOB"
-    DCR_missing_error_messgae = "Could not detect any data collection rule on the machine. The data reaching this server will not be forwarded to any workspace." \
+    DCR_missing_error_message = "Could not detect any data collection rule on the machine. The data reaching this server will not be forwarded to any workspace." \
                                 " For explanation on how to install a Data collection rule please browse- {} \n " \
                                 "In order to read about how to associate a DCR to a machine please review- {}".format(
         DCR_doc, DCRA_doc)
@@ -330,7 +330,7 @@ class DCRConfigurationVerifications:
         command_object = BasicCommand(command_name, command_to_run, result_keywords_array)
         command_object.run_full_test()
         if not command_object.is_successful:
-            command_object.print_error(self.DCR_missing_error_messgae)
+            command_object.print_error(self.DCR_missing_error_message)
             return False
         return True
 
