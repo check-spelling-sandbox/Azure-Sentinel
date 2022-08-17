@@ -12,7 +12,7 @@ With the ever increasing number of new domains on the Internet as well as all of
 
 Please note:  This version only stores the registration date of the domains successfully resolved, but you could modify it to store more information such as who registered the domain, address information, contact data etc.
 
-Also note: Not all TLD's support RDAP.  The current version of the code does not account for this _except_ to ignore TLD's you specifiy.  A future version of this function is planned to support traditional WHOIS lookups as well if there is enough interest.
+Also note: Not all TLD's support RDAP.  The current version of the code does not account for this _except_ to ignore TLD's you specify.  A future version of this function is planned to support traditional WHOIS lookups as well if there is enough interest.
 
 ## Setup Steps
 When deploying this Azure Function you will need some values to fill in the blanks for the Azure Resource Manager (ARM) Template:
