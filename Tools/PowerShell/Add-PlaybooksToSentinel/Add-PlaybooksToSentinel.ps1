@@ -13,7 +13,7 @@ NOTE: If there is a non-standard parameter (ie not playbook name or username, yo
 
 Profit :)
 
-Reqirements: Local GitHub Repo or URI of online repo, PowerShell Module Az.Resources
+Requirements: Local GitHub Repo or URI of online repo, PowerShell Module Az.Resources
 RepoUri: Specify Github Repo in format https://github.com/<owner>/<repo>/tree/master/<
 RepoDirectory: Specify local cloned repo, ie C:\Github\Azure-Sentinel\Playbooks
 Permissions: Contributor on the Resource Group
