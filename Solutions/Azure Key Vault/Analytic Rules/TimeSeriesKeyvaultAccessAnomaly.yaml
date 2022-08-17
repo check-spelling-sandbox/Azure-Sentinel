@@ -51,7 +51,7 @@ query: |
   // Filter the alerts since specified timeframe
   TimeSeriesAlerts
   | where TimeGenerated > ago(2d)
-  // Join against base logs since specified timeframe to retrive records associated with the hour of anomaly
+  // Join against base logs since specified timeframe to retrieve records associated with the hour of anomaly
   | join (
   AzureDiagnostics
   | where TimeGenerated > ago(timeframe)

@@ -276,7 +276,7 @@ Update-SQSPolicy
 $organizationCloudTrailConfirmation = Read-ValidatedHost -Prompt 'Do you want to enable the Trail and CloudTrail S3 Policy for ALL accounts in your organization? [y/n]' -ValidationType Confirm
 if ($organizationCloudTrailConfirmation -eq "y")
 {
-	# Retreive the organization information
+	# Retrieve the organization information
 	Write-Log -Message "Executing: ((aws organizations describe-account --account-id $callerAccount ) | ConvertFrom-Json -ErrorAction SilentlyContinue).Account.Arn.Split('/')[1]" -LogFileName $LogFileName -Severity Verbose
 	try
 	{

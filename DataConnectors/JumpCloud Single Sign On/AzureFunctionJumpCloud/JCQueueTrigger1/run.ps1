@@ -20,7 +20,7 @@ Write-Output "JumpCloud: Queue trigger for work item: $QueueItem, Queue item ins
 import-module AzTable
 
 # Retrieve Environment Variables and prep other Variables for the JumpCloud API request
-$JCService = $QueueItem                         #Which eventlog set to rerieve from JumpCloud
+$JCService = $QueueItem                         #Which eventlog set to retrieve from JumpCloud
 $JCapiToken = $env:JumpCloudApiToken            #JumpCloud API
 $JCuri = $env:JumpCloudUri                      #Standard JumpCloud URI
 #$JCStartTime = $env:JumpCloudStartTime          #Initial Start time to collect logs

@@ -34,8 +34,8 @@ class AzureSecretHandler:
     def get_secret(self, key):
         #As per the Azure Vault rules, Key will be strictly follow the format '^[0-9a-zA-Z-]+$'
         try:
-            retrived_obj = self.client.get_secret(key)
-            return retrived_obj.value
+            retrieved_obj = self.client.get_secret(key)
+            return retrieved_obj.value
         except ResourceNotFoundError as e:
             logging.info("No value found in vault for key %s" % str(key))
             return None
@@ -48,8 +48,8 @@ class AzureSecretHandler:
     def set_secret(self, key, value):
         #As per the Azure Vault rules, Key will be strictly follow the format '^[0-9a-zA-Z-]+$'.
         try:
-            retrived_obj = self.client.set_secret(key, value)
-            return retrived_obj.value
+            retrieved_obj = self.client.set_secret(key, value)
+            return retrieved_obj.value
         except Exception as e:
             # Anything else that is not Azure related (network, stdlib, etc.)
             logging.info("Exception during creating key/value in vault  %s" % str(e))

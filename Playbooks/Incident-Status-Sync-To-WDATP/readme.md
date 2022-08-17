@@ -79,7 +79,7 @@ The actual matching attribute "provider alert ID" that is exactly same as Vendor
 ![Picture8](./Graphics/8.gif)
 
 
-Note: attribute "provider Alert ID" was retreived and the MDATP connector was used in background to pass it to. Same result could be obtained when sending a query to MDATP with the specific alert id ed637431102114129586_160070831 in order to set it to "resolved".
+Note: attribute "provider Alert ID" was retrieved and the MDATP connector was used in background to pass it to. Same result could be obtained when sending a query to MDATP with the specific alert id ed637431102114129586_160070831 in order to set it to "resolved".
 
 **Step#5:** testing the playbook in action:
 

@@ -44,7 +44,7 @@ query: |
   // Joining the flagged outlier from the previous step with the original dataset to present contextual information
   // during the anomalyhour to analysts to conduct investigation or informed decisions.
   TimeSeriesAlerts | where TimeGenerated > ago(2d)
-  // Join against base logs since specified timeframe to retrive records associated with the hour of anomaly
+  // Join against base logs since specified timeframe to retrieve records associated with the hour of anomaly
   | join (
       OfficeActivity
       | where TimeGenerated > ago(2d)
