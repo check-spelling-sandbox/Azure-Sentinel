@@ -1987,7 +1987,7 @@
   {
     "workbookKey": "MicrosoftSentinelDeploymentandMigrationTracker",
     "logoFileName": "",
-    "description": "Use this workbook as a tool to define, track, and complete key deployment/migraiton tasks for Microsoft Sentinel. This workbook serves as a central hub for monitoring and configuring key areas of the product without having to leave the workbook and start over.",
+    "description": "Use this workbook as a tool to define, track, and complete key deployment/migration tasks for Microsoft Sentinel. This workbook serves as a central hub for monitoring and configuring key areas of the product without having to leave the workbook and start over.",
     "dataTypesDependencies": [],
     "dataConnectorsDependencies": [],
     "previewImagesFileNames": [ "microsoftsentineldeploymentandmigration-black.png", "microsoftsentineldeploymentandmigration-white.png" ],
