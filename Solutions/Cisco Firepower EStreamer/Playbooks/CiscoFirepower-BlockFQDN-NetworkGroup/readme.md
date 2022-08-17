@@ -16,7 +16,7 @@ When a new Sentinel incident is created, this playbook gets triggered and perfor
 
 ![Cisco Firepower Network Group object](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Cisco%20Firepower%20EStreamer/Playbooks/CiscoFirepower-BlockFQDN-NetworkGroup/Images/BlockFQDN-NetworkGroup-CiscoFirepowerAdd.png)
 
-**Plabook overview:**
+**Playbook overview:**
 
 
 ![Playbook overview](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Cisco%20Firepower%20EStreamer/Playbooks/CiscoFirepower-BlockIP-NetworkGroup/Images/designerOverviewLight1.png)

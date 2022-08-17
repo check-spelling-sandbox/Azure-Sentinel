@@ -14,7 +14,7 @@ When this playbook gets triggered performs below actions:
 <br>
 ![Cisco Firepower Network Group object](./Images/BlockIP-NetworkGroup-CiscoFirepowerAdd.png)
 
-**Plabook overview:**
+**Playbook overview:**
 
 ![Playbook overview](./Images/designerOverviewLight1.png)
 ![Playbook overview](./Images/designerOverviewLight2.png)
