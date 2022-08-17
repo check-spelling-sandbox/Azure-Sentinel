@@ -105,7 +105,7 @@ None
 
 
 **Additional value to consider when making the change:** 
-* Incident trigger recieves as an input:
+* Incident trigger receives as an input:
     * Incident properties
     * Alerts and their properties 
     * Entities
