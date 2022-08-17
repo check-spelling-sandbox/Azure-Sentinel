@@ -93,7 +93,7 @@ It’s only one-time step to collect consent
 		c. Click on "Add Access Policy"
 			i. Configure from template : Secret Management
 			ii. Key Permissions : GET, LIST, SET
-			iii. Select Prinicpal : <<Your Account>>
+			iii. Select Principal : <<Your Account>>
 			iv. Add
 		d. Click "Save"
 

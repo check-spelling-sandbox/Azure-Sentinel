@@ -40,7 +40,7 @@ A MCAS API Token is required. See the documentation to learn more about the [API
 		c. Click on "Add Access Policy"
 			i. Configure from template : Secret Management
 			ii. Key Permissions : GET, LIST, SET
-			iii. Select Prinicpal : <<Your Account>>
+			iii. Select Principal : <<Your Account>>
 			iv. Add
 		d. Click "Save"
 
