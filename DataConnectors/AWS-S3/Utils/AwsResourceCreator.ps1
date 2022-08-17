@@ -170,7 +170,7 @@ function Enable-S3EventNotification
 
         if($IsCustomLog -ne $true)
         {
-            Write-Log -Message "Event notificaion prefix definition, to Limit the notifications to objects with key starting with specified characters." -LogFileName $LogFileName     
+            Write-Log -Message "Event notification prefix definition, to Limit the notifications to objects with key starting with specified characters." -LogFileName $LogFileName     
             $prefixOverrideConfirm = Read-ValidatedHost -Prompt "The default prefix is '$eventNotificationPrefix'. `n  Do you want to override the event notification prefix? [y/n]" -ValidationType Confirm
             if ($prefixOverrideConfirm -eq 'y')
             {
