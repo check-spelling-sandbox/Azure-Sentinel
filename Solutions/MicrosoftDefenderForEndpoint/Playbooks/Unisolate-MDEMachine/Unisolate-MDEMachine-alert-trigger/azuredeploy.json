@@ -126,7 +126,7 @@
                                         "Actions_-_Unisolate_machine": {
                                             "inputs": {
                                                 "body": {
-                                                    "Comment": "Relased from isolation from playbook for Microsoft Sentinel Incident:  @{body('Alert_-_Get_incident')?['properties']?['incidentNumber']} - @{body('Alert_-_Get_incident')?['properties']?['title']}"
+                                                    "Comment": "Released from isolation from playbook for Microsoft Sentinel Incident:  @{body('Alert_-_Get_incident')?['properties']?['incidentNumber']} - @{body('Alert_-_Get_incident')?['properties']?['title']}"
                                                 },
                                                 "host": {
                                                     "connection": {
