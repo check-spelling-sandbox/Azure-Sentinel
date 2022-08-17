@@ -33,7 +33,7 @@ EmailEvents
 
 // --------------------------------------------
 
-// min() - obtains the minimim value from the set
+// min() - obtains the minimum value from the set
 // max() - obtains the maximum value from the set
 
 // SQL Equivalent: 
