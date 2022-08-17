@@ -3,7 +3,7 @@
 #
 #  MODIFIED VERSION FOR ACHMEA ArcSight Migration to Microsoft Sentinel
 #  ABLE TO READ AND CONVERT MORE MODERN LOGGER .dat FORMATS
-#  Performace Optimized
+#  Performance Optimized
 #
 #  TODO:
 #    What is the meaning/significance of the skipped data?  Search for "## SKIP:"  in this file

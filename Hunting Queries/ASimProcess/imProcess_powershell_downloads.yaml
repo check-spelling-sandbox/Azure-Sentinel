@@ -8,7 +8,7 @@ tactics:
   - CommandAndControl
 query: |
   imProcessCreate 
-    | where Process has_any ("powershell.exe", "powershell_ise.exe") // perfromance pre-filtering
+    | where Process has_any ("powershell.exe", "powershell_ise.exe") // performance pre-filtering
     | extend FileName=tostring(split(TargetProcessFilePath, '\\')[-1])
     | where FileName in~ ("powershell.exe", "powershell_ise.exe")
     | where CommandLine has_any ("Net.WebClient", "DownloadFile", "Invoke-WebRequest", "Invoke-Shellcode", "http:")
