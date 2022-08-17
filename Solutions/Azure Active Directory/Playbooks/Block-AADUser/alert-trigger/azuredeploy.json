@@ -305,7 +305,7 @@
                                                 "inputs": {
                                                     "body": {
                                                         "incidentArmId": "@body('Alert_-_Get_incident')?['id']",
-                                                        "message": "<p>Block-AADUser playbook could not disable user @{items('For_each')?['Name']}.<br>\nError message: @{body('Update_user_-_disable_user')['error']['message']}<br>\nNote: If user is admin, this playbook don't have privilages to block admin users!</p>"
+                                                        "message": "<p>Block-AADUser playbook could not disable user @{items('For_each')?['Name']}.<br>\nError message: @{body('Update_user_-_disable_user')['error']['message']}<br>\nNote: If user is admin, this playbook don't have privileges to block admin users!</p>"
                                                     },
                                                     "host": {
                                                         "connection": {

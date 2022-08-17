@@ -158,7 +158,7 @@ function Get-RequiredModules {
         $installedModule = Get-InstalledModule -Name $Module -ErrorAction SilentlyContinue
         if ($null -eq $installedModule) {
             Write-Log -Message "The $Module PowerShell module was not found" -LogFileName $LogFileName -Severity Warning
-            #check for Admin Privleges
+            #check for Admin Privileges
             $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 
             if (-not ($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) {
