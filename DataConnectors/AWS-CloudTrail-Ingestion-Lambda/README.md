@@ -125,7 +125,7 @@ SplitAWSResourceTypeTables --> Boolean
 ### **Test the function**
 1. To test your function, Perform some actions like Start EC2, Stop EC2, Login into EC2, etc.,. 
 2. To see the logs, go the Lambda function.  Click Monitoring tab. Click view logs in CloudWatch. 
-![Pciture5](./Graphics/Picture5.png)
+![Picture5](./Graphics/Picture5.png)
 3. In CloudWatch, you will see each log stream from the runs. Select the latest.
 ![Picture6](./Graphics/Picture6.png)
 
