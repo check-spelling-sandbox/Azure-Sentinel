@@ -32,7 +32,7 @@ When a new Sentinel incident is created, this playbook gets triggered and perfor
 
 
 
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
     * Playbook Name: Enter the playbook name here (ex:CiscoASA-CreateInboundAccessRuleOnInterface)
     * Cisco ASA Connector name : Enter the name of the Cisco ASA custom connector (default value:CiscoASAConnector)
     * Interface ID : The name of the interface you want to create the access rules on.

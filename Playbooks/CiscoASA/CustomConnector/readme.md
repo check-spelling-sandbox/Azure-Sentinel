@@ -49,7 +49,7 @@ Prior using this custom connector, it should be deployed in the Resource Group w
 
 ### Connector **not** via on-premises data gateway
 1. Deploy the Custom Connector by clicking on "Deploy to Azure" button. This will take you to deploying an ARM Template wizard.
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
     * Connector name: Please enter the custom connector(ex:Cisco ASA connector)
     * Service Endpoint: The URL to the Cisco ASA REST API
 
@@ -59,7 +59,7 @@ Prior using this custom connector, it should be deployed in the Resource Group w
 
 ### Connector via on-premises data gateway
 1. Deploy the Custom Connector by clicking on "Deploy to Azure" button. This will take you to deploying an ARM Template wizard.
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
     * Connector name: Please enter the custom connector(ex:Cisco ASA connector)
     * Service Endpoint: The URL to the Cisco ASA REST API
 

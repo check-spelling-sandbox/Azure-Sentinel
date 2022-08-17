@@ -19,7 +19,7 @@ When  this playbook gets triggered and performs the following actions:
 ### Deployment instructions
 
 1. To deploy the Playbook, click the Deploy to Azure button. This will launch the ARM Template deployment wizard.
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
     * Playbook Name: Enter the playbook name here
     * Cisco Umbrella Organization Id: Organization id in Cisco Umbrella
 
