@@ -4,7 +4,7 @@ Master playbook is integrated with multiple firewall end products like Zscaler ,
 
 Firewall end products are deployed as child/nested playbooks.
 
-If a malicious URL is detected from the Azure sentinel, master playbook calls all the child/nested playbooks and each firewall product will take remidiation steps needed on that URL and comments will be passed on the master playbook from the child/nested playbooks involving multiple products. 
+If a malicious URL is detected from the Azure sentinel, master playbook calls all the child/nested playbooks and each firewall product will take remediation steps needed on that URL and comments will be passed on the master playbook from the child/nested playbooks involving multiple products. 
 
 ## Summary
  When a new Azure Sentinel incident is created, this playbook gets triggered and performs the below actions:
@@ -18,11 +18,11 @@ If a malicious URL is detected from the Azure sentinel, master playbook calls al
  ## Pre-requisites for deployment
 At least one of the below mentioned nested playbooks must be deployed prior to deployment of this playbook under same subscription and same resource group and the same location/region. Capture the name of all the deployed playbooks during deployment.
 
-- [Cisco-Meraki-Remediation-URL](./Cisco-Meraki-Remediation-URL/azuredeploy.json) is a nested playbook that handles remidiation for Cisco Meraki.
-- [Forcepoint-Remediation-URL](./Forcepoint-Remediation-URL/azuredeploy.json) is a nested playbook that handles remidiation for Forcepoint.
-- [Fortinet-FortiGate-Remediation-URL](./Fortinet-FortiGate-Remediation-URL/azuredeploy.json) is a nested playbook that handles remidiation for Fortinet FortiGate.
-- [PaloAlto-PAN-OS-Remediation-URL](./PaloAlto-PAN-OS-Remediation-URL/azuredeploy.json) is a nested playbook that handles remidiation for PaloAlto PAN OS.
-- [Zscaler-Remediation-URL](./Zscaler-Remediation-URL/azuredeploy.json) is a nested playbook that handles remidiation for Zscaler.
+- [Cisco-Meraki-Remediation-URL](./Cisco-Meraki-Remediation-URL/azuredeploy.json) is a nested playbook that handles remediation for Cisco Meraki.
+- [Forcepoint-Remediation-URL](./Forcepoint-Remediation-URL/azuredeploy.json) is a nested playbook that handles remediation for Forcepoint.
+- [Fortinet-FortiGate-Remediation-URL](./Fortinet-FortiGate-Remediation-URL/azuredeploy.json) is a nested playbook that handles remediation for Fortinet FortiGate.
+- [PaloAlto-PAN-OS-Remediation-URL](./PaloAlto-PAN-OS-Remediation-URL/azuredeploy.json) is a nested playbook that handles remediation for PaloAlto PAN OS.
+- [Zscaler-Remediation-URL](./Zscaler-Remediation-URL/azuredeploy.json) is a nested playbook that handles remediation for Zscaler.
 
 
 If any one of the above mentioned playbooks are not deployed then default playbook will deploy in its place.

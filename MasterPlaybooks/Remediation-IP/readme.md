@@ -4,7 +4,7 @@ Master playbook is integrated with multiple firewall end products like AzureFire
 
 Firewall end products are deployed as child/nested playbooks.
 
-If a malicious IP is detected from the Azure sentinel, master playbook calls all the child/nested playbooks and each firewall product will take remidiation steps needed on that Ip Address and comments will be passed on the master playbook from the child/nested playbooks involving multiple products. 
+If a malicious IP is detected from the Azure sentinel, master playbook calls all the child/nested playbooks and each firewall product will take remediation steps needed on that Ip Address and comments will be passed on the master playbook from the child/nested playbooks involving multiple products. 
 
 ## Summary
  When a new Azure Sentinel incident is created, this playbook gets triggered and performs the below actions:
@@ -20,17 +20,17 @@ If a malicious IP is detected from the Azure sentinel, master playbook calls all
  ## Pre-requisites for deployment
 At least one of the below-mentioned nested playbooks must be deployed prior to deployment of this playbook under same subscription and same resource group and the same location/region. Capture the name of all the deployed playbooks during deployment.
 
-- [AzureFirewall-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/AzureFirewall-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for AzureFirewall.  
-- [Forcepoint-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/ForcepointNGFW-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for Forcepoint. 
-- [Fortinet-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/Fortinet-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for Fortinet. 
-- [Meraki-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/Meraki-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for Meraki. 
-- [PaloAlto-PAN-OS-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/PaloAlto-PAN-OS-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for PaloAlto.
+- [AzureFirewall-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/AzureFirewall-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for AzureFirewall.  
+- [Forcepoint-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/ForcepointNGFW-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for Forcepoint. 
+- [Fortinet-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/Fortinet-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for Fortinet. 
+- [Meraki-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/Meraki-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for Meraki. 
+- [PaloAlto-PAN-OS-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/PaloAlto-PAN-OS-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for PaloAlto.
 
-- [CiscoASA-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/CiscoASA-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for PaloAlto.
-- [CiscoFirepower-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/CiscoFirepower-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for PaloAlto.
-- [CiscoUmbrella-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/CiscoUmbrella-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for PaloAlto.
-- [F5-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/F5-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for PaloAlto.
-- [MDE-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/MDE-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remidiation for PaloAlto.
+- [CiscoASA-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/CiscoASA-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for PaloAlto.
+- [CiscoFirepower-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/CiscoFirepower-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for PaloAlto.
+- [CiscoUmbrella-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/CiscoUmbrella-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for PaloAlto.
+- [F5-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/F5-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for PaloAlto.
+- [MDE-BlockIP-Nested-Remediation](/MasterPlaybook-IP-Remediation/MDE-BlockIP-Nested-Remediation/azuredeploy.json) is a nested playbook that handles remediation for PaloAlto.
 
 If any one of the above-mentioned playbooks are not deployed then default playbook will deploy in its place.
 
