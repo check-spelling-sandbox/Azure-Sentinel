@@ -22,7 +22,7 @@ DuoSecurityTrustMonitor_CL
     FromCommonNetblock = column_ifexists("from_common_netblock_b", ""),
     FromNewUser = column_ifexists("from_new_user_b", ""),
     LowRiskIp = column_ifexists("low_risk_ip_b", ""),
-    PrioirtyEvent = column_ifexists("priority_event_b", ""),
+    PriorityEvent = column_ifexists("priority_event_b", ""),
     SeKey = column_ifexists("sekey_s", ""),
     State = column_ifexists("state_s", ""),
     SurfacedAuthAccessDeviceBrowser = column_ifexists("surfaced_auth_access_device_browser_s", ""),
