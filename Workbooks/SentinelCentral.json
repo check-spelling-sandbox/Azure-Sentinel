@@ -1487,7 +1487,7 @@
           {
             "type": 1,
             "content": {
-              "json": "For further analysis I suggest you open the Azure Sentinel Incident Blade and _Investigate_ (use the hyper link provided in the table, if you have the correct RBAC).\r\n\r\nAlternatively open the [_Investigation Insights_] or [_Incident Overview_] Workbooks for guided and deeper investigation.  Open Incident Overview from the Portal, _Investigation Insights_ can be opened to the right --->.\r\n\r\n- You must have previoulsy SAVED these Workbooks in your workspace(s).  \r\n- Investigation Insights requires release v1.2 or above (you may have to manually select the Workspace), for prior versions you will have to select the matching Incident Number as well. \r\n- For the Workbooks to be listed, they need \"Investigation\" in the name when you save them."
+              "json": "For further analysis I suggest you open the Azure Sentinel Incident Blade and _Investigate_ (use the hyper link provided in the table, if you have the correct RBAC).\r\n\r\nAlternatively open the [_Investigation Insights_] or [_Incident Overview_] Workbooks for guided and deeper investigation.  Open Incident Overview from the Portal, _Investigation Insights_ can be opened to the right --->.\r\n\r\n- You must have previously SAVED these Workbooks in your workspace(s).  \r\n- Investigation Insights requires release v1.2 or above (you may have to manually select the Workspace), for prior versions you will have to select the matching Incident Number as well. \r\n- For the Workbooks to be listed, they need \"Investigation\" in the name when you save them."
             },
             "customWidth": "50",
             "name": "text - 7"
