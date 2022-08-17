@@ -3270,7 +3270,7 @@
                   },
                   {
                     "columnId": "maximum E2E IngestionLatency",
-                    "label": "max E2E Ingestion Latenc"
+                    "label": "max E2E Ingestion Latency"
                   }
                 ]
               },
