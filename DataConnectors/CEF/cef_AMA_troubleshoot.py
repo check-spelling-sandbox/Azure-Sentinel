@@ -501,7 +501,7 @@ class OperatingSystemVerifications:
     SELinux_documentation = "https://access.redhat.com/documentation/red_hat_enterprise_linux/8/html/using_selinux/changing-selinux-states-and-modes_using-selinux#changing-selinux-modes_changing-selinux-states-and-modes"
     SELinux_running_error_message = "Detected SELinux running on the machine. The CEF connector does not support any form of hardening at the moment," \
                                     "and having SELinux in Enforcing mode can harm the forwarding of data. Please disable SELinux by running the command \'setenforce 0\'." \
-                                    "This will disable SELinux temporarily. In order to disable permemently please follow this documentation- {}".format(
+                                    "This will disable SELinux temporarily. In order to disable permanently please follow this documentation- {}".format(
         SELinux_documentation)
     iptables_blocking_traffic_error_message = "Iptables might be blocking incoming traffic to the agent." \
                                               " Please verify there are no firewall rules blocking incoming traffic to port 514 and run again."
