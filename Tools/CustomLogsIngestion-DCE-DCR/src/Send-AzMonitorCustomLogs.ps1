@@ -32,7 +32,7 @@
     Uri of the data collection endpoint used to host the data collection rule.
 
     .PARAMETER StreamName
-    Name of stream to send data to before being procesed and sent to an Azure Monitor data table.
+    Name of stream to send data to before being processed and sent to an Azure Monitor data table.
 
     .EXAMPLE
     PS> Send-AzMonitorCustomLogs -LogPath C:\WinEvents.json -AADAppId 'XXXX' -AADAppSecret 'XXXXXX' -TenantId 'XXXXXX' -DcrImmutableId 'dcr-XXXX' -DceURI 'https://XXXX.westus2-1.ingest.monitor.azure.com' -StreamName 'Custom-WindowsEvent'
