@@ -153,7 +153,7 @@
           "version": "KqlItem/1.0",
           "query": "GitHubRepoLogs_CL\r\n| extend TimeGenerated = created_at_t\r\n| where LogType_s == \"Forks\"\r\n| summarize count() by bin(TimeGenerated, 1d), name_s",
           "size": 0,
-          "title": "Fork Count by Repoistory over Time",
+          "title": "Fork Count by Repository over Time",
           "timeContext": {
             "durationMs": 0
           },
