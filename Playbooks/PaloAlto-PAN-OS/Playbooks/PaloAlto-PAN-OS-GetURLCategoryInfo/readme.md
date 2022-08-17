@@ -59,7 +59,7 @@ Iterates on the URLs found in this incident (probably one) and performs the foll
 
  3. Add a comment to the incident with the information below:
 
-     a. User information collected by "List address obects" action from PAN-OS such as
+     a. User information collected by "List address objects" action from PAN-OS such as
 
     *  name, location, description and URL
     
