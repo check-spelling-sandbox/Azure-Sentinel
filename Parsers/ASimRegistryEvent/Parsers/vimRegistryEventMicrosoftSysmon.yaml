@@ -36,7 +36,7 @@ ParserQuery: |
               Event 
               | where Source == "Microsoft-Windows-Sysmon" and EventID in (12, 13, 14)
               | parse EventData with 
-                      * '<Data Name="RuleName">'RuleName // parsing the XML using the original fields name - for readibliy 
+                      * '<Data Name="RuleName">'RuleName // parsing the XML using the original fields name - for readability 
                       '</Data><Data Name="EventType">'EventType
                       '</Data><Data Name="UtcTime">'UtcTime
                       '</Data><Data Name="ProcessGuid">{'ProcessGuid
