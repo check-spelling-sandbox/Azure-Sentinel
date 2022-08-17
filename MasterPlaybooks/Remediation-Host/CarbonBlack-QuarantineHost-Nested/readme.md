@@ -74,7 +74,7 @@ Initialize an array variable to assign the quarantined devices information used 
 
 ### For each-Hosts
 This action will perform the below actions
- a. Make a call to CarbonBlack API with the parameters such as Organization Key and Quary [ Contains device name ]
+ a. Make a call to CarbonBlack API with the parameters such as Organization Key and Query [ Contains device name ]
  b. Verify the CarbonBlack returned the results and Check the device is quarantined
  c. If the device is not quarantined then isolate it.
 
