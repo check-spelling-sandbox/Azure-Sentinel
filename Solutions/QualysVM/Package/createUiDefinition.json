@@ -152,7 +152,7 @@
                 "name": "analytic2-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "This creates an incident when a new high severity vulnerability is detected across multilple hosts"
+                  "text": "This creates an incident when a new high severity vulnerability is detected across multiple hosts"
                 }
               }
             ]

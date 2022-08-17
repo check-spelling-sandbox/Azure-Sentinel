@@ -186,7 +186,7 @@
   },
   {
     "id": "da498ea0-f3bd-437f-9f36-eaf5ba5e0a6c",
-    "templateName": "NewHighSeverityVulnDetectedAcrossMulitpleHostsV2.yaml",
+    "templateName": "NewHighSeverityVulnDetectedAcrossMultipleHostsV2.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {
