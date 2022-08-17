@@ -69,7 +69,7 @@ ParserQuery: |
   parser (starttime=starttime, endtime=endtime, srcipaddr_has_any_prefix=srcipaddr_has_any_prefix, ipaddr_has_any_prefix=ipaddr_has_any_prefix, url_has_any=url_has_any, httpuseragent_has_any=httpuseragent_has_any, eventresultdetails_in=eventresultdetails_in, eventresult=eventresult)
 
 Parsers:
-  - _Im_WebSesssion_Empty
+  - _Im_WebSession_Empty
   - _Im_WebSession_SquidProxy
   - _Im_WebSession_ZscalerZIA
   - _Im_WebSession_VectraAI
