@@ -47,7 +47,7 @@ API connections for the above mentioned prerequisites are created as a part of A
     - SharePoint connection - To store all the reports
     - Teams connection - To send the notification
 6. Select the SharePoint site at the "Create new subfolder under Documents to store all csv files" block of the logic app and select "List or Library" as "Documents"
-7. Make sure to give to same SharePoint site URL given in the above step at the blocks "Create missing KBs csv file", "Create installed software csv file", "Create alerts csv file", "Create recommendation csv file" and "Create vulnerabilities csv file" under the "For each MDATP host - get missing KBs", "For each MDATP host - get software inventory", "For each MDATP host - get alerts", "For each MDATP host - get recommendations" and "For each MDATP host - get vulnerabilities" blocks respectivly.
+7. Make sure to give to same SharePoint site URL given in the above step at the blocks "Create missing KBs csv file", "Create installed software csv file", "Create alerts csv file", "Create recommendation csv file" and "Create vulnerabilities csv file" under the "For each MDATP host - get missing KBs", "For each MDATP host - get software inventory", "For each MDATP host - get alerts", "For each MDATP host - get recommendations" and "For each MDATP host - get vulnerabilities" blocks respectively.
 8. Also make sure "Create sharing link for the subfolder which contains all csv files" is given the same SharePoint site URL and the Library Name  (Documents) in (6)
 
 ## Deploy to Azure
