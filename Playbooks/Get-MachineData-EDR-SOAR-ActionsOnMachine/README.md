@@ -16,7 +16,7 @@ Also should be able to perform some actions like:
 1. Defender for Endpoint / MDATP / EDR
 2. Microsoft SharePoint online
 3. Microsoft Teams
-4. Azure AD App registerd with the following permissions under "WindowsDefenderATP"
+4. Azure AD App registered with the following permissions under "WindowsDefenderATP"
     - Alert.Read.Add
     - Alert.ReadWrite.All
     - Machine.Read.All
