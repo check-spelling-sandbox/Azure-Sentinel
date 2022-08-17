@@ -18,7 +18,7 @@
 | **Carbon Black Cloud Platform (PSC)** | Alerts API, Devices API | /appservices/ | Custom (must add an access level with appropriate permissions) |
 | **Carbon Black Cloud Platform (PSC)** | Platform Search API for Processes | /investigate/ | Custom (must add an access level with appropriate permissions) |
 
-1. Find Organization key by refering this link [ Find Organization key by refering this link ](https://defense.conferdeploy.net/settings/connectors)
+1. Find Organization key by referring this link [ Find Organization key by referring this link ](https://defense.conferdeploy.net/settings/connectors)
 
 ### Deploy Custom Connector
 
