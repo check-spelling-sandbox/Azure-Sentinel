@@ -23,7 +23,7 @@ query: |
   | where propertyName =~ "Role.DisplayName"
   | extend roleName = modifiedPropery.OldValue
   | where roleName in ("Company Administrator", "Global Administrator") // Add more roles you found interesting here
-  | where RawEventData.Actor has "User" // Validate the actor of the oepration is a user and not service principal
+  | where RawEventData.Actor has "User" // Validate the actor of the operation is a user and not service principal
   | extend Actor = tostring(RawEventData.Actor[0].ID), removedUserUpn = tostring(RawEventData.Target[3].ID)
   | summarize removedAccounts = dcount(removedUserUpn), make_set(removedUserUpn) by Actor
   | where removedAccounts > removedAccountsThreshold
