@@ -25,7 +25,7 @@ This function app will poll O365 Activity Management API every 10 mins for logs.
 
 ```powershell
 $ClientID = "<GUID> from AAD App Registration"
-$ClientSecret = "<clientSecret> from AAD App Registrtion"
+$ClientSecret = "<clientSecret> from AAD App Registration"
 $loginURL = "https://login.microsoftonline.com/"
 $tenantdomain = "<domain>.onmicrosoft.com"
 $TenantGUID = "<tenantguid> from AAD"
