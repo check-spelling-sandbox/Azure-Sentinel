@@ -31,8 +31,8 @@ query: |
     | extend AuthenticationMethod = tostring(todynamic(AuthenticationDetails)[0].authenticationMethod)
     | where AuthenticationMethod != "Previously satisfied"
     | summarize count(), make_set(AuthenticationRequirement), make_set(AuthenticationMethod), make_set(IPAddress), make_set(Location), LastLogin = max(TimeGenerated) by UserPrincipalName
-    | extend noofAuthMehods = array_length(set_AuthenticationMethod), noofAuthReqs = array_length(set_AuthenticationRequirement)
-    | where noofAuthMehods > 1 or noofAuthReqs > 1
+    | extend noofAuthMethods = array_length(set_AuthenticationMethod), noofAuthReqs = array_length(set_AuthenticationRequirement)
+    | where noofAuthMethods > 1 or noofAuthReqs > 1
     | extend timestamp = LastLogin, AccountCustomEntity = UserPrincipalName
   };
   let aadSignin = aadFunc("SigninLogs");
