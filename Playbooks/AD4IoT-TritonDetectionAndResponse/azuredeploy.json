@@ -466,7 +466,7 @@
                                                                                                 "type": "ApiConnection",
                                                                                                 "inputs": {
                                                                                                     "body": {
-                                                                                                        "Value": "PLC Proggraming occurred from a non-engineering workstation, that was remotly accessed by an unauthorized IT PC"
+                                                                                                        "Value": "PLC Programming occurred from a non-engineering workstation, that was remotly accessed by an unauthorized IT PC"
                                                                                                     },
                                                                                                     "host": {
                                                                                                         "connection": {
