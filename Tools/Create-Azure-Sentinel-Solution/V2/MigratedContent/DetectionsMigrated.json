@@ -174,7 +174,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "NRT_UseraddedtoPrivilgedGroups.yaml",
+        "FileName": "NRT_UseraddedtoPrivilegedGroups.yaml",
         "DetectionId": "70fc7201-f28e-4ba7-b9ea-c04b96701f13",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/AuditLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
@@ -210,7 +210,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "UseraddedtoPrivilgedGroups.yaml",
+        "FileName": "UseraddedtoPrivilegedGroups.yaml",
         "DetectionId": "4d94d4a9-dc96-410a-8dea-4d4d4584188b",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/AuditLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"

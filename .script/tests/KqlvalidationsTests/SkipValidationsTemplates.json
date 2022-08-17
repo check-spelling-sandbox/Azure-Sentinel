@@ -281,7 +281,7 @@
   },
   {
     "id": "0124b561-b8d3-4043-b126-e2bb8904a61f",
-    "templateName": "NRT_UseraddedtoPrivilgedGroups.yaml",
+    "templateName": "NRT_UseraddedtoPrivilegedGroups.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {
@@ -311,7 +311,7 @@
   },
   {
     "id": "9e89f397-7ced-4896-8006-1fea53bd0885",
-    "templateName": "UseraddedtoPrivilgedGroups.yaml",
+    "templateName": "UseraddedtoPrivilegedGroups.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {
