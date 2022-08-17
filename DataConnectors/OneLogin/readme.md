@@ -131,7 +131,7 @@ Note: You will need to prepare VS code for Azure function development. See https
 
 13. Select **Managed Identity** under **Assign access to**
 
-14. Click Select **Memebers**
+14. Click Select **Members**
 
 15. Select the correct Subscription and Function App under the Managed identity drop down
 

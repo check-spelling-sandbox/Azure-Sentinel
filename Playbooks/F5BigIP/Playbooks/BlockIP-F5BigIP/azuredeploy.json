@@ -211,7 +211,7 @@
                                   "name": "AddressListMembers",
                                   "value": "@variables('AddressListMember')"
                                 },
-                                "description": "This Appends URL to Block list Memebers"
+                                "description": "This Appends URL to Block list Members"
                               },
                               "Condition_to_check_if_URL_added_to_block_list_category": {
                                 "actions": {
