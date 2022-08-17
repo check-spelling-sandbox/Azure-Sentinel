@@ -275,7 +275,7 @@
           {
             "type": 1,
             "content": {
-              "json": "## Sentinel Central\r\n### Change Log\r\nUse this report to view Incident and Alert data across many workspaces (works with Azure Lighthouse)\r\n\r\n\r\n|Version|Description|\r\n|---|---|\r\n|v1.2| View Alerts from multiple workspaces (Azure Lighhouse compatible)|\r\n|v1.3| MSSP release |\r\n|v1.4| Add Workspace info |\r\n|v1.5| Add Workspace info |\r\n|v2.0| Multi workspace hunting. per Region selection from main drop down. |\r\n|v2.1| Addition of Workspace and Table specific retention. |\r\n"
+              "json": "## Sentinel Central\r\n### Change Log\r\nUse this report to view Incident and Alert data across many workspaces (works with Azure Lighthouse)\r\n\r\n\r\n|Version|Description|\r\n|---|---|\r\n|v1.2| View Alerts from multiple workspaces (Azure Lighthouse compatible)|\r\n|v1.3| MSSP release |\r\n|v1.4| Add Workspace info |\r\n|v1.5| Add Workspace info |\r\n|v2.0| Multi workspace hunting. per Region selection from main drop down. |\r\n|v2.1| Addition of Workspace and Table specific retention. |\r\n"
             },
             "customWidth": "50",
             "conditionalVisibility": {
