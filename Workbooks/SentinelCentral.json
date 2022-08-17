@@ -168,7 +168,7 @@
                   "version": "KqlParameterItem/1.0",
                   "name": "WorkspaceIDguid",
                   "type": 1,
-                  "query": "resources\r\n| where type =~ 'microsoft.operationalinsights/workspaces'\r\n| extend customerID = trim(' ', tostring(properties.customerId))\r\n| project '{Workspace:name}', name, customerID\r\n| where '{Workspace:name}' has name\r\n//| project customerID, name\r\n// join two columns, seperate with a \":\"; ARG, will comma seperate each row by default\r\n| project strcat(customerID,\":\",name)",
+                  "query": "resources\r\n| where type =~ 'microsoft.operationalinsights/workspaces'\r\n| extend customerID = trim(' ', tostring(properties.customerId))\r\n| project '{Workspace:name}', name, customerID\r\n| where '{Workspace:name}' has name\r\n//| project customerID, name\r\n// join two columns, separate with a \":\"; ARG, will comma separate each row by default\r\n| project strcat(customerID,\":\",name)",
                   "crossComponentResources": [
                     "{Subscription}"
                   ],

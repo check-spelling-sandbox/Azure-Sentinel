@@ -11,7 +11,7 @@
     The response from the Qualys API is received in XML format. This function will parse the XML into JSON format, build the signature and authorization header needed to post the data
     to the Log Analytics workspace via the HTTP Data Connector API. The Function App will omit API responses that with an empty host list, which indicates there were no records for that 
     time interval. Often, there are Hosts with numerous scan detections, which causes the record submitted to the Data Connector API to be truncated and improperly ingested, The Function App
-    will also identify those records greater than the 32Kb limit per record and seperate them into individual records.
+    will also identify those records greater than the 32Kb limit per record and separate them into individual records.
 #>
 
 # Input bindings are passed in via param block

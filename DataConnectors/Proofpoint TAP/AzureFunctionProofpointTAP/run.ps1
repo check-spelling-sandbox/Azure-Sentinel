@@ -25,7 +25,7 @@ if ($Timer.IsPastDue) {
     
 }
 
-# Define the different ProofPoint Log Types. These values are set by the ProofPoint API and required to seperate the log types into the respective Log Analytics tables
+# Define the different ProofPoint Log Types. These values are set by the ProofPoint API and required to separate the log types into the respective Log Analytics tables
 $ProofPointlogTypes = @(
     "ClicksBlocked", 
     "ClicksPermitted",

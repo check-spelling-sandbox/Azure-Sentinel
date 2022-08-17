@@ -23,7 +23,7 @@ if ($Timer.IsPastDue) {
     
 }
 
-# Define the different Duo Security Log Types. These values are set by the Duo Security API and required to seperate the log types into the respective Log Analytics tables
+# Define the different Duo Security Log Types. These values are set by the Duo Security API and required to separate the log types into the respective Log Analytics tables
 $DuoSecuritylogTypes = @{
     Authentication    = "/admin/v2/logs/authentication" 
     Administrator     = "/admin/v1/logs/administrator"
