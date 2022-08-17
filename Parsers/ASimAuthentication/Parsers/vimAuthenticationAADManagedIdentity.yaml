@@ -32,14 +32,14 @@ ParserQuery: |
   let AADMIAuthentication=(starttime:datetime=datetime(null), endtime:datetime=datetime(null), targetusername_has:string="*", disabled:bool=false){
     AADManagedIdentitySignInLogs | where not(disabled)
     // ************************************************************************* 
-    //       <Prefilterring>
+    //       <Prefiltering>
     // *************************************************************************
     | where 
       (isnull(starttime)   or TimeGenerated >= starttime) 
       and (isnull(endtime)     or TimeGenerated <= endtime)
       and (targetusername_has=='*' or (ServicePrincipalName has targetusername_has))
     // ************************************************************************* 
-    //       </Prefilterring>
+    //       </Prefiltering>
     // ************************************************************************* 
     | extend
         EventVendor = 'Microsoft'
