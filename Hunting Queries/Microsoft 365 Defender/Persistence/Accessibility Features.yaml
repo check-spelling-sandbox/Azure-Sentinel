@@ -28,7 +28,7 @@ query: |
       | where FileName in~ (accessibilityProcessNames) and isnotempty(RegistryValueData)
       | project Technique="AttachedDebugger", FileName, AttachedDebuggerCommandline=RegistryValueData, InitiatingProcessCommandLine, Timestamp, DeviceName;
   // Query for overwrites of the accessibility files
-  let fileOverwiteOfAccessibilityFiles =
+  let fileOverwriteOfAccessibilityFiles =
       DeviceFileEvents
       | where Timestamp > minTime
           and FileName in~ (accessibilityProcessNames)
@@ -51,5 +51,5 @@ query: |
   // Union all results together. 
   // An outer union is used because the schemas are a bit different between the tables - and we want to get the superset of all tables combined.
   attachedDebugger
-  | union kind=outer fileOverwiteOfAccessibilityFiles
+  | union kind=outer fileOverwriteOfAccessibilityFiles
   | union kind=outer executedProcessIsPowershellOrCmd
