@@ -52,7 +52,7 @@ relevantTechniques:
   - T1071
 query: |
   let DomainNames = dynamic(["irf.services","microsoft-onthehub.com","msofficelab.com","com-mailbox.com","my-sharefile.com","my-sharepoints.com",
-  "accounts-web-mail.com","customer-certificate.com","session-users-activities.com","user-profile-credentials.com","verify-linke.com","support-servics.net",
+  "accounts-web-mail.com","customer-certificate.com","session-users-activities.com","user-profile-credentials.com","verify-linke.com","support-services.net",
   "onedrive-sharedfile.com","onedrv-live.com","transparencyinternational-my-sharepoint.com","transparencyinternational-my-sharepoints.com","soros-my-sharepoint.com"]);
   (union isfuzzy=true
     (CommonSecurityLog 

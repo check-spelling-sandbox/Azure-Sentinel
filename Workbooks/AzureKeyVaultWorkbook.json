@@ -2379,7 +2379,7 @@
                         "typeSettings": {
                           "additionalResourceOptions": []
                         },
-                        "jsonData": "[\r\n    { \"value\":\"all\", \"label\":\"All\" },\r\n    { \"value\":\"users\", \"label\":\"Users\" },\r\n    { \"value\":\"servicesr\", \"label\":\"Services\" }\r\n]",
+                        "jsonData": "[\r\n    { \"value\":\"all\", \"label\":\"All\" },\r\n    { \"value\":\"users\", \"label\":\"Users\" },\r\n    { \"value\":\"services\", \"label\":\"Services\" }\r\n]",
                         "timeContext": {
                           "durationMs": 86400000
                         }
