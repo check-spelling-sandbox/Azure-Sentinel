@@ -225,7 +225,7 @@
     {
       "type": 1,
       "content": {
-        "json": "### Change Log\r\nBrian Delaney, Clive Watson, Jon Shectman - Microsoft <br>\r\n\t\r\n\tVersion v2.0\r\n\tFiltered Legacy Authentication to success only\r\n\tAdded Export/Open Query buttons to detailed views\r\n\tReogranized Insecure LDAP\r\n\tFixed TimeRange in NTLM query to follow parameter selection\r\n\tOther minor improvements\r\n\r\n\tVersion v1.9\r\n\tUpdated AAD Legacy Auth (Exchange ActiveSync)\r\n\r\n\tVersion v1.8\r\n\tAdded Vulnerable Netlogon Secure Channel\r\n\tAdded Legacy Authentication to Summary\r\n\tFixed reporting of Weak Kerberos Cipher in summary\r\n\t\r\n\t\r\n\tVersion v1.7\r\n\tAdded Tabs\r\n\tFixed a bug\r\n\tAdded Timebrushing and Groupings\r\n\tAdded Help sections",
+        "json": "### Change Log\r\nBrian Delaney, Clive Watson, Jon Shectman - Microsoft <br>\r\n\t\r\n\tVersion v2.0\r\n\tFiltered Legacy Authentication to success only\r\n\tAdded Export/Open Query buttons to detailed views\r\n\tReorganized Insecure LDAP\r\n\tFixed TimeRange in NTLM query to follow parameter selection\r\n\tOther minor improvements\r\n\r\n\tVersion v1.9\r\n\tUpdated AAD Legacy Auth (Exchange ActiveSync)\r\n\r\n\tVersion v1.8\r\n\tAdded Vulnerable Netlogon Secure Channel\r\n\tAdded Legacy Authentication to Summary\r\n\tFixed reporting of Weak Kerberos Cipher in summary\r\n\t\r\n\t\r\n\tVersion v1.7\r\n\tAdded Tabs\r\n\tFixed a bug\r\n\tAdded Timebrushing and Groupings\r\n\tAdded Help sections",
         "style": "info"
       },
       "conditionalVisibility": {
