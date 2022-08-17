@@ -276,7 +276,7 @@
   },
   {
     "id": "7d237897-ac1b-4e59-b73e-f2f22c23a2bc",
-    "templateName": "NRT_PrivlegedRoleAssignedOutsidePIM.yaml",
+    "templateName": "NRT_PrivilegedRoleAssignedOutsidePIM.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {
@@ -291,7 +291,7 @@
   },
   {
     "id": "d4cc3972-25a8-47a6-b1c7-70bbda67ee73",
-    "templateName": "PrivlegedRoleAssignedOutsidePIM.yaml",
+    "templateName": "PrivilegedRoleAssignedOutsidePIM.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {
@@ -911,7 +911,7 @@
   },
   {
     "id": "606d455c-c97c-40b6-bb18-cad76d24159d",
-    "templateName": "GroupAddedToPrivlegeGroup.yaml",
+    "templateName": "GroupAddedToPrivilegeGroup.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {
@@ -1051,7 +1051,7 @@
   },
   {
     "id": "ace1a7a8-25c1-4b80-9103-2e3e11713f31",
-    "templateName": "UserAccountAddedToPrivlegeGroup.yaml",
+    "templateName": "UserAccountAddedToPrivilegeGroup.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {

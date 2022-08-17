@@ -168,7 +168,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "NRT_PrivlegedRoleAssignedOutsidePIM.yaml",
+        "FileName": "NRT_PrivilegedRoleAssignedOutsidePIM.yaml",
         "DetectionId": "14f6da04-2f96-44ee-9210-9ccc1be6401e",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/AuditLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
@@ -186,7 +186,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "PrivlegedRoleAssignedOutsidePIM.yaml",
+        "FileName": "PrivilegedRoleAssignedOutsidePIM.yaml",
         "DetectionId": "269435e3-1db8-4423-9dfc-9bf59997da1c",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/AuditLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
