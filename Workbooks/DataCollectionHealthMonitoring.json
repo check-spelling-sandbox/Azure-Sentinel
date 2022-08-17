@@ -3262,7 +3262,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "CommonSecurityLog\r\n| make-series Trend = count() on TimeGenerated from {AnomaliesTimeRange:start} to {AnomaliesTimeRange:end} step {SampleInterval:value} by DeviceVendor, DeviceProduct, _ResourceId, Computer\r\n| extend (anomalies, score, baseline) = series_decompose_anomalies(Trend, 1.5, 7, 'linefit', 1, 'ctukey', 0.01)\r\n| where anomalies[-1] == 1 or anomalies[-1] == -1  \r\n| extend Score = score[-1]\r\n| where Score >= {PositiveAlertThreshold:value} or Score <= {NegativeAlertThreshold:value}\r\n| project DeviceVendor,  DeviceProduct, Machime = _ResourceId, [\"Computer Name\"] = Computer, expectedCounts=baseline[-1], actualCount=Trend[-1], score = score[-1], Trend, Baseline = baseline",
+                    "query": "CommonSecurityLog\r\n| make-series Trend = count() on TimeGenerated from {AnomaliesTimeRange:start} to {AnomaliesTimeRange:end} step {SampleInterval:value} by DeviceVendor, DeviceProduct, _ResourceId, Computer\r\n| extend (anomalies, score, baseline) = series_decompose_anomalies(Trend, 1.5, 7, 'linefit', 1, 'ctukey', 0.01)\r\n| where anomalies[-1] == 1 or anomalies[-1] == -1  \r\n| extend Score = score[-1]\r\n| where Score >= {PositiveAlertThreshold:value} or Score <= {NegativeAlertThreshold:value}\r\n| project DeviceVendor,  DeviceProduct, Machine = _ResourceId, [\"Computer Name\"] = Computer, expectedCounts=baseline[-1], actualCount=Trend[-1], score = score[-1], Trend, Baseline = baseline",
                     "size": 0,
                     "showAnalytics": true,
                     "title": "Detections by vendor, product and machine",
@@ -3341,7 +3341,7 @@
                           "label": "Device product"
                         },
                         {
-                          "columnId": "Machime",
+                          "columnId": "Machine",
                           "label": "Machine"
                         },
                         {
