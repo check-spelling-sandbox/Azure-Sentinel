@@ -414,7 +414,7 @@
             "Type": "String"
         },
         {
-            "Name": "data_stateChange_current_lifecyleDetails_s",
+            "Name": "data_stateChange_current_lifecycleDetails_s",
             "Type": "String"
         },
         {
