@@ -139,7 +139,7 @@ def check_multi_homing(workspace_id):
         current_ws_id = re.search("(?<=WORKSPACE_ID=).*", output_decoded).group(0)
         if current_ws_id != workspace_id:
             print_error("This server already has an omsagent installed and connected to a different workspace- {}. \nThe omsagent"
-                        " does not currently support sending data to multiple workspaces (multi-homing).\nIf you wish to overeide this workspace connection"
+                        " does not currently support sending data to multiple workspaces (multi-homing).\nIf you wish to override this workspace connection"
                         " please remove the existing omsagent using the command: \"{}\" \nand rerun this installation script"
                         .format(current_ws_id, oms_agent_purge_command))
             print_error("For more on this issue please visit " + oms_agent_documentation)
@@ -207,7 +207,7 @@ def create_daemon_forwarding_configuration(omsagent_incoming_port, daemon_config
     print("Path:")
     print_notice(daemon_configuration_path)
     file_content = get_daemon_configuration_content(daemon_name, omsagent_incoming_port)
-    append_content_to_file(file_content, daemon_configuration_path, overide=True)
+    append_content_to_file(file_content, daemon_configuration_path, override=True)
     print_ok("Configuration for " + daemon_name + " daemon was changed successfully.")
     return True
 
@@ -295,8 +295,8 @@ def set_rsyslog_new_configuration():
     return True
 
 
-def append_content_to_file(line, file_path, overide = False):
-    command_tokens = ["sudo", "bash", "-c", "printf '" + "\n" + line + "' >> " + file_path] if not overide else ["sudo", "bash", "-c", "printf '" + "\n" + line + "' > " + file_path]
+def append_content_to_file(line, file_path, override = False):
+    command_tokens = ["sudo", "bash", "-c", "printf '" + "\n" + line + "' >> " + file_path] if not override else ["sudo", "bash", "-c", "printf '" + "\n" + line + "' > " + file_path]
     write_new_content = subprocess.Popen(command_tokens, stdout=subprocess.PIPE)
     time.sleep(3)
     o, e = write_new_content.communicate()

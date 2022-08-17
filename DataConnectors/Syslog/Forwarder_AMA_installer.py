@@ -113,8 +113,8 @@ def set_file_read_permissions(file_path):
     return True
 
 
-def append_content_to_file(line, file_path, overide=False):
-    command_tokens = ["sudo", "bash", "-c", "printf '" + "\n" + line + "' >> " + file_path] if not overide else ["sudo",
+def append_content_to_file(line, file_path, override=False):
+    command_tokens = ["sudo", "bash", "-c", "printf '" + "\n" + line + "' >> " + file_path] if not override else ["sudo",
                                                                                                                  "bash",
                                                                                                                  "-c",
                                                                                                                  "printf '" + "\n" + line + "' > " + file_path]
