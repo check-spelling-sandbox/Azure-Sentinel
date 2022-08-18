@@ -131,7 +131,7 @@
                                     "inputs": {
                                         "body": {
                                             "incidentArmId": "@triggerBody()?['object']?['id']",
-                                            "message": "<p>Provided Ip's are succesfully blocked at threatX .<br>\n<br>\n@{outputs('Compose')}<br>\n</p>"
+                                            "message": "<p>Provided Ip's are successfully blocked at threatX .<br>\n<br>\n@{outputs('Compose')}<br>\n</p>"
                                         },
                                         "host": {
                                             "connection": {

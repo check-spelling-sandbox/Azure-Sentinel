@@ -758,7 +758,7 @@
                               "type": "AppendToStringVariable",
                               "inputs": {
                                 "name": "Comment",
-                                "value": "Host Status : Contained\nActions taken on devices : The playbook sucessfully contained the host"
+                                "value": "Host Status : Contained\nActions taken on devices : The playbook successfully contained the host"
                               },
                               "runAfter": {},
                               "description": "This appends the variable comment if host is contained by playbook"

@@ -1325,7 +1325,7 @@
           {
             "type": 1,
             "content": {
-              "json": "\r\n\r\n\r\nThis query looks across multiple data sources for network activity relating to domains known to be associated with Solarigate activity. This can be a large amount of data. If the query fails to load select a smaller Hunting Time Frame to run the workbook in. If you do not have DnsEvent logging in your workspace you may see an error relating to an unknown table or column, despite this warning the query has run sucessfully.",
+              "json": "\r\n\r\n\r\nThis query looks across multiple data sources for network activity relating to domains known to be associated with Solarigate activity. This can be a large amount of data. If the query fails to load select a smaller Hunting Time Frame to run the workbook in. If you do not have DnsEvent logging in your workspace you may see an error relating to an unknown table or column, despite this warning the query has run successfully.",
               "style": "info"
             },
             "customWidth": "30",

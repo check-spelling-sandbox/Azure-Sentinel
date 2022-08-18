@@ -432,7 +432,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "SentinelHealth\r\n| where SentinelResourceType == \"{SentinelResourceType}\"\r\n| where RecordId == \"{RecordId}\"\r\n| mv-expand TriggeredPlaybooks = ExtendedProperties.TriggeredPlaybooks\r\n| project IncidentNumber=ExtendedProperties.IncidentNumber, workflowId=tostring(TriggeredPlaybooks.WorkflowId), runId=tostring(TriggeredPlaybooks.RunId), Description, Reason, TriggeredOn=ExtendedProperties.TriggeredOn, TriggeredWhen=ExtendedProperties.TriggeredWhen, TotalActions=ExtendedProperties.TotalActions, ActionsTriggeredSuccessfuly=ExtendedProperties.ActionsTriggeredSuccessfuly",
+        "query": "SentinelHealth\r\n| where SentinelResourceType == \"{SentinelResourceType}\"\r\n| where RecordId == \"{RecordId}\"\r\n| mv-expand TriggeredPlaybooks = ExtendedProperties.TriggeredPlaybooks\r\n| project IncidentNumber=ExtendedProperties.IncidentNumber, workflowId=tostring(TriggeredPlaybooks.WorkflowId), runId=tostring(TriggeredPlaybooks.RunId), Description, Reason, TriggeredOn=ExtendedProperties.TriggeredOn, TriggeredWhen=ExtendedProperties.TriggeredWhen, TotalActions=ExtendedProperties.TotalActions, ActionsTriggeredSuccessfully=ExtendedProperties.ActionsTriggeredSuccessfully",
         "size": 4,
         "title": "Automation rule run details",
         "timeContextFromParameter": "TimeRange",
@@ -691,7 +691,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "SentinelHealth\r\n| where SentinelResourceType == \"{SentinelResourceType2}\"\r\n| where RecordId == \"{RecordId2}\"\r\n| extend IncidentNo = tostring(ExtendedProperties.IncidentNumber)\r\n| where IncidentNo == \"{IncidentNumber}\"\r\n| mv-expand TriggeredPlaybooks = ExtendedProperties.TriggeredPlaybooks\r\n| project IncidentNumber=ExtendedProperties.IncidentNumber, workflowId=tostring(TriggeredPlaybooks.WorkflowId), RunId=tostring(TriggeredPlaybooks.RunId), Description, Reason, TriggeredOn=ExtendedProperties.TriggeredOn, TriggeredWhen=ExtendedProperties.TriggeredWhen, TotalActions=ExtendedProperties.TotalActions, ActionsTriggeredSuccessfuly=ExtendedProperties.ActionsTriggeredSuccessfuly",
+        "query": "SentinelHealth\r\n| where SentinelResourceType == \"{SentinelResourceType2}\"\r\n| where RecordId == \"{RecordId2}\"\r\n| extend IncidentNo = tostring(ExtendedProperties.IncidentNumber)\r\n| where IncidentNo == \"{IncidentNumber}\"\r\n| mv-expand TriggeredPlaybooks = ExtendedProperties.TriggeredPlaybooks\r\n| project IncidentNumber=ExtendedProperties.IncidentNumber, workflowId=tostring(TriggeredPlaybooks.WorkflowId), RunId=tostring(TriggeredPlaybooks.RunId), Description, Reason, TriggeredOn=ExtendedProperties.TriggeredOn, TriggeredWhen=ExtendedProperties.TriggeredWhen, TotalActions=ExtendedProperties.TotalActions, ActionsTriggeredSuccessfully=ExtendedProperties.ActionsTriggeredSuccessfully",
         "size": 1,
         "title": "Automation rule run details",
         "timeContextFromParameter": "TimeRange",

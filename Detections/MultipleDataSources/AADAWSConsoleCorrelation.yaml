@@ -44,7 +44,7 @@ query: |
   let Suspicious_signins = 
   union isfuzzy=true aadSignin, aadNonInt
   | summarize make_set(set_IPAddress);
-  //See if any of those IPs have sucessfully logged into the AWS console
+  //See if any of those IPs have successfully logged into the AWS console
   AWSCloudTrail
   | where EventName =~ "ConsoleLogin"
   | extend LoginResult = tostring(parse_json(ResponseElements).ConsoleLogin) 

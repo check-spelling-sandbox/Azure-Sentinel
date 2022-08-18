@@ -41,7 +41,7 @@ Use the following steps to create your content structure:
 
 5. Submit a PR with all of your solution content. The PR will go through automated GitHub validation. [Address potential errors](https://github.com/Azure/Azure-Sentinel/wiki#test-your-contribution) as needed. 
 
-After your content has been succesfully validated, the Microsoft Sentinel team will review your PR and reply with any feedback as needed. You can expect an initial response within five business days.
+After your content has been successfully validated, the Microsoft Sentinel team will review your PR and reply with any feedback as needed. You can expect an initial response within five business days.
 
 The PR will be approved and merged after any feedback has been incorportated and the full review is successful.
 

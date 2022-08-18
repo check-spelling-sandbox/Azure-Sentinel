@@ -109,9 +109,9 @@
                 "type": "ApiConnection",
                 "inputs": {
                     "body": {
-                        "Body": "<p>New Microsoft Sentinel incident created succesfully using Microsoft Forms!</p>",
+                        "Body": "<p>New Microsoft Sentinel incident created successfully using Microsoft Forms!</p>",
                         "Importance": "Normal",
-                        "Subject": "New Microsoft Sentinel Incident created sucesfully!",
+                        "Subject": "New Microsoft Sentinel Incident created successfully!",
                         "To": "@body('Get_response_details')?['responder']"
                     },
                     "host": {

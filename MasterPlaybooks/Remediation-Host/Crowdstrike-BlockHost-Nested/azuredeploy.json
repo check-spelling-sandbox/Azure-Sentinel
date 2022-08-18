@@ -906,7 +906,7 @@
                                       "inputs": {
                                         "name": "CommentObjVar",
                                         "value": {
-                                          "action": "The playbook sucessfully contained the host",
+                                          "action": "The playbook successfully contained the host",
                                           "device_id": "@{body('Parse_JSON_device_information_response')?['resources']?['device_id']}",
                                           "external_ip": "@{body('Parse_JSON_device_information_response')?['resources']?['external_ip']}",
                                           "first_seen": "@{body('Parse_JSON_device_information_response')?['resources']?['first_seen']}",
@@ -959,7 +959,7 @@
                                         "inputs": {
                                           "name": "CommentObjVar",
                                           "value": {
-                                            "action": "The playbook sucessfully contained the host",
+                                            "action": "The playbook successfully contained the host",
                                             "device_id": "@{body('Parse_JSON_device_information_response')?['resources']?['device_id']}",
                                             "external_ip": "@{body('Parse_JSON_device_information_response')?['resources']?['external_ip']}",
                                             "first_seen": "@{body('Parse_JSON_device_information_response')?['resources']?['first_seen']}",

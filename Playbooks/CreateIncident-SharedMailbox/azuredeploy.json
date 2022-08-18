@@ -121,10 +121,10 @@
                 "type": "ApiConnection",
                 "inputs": {
                     "body": {
-                        "Body": "<p>New Microsoft Sentinel incident created succesfully using shared mailbox.&nbsp;</p>",
+                        "Body": "<p>New Microsoft Sentinel incident created successfully using shared mailbox.&nbsp;</p>",
                         "Importance": "Normal",
                         "MailboxAddress": "@parameters('Shared Mailbox Address')",
-                        "Subject": "New Microsoft Sentinel Incident created sucesfully!",
+                        "Subject": "New Microsoft Sentinel Incident created successfully!",
                         "To": "@triggerBody()?['from']"
                     },
                     "host": {

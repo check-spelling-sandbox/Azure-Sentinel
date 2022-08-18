@@ -107,7 +107,7 @@ def main(
                 ),
             )
 
-            # Write last succesfully processed detetion to blob storage
+            # Write last successfully processed detetion to blob storage
             latest_detection = detection
             outputblob.set(json.dumps({"id": latest_detection["id"]}))
 
