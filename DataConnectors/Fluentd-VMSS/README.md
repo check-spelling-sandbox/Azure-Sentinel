@@ -1,7 +1,7 @@
 # Scaleable SYSLOG CEF Collection using FluentD and VMSS
 author: Nicholas DiCola
 
-Sample is an ARM template that will deploy a Linux (RedHat or Unbuntu) Virtual Machine Scale Set with FluentD installed with a basic config.  The FluentD config will listen on 5514 for SYSLOG CEF formatted messages.  It will then get the GEOIP information for src or dst IP Addresses and copy the send time to agentReceiptTime.  Lastly, it will output to the local Microsoft Monitoring Agent for ingestion to Azure Sentinel.
+Sample is an ARM template that will deploy a Linux (RedHat or Ubuntu) Virtual Machine Scale Set with FluentD installed with a basic config.  The FluentD config will listen on 5514 for SYSLOG CEF formatted messages.  It will then get the GEOIP information for src or dst IP Addresses and copy the send time to agentReceiptTime.  Lastly, it will output to the local Microsoft Monitoring Agent for ingestion to Azure Sentinel.
 
 The ARM template will deploy everything needed:
 * Virtual Machine Scale
@@ -22,6 +22,6 @@ The ARM template includes the cloud init files which runs commands on the VM ins
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FDataConnectors%2FFluentD-VMSS%2FFluentD-VMSS-RH-Templatev2.json)
 [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)]("https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FDataConnectors2FFluentD-VMSS%2FFluentD-VMSS-RH-Templatev2.json)
 
-## Deploy Unbuntu VMSS
+## Deploy Ubuntu VMSS
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)]("https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FDataConnectors%2FFluentd-VMSS%2FFluentD-VMSS-UB-Templatev2.json)
 [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)]("https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FDataConnectors2FFluentD-VMSS%2FFluentD-VMSS-UB-Templatev2.json)
