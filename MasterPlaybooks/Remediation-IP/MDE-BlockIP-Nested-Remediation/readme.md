@@ -12,7 +12,7 @@ This playbook will take IP entities and generate alert and block threat indicato
 
 ## Prerequisites
 - **For Gov Only** You will need to update the HTTP action URL to the correct URL documented [here](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/gov?view=o365-worldwide#api)
-- You will need to grant Ti.ReadWrite permissions and assign Microsoft Sentinel Reader to the resource group for the managed identity.  Run the following code replacing the managed identity object id, subscrptiptionid and resource group.  You find the managed identity object id on the Identity blade under Settings for the Logic App.
+- You will need to grant Ti.ReadWrite permissions and assign Microsoft Sentinel Reader to the resource group for the managed identity.  Run the following code replacing the managed identity object id, subscriptionid and resource group.  You find the managed identity object id on the Identity blade under Settings for the Logic App.
 ```powershell
 
 $MIGuid = "<Enter your managed identity guid here>"
