@@ -819,7 +819,7 @@
                       {
                         "type": 1,
                         "content": {
-                          "json": "does not work on between values\r\n\r\ndo not use spaces and one value at a time\r\n\r\nalso this will also match if you search for 233 and the number is 4233, but not sure if I should fix it since this could actually be usefull\r\n\r\nwe could show the in between operator as an option? lets discuss during our call",
+                          "json": "does not work on between values\r\n\r\ndo not use spaces and one value at a time\r\n\r\nalso this will also match if you search for 233 and the number is 4233, but not sure if I should fix it since this could actually be useful\r\n\r\nwe could show the in between operator as an option? lets discuss during our call",
                           "style": "warning"
                         },
                         "name": "EventIDText - Copy"
@@ -1452,7 +1452,7 @@
                       {
                         "type": 1,
                         "content": {
-                          "json": "does not work on between values\r\n\r\ndo not use spaces and one value at a time\r\n\r\nalso this will also match if you search for 233 and the number is 4233, but not sure if I should fix it since this could actually be usefull\r\n\r\nwe could show the in between operator as an option? lets discuss during our call",
+                          "json": "does not work on between values\r\n\r\ndo not use spaces and one value at a time\r\n\r\nalso this will also match if you search for 233 and the number is 4233, but not sure if I should fix it since this could actually be useful\r\n\r\nwe could show the in between operator as an option? lets discuss during our call",
                           "style": "warning"
                         },
                         "name": "EventIDText"
