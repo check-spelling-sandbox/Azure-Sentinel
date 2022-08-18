@@ -15,7 +15,7 @@ This function app will poll O365 Activity Management API every 10 mins for logs.
 10. Click Certificates and Secrets
 11. Click New Client Secret
 12. Enter a description, select never.  Click Add.
-13. IMPORTANT.  Click copy next to the new secret and paste it somewhere temporaily.  You can not come back to get the secret once you leave the blade.
+13. IMPORTANT.  Click copy next to the new secret and paste it somewhere temporarily.  You can not come back to get the secret once you leave the blade.
 14. Copy the client Id from the application properties and paste it somewhere.
 15. Also copy the tenant Id from the AAD directory properties blade.
 
