@@ -69,7 +69,7 @@ class LogStashEventsBatcher
                     @logger.info("Not trying to resend since exception http code is #{ewr.http_code}")
                     return                
                 elsif ewr.http_code.to_f == 429
-                    # thrutteling detected, backoff before resending
+                    # throttling detected, backoff before resending
                     parsed_retry_after = response.headers.include?(:retry_after) ? response.headers[:retry_after].to_i : 0
                     seconds_to_sleep = parsed_retry_after > 0 ? parsed_retry_after : 30
 
