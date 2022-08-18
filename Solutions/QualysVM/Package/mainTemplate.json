@@ -163,11 +163,11 @@
                   ],
                   "sampleQueries": [
                     {
-                      "description": "Top 10 Qualys V2 Vulerabilities detected",
+                      "description": "Top 10 Qualys V2 Vulnerabilities detected",
                       "query": "QualysHostDetectionV2_CL\n | extend Vulnerability = tostring(QID_s)\n | summarize count() by Vulnerability\n | top 10 by count_"
                     },
                     {
-                      "description": "Top 10 Vulerabilities detected",
+                      "description": "Top 10 Vulnerabilities detected",
                       "query": "QualysHostDetection_CL\n | mv-expand todynamic(Detections_s)\n | extend Vulnerability = tostring(Detections_s.Results)\n | summarize count() by Vulnerability\n | top 10 by count_"
                     }
                   ],
@@ -409,11 +409,11 @@
           ],
           "sampleQueries": [
             {
-              "description": "Top 10 Qualys V2 Vulerabilities detected",
+              "description": "Top 10 Qualys V2 Vulnerabilities detected",
               "query": "QualysHostDetectionV2_CL\n | extend Vulnerability = tostring(QID_s)\n | summarize count() by Vulnerability\n | top 10 by count_"
             },
             {
-              "description": "Top 10 Vulerabilities detected",
+              "description": "Top 10 Vulnerabilities detected",
               "query": "QualysHostDetection_CL\n | mv-expand todynamic(Detections_s)\n | extend Vulnerability = tostring(Detections_s.Results)\n | summarize count() by Vulnerability\n | top 10 by count_"
             }
           ],

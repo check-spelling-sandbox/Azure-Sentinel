@@ -11,7 +11,7 @@ The connector will be fetching logs such as:
 - MDE Secure Score
 - MDE Exposure Score
 - MDE Recommendations
-- MDE Vulnerabilites
+- MDE Vulnerabilities
 - M365 Secure Score
 
 The workbook will also be referencing data from Azure Security Center and Microsoft Cloud App Security such as:
