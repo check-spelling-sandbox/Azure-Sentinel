@@ -213,7 +213,7 @@
               "version": "KqlItem/1.0",
               "query": "SigninLogs\r\n| where ResultType == 0\r\n| where UserPrincipalName == '{upn}'\r\n| extend additionalDetails = tostring(Status.additionalDetails)\r\n    | extend Browser = tostring(DeviceDetail.browser)\r\n    | extend Country = tostring(LocationDetails.countryOrRegion)\r\n    | extend City = tostring(LocationDetails.city)\r\n    | extend Lat = tostring(LocationDetails.geoCoordinates.latitude)\r\n    | extend Long = tostring(LocationDetails.geoCoordinates.longitude)\r\n    | project TimeGenerated, ResultType, UserPrincipalName, UserAgent, Browser, City, Country, additionalDetails, IPAddress, LocationDetails, Lat, Long\r\n\r\n",
               "size": 0,
-              "title": "Sucessful Logon Locations for {upn}",
+              "title": "Successful Logon Locations for {upn}",
               "timeContext": {
                 "durationMs": 2592000000
               },
