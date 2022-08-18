@@ -70,7 +70,7 @@
     
     if ((Get-AzContext) -eq $null)
     {
-       $supress= Connect-AzAccount
+       $suppress= Connect-AzAccount
     }
     
     $default_subscription = (Get-AzContext).Subscription.Name
