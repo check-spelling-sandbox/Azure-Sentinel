@@ -39,7 +39,7 @@ API connections for the above mentioned prerequisites are created as a part of A
     - Create a secret called "ClientAppSecret" in the Azure Keyvault and store the App Secret of the Azure AD Application
 4. Deploy the template
     - Give an appropriate name for the Playbook.
-    - All the dependent API connections shall automatically be created as a part of the ARM tempate deployment.
+    - All the dependent API connections shall automatically be created as a part of the ARM template deployment.
 5. Once deployed, open the logic app and authorize and configure API connectors
     - Ensure all functions have been authorized with their appropriate connectors
     - Setup HTTP connector - Provide the Tenant ID, client/app ID of the app you registered

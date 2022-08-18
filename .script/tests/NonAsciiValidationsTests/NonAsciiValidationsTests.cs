@@ -66,14 +66,14 @@ namespace NonAsciiValidations.Tests
             Assert.False(nonAsciiCharMatch.Success, $"${yamlFileName} includes the non ascii char:{nonAsciiCharMatch.Value} string index:{nonAsciiCharMatch.Index}");
         }
 
-        private static bool TryExtractTemplateId(string yaml,out string tempateId)
+        private static bool TryExtractTemplateId(string yaml,out string templateId)
         {
-			tempateId = null;
+			templateId = null;
 			try
 			{
 				var deserializer = new DeserializerBuilder().Build();
 				var res = deserializer.Deserialize<dynamic>(yaml);
-				tempateId = res["id"];
+				templateId = res["id"];
 			}
 			catch
             {

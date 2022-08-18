@@ -155,14 +155,14 @@ namespace Kqlvalidations.Tests
 
             var invalidTemplateRuleKindsAndIds = templatesAfterRemovingSkipFiles
                 .Where(template => !Enum.TryParse(typeof(AlertRuleKind), template["kind"].ToString(), ignoreCase: false, out _))
-                .Select(template => (templdateId: template["id"].ToString(), templateKind: template["kind"].Value<string>()))
+                .Select(template => (templateId: template["id"].ToString(), templateKind: template["kind"].Value<string>()))
                 .ToList();
 
             string exceptionMessage = "";
             var validEnumValues = string.Join(", ", Enum.GetNames(typeof(AlertRuleKind)));
             if (invalidTemplateRuleKindsAndIds.Any())
             {
-                exceptionMessage += string.Join(", ", invalidTemplateRuleKindsAndIds.Select(invalidTemplate => $"(id: {invalidTemplate.templdateId}, invalid kind: {invalidTemplate.templateKind})"));
+                exceptionMessage += string.Join(", ", invalidTemplateRuleKindsAndIds.Select(invalidTemplate => $"(id: {invalidTemplate.templateId}, invalid kind: {invalidTemplate.templateKind})"));
             }
 
             Assert.False(invalidTemplateRuleKindsAndIds.Any(), $"Invalid rule kind(s) encountered for the following template(s): {exceptionMessage}. Valid kind values (case sensitively) are: {validEnumValues}");
