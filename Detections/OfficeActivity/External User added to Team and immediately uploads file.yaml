@@ -18,7 +18,7 @@ tactics:
 relevantTechniques:
   - T1566
 query: |
- let fileAccessThrehold = 10;
+ let fileAccessThreshold = 10;
  OfficeActivity
   | where OfficeWorkload =~ "MicrosoftTeams"
   | where Operation =~ "MemberAdded"
@@ -47,7 +47,7 @@ query: |
                                         | where Operation  == "FileAccessed"
                                         | where SourceRelativeUrl has "Microsoft Teams Chat Files"
                                         | summarize FileAccessCount = count() by OfficeObjectId
-                                        | where FileAccessCount > fileAccessThrehold
+                                        | where FileAccessCount > fileAccessThreshold
                                         ) on $left.OfficeObjectId == $right.OfficeObjectId
                     )on $left.UPN == $right.UserId
   | extend timestamp=TimeGenerated, AccountCustomEntity = UserWhoAdded 
