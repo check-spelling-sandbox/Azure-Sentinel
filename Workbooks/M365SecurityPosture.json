@@ -485,7 +485,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "M365SecureScore_CL \r\n| extend ActiveUsers=activeUserCount_d, \r\n          CurrentScore=currentScore_d, \r\n          MaximumScore=maxScore_d, \r\n          TenanatID=azureTenantId_g \r\n| summarize by round(CurrentScore), bin(TimeGenerated, 1d)",
+              "query": "M365SecureScore_CL \r\n| extend ActiveUsers=activeUserCount_d, \r\n          CurrentScore=currentScore_d, \r\n          MaximumScore=maxScore_d, \r\n          TenantID=azureTenantId_g \r\n| summarize by round(CurrentScore), bin(TimeGenerated, 1d)",
               "size": 0,
               "aggregation": 5,
               "timeContext": {
@@ -508,7 +508,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "M365SecureScore_CL \r\n| project TimeGenerated, \r\n          ActiveUsers=activeUserCount_d, \r\n          CurrentScore=currentScore_d, \r\n          MaximumScore=maxScore_d, \r\n          TenanatID=azureTenantId_g \r\n| sort by TimeGenerated desc",
+              "query": "M365SecureScore_CL \r\n| project TimeGenerated, \r\n          ActiveUsers=activeUserCount_d, \r\n          CurrentScore=currentScore_d, \r\n          MaximumScore=maxScore_d, \r\n          TenantID=azureTenantId_g \r\n| sort by TimeGenerated desc",
               "size": 1,
               "title": "Microsoft 365 Secure Score",
               "timeContext": {
