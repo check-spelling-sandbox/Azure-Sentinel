@@ -397,7 +397,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "CommonSecurityLog\r\n| where DeviceVendor == \"FORCEPOINT\"\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| where DeviceAction == '{ActionSelected}' or '{ActionSelected}' == \"All\" \r\n| where SourceIP != \"\"\r\n| project ReceiptTime, LogSeverity,DeviceFacility,VirualEngine=DeviceExternalID, SourceIP, DestinationIP, ApplicationProtocol, AdditionalExtensions,Message,Activity",
+              "query": "CommonSecurityLog\r\n| where DeviceVendor == \"FORCEPOINT\"\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| where DeviceAction == '{ActionSelected}' or '{ActionSelected}' == \"All\" \r\n| where SourceIP != \"\"\r\n| project ReceiptTime, LogSeverity,DeviceFacility,VirtualEngine=DeviceExternalID, SourceIP, DestinationIP, ApplicationProtocol, AdditionalExtensions,Message,Activity",
               "size": 0,
               "timeContext": {
                 "durationMs": 86400000
@@ -521,7 +521,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "CommonSecurityLog\r\n| where DeviceVendor == \"FORCEPOINT\"\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| where DeviceFacility == \"Inspection\"\r\n| where Activity == \"URL_Category-Accounting\"\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\" \r\n| where SourceIP != \"\"\r\n| project ReceiptTime, LogSeverity,DeviceFacility,VirualEngine=DeviceExternalID, SourceIP, DestinationIP, ApplicationProtocol, AdditionalExtensions,Message,Activity",
+              "query": "CommonSecurityLog\r\n| where DeviceVendor == \"FORCEPOINT\"\r\n| where \"{LogSeverity:label}\" == \"All\" or LogSeverity in ({LogSeverity})\r\n| where \"{Action:label}\" == \"All\" or DeviceAction in ({Action})\r\n| where DeviceFacility == \"Inspection\"\r\n| where Activity == \"URL_Category-Accounting\"\r\n| where ApplicationProtocol == '{ApplicationProtocolFilter}' or '{ApplicationProtocolFilter}' == \"All\" \r\n| where SourceIP != \"\"\r\n| project ReceiptTime, LogSeverity,DeviceFacility,VirtualEngine=DeviceExternalID, SourceIP, DestinationIP, ApplicationProtocol, AdditionalExtensions,Message,Activity",
               "size": 0,
               "title": "Connection Details",
               "timeContext": {
