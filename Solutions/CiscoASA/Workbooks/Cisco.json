@@ -223,7 +223,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//volume by time\r\nCommonSecurityLog\r\n| where DeviceVendor =~ 'Cisco'\r\n| where DeviceProduct =~ 'ASA'\r\n| where \"{DeviceAddress:label}\" == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where '{SelectedDeviceAction}' == \"All\" or '{SelectedDeviceAction}' == SimplifiedDeviceAction\r\n| where '{SelectedLogSeverity}' == \"All\" or '{SelectedLogSeverity}' == LogSeverity\r\n| summarize Volme=count() by bin(TimeGenerated,{TimeRange:grain})",
+        "query": "//volume by time\r\nCommonSecurityLog\r\n| where DeviceVendor =~ 'Cisco'\r\n| where DeviceProduct =~ 'ASA'\r\n| where \"{DeviceAddress:label}\" == \"All\" or DeviceAddress in ({DeviceAddress})\r\n| where '{SelectedDeviceAction}' == \"All\" or '{SelectedDeviceAction}' == SimplifiedDeviceAction\r\n| where '{SelectedLogSeverity}' == \"All\" or '{SelectedLogSeverity}' == LogSeverity\r\n| summarize Volume=count() by bin(TimeGenerated,{TimeRange:grain})",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Event trends, by time",
