@@ -16,7 +16,7 @@ This Logic App  act as listener for a incident close event in ServiceNow and wil
 
 
 **The playbook, available here and presented below, works as follows:**
-1.	Triger when an HTTP POST request hits the endpoint (1)
+1.	Trigger when an HTTP POST request hits the endpoint (1)
 2.	Get relevant properties from the ServiceNow Incident. 
 3.	Close the incident on Azure Sentinel (4)
 4.	Add comment with the name of the user who closed the incident in ServiceNow into an Azure sentinel incident comment (5) 
