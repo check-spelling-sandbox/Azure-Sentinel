@@ -2,7 +2,7 @@
 
 Author: Younes Khaldi
 
-This playbook will get vulnerability data from tenanble.io instance and send it to log analytics workspace.
+This playbook will get vulnerability data from tenable.io instance and send it to log analytics workspace.
 
 # Pre-Requisites:
 
