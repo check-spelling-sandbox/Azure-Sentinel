@@ -148,7 +148,7 @@
                   "id": "[variables('_uiConfigId1')]",
                   "title": "Qualys Vulnerability Management (using Azure Function)",
                   "publisher": "Qualys",
-                  "descriptionMarkdown": "The [Qualys Vulnerability Management (VM)](https://www.qualys.com/apps/vulnerability-management/) data connector provides the capability to ingest vulnerability host detection data into Microsoft Sentinel through the Qualys API. The connector provides visibility into host detection data from vulerability scans. This connector provides Microsoft Sentinel the capability to view dashboards, create custom alerts, and improve investigation ",
+                  "descriptionMarkdown": "The [Qualys Vulnerability Management (VM)](https://www.qualys.com/apps/vulnerability-management/) data connector provides the capability to ingest vulnerability host detection data into Microsoft Sentinel through the Qualys API. The connector provides visibility into host detection data from vulnerability scans. This connector provides Microsoft Sentinel the capability to view dashboards, create custom alerts, and improve investigation ",
                   "graphQueries": [
                     {
                       "metricName": "Total data received",
@@ -375,7 +375,7 @@
         "connectorUiConfig": {
           "title": "Qualys Vulnerability Management (using Azure Function)",
           "publisher": "Qualys",
-          "descriptionMarkdown": "The [Qualys Vulnerability Management (VM)](https://www.qualys.com/apps/vulnerability-management/) data connector provides the capability to ingest vulnerability host detection data into Microsoft Sentinel through the Qualys API. The connector provides visibility into host detection data from vulerability scans. This connector provides Microsoft Sentinel the capability to view dashboards, create custom alerts, and improve investigation ",
+          "descriptionMarkdown": "The [Qualys Vulnerability Management (VM)](https://www.qualys.com/apps/vulnerability-management/) data connector provides the capability to ingest vulnerability host detection data into Microsoft Sentinel through the Qualys API. The connector provides visibility into host detection data from vulnerability scans. This connector provides Microsoft Sentinel the capability to view dashboards, create custom alerts, and improve investigation ",
           "graphQueries": [
             {
               "metricName": "Total data received",
