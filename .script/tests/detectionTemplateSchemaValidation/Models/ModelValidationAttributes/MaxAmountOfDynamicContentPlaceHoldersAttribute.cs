@@ -8,8 +8,8 @@ namespace Microsoft.Azure.Sentinel.Analytics.Management.AnalyticsManagement.Cont
     public class MaxAmountOfDynamicContentPlaceHoldersAttribute : ValidationAttribute
     {
         private const string FORMAT_PREFIX_CHARACTER = "{{";
-        private const string FORMAT_SUFFFIX_CHARACTER = "}}";
-        private static readonly Regex _placeholderRegExp = new Regex($"{FORMAT_PREFIX_CHARACTER}([^{{}}]*){FORMAT_SUFFFIX_CHARACTER}", RegexOptions.Compiled);
+        private const string FORMAT_SUFFIX_CHARACTER = "}}";
+        private static readonly Regex _placeholderRegExp = new Regex($"{FORMAT_PREFIX_CHARACTER}([^{{}}]*){FORMAT_SUFFIX_CHARACTER}", RegexOptions.Compiled);
         private readonly int _maxAmount;
 
         public MaxAmountOfDynamicContentPlaceHoldersAttribute(int maxAmount)
