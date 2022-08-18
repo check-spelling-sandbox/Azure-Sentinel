@@ -696,7 +696,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store URL , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store URL , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {
