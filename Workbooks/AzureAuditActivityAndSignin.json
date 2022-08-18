@@ -72,7 +72,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "SigninLogs\n| extend ResultText = case(isnotempty(ResultDescription), ResultDescription, ResultType == 0 and isempty(ResultDescription), \"successful login\", \"unknown\") // Create readable result text to include succesfull logins\n| summarize dcount(CorrelationId) by ResultText // Signin results by unique CorrelationId\n| render piechart",
+        "query": "SigninLogs\n| extend ResultText = case(isnotempty(ResultDescription), ResultDescription, ResultType == 0 and isempty(ResultDescription), \"successful login\", \"unknown\") // Create readable result text to include successful logins\n| summarize dcount(CorrelationId) by ResultText // Signin results by unique CorrelationId\n| render piechart",
         "size": 0,
         "title": "Login events by result",
         "timeContext": {

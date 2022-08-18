@@ -101,7 +101,7 @@ try {
 	Exit
 }
 # print the request details
-Write-Host "Session creation is successfull `nUsing API Server: $uri `nUsing Host Detection API: $api `nUsing Username: $username `nUsing Parameters : $all_params, `nTable name: $TableName"
+Write-Host "Session creation is successful `nUsing API Server: $uri `nUsing Host Detection API: $api `nUsing Username: $username `nUsing Parameters : $all_params, `nTable name: $TableName"
 
 #===================================== Function Definitions =====================================#
 
