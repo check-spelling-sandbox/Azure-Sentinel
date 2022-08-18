@@ -303,7 +303,7 @@
                   },
                   {
                     "operator": "==",
-                    "thresholdValue": "Worning",
+                    "thresholdValue": "Warning",
                     "representation": "warning",
                     "text": "{0}{1}"
                   },
