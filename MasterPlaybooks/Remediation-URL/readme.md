@@ -33,7 +33,7 @@ If any one of the above mentioned playbooks are not deployed then default playbo
 
 Each of the nested playbooks of IP Remediation accepts following inputs:
 - URLs: List of URLs as entities from azure sentinel incident.
-- Workflow: Worklfow is identifier for the nested playbook which points to which subscription and which resource group the nested playbook belongs to.
+- Workflow: Workflow is identifier for the nested playbook which points to which subscription and which resource group the nested playbook belongs to.
 - Trigger: Tells how the playbook is invoked/triggered.
 - Headers: Tells the content type of entity accepting by nested playbook.
 
