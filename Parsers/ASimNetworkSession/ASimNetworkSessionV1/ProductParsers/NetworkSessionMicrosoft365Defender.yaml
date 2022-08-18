@@ -22,7 +22,7 @@ ParserQuery: |
   ,'ConnectionFailed', 'Outbound'
   ,'ConnectionRequest','Outbound'
   ,'InboundConnectionAccepted', 'Inbound'
-  ,'ConnectionFound', 'Unkown'
+  ,'ConnectionFound', 'Unknown'
   ,'ListeningConnectionCreated', 'Listening'];
   DeviceNetworkEvents 
   | extend EventType = "Traffic"
