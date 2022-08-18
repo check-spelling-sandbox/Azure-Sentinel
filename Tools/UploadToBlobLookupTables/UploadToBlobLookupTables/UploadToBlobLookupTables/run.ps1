@@ -26,7 +26,7 @@ function ParseUrlfromHTML {
 }
 
 
-function UploadtoBlob {
+function UploadedBlob {
     <#
     .DESCRIPTION
     This function uploads input file to blob storage.
@@ -91,10 +91,10 @@ Invoke-WebRequest -Uri $awsipranges -OutFile $env:TEMP\AWS-IP-Ranges.json
 Invoke-WebRequest -Uri $officeworldwide -OutFile $env:TEMP\Office-WorldWide.json
 
 # Upload Files to Blob Storage
-UploadtoBlob -ConnectionString $azstoragestring -Container $Container -InputFile $env:TEMP\ServiceTags_Public.json
-UploadtoBlob -ConnectionString $azstoragestring -Container $Container -InputFile $env:TEMP\MSFT-Public-IPs.csv
-UploadtoBlob -ConnectionString $azstoragestring -Container $Container -InputFile $env:TEMP\AWS-IP-Ranges.json
-UploadtoBlob -ConnectionString $azstoragestring -Container $Container -InputFile $env:TEMP\Office-WorldWide.json    
+UploadedBlob -ConnectionString $azstoragestring -Container $Container -InputFile $env:TEMP\ServiceTags_Public.json
+UploadedBlob -ConnectionString $azstoragestring -Container $Container -InputFile $env:TEMP\MSFT-Public-IPs.csv
+UploadedBlob -ConnectionString $azstoragestring -Container $Container -InputFile $env:TEMP\AWS-IP-Ranges.json
+UploadedBlob -ConnectionString $azstoragestring -Container $Container -InputFile $env:TEMP\Office-WorldWide.json    
 
 # Write an information log with the current time.
 Write-Host "PowerShell timer trigger function ran! TIME: $currentUTCtime"
