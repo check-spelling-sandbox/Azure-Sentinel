@@ -529,7 +529,7 @@
     "provider": "Microsoft"
   },
   {
-    "workbookKey": "F5BIGIPSytemMetricsWorkbook",
+    "workbookKey": "F5BIGIPSystemMetricsWorkbook",
     "logoFileName": "f5_logo.svg",
     "description": "Gain insight into F5 BIG-IP health and performance.  This workbook provides visibility of various metrics including CPU, memory, connectivity, throughput and disk utilization.",
     "dataTypesDependencies": [
