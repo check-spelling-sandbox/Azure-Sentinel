@@ -28,7 +28,7 @@ To implement this solution, a few different steps need to be done:
    2. Deploy Automation for JIRA rules (used for sync from JIRA to Azure Sentinel)
 3. Deploy the Key Vault and add secrets
 4. Deploy Azure Logic Apps (4) through ARM deployment
-5. Deploy Azure Function for comment sychronization and add the Powershell code (check the Functions)
+5. Deploy Azure Function for comment synchronization and add the Powershell code (check the Functions)
 6. Create Sentinel Automation Rule
 
 ## 1. Create Service Principal
