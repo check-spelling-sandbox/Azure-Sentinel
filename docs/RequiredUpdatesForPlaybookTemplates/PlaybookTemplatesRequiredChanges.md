@@ -48,7 +48,7 @@ Below are details about the recent changes and links to relevant documentation f
 are highly recommended to use the Incident trigger (“When Azure Sentinel incident creation rule was triggered”). 
 !['triggers'](./images/triggers.png)
 
-**Case playbook require both incident and alert trigger vesrion:**<br>
+**Case playbook require both incident and alert trigger version:**<br>
 Since manual trigger for incident trigger not yet available, if the playbook is relevant for manual trigger please have both versions.<br>
 Folder structure in this case:
 * incident-trigger (folder)
