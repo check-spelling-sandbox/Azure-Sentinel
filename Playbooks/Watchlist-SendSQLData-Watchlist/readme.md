@@ -1,7 +1,7 @@
 # Watchlist-SendSQLData-Watchlist
 author: Yaniv Shasha
 
-This playbook levarages Azure Sentinel Watchlists in order to get the relevant date from Azure SQL, and create a new watchlist or update an exsisting watchlsit with the query output.
+This playbook levarages Azure Sentinel Watchlists in order to get the relevant date from Azure SQL, and create a new watchlist or update an exsisting watchlist with the query output.
 
 
 Prerequisites
