@@ -925,7 +925,7 @@
                 "name": "huntingquery35-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "ooking for suspiciopus interactive logon events which are outside normal logon hours for the user. Current day logon events are compared with last 14 days activity\nand filtered for events which are above or below of historical logon hour range seen for the user It depends on the SecurityEvents WindowsSecurityEvents data connector and SecurityEvent SecurityEvent data type and SecurityEvents WindowsSecurityEvents parser."
+                  "text": "ooking for suspicious interactive logon events which are outside normal logon hours for the user. Current day logon events are compared with last 14 days activity\nand filtered for events which are above or below of historical logon hour range seen for the user It depends on the SecurityEvents WindowsSecurityEvents data connector and SecurityEvent SecurityEvent data type and SecurityEvents WindowsSecurityEvents parser."
                 }
               }
             ]
