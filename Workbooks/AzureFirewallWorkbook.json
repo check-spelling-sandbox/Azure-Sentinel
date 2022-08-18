@@ -764,7 +764,7 @@
     {
       "type": 1,
       "content": {
-        "json": "### Firewall Metrics\r\nThe data below doesn't read from the Log Analytics workpsace, it's reading directly from the resources which requires resource visibility. \r\nClick [here for more information on Azure Metrics](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics)\r\n",
+        "json": "### Firewall Metrics\r\nThe data below doesn't read from the Log Analytics workspace, it's reading directly from the resources which requires resource visibility. \r\nClick [here for more information on Azure Metrics](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics)\r\n",
         "style": "info"
       },
       "conditionalVisibility": {

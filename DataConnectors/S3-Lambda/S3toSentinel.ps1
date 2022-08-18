@@ -151,7 +151,7 @@ foreach ($record in $LambdaInput.Records) {
     $workspaceId = "workspaceId"
     $workspaceKey = "workspaceKey"
     $CustomLogName = "CustomLog"
-    #$worksapceId = $env:workspaceId
+    #$workspaceId = $env:workspaceId
     #$workspaceKey = $env:workspaceKey
     #$CustomLogName = $env:CustomLogName
 
