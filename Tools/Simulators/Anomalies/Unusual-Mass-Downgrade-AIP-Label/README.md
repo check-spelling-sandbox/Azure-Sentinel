@@ -41,7 +41,7 @@ When complete your will have a:
 
 - custom log - "InformationProtectionLogs_CL"
 - 62 log entries "Preview/Unusual-Mass-Downgrade-AIP-Label"
-- You can query the Anomalies Table to show the "Preview/Unsual Mass Downgrade AIP Label" events matching the anomaly rule
+- You can query the Anomalies Table to show the "Preview/Unusual Mass Downgrade AIP Label" events matching the anomaly rule
 
 Script execution and data ingestion simulates what would happen in the event the anomaly rule is triggered.
 
