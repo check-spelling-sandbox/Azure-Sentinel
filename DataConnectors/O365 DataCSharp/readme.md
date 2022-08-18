@@ -117,7 +117,7 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
    * ConnectionIntervalinMinutes = <domain> from <domain>.onmicrosoft.com
    * Indicating the time range of content to return , read more on https://docs.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-reference
 
-   * StorageContainerConnectionString = "Stroage container string"
+   * StorageContainerConnectionString = "Storage container string"
    * If key vault is enabled then leave it blank. 
 
    * LogContainerName = "log"

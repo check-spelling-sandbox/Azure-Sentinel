@@ -43,7 +43,7 @@ namespace Teams.CustomConnector.StorageHandler
             log.LogInformation(Common.Constants.UploadDataToStorageContainerStarted);
             try
             {
-                CreateCloudStroageHandler();
+                CreateCloudStorageHandler();
                 var container = blobServiceClient.GetBlobContainerClient(opType == OperationType.Data ? Environment.GetEnvironmentVariable(Constants.DataContainerName) : Environment.GetEnvironmentVariable(Constants.LogContainerName));
                 var blockBlob = container.GetBlockBlobClient(blobName);
                 var data = JsonSerializer.Serialize(operationDetails);
@@ -68,7 +68,7 @@ namespace Teams.CustomConnector.StorageHandler
             log.LogInformation(Common.Constants.UploadDataToStorageContainerStarted);
             try
             {
-                CreateCloudStroageHandler();
+                CreateCloudStorageHandler();
                 var container = blobServiceClient.GetBlobContainerClient(opType == OperationType.Data ? Environment.GetEnvironmentVariable(Constants.DataContainerName) : Environment.GetEnvironmentVariable(Constants.LogContainerName));
                 var blockBlob = container.GetBlockBlobClient(blobName);
                 byte[] byteArray = Encoding.ASCII.GetBytes(data);
@@ -93,7 +93,7 @@ namespace Teams.CustomConnector.StorageHandler
             try
             {
                 log.LogInformation(Common.Constants.RequestLastExecutionTime);
-                CreateCloudStroageHandler();
+                CreateCloudStorageHandler();
                 var container = blobServiceClient.GetBlobContainerClient(Environment.GetEnvironmentVariable(Constants.LogContainerName));
                 if (await container.ExistsAsync())
                 {
@@ -115,7 +115,7 @@ namespace Teams.CustomConnector.StorageHandler
             return operationDetails;
         }
 
-        private void CreateCloudStroageHandler()
+        private void CreateCloudStorageHandler()
         {
             bool.TryParse(Environment.GetEnvironmentVariable(Constants.KeyVaultEnabled), out bool isKeyVaultEnabled);
             if (isKeyVaultEnabled)
