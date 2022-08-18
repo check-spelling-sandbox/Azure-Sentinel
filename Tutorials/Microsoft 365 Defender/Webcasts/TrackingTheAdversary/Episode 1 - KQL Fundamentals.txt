@@ -82,7 +82,7 @@ DeviceLogonEvents
 // - Timestamp
 
 // count
-// Returns the row count for a tablular dataset
+// Returns the row count for a tabular dataset
 
 // ---------------
 

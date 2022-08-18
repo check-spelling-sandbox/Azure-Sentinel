@@ -32,7 +32,7 @@ let MyFunction = (MyParameter:string)
 MyFunction('foo')
 
 // ...but that's just getting started. You can also pass in tabular data!
-// To accomplish this we will use the invoke tabluar operator
+// To accomplish this we will use the invoke tabular operator
 // https://docs.microsoft.com/azure/data-explorer/kusto/query/invokeoperator
 
 let MyOtherFunction = (MyParameter:(Value:int))
@@ -65,7 +65,7 @@ datatable(Multiplicand:int)
 // parameter to the second parameter step the third parameter
 // https://docs.microsoft.com/azure/data-explorer/kusto/query/rangeoperator
 
-// or go all out and use multiple tablular inputs
+// or go all out and use multiple tabular inputs
 
 let LetsIntersect = (Dataset1:(key:int,value:string), Dataset2:(key:int,value:string))
 {
