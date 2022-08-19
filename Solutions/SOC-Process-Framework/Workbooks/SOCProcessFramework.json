@@ -718,10 +718,10 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "// report on found watchlist(s)\r\nunion withsource=wlTableName// isfuzzy=true \r\n    (_GetWatchlist('SOCcontacts')          \r\n        | extend wlName = 'SOCContacts'),\r\n    (_GetWatchlist('SOCworkstations')\r\n        | extend wlName = 'SOCWorkstations'),\r\n    (_GetWatchlist('SOCpager')\r\n        | extend wlName = 'SOCpager'),\r\n    (_GetWatchlist('SOCgeneralIT')\r\n        | extend wlName = 'SOCgeneralIT'),\r\n    (_GetWatchlist('SOCDepartmental')\r\n        | extend wlName = 'SOCDepartmental'),\r\n    (_GetWatchlist('SOCEmailDistribution')\r\n        | extend wlName = 'SOCEmailDistribution'),\r\n    (_GetWatchlist('SOCExternalContacts')\r\n        | extend wlName = 'SOCExternalContacts'),\r\n    (_GetWatchlist('SOCInternalContacts')\r\n        | extend wlName = 'SOCInternalContacts')\r\n| summarize recordsFound=count() by Watchlist = wlName",
+              "query": "// report on found watchlist(s)\r\nunion withsource=wlTableName// isfuzzy=true \r\n    (_GetWatchlist('SOCContacts')          \r\n        | extend wlName = 'SOCContacts'),\r\n    (_GetWatchlist('SOCworkstations')\r\n        | extend wlName = 'SOCWorkstations'),\r\n    (_GetWatchlist('SOCpager')\r\n        | extend wlName = 'SOCpager'),\r\n    (_GetWatchlist('SOCgeneralIT')\r\n        | extend wlName = 'SOCgeneralIT'),\r\n    (_GetWatchlist('SOCDepartmental')\r\n        | extend wlName = 'SOCDepartmental'),\r\n    (_GetWatchlist('SOCEmailDistribution')\r\n        | extend wlName = 'SOCEmailDistribution'),\r\n    (_GetWatchlist('SOCExternalContacts')\r\n        | extend wlName = 'SOCExternalContacts'),\r\n    (_GetWatchlist('SOCInternalContacts')\r\n        | extend wlName = 'SOCInternalContacts')\r\n| summarize recordsFound=count() by Watchlist = wlName",
               "size": 1,
               "title": "SOC Watchlist Inventory: {$rowCount} watchlists detected",
-              "noDataMessage": "Please add this SOCcontacts watchlist: <<<add URL to Wiki >>>>",
+              "noDataMessage": "Please add this SOCContacts watchlist: <<<add URL to Wiki >>>>",
               "timeContext": {
                 "durationMs": 2592000000
               },
@@ -833,10 +833,10 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "_GetWatchlist('SOCcontacts')\r\n| project-away _DTItemId, SearchKey",
+              "query": "_GetWatchlist('SOCContacts')\r\n| project-away _DTItemId, SearchKey",
               "size": 1,
-              "title": "👥 SOC Contacts (from SOCcontacts Watchlist)",
-              "noDataMessage": "Please add this SOCcontacts watchlist: <<<add URL to Wiki >>>>",
+              "title": "👥 SOC Contacts (from SOCContacts Watchlist)",
+              "noDataMessage": "Please add this SOCContacts watchlist: <<<add URL to Wiki >>>>",
               "timeContext": {
                 "durationMs": 86400000
               },
@@ -1178,7 +1178,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### Contacts\r\n**This Option shows you a plain text visual of suggested data you should gather and document**\r\n\r\n### Contacts Watchlist\r\nThis option allows you to import data to the Workbook from a Watchlist, for all the contact sections. The following Watchlist Alias are needed to populate the **Contacts Watchlist**.  Templates are provided:\r\n\r\n- SOCcontacts\r\n- SOCworkstations\r\n- SOCpager     \r\n- SOCgeneralIT  \r\n- SOCDepartmental  \r\n- SOCEmailDistribution      \r\n- SOCExternalContacts      \r\n- SOCInternalContacts  "
+              "json": "### Contacts\r\n**This Option shows you a plain text visual of suggested data you should gather and document**\r\n\r\n### Contacts Watchlist\r\nThis option allows you to import data to the Workbook from a Watchlist, for all the contact sections. The following Watchlist Alias are needed to populate the **Contacts Watchlist**.  Templates are provided:\r\n\r\n- SOCContacts\r\n- SOCworkstations\r\n- SOCpager     \r\n- SOCgeneralIT  \r\n- SOCDepartmental  \r\n- SOCEmailDistribution      \r\n- SOCExternalContacts      \r\n- SOCInternalContacts  "
             },
             "customWidth": "80",
             "conditionalVisibility": {
