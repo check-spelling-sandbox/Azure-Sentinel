@@ -21,7 +21,7 @@
 -----------------------------------------------------------------------------------------------------------
 ## Before submitting this PR please ensure that you have read the following sections and filled out the changes, reason for change and testing complete sections:
 
-Thank you for your contribution to the Microsoft Sentinel Github repo.
+Thank you for your contribution to the Microsoft Sentinel GitHub repo.
 
 > Details of the code changes in your submitted PR.  Providing descriptions for pull requests ensures there is context to changes being made and greatly enhances the code review process.  Providing associated Issues that this resolves also easily connects the reason.
    
