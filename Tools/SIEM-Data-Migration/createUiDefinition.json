@@ -28,7 +28,7 @@
                   "type": "Microsoft.Common.TextBlock",
                   "visible": true,
                   "options": {
-                    "text": "This step creates a Windows 2019 Datacenter VM with LightIngest, AzCopy and and Custom Log ingestion tools installed.",
+                    "text": "This step creates a Windows 2019 Datacenter VM with LightIngest, AzCopy and Custom Log ingestion tools installed.",
                     "link": {
                         "label": "Learn more",
                         "uri": "https://aka.ms/siemdatamigration"
