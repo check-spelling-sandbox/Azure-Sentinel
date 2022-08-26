@@ -5,7 +5,7 @@ This template deploys all the [Sysmon for Windows](https://docs.microsoft.com/sy
 When deploying the parsers, you:
 
 - Make sure that telemetry from Sysmon is analyzed using the built-in Microsoft Sentinel Analytics. You also enable analysts easier access to the telemetry using a known, standard, schema.
-- That events collected to the Event table and to the WindowsEvent tables (used by WEF) are both both available to analysts and in the same format.
+- That events collected to the Event table and to the WindowsEvent tables (used by WEF) are both available to analysts and in the same format.
 
 **Note: to get the best value from ASIM and make sure that Sysmon telemetry is included in Microsoft Sentinel Analytics, deploy the [full ASIM parser suite](https://aka.ms/DeployASIM).**
 
