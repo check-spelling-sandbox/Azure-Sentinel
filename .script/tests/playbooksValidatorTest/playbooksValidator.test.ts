@@ -14,7 +14,7 @@ describe("Playbooks validator", () => {
     await checkValid(".script/tests/playbooksValidatorTest/testFiles/validPlaybookTemplateNotForGallery.json");
   });
 
-  it(`Should pass when playbook template is using using capitalized parameter types`, async () => {
+  it(`Should pass when playbook template is using capitalized parameter types`, async () => {
     await checkValid(".script/tests/playbooksValidatorTest/testFiles/playbookTemplateWithCapitalizedParameterType.json");
   });
 
