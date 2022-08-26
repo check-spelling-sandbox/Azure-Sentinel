@@ -5459,7 +5459,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### Instructions\r\n\r\nThis tab lists tables within the workspace and their current configuration for retention and archive. \r\n\r\nTo configure archive:\r\n1. Click on one one of the tables.\r\n2. A section will appear below, within the box provided enter the desired total retention for the table. </br>\r\n\tNote: Archive retention is found by taking TotalRetention and subtracting WorkspaceRetention. So if a table is set to 400 days of total retention and the workspace is only 90 days, the archive retention will be 310 days.\r\n3. Once the total retention is ready, click 'Update Retention'. \r\n4. A context pane will appear to confirm the changes to be made. If all is set, click 'Update Retention' again.\r\n5. To see the changes, refresh the workbook and view the table again.",
+              "json": "### Instructions\r\n\r\nThis tab lists tables within the workspace and their current configuration for retention and archive. \r\n\r\nTo configure archive:\r\n1. Click on one of the tables.\r\n2. A section will appear below, within the box provided enter the desired total retention for the table. </br>\r\n\tNote: Archive retention is found by taking TotalRetention and subtracting WorkspaceRetention. So if a table is set to 400 days of total retention and the workspace is only 90 days, the archive retention will be 310 days.\r\n3. Once the total retention is ready, click 'Update Retention'. \r\n4. A context pane will appear to confirm the changes to be made. If all is set, click 'Update Retention' again.\r\n5. To see the changes, refresh the workbook and view the table again.",
               "style": "info"
             },
             "conditionalVisibility": {
