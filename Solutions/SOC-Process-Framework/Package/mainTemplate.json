@@ -1269,7 +1269,7 @@
               "3. Ensure each connection has been authorized."
             ],
             "lastUpdateTime": "2022-07-29T00:00:00Z",
-            "comments": "This playbook will provide users with Recommended SOC Actions using a .csv file that they upload into a WatchList and give it the the Alias of SocRA. This also contains steps an Analyst should consider taking when an Analytic Detection has not been onboarded to the WatchList .csv file.",
+            "comments": "This playbook will provide users with Recommended SOC Actions using a .csv file that they upload into a WatchList and give it the Alias of SocRA. This also contains steps an Analyst should consider taking when an Analytic Detection has not been onboarded to the WatchList .csv file.",
             "releaseNotes": {
               "version": "1.0",
               "title": "[variables('blanks')]",

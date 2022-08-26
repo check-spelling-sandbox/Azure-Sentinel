@@ -196,7 +196,7 @@ def create_daemon_forwarding_configuration(omsagent_incoming_port, daemon_config
     '''
     Create the daemon configuration to forward messages over TCP to the
     oms agent
-    :param omsagent_incoming_port: port for communication between the omsagent the the daemon
+    :param omsagent_incoming_port: port for communication between the omsagent the daemon
     :param daemon_configuration_path: path of the configuration file
     :param daemon_name: name of the daemon
     :return:

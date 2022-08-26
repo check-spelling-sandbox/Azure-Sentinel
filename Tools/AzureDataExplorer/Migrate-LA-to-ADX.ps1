@@ -199,7 +199,7 @@ function Start-SleepMessage {
     Start-SleepMessage is used to display a progress bar.
     
     .PARAMETER Seconds
-    Specifies the path the the file that includes the commands to execute
+    Specifies the path the file that includes the commands to execute
 
     .PARAMETER WaitMessage
     Specifies the message to display with the progress bar.
@@ -234,7 +234,7 @@ function Invoke-KustoCLI {
     Invoke-KustoCLI is used to execute the KustoCLI with the specified AdxCommandsFile.
     
     .PARAMETER AdxCommandsFile
-    parameter specifies the path the the file that includes the commands to execute 
+    parameter specifies the path the file that includes the commands to execute 
     #>
 
     [CmdletBinding()]

@@ -166,7 +166,7 @@ function Invoke-KustoCLI {
     Invoke-KustoCLI is used to execute the KustoCLI with the specified AdxCommandsFile.
     
     .PARAMETER AdxCommandsFile
-    parameter specifies the path the the file that includes the commands to execute 
+    parameter specifies the path the file that includes the commands to execute 
     #>
 
     [CmdletBinding()]

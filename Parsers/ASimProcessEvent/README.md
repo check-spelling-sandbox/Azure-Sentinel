@@ -1,6 +1,6 @@
 # Advanced Security Information Model (ASIM) ProcessEvent parsers 
 
-This folder includes the the Advanced Security Information Model (ASIM)  ProcessEvent parsers. The parsers are provided in YAML and in ARM template formats. The latter can be used to deploy the parsers, while the former is provided for educational purposes. 
+This folder includes the Advanced Security Information Model (ASIM)  ProcessEvent parsers. The parsers are provided in YAML and in ARM template formats. The latter can be used to deploy the parsers, while the former is provided for educational purposes. 
 
 The Advanced Security Information Model (ASIM) enables you to use and create source-agnostic content, simplifying your analysis of the data in your Microsoft Sentinel workspace.
 

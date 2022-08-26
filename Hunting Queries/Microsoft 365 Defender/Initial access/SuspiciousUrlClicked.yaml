@@ -15,7 +15,7 @@ tactics:
 - Initial access
 query: |
   // Some URL are wrapped with a safelink
-  // Let's get the the unwrapped url and clicks 
+  // Let's get the unwrapped url and clicks 
   AlertInfo
   | where ServiceSource == "Office 365 ATP"
   | join (
