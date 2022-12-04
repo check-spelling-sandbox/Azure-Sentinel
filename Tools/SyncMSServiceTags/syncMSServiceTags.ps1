@@ -7,7 +7,7 @@ $jsonContent = $jsonFileData | ConvertTo-Json -depth 100
 $jsonFileData | ConvertTo-Json -depth 100 | Out-File ".\servicetags.json"
 write-host "File Fetch completed."
 
-#decleration
+#declaration
 $file = ".\servicetags.json"
 $text = $jsonFileData 
 $wi = "#13 #14"
