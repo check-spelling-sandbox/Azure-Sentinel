@@ -58,7 +58,7 @@ resource "google_service_account" "sentinel-service-account" {
 resource "google_project_iam_custom_role" "sentinel-custom-role" {
   role_id     = "SentinelCustomRole"
   title       = "Sentinel Custom Role"
-  description = "Role that allowes pulling messages from pub/sub"
+  description = "Role that allows pulling messages from pub/sub"
   permissions = ["pubsub.subscriptions.consume", "pubsub.subscriptions.get"]
   project = data.google_project.project.project_id
 }
