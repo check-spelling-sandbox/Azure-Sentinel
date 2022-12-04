@@ -4719,7 +4719,7 @@
     "AnomaliesVisualizationWorkbookBlack.png"
   ],
   "version": "1.0.0",
-  "title": "AnomaliesVisulization",
+  "title": "AnomaliesVisualization",
   "templateRelativePath": "AnomaliesVisualization.json",
   "subtitle": "",
   "provider": "Microsoft Sentinel Community"
