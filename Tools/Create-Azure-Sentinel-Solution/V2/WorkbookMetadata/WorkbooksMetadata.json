@@ -4246,7 +4246,7 @@
     "provider": "Microsoft"
   },
   {
-    "workbookKey": "AtlasianJiraAuditWorkbook",
+    "workbookKey": "AtlassianJiraAuditWorkbook",
     "logoFileName": "",
     "description": "Select the time range for this Overview.",
     "dataTypesDependencies": [
@@ -4260,8 +4260,8 @@
       "AtlassianJiraAuditWhite.png"
     ],
     "version": "1.0.0",
-    "title": "AtlasianJiraAuditWorkbook",
-    "templateRelativePath": "AtlasianJiraAuditWorkbook.json",
+    "title": "AtlassianJiraAuditWorkbook",
+    "templateRelativePath": "AtlassianJiraAuditWorkbook.json",
     "subtitle": "",
     "provider": "Microsoft"
   },
