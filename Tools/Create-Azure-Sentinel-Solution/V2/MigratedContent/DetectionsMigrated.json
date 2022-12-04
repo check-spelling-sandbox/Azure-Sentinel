@@ -300,13 +300,13 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "MFARejectedbyUser.yaml",
+        "FileName": "MFARejectedByUser.yaml",
         "DetectionId": "d99cf5c3-d660-436c-895b-8a8f8448da23",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/SigninLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "NRT_MFARejectedbyUser.yaml",
+        "FileName": "NRT_MFARejectedByUser.yaml",
         "DetectionId": "3617d76d-b15e-4c6f-985e-a1dac73c592d",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/SigninLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
