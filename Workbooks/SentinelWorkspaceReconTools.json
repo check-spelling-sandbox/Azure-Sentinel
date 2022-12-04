@@ -2612,7 +2612,7 @@
           {
             "type": 1,
             "content": {
-              "json": "**Azure Active Directory Log Viewer**. Start by setting the time range above and the optional time brush. Select the AAD log table followed by one or more item of interest. Each selection is **cumulative**. **Best if you select from 1-2 filte**r categories at a time.**",
+              "json": "**Azure Active Directory Log Viewer**. Start by setting the time range above and the optional time brush. Select the AAD log table followed by one or more item of interest. Each selection is **cumulative**. **Best if you select from 1-2 filter categories at a time.**",
               "style": "success"
             },
             "customWidth": "75",
