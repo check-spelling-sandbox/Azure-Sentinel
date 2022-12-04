@@ -447,7 +447,7 @@
                                 }
                             }
                         },
-                        "Verify_Recorderd_Future_response_body": {
+                        "Verify_Recorded_Future_response_body": {
                             "actions": {
                                 "Add_comment_to_incident_(V3)_Recorded_Future": {
                                     "runAfter": {},
