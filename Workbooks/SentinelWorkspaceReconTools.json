@@ -8453,7 +8453,7 @@
           {
             "type": 1,
             "content": {
-              "json": "**Agent Health Viewer**. The following workbooks shows agent health for connected Linux and Windows agents. Optional extension to view Defender for Cloud and Defender for Endpoint status. **Time range must exceed the threshold value.**\r\n\r\nRequirement: At least one connected agent. Optional MDFC sharig the same workspace. Optional MDE integration. Based on Heartbeat, Update, and DeviceInfo tables.",
+              "json": "**Agent Health Viewer**. The following workbooks shows agent health for connected Linux and Windows agents. Optional extension to view Defender for Cloud and Defender for Endpoint status. **Time range must exceed the threshold value.**\r\n\r\nRequirement: At least one connected agent. Optional MDFC sharing the same workspace. Optional MDE integration. Based on Heartbeat, Update, and DeviceInfo tables.",
               "style": "success"
             },
             "customWidth": "75",
