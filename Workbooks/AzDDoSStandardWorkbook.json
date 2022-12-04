@@ -641,7 +641,7 @@
         "version": "KqlItem/1.0",
         "query": "AzureDiagnostics\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| where Category == \"DDoSMitigationReports\"\r\n| extend SourceContinents_s = coalesce(parse_json(column_ifexists(\"SourceContinents_s\",\"\")),parse_json(AdditionalFields[\"SourceContinents\"]))\r\n| where SourceContinents_s <> \"{}\"\r\n| extend SourceContinents_s = parse_json(tostring(SourceContinents_s))\r\n| extend DynamicContinents = todynamic(SourceContinents_s) \r\n| project DynamicContinents\r\n| as T\r\n| mv-apply DynamicContinents on (\r\n    extend Continent = tostring(bag_keys(DynamicContinents)[0])\r\n    | project Continent, value = todouble(DynamicContinents[Continent])\r\n)\r\n| summarize Percentage = strcat(round(100 * sum(value) / toscalar(T | count), 3)) by Continent\r\n| extend Percent = todouble(Percentage)",
         "size": 0,
-        "title": "Continent of orgin",
+        "title": "Continent of origin",
 		"timeContext": {
           "durationMs": 2419200000
         },
@@ -831,7 +831,7 @@
         "version": "KqlItem/1.0",
         "query": "AzureDiagnostics\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| where Category == \"DDoSMitigationReports\"\r\n| extend SourceContinents_s = coalesce(parse_json(column_ifexists(\"SourceContinents_s\",\"\")),parse_json(AdditionalFields[\"SourceContinents\"]))\r\n| extend SourceContinents_s = parse_json(tostring(SourceContinents_s))\r\n| where SourceContinents_s <> \"{}\"\r\n| extend DynamicContinents = todynamic(SourceContinents_s) \r\n| project DynamicContinents\r\n| as T\r\n| mv-apply DynamicContinents on (\r\n    extend Continent = tostring(bag_keys(DynamicContinents)[0])\r\n    | project Continent, value = todouble(DynamicContinents[Continent])\r\n)\r\n| summarize Percentage = strcat(round(100 * sum(value) / toscalar(T | count), 3), \"%\") by Continent\r\n| sort by Percentage desc",
         "size": 1,
-        "title": "Continent of orgin",
+        "title": "Continent of origin",
 		"timeContext": {
           "durationMs": 2419200000
         },
