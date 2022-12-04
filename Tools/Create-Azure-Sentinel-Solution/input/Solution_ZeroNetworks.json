@@ -2,8 +2,8 @@
   "Name": "ZeroNetworks",
   "Author": "Nicholas DiCola - nicholas@zeronetworks.com",
   "Logo": "<img src=\"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Logos/ZeroNetworks.svg\" width=\"75px\" height=\"75px\">",
-  "Description": "[Zero Networks Access Orchestator](https://zeronetworks.com/product/) is a automated microsegmentation solution.",
-  "WorkbookDescription": "Gain insights into Zero Networks Access Orchestator Audit logs.",
+  "Description": "[Zero Networks Access Orchestrator](https://zeronetworks.com/product/) is a automated microsegmentation solution.",
+  "WorkbookDescription": "Gain insights into Zero Networks Access Orchestrator Audit logs.",
   "Workbooks": [
     "Workbooks/ZNAccessOrchestratorAudit.json"
   ],
