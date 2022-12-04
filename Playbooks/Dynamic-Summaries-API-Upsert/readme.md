@@ -19,4 +19,4 @@ Before deploying the playbook you will need
 
 ## Post-Deployment
 After deployment, the playbook will run automatically, it may fail due to permission issues.  You need to perform one action:
-- You need to auithorize the API Connections, going to API connections, selecting the API connection, selecting Edit API connection. then clicking Authorize button at the bottom.
+- You need to authorize the API Connections, going to API connections, selecting the API connection, selecting Edit API connection. then clicking Authorize button at the bottom.
