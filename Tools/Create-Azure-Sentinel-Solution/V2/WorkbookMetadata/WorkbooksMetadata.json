@@ -4438,7 +4438,7 @@
     "provider": "ARGOS Cloud Security"
   },
   {
-    "workbookKey": "SAP-InitialAccessAttemptstoBypassSAPSecurityMechanisms",
+    "workbookKey": "SAP-InitialAccessAttemptsToBypassSAPSecurityMechanisms",
     "logoFileName": "SAP_LOGO.svg",
     "description": "SAP - Initial Access & Attempts to Bypass SAP Security Mechanisms",
     "dataTypesDependencies": [
