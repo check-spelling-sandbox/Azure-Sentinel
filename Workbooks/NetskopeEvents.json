@@ -1387,7 +1387,7 @@
                         },
                         {
                           "columnId": "ip_protocol_s",
-                          "label": "Protcol"
+                          "label": "Protocol"
                         },
                         {
                           "columnId": "policy_s",
