@@ -8,7 +8,7 @@
     "Workbooks/ZNAccessOrchestratorAudit.json"
   ],
   "Analytic Rules": [
-    "Analytics Rules/ZNAccessOrchestratorMachineRemovedfromProtection.yaml",
+    "Analytics Rules/ZNAccessOrchestratorMachineRemovedFromProtection.yaml",
     "Analytics Rules/ZNAccessOrchestratorNewAPIToken.yaml",
     "Analytics Rules/ZNAccessOrchestratorRareJITRuleCreation.yaml"
   ],
