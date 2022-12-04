@@ -83,7 +83,7 @@
      * If client policy does not exist in the network, then incident comment is created saying client policy not found.
      *  If client policy exists in the network as Blocked, then incident comment is created saying client blocked using client policy.
      *  If client policy exists in the network as Whitelisted, then incident comment is created saying client allowed using client policy.
-     *  If client policy exists in the network as group polciy, then check the group policy details and  incident comment is created saying client blocked using client policy.
+     *  If client policy exists in the network as group policy, then check the group policy details and  incident comment is created saying client blocked using client policy.
      *  If client policy exists in the network as Normal, then client is blocked by playbook. Incident Comment is created saying Client blocked by playbook.
   - Add incident Comment from all the cases.
   - Update the incident with status 'Closed' and reason as
