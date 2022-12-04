@@ -586,7 +586,7 @@
   },
    {
     "id": "ea428211-e04e-4709-9d75-7064f8150bfe",
-    "templateName": "ExternalUpstreamSourceAddedtoAzureDevOpsFeed.yaml",
+    "templateName": "ExternalUpstreamSourceAddedToAzureDevOpsFeed.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidence for redirecting the customers to new location"
   },
    {
