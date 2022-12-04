@@ -11,7 +11,7 @@ The ARM template will deploy everything needed:
 * Public IP Address
 * Load Balancer
 * Data Collection Rule
-* Data Colection Rule association
+* Data Collection Rule association
 * Managed identity required for AMA to authenticate
 
 The ARM template includes a cloud init to run the required to commands on the VM instances to enable syslog collection.
