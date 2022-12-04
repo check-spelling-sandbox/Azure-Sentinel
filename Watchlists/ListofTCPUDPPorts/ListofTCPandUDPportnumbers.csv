@@ -731,7 +731,7 @@ Port,TCP,UDP,SCTP,DCCP,Description
 5556 ,Yes ,Yes , , ,Freeciv - Oracle WebLogic Server Node Manager
 5568 ,Yes ,Yes , , ,Session Data Transport (SDT) - a part of Architecture for Control Networks (ACN)
 5601 ,Unofficial , , , ,Kibana
-5631 ,Yes , , , ,pcANYWHEREdata - Symantec pcAnywhere (version 7.52 and later data
+5631 ,Yes , , , ,pcANYWHEREdata - Symantec pcAnywhere (version 7.52 and later) data
 5632 , ,Yes , , ,pcANYWHEREstat - Symantec pcAnywhere (version 7.52 and later) status
 5656 ,Unofficial , , , ,IBM Lotus Sametime p2p file transfer
 5666 ,Unofficial , , , ,NRPE (Nagios)
