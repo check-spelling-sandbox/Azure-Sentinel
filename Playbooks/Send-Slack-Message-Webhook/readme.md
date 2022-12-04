@@ -4,7 +4,7 @@ author: Zachi Neuman
 This playbook will be sending slack with basic incidents details (Incident title, severity, tactics, link,…) when incident is created in Azure Sentinel.
 The playbook includes functionality to:
 1. Close Incident As False Positive
-2. Close Incident As Benign Positve
+2. Close Incident As Benign Positive
 3. Change Incident Status To Active
 4. White List Entities
 <br/><br/>
