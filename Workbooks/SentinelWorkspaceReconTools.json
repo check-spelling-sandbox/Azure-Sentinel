@@ -495,7 +495,7 @@
           {
             "type": 1,
             "content": {
-              "json": "**Table Explorer** is designed to help you better understand the data in your tables. Each table, column, and vaule is easily **sorted by volume**.",
+              "json": "**Table Explorer** is designed to help you better understand the data in your tables. Each table, column, and value is easily **sorted by volume**.",
               "style": "success"
             },
             "customWidth": "75",
