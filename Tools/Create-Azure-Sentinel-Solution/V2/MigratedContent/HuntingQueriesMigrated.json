@@ -468,7 +468,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Security%20Events/Hunting%20Queries/"
     },
 	{
-        "FileName": "RareProcbyServiceAccount.yaml",
+        "FileName": "RareProcByServiceAccount.yaml",
         "DetectionId": "af02987c-949d-47d5-b0ae-64d8e1b674e2",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/SecurityEvent/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Security%20Events/Hunting%20Queries/"

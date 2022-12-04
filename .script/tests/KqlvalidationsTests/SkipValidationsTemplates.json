@@ -1001,7 +1001,7 @@
   },
   {
     "id": "6c17f205-bda3-41ee-8a21-77fe61af39ea",
-    "templateName": "RareProcbyServiceAccount.yaml",
+    "templateName": "RareProcByServiceAccount.yaml",
     "validationFailReason": "Since the content moved to new location, created dummy file with guidance for redirecting the customers to new location"
   },
   {
