@@ -2695,7 +2695,7 @@
                     "version": "KqlItem/1.0",
                     "query": "Netskope_Alerts_CL\n| where alert_type_s == \"DLP\"\n| summarize Count = count() by policy_s\n| top 10 by Count\n",
                     "size": 2,
-                    "title": "Top 10 DLP Incidents by Policy Voilations",
+                    "title": "Top 10 DLP Incidents by Policy Violations",
                     "queryType": 0,
                     "resourceType": "microsoft.operationalinsights/workspaces",
                     "visualization": "piechart",
@@ -2704,7 +2704,7 @@
                     }
                   },
                   "customWidth": "33",
-                  "name": "Top 10 DLP Incidents by Policy Voilations"
+                  "name": "Top 10 DLP Incidents by Policy Violations"
                 },
                 {
                   "type": 3,
