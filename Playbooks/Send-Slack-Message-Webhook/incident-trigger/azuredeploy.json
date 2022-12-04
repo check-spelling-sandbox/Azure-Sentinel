@@ -4,7 +4,7 @@
         "metadata": {
         "title": "Post Message Slack Via Webhook",
         "description": "This playbook will be sending Slack with basic incidents details (Incident title, severity, tactics, link,…) when incident is created in Microsoft Sentinel. The playbook includes functionality to:<br>Close Incident As False Positive<br>Close Incident As Benign Positve<br>Change Incident Status To Active<br>Add entities to allow list",
-        "prerequisites": ["Slack application with Webhook installed and Interactivity Enbaled"],
+        "prerequisites": ["Slack application with Webhook installed and Interactivity Enabled"],
         "lastUpdateTime": "2022-03-15T00:00:00.000Z",
         "entities": [],
         "tags": [ "Notification" ],

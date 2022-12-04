@@ -12,7 +12,7 @@ The playbook includes functionality to:
 Slack application with: 
 1. Webhook installed
 1.1 How to install webhook - https://api.slack.com/messaging/webhooks
-2. Interactivity Enbaled
+2. Interactivity Enabled
 <br/><br/>
 ## Deployment:
 
