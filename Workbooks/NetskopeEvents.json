@@ -45,7 +45,7 @@
             "cellValue": "selTab",
             "linkTarget": "parameter",
             "linkLabel": "Web Transactions",
-            "subTarget": "Web Transcations",
+            "subTarget": "Web Transactions",
             "style": "link"
           }
         ]
@@ -3282,7 +3282,7 @@
       "conditionalVisibility": {
         "parameterName": "selTab",
         "comparison": "isEqualTo",
-        "value": "Web Transcations"
+        "value": "Web Transactions"
       },
       "name": "Web Transactions"
     }
