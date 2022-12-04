@@ -4,7 +4,7 @@
     {
       "type": 1,
       "content": {
-        "json": "# Syslog Overview\r\n\r\nThis workbook is designed to show an overview about the data ingested through Syslog.\r\nThis can span across multiple wokspaces as well.\r\n\r\nPlease use the filters make the needed chioce for \r\n\r\n- Subscriptions\r\n- TimeRange\r\n- Wokspaces\r\n- HostNames\r\n- Facilities\r\n- Severity Level"
+        "json": "# Syslog Overview\r\n\r\nThis workbook is designed to show an overview about the data ingested through Syslog.\r\nThis can span across multiple wokspaces as well.\r\n\r\nPlease use the filters make the needed choice for \r\n\r\n- Subscriptions\r\n- TimeRange\r\n- Wokspaces\r\n- HostNames\r\n- Facilities\r\n- Severity Level"
       },
       "name": "text - 1"
     },
