@@ -21,7 +21,7 @@ $outputFile = $rawcontentpath
 
 
 # Update This ! #  Put your own csv file path to import into PS
-$filePath = "C:\Users\username\Downloads\ListofTCPandUDPportnumbers.csv"
+$filePath = "C:\Users\username\Downloads\ListofTCPandUDPPortnumbers.csv"
 
 # import csv file into a PS table for rawcontent conversion
 $csvData = Import-Csv -Path $filepath
