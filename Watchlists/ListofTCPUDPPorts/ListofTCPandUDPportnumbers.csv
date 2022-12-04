@@ -168,7 +168,7 @@ Port,TCP,UDP,SCTP,DCCP,Description
 561 , ,Yes , , ,monitor
 563 ,Yes ,Yes , , ,NNTP over TLS/SSL (NNTPS)
 564 ,Unofficial , , , ,9P (Plan 9)
-585 ,No ,No , , ,Previously assigned for use of Internet Message Access Protocol over TLS/SSL (IMAPS) - now deregisterd in favour of port 993.
+585 ,No ,No , , ,Previously assigned for use of Internet Message Access Protocol over TLS/SSL (IMAPS) - now deregistered in favour of port 993.
 587 ,Yes ,Assigned , , ,email message submission (SMTP)
 591 ,Yes , , , ,FileMaker 6.0 (and later) Web Sharing (HTTP Alternate - also see port 80)
 593 ,Yes ,Yes , , ,HTTP RPC Ep Map - Remote procedure call over Hypertext Transfer Protocol - often used by Distributed Component Object Model services and Microsoft Exchange Server
