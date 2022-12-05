@@ -111,7 +111,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "OfficeActivity\r\n| where OfficeWorkload == 'Exchange'\r\n//| extend OperationType = case( Operation contains \r\n| where \"{Operations:lable}\" == \"All\" or \"{Operations:lable}\" == \"All\" or Operation in ({Operations})\r\n| summarize count() by Operation, bin(TimeGenerated, 1d)",
+        "query": "OfficeActivity\r\n| where OfficeWorkload == 'Exchange'\r\n//| extend OperationType = case( Operation contains \r\n| where \"{Operations:label}\" == \"All\" or \"{Operations:label}\" == \"All\" or Operation in ({Operations})\r\n| summarize count() by Operation, bin(TimeGenerated, 1d)",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Activities, by time",
@@ -130,7 +130,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "OfficeActivity \r\n| where OfficeWorkload == 'Exchange' \r\n| where \"{Operations:lable}\" == \"All\" or Operation in ({Operations})\r\n| summarize count() by UserType \r\n//| order by count_",
+        "query": "OfficeActivity \r\n| where OfficeWorkload == 'Exchange' \r\n| where \"{Operations:label}\" == \"All\" or Operation in ({Operations})\r\n| summarize count() by UserType \r\n//| order by count_",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "User type activities",
@@ -149,7 +149,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "let data = OfficeActivity\r\n| where OfficeWorkload == 'Exchange' \r\n| where \"{Operations:lable}\" == \"All\" or Operation in ({Operations});\r\nlet appData = data\r\n| summarize TotalCount = count() by UserId\r\n| join kind=inner (data\r\n    | make-series Trend = count() default = 0 on bin(TimeGenerated, 1d) in range({TimeRange:start}, {TimeRange:end}, {TimeRange:grain}) by UserId\r\n    | project-away TimeGenerated) on UserId\r\n| order by TotalCount desc, UserId asc\r\n| project UserId, TotalCount, Trend\r\n| serialize Id = row_number();\r\ndata\r\n| summarize TotalCount = count() by Operation , UserId\r\n| join kind=inner (data\r\n    | make-series Trend = count() default = 0 on bin(TimeGenerated, 1d) in range({TimeRange:start}, {TimeRange:end}, {TimeRange:grain}) by UserId, Operation\r\n    | project-away TimeGenerated) on UserId, Operation\r\n| order by TotalCount desc, UserId asc\r\n| project UserId, Operation, TotalCount, Trend\r\n| serialize Id = row_number(1000000)\r\n| join kind=inner (appData) on UserId\r\n| project Id, Name = Operation, Type = 'Operation', ['Operation Count'] = TotalCount, Trend, ParentId = Id1\r\n| union (appData \r\n    | project Id, Name = UserId, Type = 'UserId', ['Operation Count'] = TotalCount, Trend )\r\n| order by ['Operation Count'] desc, Name asc",
+        "query": "let data = OfficeActivity\r\n| where OfficeWorkload == 'Exchange' \r\n| where \"{Operations:label}\" == \"All\" or Operation in ({Operations});\r\nlet appData = data\r\n| summarize TotalCount = count() by UserId\r\n| join kind=inner (data\r\n    | make-series Trend = count() default = 0 on bin(TimeGenerated, 1d) in range({TimeRange:start}, {TimeRange:end}, {TimeRange:grain}) by UserId\r\n    | project-away TimeGenerated) on UserId\r\n| order by TotalCount desc, UserId asc\r\n| project UserId, TotalCount, Trend\r\n| serialize Id = row_number();\r\ndata\r\n| summarize TotalCount = count() by Operation , UserId\r\n| join kind=inner (data\r\n    | make-series Trend = count() default = 0 on bin(TimeGenerated, 1d) in range({TimeRange:start}, {TimeRange:end}, {TimeRange:grain}) by UserId, Operation\r\n    | project-away TimeGenerated) on UserId, Operation\r\n| order by TotalCount desc, UserId asc\r\n| project UserId, Operation, TotalCount, Trend\r\n| serialize Id = row_number(1000000)\r\n| join kind=inner (appData) on UserId\r\n| project Id, Name = Operation, Type = 'Operation', ['Operation Count'] = TotalCount, Trend, ParentId = Id1\r\n| union (appData \r\n    | project Id, Name = UserId, Type = 'UserId', ['Operation Count'] = TotalCount, Trend )\r\n| order by ['Operation Count'] desc, Name asc",
         "size": 0,
         "exportParameterName": "OperationInfo",
         "exportDefaultValue": "{ \"Name\":\"\", \"Type\":\"*\"}",
@@ -226,7 +226,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "OfficeActivity \r\n| where OfficeWorkload == 'Exchange' and UserType == 'Admin' \r\n| where \"{Operations:lable}\" == \"All\" or Operation in ({Operations})\r\n| summarize count() by Operation ",
+        "query": "OfficeActivity \r\n| where OfficeWorkload == 'Exchange' and UserType == 'Admin' \r\n| where \"{Operations:label}\" == \"All\" or Operation in ({Operations})\r\n| summarize count() by Operation ",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Admin activities",
@@ -252,7 +252,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//Exchange activities that are performed by actors outside your organization - external\r\nlet OI = dynamic({OperationInfo});\r\nOfficeActivity\r\n| where (OI.Type==\"*\" or (OI.Type == 'UserId' and OI.Name == UserId) or (OI.Type == 'Operation' and OI.Name == Operation))\r\n| where OfficeWorkload == 'Exchange'\r\n| where \"{Operations:lable}\" == \"All\" or Operation in ({Operations})\r\n| where ExternalAccess == 'True' \r\n| summarize count() by Operation\r\n | sort by count_",
+        "query": "//Exchange activities that are performed by actors outside your organization - external\r\nlet OI = dynamic({OperationInfo});\r\nOfficeActivity\r\n| where (OI.Type==\"*\" or (OI.Type == 'UserId' and OI.Name == UserId) or (OI.Type == 'Operation' and OI.Name == Operation))\r\n| where OfficeWorkload == 'Exchange'\r\n| where \"{Operations:label}\" == \"All\" or Operation in ({Operations})\r\n| where ExternalAccess == 'True' \r\n| summarize count() by Operation\r\n | sort by count_",
         "size": 2,
         "exportToExcelOptions": "visible",
         "title": "External access activities, by activities",
@@ -271,7 +271,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "//Exchange activities that are performed by actors outside your organization - external\r\nlet OI = dynamic({OperationInfo});\r\nOfficeActivity\r\n| where OfficeWorkload == 'Exchange'\r\n| where (OI.Type==\"*\" or (OI.Type == 'UserId' and OI.Name == UserId) or (OI.Type == 'Operation' and OI.Name == Operation))\r\n| where \"{Operations:lable}\" == \"All\" or Operation in ({Operations})\r\n| where ExternalAccess == 'True' \r\n| summarize Amount = count() by Operation, UserId, UserType, bin(TimeGenerated, 1h)\r\n| project Amount, Activity = Operation, UserId, UserType, TimeGenerated\r\n| order by Amount desc",
+        "query": "//Exchange activities that are performed by actors outside your organization - external\r\nlet OI = dynamic({OperationInfo});\r\nOfficeActivity\r\n| where OfficeWorkload == 'Exchange'\r\n| where (OI.Type==\"*\" or (OI.Type == 'UserId' and OI.Name == UserId) or (OI.Type == 'Operation' and OI.Name == Operation))\r\n| where \"{Operations:label}\" == \"All\" or Operation in ({Operations})\r\n| where ExternalAccess == 'True' \r\n| summarize Amount = count() by Operation, UserId, UserType, bin(TimeGenerated, 1h)\r\n| project Amount, Activity = Operation, UserId, UserType, TimeGenerated\r\n| order by Amount desc",
         "size": 0,
         "exportToExcelOptions": "visible",
         "timeContext": {
@@ -371,7 +371,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "let OperationsData = OfficeActivity\r\n| where Operation in (\"Set-Mailbox\", \"Log-on\", 'Add-MailboxPermission', 'UpdateFolderPermissions', 'Remove-MailboxPermission')\r\n| extend Category = case( Operation == \"Set-Mailbox\", \"Mailbox creation\",\r\n                                Operation == \"Log-on\", \"Log-in\",\r\n                                Operation == \"Add-MailboxPermission\" or Operation == \"UpdateFolderPermissions\" or Operation == \"Remove-MailboxPermission\", \"Permission activities\",\r\n                                \"\");\r\nOperationsData\r\n| summarize Count = count() by Category\r\n| join kind = inner (OperationsData\r\n | make-series Trend = count() default = 0 on bin(TimeGenerated, 1d) from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by Category)\r\n on Category\r\n | project-away Category1, TimeGenerated\r\n| extend Categorys = Category\r\n| union (\r\n OperationsData\r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (OperationsData\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend Category = 'All', Categorys = '*' \r\n)\r\n| order by Count desc\r\n| take 10",
+        "query": "let OperationsData = OfficeActivity\r\n| where Operation in (\"Set-Mailbox\", \"Log-on\", 'Add-MailboxPermission', 'UpdateFolderPermissions', 'Remove-MailboxPermission')\r\n| extend Category = case( Operation == \"Set-Mailbox\", \"Mailbox creation\",\r\n                                Operation == \"Log-on\", \"Log-in\",\r\n                                Operation == \"Add-MailboxPermission\" or Operation == \"UpdateFolderPermissions\" or Operation == \"Remove-MailboxPermission\", \"Permission activities\",\r\n                                \"\");\r\nOperationsData\r\n| summarize Count = count() by Category\r\n| join kind = inner (OperationsData\r\n | make-series Trend = count() default = 0 on bin(TimeGenerated, 1d) from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by Category)\r\n on Category\r\n | project-away Category1, TimeGenerated\r\n| extend Categories = Category\r\n| union (\r\n OperationsData\r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (OperationsData\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend Category = 'All', Categories = '*' \r\n)\r\n| order by Count desc\r\n| take 10",
         "size": 4,
         "exportToExcelOptions": "visible",
         "timeContext": {

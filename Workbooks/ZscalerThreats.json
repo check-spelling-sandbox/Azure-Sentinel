@@ -477,7 +477,7 @@
           "labelSettings": [
             {
               "columnId": "malwarecat",
-              "label": "Malware Categoty"
+              "label": "Malware Category"
             },
             {
               "columnId": "count_"

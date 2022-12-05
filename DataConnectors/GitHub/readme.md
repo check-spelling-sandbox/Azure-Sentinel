@@ -18,7 +18,7 @@ This user will be used to grant access to the Key Vault secret.
 "workSpaceKey": The Sentinel Workspace Key
  ```
 4. There are two json files (ORGS.json and lastrun-Audit.json).
-5. Edit the ORGS.json file and update "org": "sampleorg" and replace sample org with your org name.  If you have addtional orgs, add another line {"org": "sampleorg"} for each org.
+5. Edit the ORGS.json file and update "org": "sampleorg" and replace sample org with your org name.  If you have additional orgs, add another line {"org": "sampleorg"} for each org.
 6. Upload the ORGS.json, and lastrun-Audit.json to the storage account githublogicapp container.
 7. Go to the keyvault-GitHubPlaybooks connection resource.
 8. Click Edit API Connection.

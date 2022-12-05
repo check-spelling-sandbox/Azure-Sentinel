@@ -41,7 +41,7 @@ query: |
   | where ResultType == 0
   | summarize FirstSuccessfulSignin = min(TimeGenerated), LastSuccessfulSignin = max(TimeGenerated), make_set(IPAddress), make_set(ClientAppUsed), make_set(UserAgent), make_set(AppDisplayName) by UserPrincipalName, UserDisplayName
   ) on UserPrincipalName
-  | where LastSuccessfulSignin > LastBlockedAttempt //Checking if successul login is after lastblockedattempts
+  | where LastSuccessfulSignin > LastBlockedAttempt //Checking if successful login is after lastblockedattempts
   | extend timestamp = LastSuccessfulSignin, AccountCustomEntity = UserPrincipalName
 entityMappings:
   - entityType: Account

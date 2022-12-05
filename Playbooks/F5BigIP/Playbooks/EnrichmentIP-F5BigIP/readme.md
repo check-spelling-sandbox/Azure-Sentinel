@@ -64,7 +64,7 @@
  * If IP address list does not exist, compose comment that IP address list not found.
 
  ## Check if IP address List is part of firewall security policy rule.
-  - If IP address list is part of any firewall security policy rule, then incident comment is created by dispalying list of firewall security policy rule(s) by coma seperated values.
+  - If IP address list is part of any firewall security policy rule, then incident comment is created by displaying list of firewall security policy rule(s) by coma separated values.
   - If IP address list is not part of firewall security policy rule, then incident comment is created saying IP address list is not part of firewall security policy rule.
 
 ## For each malicious IP received from the incident

@@ -236,7 +236,7 @@
                                 "method": "GET",
                                 "uri": "[concat('https://', parameters('EdgescanURL'), '/api/v1/vulnerabilities.json')]"
                             },
-                            "description": "Grab open vunerabilities"
+                            "description": "Grab open vulnerabilities"
                         }
                     },
                     "outputs": {}

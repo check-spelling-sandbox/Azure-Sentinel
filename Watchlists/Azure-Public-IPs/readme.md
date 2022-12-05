@@ -8,7 +8,7 @@ The Azure IP Watchlist template provides a compiled list of IP's that are used b
 To deploy, users will need:
 1. An Azure Subscription
 2. An Azure Sentinel workspace and instance
-3. A user that has Azure Sentinel Contirbutor permissions on the Resource Group that Azure Sentinel is located in
+3. A user that has Azure Sentinel Contributor permissions on the Resource Group that Azure Sentinel is located in
 
 ## **Deployment Process**
 ## Option 1

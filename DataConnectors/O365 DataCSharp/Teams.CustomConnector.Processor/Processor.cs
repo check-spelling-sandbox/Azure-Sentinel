@@ -78,7 +78,7 @@ namespace Teams.CustomConnector.Processor
                     //List of JSON objects from the initial data call
                     List<AuditInitialReport> auditInitialReports = auditInitialDataObject.AuditInitialReports;
 
-                    // parallal request to improve performance
+                    // parallel request to improve performance
                     int maxCalls = 1;
                     Parallel.ForEach(auditInitialReports, new ParallelOptions { MaxDegreeOfParallelism = maxCalls }, async (auditInitialReport) =>
                     {

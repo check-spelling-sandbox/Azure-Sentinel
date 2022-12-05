@@ -780,7 +780,7 @@
                                         "body": {
                                             "classification": {
                                                 "ClassificationAndReason": "True Positive - Suspicious Activity",
-                                                "ClassificationReasonText": "URLs/FQDNs in incident automaticly blocked"
+                                                "ClassificationReasonText": "URLs/FQDNs in incident automatically blocked"
                                             },
                                             "incidentArmId": "@triggerBody()?['object']?['id']",
                                             "status": "Closed"

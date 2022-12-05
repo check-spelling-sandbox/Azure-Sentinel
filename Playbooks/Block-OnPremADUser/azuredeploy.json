@@ -66,7 +66,7 @@
       "minLength": 1,
       "maxLength": 300,
       "metadata": {
-        "description": "Semi-colon separated list of recepients to be notified of LogicApp activities."
+        "description": "Semi-colon separated list of recipients to be notified of LogicApp activities."
       }
     }
   },
@@ -257,7 +257,7 @@
                         "type": "ApiConnection",
                         "inputs": {
                           "body": {
-                            "Body": "<p>An error has occured while trying to disable user with SAM ID: &nbsp;<br>\n@{body('Parse_JSON')?['Name']}<br>\n<br>\nCheck the following details in the Runbook logs in the Azure Portal<br>\n@{body('Create_job')?['id']}</p>",
+                            "Body": "<p>An error has occurred while trying to disable user with SAM ID: &nbsp;<br>\n@{body('Parse_JSON')?['Name']}<br>\n<br>\nCheck the following details in the Runbook logs in the Azure Portal<br>\n@{body('Create_job')?['id']}</p>",
                             "Subject": "Failed to disable @{body('Parse_JSON')?['Name']}",
                             "To": "[parameters('mailList')]"
                           },

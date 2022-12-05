@@ -45,7 +45,7 @@
                             "body": {
                                 "classification": {
                                     "ClassificationAndReason": "BenignPositive - SuspiciousButExpected",
-                                    "ClassificationReasonText": "Known Manitenence Activity - closed by Playbook "
+                                    "ClassificationReasonText": "Known Maintenance Activity - closed by Playbook "
                                 },
                                 "incidentArmId": "@triggerBody()?['object']?['id']",
                                 "status": "Closed"

@@ -34,7 +34,7 @@ Use the following steps to generate **Client Id** & **Client Secret** from your 
 Example for **Redirect URL** : https://logic-apis-eastus.consent.azure-apim.net/redirect which is available on the **Security** page of the custom connector configuratino on the Azure portal.
 <br><p align="center">![3](./Images/3.png)</p><br>
 
-4. Once you have completed the above steps click **Create**. This will generate the **Client Id** & **Client Secret** required for the connector to fetch the OAuth Token. Please note once you close the dialog box, the **Client Secret** cannot be retrived. You will have to create a new client.
+4. Once you have completed the above steps click **Create**. This will generate the **Client Id** & **Client Secret** required for the connector to fetch the OAuth Token. Please note once you close the dialog box, the **Client Secret** cannot be retrieved. You will have to create a new client.
 <br><p align="center">![4](./Images/4.png)</p><br>
 
 

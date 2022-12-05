@@ -25,7 +25,7 @@ This Logic App will run weekly and create/update a Risky User watchlist with use
 
 1. Manually check/update the Key Vault secret called 'cloudapplist' with the Azure AD Service Principal key
 
-   The Logic App as a Managed Service Indetity - MSI needs to have the following RBAC Roles:
+   The Logic App as a Managed Service Identity - MSI needs to have the following RBAC Roles:
 
 2. Key Vault Secrets User on the deployed Key Vault resource.
 This is required for obtaining the AAD SPN secret key encrypted through Logic App.

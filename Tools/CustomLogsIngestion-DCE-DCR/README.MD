@@ -50,5 +50,5 @@ You can modify the target table and workspace by modifying the data collection r
 	- **DceURI**   
     Uri of the data collection endpoint used to host the data collection rule  
 	- **StreamName**   
-    Name of stream to send data to before being procesed and sent to an Azure Monitor data table  
+    Name of stream to send data to before being processed and sent to an Azure Monitor data table  
     

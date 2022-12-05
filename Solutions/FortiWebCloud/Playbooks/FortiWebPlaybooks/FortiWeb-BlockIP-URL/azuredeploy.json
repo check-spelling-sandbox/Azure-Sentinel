@@ -88,7 +88,7 @@
                                     "inputs": {
                                         "body": {
                                             "incidentArmId": "@triggerBody()?['object']?['id']",
-                                            "message": "<p>Ip mentioned below has been blocked succesfully &nbsp;,<br>\n@{outputs('Creating_formatted_payload_')}</p>"
+                                            "message": "<p>Ip mentioned below has been blocked successfully &nbsp;,<br>\n@{outputs('Creating_formatted_payload_')}</p>"
                                         },
                                         "host": {
                                             "connection": {
@@ -215,7 +215,7 @@
                                     "inputs": {
                                         "body": {
                                             "incidentArmId": "@triggerBody()?['object']?['id']",
-                                            "message": "<p>URL's &nbsp;has been blocked succesfully .<br>\n</p>"
+                                            "message": "<p>URL's &nbsp;has been blocked successfully .<br>\n</p>"
                                         },
                                         "host": {
                                             "connection": {

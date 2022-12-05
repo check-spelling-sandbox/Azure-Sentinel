@@ -2,7 +2,7 @@
 
 ARM template for deploying the Log Analytics KQL function An ASIM function to check if a parser is disabled
 
-This ASIM function reads the ASimDisabledParsers watchlist and determined based on it if the the parser provided as parameter is disabled.
+This ASIM function reads the ASimDisabledParsers watchlist and determined based on it if the parser provided as parameter is disabled.
 
 
 The Advanced SIEM Information Model (ASIM) enables you to use and create source-agnostic content, simplifying your analysis of the data in your Microsoft Sentinel workspace.

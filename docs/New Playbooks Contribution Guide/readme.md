@@ -1,13 +1,13 @@
 # Contribution guidelines
 
-This document guides how to contirubte a playbook template to a **Microsoft Sentinel Solution** or to the **playbook templates tab**.
+This document guides how to contribute a playbook template to a **Microsoft Sentinel Solution** or to the **playbook templates tab**.
 [See example.](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/IdentityProtection-TeamsBotResponse)
 
 # Main steps
 
 Once you have created a playbook that you want to export to share, please follow the following guidelines:
 
-1. [Playbook conventions and guidlines](#playbook-conventions-and-guidlines)
+1. [Playbook conventions and guidelines](#playbook-conventions-and-guidelines)
 2. [Create ARM Template](#create-arm-template)
 3. [Add metadata to the ARM Template](#add-metadata)
 4. [Create Screenshots](#create-screenshots)
@@ -15,7 +15,7 @@ Once you have created a playbook that you want to export to share, please follow
 6. [Create a Pull Request](#create-a-pull-request) (For GitHub/Playbook templates tab contribution)
 
 
-## Playbook conventions and guidlines
+## Playbook conventions and guidelines
 
 * **Trigger choice:** please use **Microsoft Sentinel Incident** trigger, unless there is a strong use case for the alert trigger. [Learn more](https://docs.microsoft.com/azure/sentinel/playbook-triggers-actions#microsoft-sentinel-triggers-summary)
 * **Use parameters**<br> For example, if playbook sends an email to the SOC shared inbox, this field should be supplied as a parameter to the playbook.To do so:
@@ -123,9 +123,9 @@ Example for workflow level parameters *Note that the "defaultValue" refer the pa
         "$connections": {
             "value": {
                 "azuresentinel": {
-                    "connectionId": "/subscriptions/{subsriptionId}/resourceGroups/{resourceGroups}/providers/Microsoft.Web/connections/azuresentinel",
+                    "connectionId": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroups}/providers/Microsoft.Web/connections/azuresentinel",
                     "connectionName": "azuresentinel",
-                    "id": "/subscriptions/{subsriptionId}/providers/Microsoft.Web/locations/{locations}/managedApis/azuresentinel"
+                    "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Web/locations/{locations}/managedApis/azuresentinel"
                 }
             }
         }
@@ -284,7 +284,7 @@ Templates tab only:
 ```json
     "metadata":{
         "title": "Identity Protection response from Teams", 
-        "description": "Run this playbook on incidents which contains suspiciouse AAD identities. When a new incident is created, this playbook iterates over the Accounts. It then posts an adaptive card in the SOC Microsoft Teams channel, including the potential risky user information given by Azure AD Identity Protection. The card offers to confirm the user as compromised or dismiss the compromised user in AADIP. It also allows to configure the Azure Sentinel incident. A summary comment will be posted to document the action taken and user information.",
+        "description": "Run this playbook on incidents which contains suspicious AAD identities. When a new incident is created, this playbook iterates over the Accounts. It then posts an adaptive card in the SOC Microsoft Teams channel, including the potential risky user information given by Azure AD Identity Protection. The card offers to confirm the user as compromised or dismiss the compromised user in AADIP. It also allows to configure the Azure Sentinel incident. A summary comment will be posted to document the action taken and user information.",
         "prerequisites": "1. Using the riskyUsers API requires an Azure AD Premium P2 license. 2. Have a user which has permissions on Identity Protection API. [Learn more](https://docs.microsoft.com/graph/api/riskyuser-confirmcompromised?view=graph-rest-1.0#permissions)  3. (optional) Create policies in Azure AD Identity protection to run when users are confirmed as compromised. [Learn more](https://docs.microsoft.com/azure/active-directory/identity-protection/concept-identity-protection-policies)",
         "lastUpdateTime": "2021-05-18T10:00:15.123Z", 
         "entities": ["Account"], 

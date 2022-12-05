@@ -12,7 +12,7 @@
   ],
   "Parsers": ["PingFederate/Parsers/PingFederateEvent.txt"],
   "Hunting Queries": [
-    "PingFederate/Hunting Queries/PingFederateUsersPaswordsReset.yaml"
+    "PingFederate/Hunting Queries/PingFederateUsersPasswordsReset.yaml"
   ],
   "Data Connectors": ["PingFederate/Data Connectors/Connector_CEF_PingFederate.json"],
   "Playbooks": [

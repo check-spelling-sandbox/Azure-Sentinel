@@ -36,7 +36,7 @@ The group ID and Channel ID can be obtained by going to Teams and getting the li
 3. The ticket is opened in serviceNow and a Teams message is created in the Alerts channel with alert/incident details.
 4. A corresponding investigation response message is sent with a list of available playbooks that can be run from teams. 
 5. Based on selected playbooks submitted, the playbooks are ran ad-hoc by routing the alert body to the selected playbook.
-6. If the executed playbook returns a response, that message is updated in the related serviceNow ticket, commented in the Microsoft Sentinel Incident, and also added added as a reply to the Initial Teams Alert message.
+1. If the executed playbook returns a response, that message is updated in the related serviceNow ticket, commented in the Microsoft Sentinel Incident, and also added as a reply to the Initial Teams Alert message.
 
 ## Setup Steps
 1. Click Deploy to Azure and fill in parameters

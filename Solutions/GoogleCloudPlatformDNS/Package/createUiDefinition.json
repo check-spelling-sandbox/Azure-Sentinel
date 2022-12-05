@@ -209,7 +209,7 @@
           {
             "name": "analytic6",
             "type": "Microsoft.Common.Section",
-            "label": "Google DNS - Malicous Python packages",
+            "label": "Google DNS - Malicious Python packages",
             "elements": [
               {
                 "name": "analytic6-text",

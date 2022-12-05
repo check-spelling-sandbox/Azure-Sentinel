@@ -225,7 +225,7 @@
     {
       "type": 1,
       "content": {
-        "json": "### Change Log\r\nBrian Delaney, Clive Watson, Jon Shectman - Microsoft <br>\r\n\t\r\n\tVersion v2.0\r\n\tFiltered Legacy Authentication to success only\r\n\tAdded Export/Open Query buttons to detailed views\r\n\tReogranized Insecure LDAP\r\n\tFixed TimeRange in NTLM query to follow parameter selection\r\n\tOther minor improvements\r\n\r\n\tVersion v1.9\r\n\tUpdated AAD Legacy Auth (Exchange ActiveSync)\r\n\r\n\tVersion v1.8\r\n\tAdded Vulnerable Netlogon Secure Channel\r\n\tAdded Legacy Authentication to Summary\r\n\tFixed reporting of Weak Kerberos Cipher in summary\r\n\t\r\n\t\r\n\tVersion v1.7\r\n\tAdded Tabs\r\n\tFixed a bug\r\n\tAdded Timebrushing and Groupings\r\n\tAdded Help sections",
+        "json": "### Change Log\r\nBrian Delaney, Clive Watson, Jon Shectman - Microsoft <br>\r\n\t\r\n\tVersion v2.0\r\n\tFiltered Legacy Authentication to success only\r\n\tAdded Export/Open Query buttons to detailed views\r\n\tReorganized Insecure LDAP\r\n\tFixed TimeRange in NTLM query to follow parameter selection\r\n\tOther minor improvements\r\n\r\n\tVersion v1.9\r\n\tUpdated AAD Legacy Auth (Exchange ActiveSync)\r\n\r\n\tVersion v1.8\r\n\tAdded Vulnerable Netlogon Secure Channel\r\n\tAdded Legacy Authentication to Summary\r\n\tFixed reporting of Weak Kerberos Cipher in summary\r\n\t\r\n\t\r\n\tVersion v1.7\r\n\tAdded Tabs\r\n\tFixed a bug\r\n\tAdded Timebrushing and Groupings\r\n\tAdded Help sections",
         "style": "info"
       },
       "conditionalVisibility": {
@@ -344,7 +344,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "let scEvents = dynamic([5827, 5828, 5829, 5830, 5831]);\r\nlet legacyAuth = SigninLogs\r\n| where ResultType == 0\r\n| where ClientAppUsed !contains \"Browser\" and ClientAppUsed !contains \"Mobile Apps and Desktop clients\"\r\n| summarize FirstOccurance=min(TimeGenerated), LastOccurance=max(TimeGenerated), Count=count() by Protocol=\"AAD Legacy Auth\";\r\nSecurityEvent\r\n| parse EventData with * '\"TicketEncryptionType\">' TicketEncryptionType '<' *\r\n| union Event\r\n| where (EventID == 2889) or (EventID == 3000 and EventLog == 'Microsoft-Windows-SMBServer/Audit') or (EventID == 4624 and AuthenticationPackageName == 'NTLM' and LmPackageName == 'NTLM V1' and Account !contains 'ANONYMOUS LOGON') or ((EventID == 4624 or EventID == 4776) and Level == 8 and PackageName contains 'WDigest') or (EventID == 4768 or EventID == 4769) and Level == 8 and (TicketEncryptionType != \"0x12\" and TicketEncryptionType != \"0x11\") or ((EventLog =~ \"System\" and Source =~ \"NETLOGON\") and EventID in (scEvents))\r\n| summarize FirstOccurance=min(TimeGenerated), LastOccurance=max(TimeGenerated), Count=count() by tostring(EventID)\r\n//| extend Protocol=replace(tostring(4776), 'WDigest', replace(tostring(4768), 'Kerberos weak cipher', replace(tostring(4769), 'Kerberos weak cipher', replace(tostring(2889), 'Insecure LDAP', replace(tostring(4624), 'NTLM v1', replace(tostring(3000), 'SMB v1', tostring(EventID)))))))\r\n| extend Protocol = case(EventID == 4776, \"WDigest\", EventID == 4768 or EventID == 4769, \"Weak Kerberos Cipher\", EventID == 2889, \"Insecure LDAP\", EventID == 4624, \"NTLM v1\", EventID == 3000, \"SMBv1\", EventID in (scEvents), \"Vulnerable Secure Channel\", \"Unknown\")\r\n| summarize FirstOccurance=min(FirstOccurance), LastOccurance=max(LastOccurance), Count=sum(Count) by Protocol\r\n| union legacyAuth\r\n| sort by Count desc\r\n",
+              "query": "let scEvents = dynamic([5827, 5828, 5829, 5830, 5831]);\r\nlet legacyAuth = SigninLogs\r\n| where ResultType == 0\r\n| where ClientAppUsed !contains \"Browser\" and ClientAppUsed !contains \"Mobile Apps and Desktop clients\"\r\n| summarize FirstOccurrence=min(TimeGenerated), LastOccurrence=max(TimeGenerated), Count=count() by Protocol=\"AAD Legacy Auth\";\r\nSecurityEvent\r\n| parse EventData with * '\"TicketEncryptionType\">' TicketEncryptionType '<' *\r\n| union Event\r\n| where (EventID == 2889) or (EventID == 3000 and EventLog == 'Microsoft-Windows-SMBServer/Audit') or (EventID == 4624 and AuthenticationPackageName == 'NTLM' and LmPackageName == 'NTLM V1' and Account !contains 'ANONYMOUS LOGON') or ((EventID == 4624 or EventID == 4776) and Level == 8 and PackageName contains 'WDigest') or (EventID == 4768 or EventID == 4769) and Level == 8 and (TicketEncryptionType != \"0x12\" and TicketEncryptionType != \"0x11\") or ((EventLog =~ \"System\" and Source =~ \"NETLOGON\") and EventID in (scEvents))\r\n| summarize FirstOccurrence=min(TimeGenerated), LastOccurrence=max(TimeGenerated), Count=count() by tostring(EventID)\r\n//| extend Protocol=replace(tostring(4776), 'WDigest', replace(tostring(4768), 'Kerberos weak cipher', replace(tostring(4769), 'Kerberos weak cipher', replace(tostring(2889), 'Insecure LDAP', replace(tostring(4624), 'NTLM v1', replace(tostring(3000), 'SMB v1', tostring(EventID)))))))\r\n| extend Protocol = case(EventID == 4776, \"WDigest\", EventID == 4768 or EventID == 4769, \"Weak Kerberos Cipher\", EventID == 2889, \"Insecure LDAP\", EventID == 4624, \"NTLM v1\", EventID == 3000, \"SMBv1\", EventID in (scEvents), \"Vulnerable Secure Channel\", \"Unknown\")\r\n| summarize FirstOccurrence=min(FirstOccurrence), LastOccurrence=max(LastOccurrence), Count=sum(Count) by Protocol\r\n| union legacyAuth\r\n| sort by Count desc\r\n",
               "size": 1,
               "title": "Summary of Insecure Protocols found in: {TimeRange:label}",
               "timeContext": {
@@ -881,7 +881,7 @@
                   },
                   {
                     "columnId": "QueryCount",
-                    "label": "Number of Insedcure Binds"
+                    "label": "Number of Insecure Binds"
                   }
                 ]
               },
@@ -1200,7 +1200,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### SMB Help File\r\n\r\n**Protocol Risk**\r\n\t* The security built into SMBv2 and SMBv3 is primarily around protecting against security downgrade attacks (Pre-authentication Integrity, Secure Dialect Negotiation) and attacker-in-the-middle attacks (Encryption, Insecure guest auth blocking). SMB1 simply doesn’t know about or contain any of these protections.\r\n\t* If you have SMBv1 enabled on your file servers or domain controllers, then an attacker-in-the-middle can simply block SMB2/3 and force a downgrade attack. The net effect here will be that your computer(s) will gracefully flip over to SMBv1, thereby exposing the exchange’s data.\r\n\t* SMBv1 continues to be a primary component in destructive ransomware attacks.\r\n\r\n**Auditing Settings**\r\n\t* On the servers that you will audit, run the following Powershell command to enable auditing: Set-SmbServerConfiguration –AuditSmb1Access $true\r\n\t* Note that this auditing is only supported on Sever 2016/Windows 10 and Server 2012 R2/Windcows 8.1 via an update.\r\n\t* Finally, in the Log Analytics configuration, you will need to set “Collect events from the following event logs” to Microsoft-Windows-SMBServer/Audit and set the log type to INFORMATION.\"\r\n\r\n**Mitigation Planning**\r\n\t* Work with application owners and vendors to use a more secure SMB version, such as SMBv2 or SMBv3.\r\n\t* Once there is no more SMBv1, set the DCs to no longer accept it. Registry key: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\r\n\tSet this to a value SMB1 REG_DWORD: 0 = Disabled.\r\n\r\n**Data Filters**\r\n\t* Events by client \r\n\t* Server timebrush\r\n\t* Events by server",
+              "json": "### SMB Help File\r\n\r\n**Protocol Risk**\r\n\t* The security built into SMBv2 and SMBv3 is primarily around protecting against security downgrade attacks (Pre-authentication Integrity, Secure Dialect Negotiation) and attacker-in-the-middle attacks (Encryption, Insecure guest auth blocking). SMB1 simply doesn’t know about or contain any of these protections.\r\n\t* If you have SMBv1 enabled on your file servers or domain controllers, then an attacker-in-the-middle can simply block SMB2/3 and force a downgrade attack. The net effect here will be that your computer(s) will gracefully flip over to SMBv1, thereby exposing the exchange’s data.\r\n\t* SMBv1 continues to be a primary component in destructive ransomware attacks.\r\n\r\n**Auditing Settings**\r\n\t* On the servers that you will audit, run the following Powershell command to enable auditing: Set-SmbServerConfiguration –AuditSmb1Access $true\r\n\t* Note that this auditing is only supported on Sever 2016/Windows 10 and Server 2012 R2/Windows 8.1 via an update.\r\n\t* Finally, in the Log Analytics configuration, you will need to set “Collect events from the following event logs” to Microsoft-Windows-SMBServer/Audit and set the log type to INFORMATION.\"\r\n\r\n**Mitigation Planning**\r\n\t* Work with application owners and vendors to use a more secure SMB version, such as SMBv2 or SMBv3.\r\n\t* Once there is no more SMBv1, set the DCs to no longer accept it. Registry key: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\r\n\tSet this to a value SMB1 REG_DWORD: 0 = Disabled.\r\n\r\n**Data Filters**\r\n\t* Events by client \r\n\t* Server timebrush\r\n\t* Events by server",
               "style": "info"
             },
             "conditionalVisibility": {
@@ -1654,7 +1654,7 @@
                 "durationMs": 604800000
               },
               "timeContextFromParameter": "TimeRange",
-              "timeBrushParameterName": "KeberosTimeBrush",
+              "timeBrushParameterName": "KerberosTimeBrush",
               "queryType": 0,
               "resourceType": "microsoft.operationalinsights/workspaces",
               "crossComponentResources": [
@@ -1676,11 +1676,11 @@
               "query": "SecurityEvent\r\n| where EventID == 4768 or EventID == 4769\r\n| where Level == 8\r\n| parse EventData with * '\"TicketEncryptionType\">' TicketEncryptionType '<' *\r\n| where TicketEncryptionType != \"0x12\" and TicketEncryptionType != \"0x11\" //AES128/256, this filter needs to be activated\r\n| parse EventData with * '\"IpAddress\">' IpAddress '<' *\r\n| parse EventData with * '\"TargetUserName\">' TargetUserName '<' *\r\n| parse EventData with * '\"ServiceName\">' ServiceName '<' *\r\n| extend Cipher=replace('0x18$', 'RC4-HMAC-EXP', replace('0x12$', 'AES256-CTS-HMAC-SHA1', replace('0x11$', 'AES128-CTS-HMAC-SHA1', replace('0x1$', 'DES_CBC_CRC', replace('0x2$', 'DES_CBC_MD4', replace('0x7$', 'DES3_CBC_SHA1', replace('0x5$', 'DES3_CBC_MD5', replace('0x3$', 'DES_CBC_MD5', replace('0x17$', 'RC4_HMAC', TicketEncryptionType)))))))))\r\n| summarize Count=count() by Cipher, IpAddress, TargetUserName , ServiceName, Computer, Activity\r\n| sort by Count desc\r\n",
               "size": 0,
               "showAnalytics": true,
-              "title": "Kerberos weak ciphers event details: {KeberosTimeBrush:label} - select TargetUserName for details",
+              "title": "Kerberos weak ciphers event details: {KerberosTimeBrush:label} - select TargetUserName for details",
               "timeContext": {
                 "durationMs": 0
               },
-              "timeContextFromParameter": "KeberosTimeBrush",
+              "timeContextFromParameter": "KerberosTimeBrush",
               "exportFieldName": "TargetUserName",
               "exportParameterName": "targetUserNameKerberosParameter",
               "exportDefaultValue": "All",
@@ -1739,11 +1739,11 @@
               "query": "SecurityEvent\r\n| where EventID == 4768 or EventID == 4769\r\n| where Level == 8\r\n| parse EventData with * '\"TicketEncryptionType\">' TicketEncryptionType '<' *\r\n| where TicketEncryptionType != \"0x12\" and TicketEncryptionType != \"0x11\" //AES128/256, this filter needs to be activated\r\n| parse EventData with * '\"IpAddress\">' IpAddress '<' *\r\n| extend IpAddress = tostring(split(IpAddress,\"f:\").[1])\r\n| parse EventData with * '\"TargetUserName\">' TargetUserName '<' *\r\n| parse EventData with * '\"ServiceName\">' ServiceName '<' *\r\n| extend Cipher=replace('0x18$', 'RC4-HMAC-EXP', replace('0x12$', 'AES256-CTS-HMAC-SHA1', replace('0x11$', 'AES128-CTS-HMAC-SHA1', replace('0x1$', 'DES_CBC_CRC', replace('0x2$', 'DES_CBC_MD4', replace('0x7$', 'DES3_CBC_SHA1', replace('0x5$', 'DES3_CBC_MD5', replace('0x3$', 'DES_CBC_MD5', replace('0x17$', 'RC4_HMAC', TicketEncryptionType)))))))))\r\n//| where TargetUserName in ('{targetUserNameKerberosParameter}')\r\n| where TargetUserName == '{targetUserNameKerberosParameter:escape}' or  '{targetUserNameKerberosParameter:escape}' == \"All\"\r\n| summarize OldestRecord = min(TimeGenerated), NewestRecord = max(TimeGenerated), Count=count() by TargetUserName, Cipher, IpAddress , ServiceName, Computer, Activity\r\n| sort by Count desc\r\n",
               "size": 0,
               "showAnalytics": true,
-              "title": "Kerberos weak ciphers event details: {targetUserNameKerberosParameter}, {KeberosTimeBrush:label}",
+              "title": "Kerberos weak ciphers event details: {targetUserNameKerberosParameter}, {KerberosTimeBrush:label}",
               "timeContext": {
                 "durationMs": 0
               },
-              "timeContextFromParameter": "KeberosTimeBrush",
+              "timeContextFromParameter": "KerberosTimeBrush",
               "showExportToExcel": true,
               "queryType": 0,
               "resourceType": "microsoft.operationalinsights/workspaces",
@@ -2727,7 +2727,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "let scEvents = dynamic([5827, 5829, 5830]);\r\nEvent\r\n| where EventID in (scEvents)\r\n| where EventLog =~ \"System\" and Source =~ \"NETLOGON\"\r\n| parse ParameterXml with \"<Param>\" Machine \"</P\" * \"<Param>\" Domain \"</P\" * \"<Param>\" AccountType \"</P\" * \"<Param>\" OperatingSystem \"</P\" *\r\n| where Machine =~ \"{Machine}\" or \"{Machine}\" =~ \"All\"\r\n| extend Status = case(EventID == 5827 or EventID == 5828, \"Connection Denied\", EventID == 5829, \"Connection Allowed - Enforcement Mode Off\", EventID == 5830 or EventID == 5831, \"Connection Allowed - Policy\", \"Unknown\")\r\n| where Status =~ \"{Status}\" or \"{Status}\" =~ \"All\"\r\n| summarize FirstOccurance=min(TimeGenerated), LastOccurance=max(TimeGenerated), Count=count() by DomainController=Computer, Machine, Domain, AccountType, OperatingSystem, EventID, Status\r\n",
+              "query": "let scEvents = dynamic([5827, 5829, 5830]);\r\nEvent\r\n| where EventID in (scEvents)\r\n| where EventLog =~ \"System\" and Source =~ \"NETLOGON\"\r\n| parse ParameterXml with \"<Param>\" Machine \"</P\" * \"<Param>\" Domain \"</P\" * \"<Param>\" AccountType \"</P\" * \"<Param>\" OperatingSystem \"</P\" *\r\n| where Machine =~ \"{Machine}\" or \"{Machine}\" =~ \"All\"\r\n| extend Status = case(EventID == 5827 or EventID == 5828, \"Connection Denied\", EventID == 5829, \"Connection Allowed - Enforcement Mode Off\", EventID == 5830 or EventID == 5831, \"Connection Allowed - Policy\", \"Unknown\")\r\n| where Status =~ \"{Status}\" or \"{Status}\" =~ \"All\"\r\n| summarize FirstOccurrence=min(TimeGenerated), LastOccurrence=max(TimeGenerated), Count=count() by DomainController=Computer, Machine, Domain, AccountType, OperatingSystem, EventID, Status\r\n",
               "size": 0,
               "showAnalytics": true,
               "title": "Machine Account Connections",
@@ -2788,7 +2788,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "let scEvents = dynamic([5828, 5831]);\r\nEvent\r\n| where EventID in (scEvents)\r\n| where EventLog =~ \"System\" and Source =~ \"NETLOGON\"\r\n| parse ParameterXml with \"<Param>\" AccountType \"</P\" * \"<Param>\" TrustName \"</P\" * \"<Param>\" TrustTarget \"</P\" * \"<Param>\" ClientIP \"</P\" *\r\n| where ClientIP =~ \"{ClientIP}\" or \"{ClientIP}\" =~ \"All\"\r\n| extend Status = case(EventID == 5827 or EventID == 5828, \"Connection Denied\", EventID == 5829, \"Connection Allowed - Enforcement Mode Off\", EventID == 5830 or EventID == 5831, \"Connection Allowed - Policy\", \"Unknown\")\r\n| where Status =~ \"{Status}\" or \"{Status}\" =~ \"All\"\r\n| summarize FirstOccurance=min(TimeGenerated), LastOccurance=max(TimeGenerated), Count=count() by DomainController=Computer, AccountType, TrustName, TrustTarget, ClientIP, EventID, Status",
+              "query": "let scEvents = dynamic([5828, 5831]);\r\nEvent\r\n| where EventID in (scEvents)\r\n| where EventLog =~ \"System\" and Source =~ \"NETLOGON\"\r\n| parse ParameterXml with \"<Param>\" AccountType \"</P\" * \"<Param>\" TrustName \"</P\" * \"<Param>\" TrustTarget \"</P\" * \"<Param>\" ClientIP \"</P\" *\r\n| where ClientIP =~ \"{ClientIP}\" or \"{ClientIP}\" =~ \"All\"\r\n| extend Status = case(EventID == 5827 or EventID == 5828, \"Connection Denied\", EventID == 5829, \"Connection Allowed - Enforcement Mode Off\", EventID == 5830 or EventID == 5831, \"Connection Allowed - Policy\", \"Unknown\")\r\n| where Status =~ \"{Status}\" or \"{Status}\" =~ \"All\"\r\n| summarize FirstOccurrence=min(TimeGenerated), LastOccurrence=max(TimeGenerated), Count=count() by DomainController=Computer, AccountType, TrustName, TrustTarget, ClientIP, EventID, Status",
               "size": 0,
               "showAnalytics": true,
               "title": "Trust Account Connections",

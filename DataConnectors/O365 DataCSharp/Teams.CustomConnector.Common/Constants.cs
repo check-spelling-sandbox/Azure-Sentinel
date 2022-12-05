@@ -27,7 +27,7 @@
         public static string StorageContainerFound = "Storage container found";
         public static string StorageContainerCreated = "Storage container created";
         public static string StorageContainerCreationFailed = "Storage container creation failed";
-        public static string UploadDataToStorageContainerStarted = "Data updload to storage container Started";
+        public static string UploadDataToStorageContainerStarted = "Data upload to storage container Started";
         public static string UploadDataToStorageContainerCompleted = "Data upload to storage container completed";
         public static string UploadLogsToStorageContainerStarted = "Logs upload to storage container completed";
         public static string UploadLogsToStorageContainerCompleted = "Logs upload to storage container completed";
@@ -68,7 +68,7 @@
         public static string KeyVaultBaseUrl = "KeyVaultBaseUrl";
         public static string KeyVaultEnabled = "KeyVaultEnabled";
 
-        public static string EnableDirectInjestionToWorkSpace = "EnableDirectInjestionToWorkSpace";
+        public static string EnableDirectIngestionToWorkSpace = "EnableDirectIngestionToWorkSpace";
         public static string SentinelCustomerId = "SentinelCustomerId";
         public static string SentinelSharedkey = "SentinelSharedkey";
 

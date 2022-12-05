@@ -13,7 +13,7 @@ This folder has resources to generate MITRE ATT&CK coverage for Microsoft Sentin
     - [Jupyter DataFrame Widget](#jupyter-dataframe-widget)
     - [Heatmaps](#heatmaps)
     - [Radar Plots](#radarplots)
-    - [ATT&CK Navigator](#attck-navigator)
+    - [ATT&CK Navigator](#attack-navigator)
     - [Donut Charts](#donutcharts)
 
 

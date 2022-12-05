@@ -641,7 +641,7 @@
         "version": "KqlItem/1.0",
         "query": "AzureDiagnostics\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| where Category == \"DDoSMitigationReports\"\r\n| extend SourceContinents_s = coalesce(parse_json(column_ifexists(\"SourceContinents_s\",\"\")),parse_json(AdditionalFields[\"SourceContinents\"]))\r\n| where SourceContinents_s <> \"{}\"\r\n| extend SourceContinents_s = parse_json(tostring(SourceContinents_s))\r\n| extend DynamicContinents = todynamic(SourceContinents_s) \r\n| project DynamicContinents\r\n| as T\r\n| mv-apply DynamicContinents on (\r\n    extend Continent = tostring(bag_keys(DynamicContinents)[0])\r\n    | project Continent, value = todouble(DynamicContinents[Continent])\r\n)\r\n| summarize Percentage = strcat(round(100 * sum(value) / toscalar(T | count), 3)) by Continent\r\n| extend Percent = todouble(Percentage)",
         "size": 0,
-        "title": "Continent of orgin",
+        "title": "Continent of origin",
 		"timeContext": {
           "durationMs": 2419200000
         },
@@ -831,7 +831,7 @@
         "version": "KqlItem/1.0",
         "query": "AzureDiagnostics\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| where Category == \"DDoSMitigationReports\"\r\n| extend SourceContinents_s = coalesce(parse_json(column_ifexists(\"SourceContinents_s\",\"\")),parse_json(AdditionalFields[\"SourceContinents\"]))\r\n| extend SourceContinents_s = parse_json(tostring(SourceContinents_s))\r\n| where SourceContinents_s <> \"{}\"\r\n| extend DynamicContinents = todynamic(SourceContinents_s) \r\n| project DynamicContinents\r\n| as T\r\n| mv-apply DynamicContinents on (\r\n    extend Continent = tostring(bag_keys(DynamicContinents)[0])\r\n    | project Continent, value = todouble(DynamicContinents[Continent])\r\n)\r\n| summarize Percentage = strcat(round(100 * sum(value) / toscalar(T | count), 3), \"%\") by Continent\r\n| sort by Percentage desc",
         "size": 1,
-        "title": "Continent of orgin",
+        "title": "Continent of origin",
 		"timeContext": {
           "durationMs": 2419200000
         },
@@ -988,7 +988,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "AzureDiagnostics\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| where Category == \"DDoSMitigationFlowLogs\"\r\n| extend sourcePublicIpAddress_s = coalesce(tostring(parse_json(column_ifexists(\"sourcePublicIpAddress_s\",\"\"))[0]), AdditionalFields[\"sourcePublicIpAddress\"])\r\n| extend sourcePort_s = coalesce(tostring(parse_json(column_ifexists(\"sourcePort_s\",\"\"))[0]), AdditionalFields[\"sourcePort\"])\r\n| extend destPublicIpAddress_s = coalesce(tostring(parse_json(column_ifexists(\"destPublicIpAddress_s\",\"\"))[0]), AdditionalFields[\"destPublicIpAddress\"])\r\n| extend destPort_s = coalesce(tostring(parse_json(column_ifexists(\"destPort_s\",\"\"))[0]), AdditionalFields[\"destPort\"])\r\n| extend protocol_s = coalesce(tostring(parse_json(column_ifexists(\"protocol_s\",\"\"))[0]), AdditionalFields[\"protocol\"])\r\n| project  TimeGenerated, ResourceGroup, SubscriptionId, Resource, ResourceType, Message, SourcePublicIPAddress = sourcePublicIpAddress_s, SourcePorts = sourcePort_s, DestinationPublicIpAddress = destPublicIpAddress_s, DestinationPorts = destPort_s, Protocol = protocol_s, ResouceID = _ResourceId\r\n",
+        "query": "AzureDiagnostics\r\n| where Resource in~ (split(\"{Resource:label}\", \", \"))\r\n| where Category == \"DDoSMitigationFlowLogs\"\r\n| extend sourcePublicIpAddress_s = coalesce(tostring(parse_json(column_ifexists(\"sourcePublicIpAddress_s\",\"\"))[0]), AdditionalFields[\"sourcePublicIpAddress\"])\r\n| extend sourcePort_s = coalesce(tostring(parse_json(column_ifexists(\"sourcePort_s\",\"\"))[0]), AdditionalFields[\"sourcePort\"])\r\n| extend destPublicIpAddress_s = coalesce(tostring(parse_json(column_ifexists(\"destPublicIpAddress_s\",\"\"))[0]), AdditionalFields[\"destPublicIpAddress\"])\r\n| extend destPort_s = coalesce(tostring(parse_json(column_ifexists(\"destPort_s\",\"\"))[0]), AdditionalFields[\"destPort\"])\r\n| extend protocol_s = coalesce(tostring(parse_json(column_ifexists(\"protocol_s\",\"\"))[0]), AdditionalFields[\"protocol\"])\r\n| project  TimeGenerated, ResourceGroup, SubscriptionId, Resource, ResourceType, Message, SourcePublicIPAddress = sourcePublicIpAddress_s, SourcePorts = sourcePort_s, DestinationPublicIpAddress = destPublicIpAddress_s, DestinationPorts = destPort_s, Protocol = protocol_s, ResourceID = _ResourceId\r\n",
         "size": 0,
         "title": "Raw DDoS Flow Logs",
 		"timeContext": {

@@ -21,7 +21,7 @@ function New-ArnRole
         if ($isRuleNotExist)
         {
             Write-Output "`n`n"
-            Write-Log "You must specify the the Azure Sentinel Workspace ID. This is found in the Azure Sentinel portal." -LogFileName $LogFileName -Severity Information -LinePadding 1
+            Write-Log "You must specify the Azure Sentinel Workspace ID. This is found in the Azure Sentinel portal." -LogFileName $LogFileName -Severity Information -LinePadding 1
             
             $workspaceId = Read-ValidatedHost -Prompt "Please enter your Azure Sentinel External ID (Workspace ID)"
             Write-Log "Using Azure Sentinel Workspace ID: $workspaceId" -LogFileName $LogFileName -Severity Information -Indent 2
@@ -170,7 +170,7 @@ function Enable-S3EventNotification
 
         if($IsCustomLog -ne $true)
         {
-            Write-Log -Message "Event notificaion prefix definition, to Limit the notifications to objects with key starting with specified characters." -LogFileName $LogFileName     
+            Write-Log -Message "Event notification prefix definition, to Limit the notifications to objects with key starting with specified characters." -LogFileName $LogFileName     
             $prefixOverrideConfirm = Read-ValidatedHost -Prompt "The default prefix is '$eventNotificationPrefix'. `n  Do you want to override the event notification prefix? [y/n]" -ValidationType Confirm
             if ($prefixOverrideConfirm -eq 'y')
             {

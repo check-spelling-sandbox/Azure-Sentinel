@@ -774,7 +774,7 @@
         "query": "F5Telemetry_AVR_CL \r\n| where Entity_s == 'SystemMonitor'\r\n| where hostname_s == '{HostName}'\r\n| where TimeGenerated between ({TimeRange:start}..{TimeRange:end})\r\n| summarize Memory_Usage = max(todouble(AvgMemory_s)/100) by hostname_s, bin (TimeGenerated, {SampleValue}{SamplePeriod})\r\n\r\n",
         "size": 0,
         "aggregation": 2,
-        "title": "BIG-IP Memory Utlilzation (%)",
+        "title": "BIG-IP Memory Utilization (%)",
         "color": "green",
         "timeContext": {
           "durationMs": 0

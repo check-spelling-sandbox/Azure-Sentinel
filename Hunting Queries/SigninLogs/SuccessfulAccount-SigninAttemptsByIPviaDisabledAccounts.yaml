@@ -44,7 +44,7 @@ query: |
   | project StartTime, EndTime, IPAddress, disabledAccountLoginAttempts, disabledAccountsTargeted, disabledAccountSet, applicationSet, 
   successfulAccountSigninCount, successfulAccountSigninSet
   | order by disabledAccountLoginAttempts
-  // Break up the string of Succesfully signed into accounts into individual events
+  // Break up the string of Successfully signed into accounts into individual events
   | mvexpand successfulAccountSigninSet
   | extend timestamp = StartTime, IPCustomEntity = IPAddress
 

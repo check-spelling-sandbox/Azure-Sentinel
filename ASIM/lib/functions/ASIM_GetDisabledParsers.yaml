@@ -6,7 +6,7 @@ References:
 - Title: ASIM
   Link: https://aka.ms/AboutASIM
 Description: |
-  This ASIM function reads the ASimDisabledParsers watchlist and determined based on it if the the parser provided as parameter is disabled.
+  This ASIM function reads the ASimDisabledParsers watchlist and determined based on it if the parser provided as parameter is disabled.
 FunctionName: ASIM_GetDisabledParsers
 EquivalentBuiltInFunction: _ASIM_GetDisabledParsers
 FunctionParams:

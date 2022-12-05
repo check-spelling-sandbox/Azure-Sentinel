@@ -67,7 +67,7 @@
           {
             "type": 1,
             "content": {
-              "json": "## FindTrace\r\n\r\n\r\nThis tab is useful to find out any occuranes of the collected IOC in the existing workspace.\r\nThis loads the list of curated IOCs listed in \r\n\r\nhttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/Log4j_IOC_List.csv\r\n\r\nBased on the selection of one it loads the tables having any occurance of the selected IOCs.\r\n\r\nBased on a table selected it loads the raw logs from the table."
+              "json": "## FindTrace\r\n\r\n\r\nThis tab is useful to find out any occurrences of the collected IOC in the existing workspace.\r\nThis loads the list of curated IOCs listed in \r\n\r\nhttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/Log4j_IOC_List.csv\r\n\r\nBased on the selection of one it loads the tables having any occurrence of the selected IOCs.\r\n\r\nBased on a table selected it loads the raw logs from the table."
             },
             "name": "text - 0"
           },
@@ -244,7 +244,7 @@
           {
             "type": 1,
             "content": {
-              "json": "## SecurityNestedRecommendation\r\n------------------------\r\n\r\n  This section uses the Azure Defender Security Nested Recommendations data to find machines vulnerable to log4j CVE-2021-44228. Log4j is an open-source Apache logging library that is used in \r\n   many Java-based applications. Security Nested Recommendations data is sent to Microsoft Sentinel using the continuous export feature of Azure Defender(refrence link below).\r\n   \r\n   Reference: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/\r\n\r\n   Reference: https://docs.microsoft.com/azure/security-center/continuous-export?tabs=azure-portal\r\n   \r\n   Reference: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/how-defender-for-cloud-displays-machines-affected-by-log4j/ba-p/3037271'\r\n"
+              "json": "## SecurityNestedRecommendation\r\n------------------------\r\n\r\n  This section uses the Azure Defender Security Nested Recommendations data to find machines vulnerable to log4j CVE-2021-44228. Log4j is an open-source Apache logging library that is used in \r\n   many Java-based applications. Security Nested Recommendations data is sent to Microsoft Sentinel using the continuous export feature of Azure Defender(reference link below).\r\n   \r\n   Reference: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/\r\n\r\n   Reference: https://docs.microsoft.com/azure/security-center/continuous-export?tabs=azure-portal\r\n   \r\n   Reference: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/how-defender-for-cloud-displays-machines-affected-by-log4j/ba-p/3037271'\r\n"
             },
             "name": "text - 6"
           },
@@ -443,7 +443,7 @@
           {
             "type": 1,
             "content": {
-              "json": "## Azure WAF matching for Log4j vuln(CVE-2021-44228)\r\n\r\nThis query will alert on a positive pattern match by Azure WAF for CVE-2021-44228 log4j vulnerability exploitation attempt. If possible, it then decodes the malicious command for further analysis.\r\n   Refrence: https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/"
+              "json": "## Azure WAF matching for Log4j vuln(CVE-2021-44228)\r\n\r\nThis query will alert on a positive pattern match by Azure WAF for CVE-2021-44228 log4j vulnerability exploitation attempt. If possible, it then decodes the malicious command for further analysis.\r\n   Reference: https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/"
             },
             "name": "text - 13"
           },
@@ -478,7 +478,7 @@
           {
             "type": 1,
             "content": {
-              "json": "## WAF_log4j_vulnerability\r\n\r\nThis hunting query looks in Azure Web Application Firewall data to find possible exploitation attempts for CVE-2021-44228 involving log4j vulnerability.\r\n   Refrence: https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/\r\n"
+              "json": "## WAF_log4j_vulnerability\r\n\r\nThis hunting query looks in Azure Web Application Firewall data to find possible exploitation attempts for CVE-2021-44228 involving log4j vulnerability.\r\n   Reference: https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/\r\n"
             },
             "name": "text - 16"
           },

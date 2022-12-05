@@ -7,7 +7,7 @@
     Comment:        Added Domain field to log record
 
     DESCRIPTION
-    This Function App calls the Okta System Log API (https://developer.okta.com/docs/reference/api/system-log/) to pull the Okta System logs. The response from the Okta API is recieved in JSON format. This function will build the signature and authorization header 
+    This Function App calls the Okta System Log API (https://developer.okta.com/docs/reference/api/system-log/) to pull the Okta System logs. The response from the Okta API is received in JSON format. This function will build the signature and authorization header 
     needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. The Function App will post the Okta logs to the Okta_CL table in the Log Analytics workspace.
 #>
 
@@ -15,7 +15,7 @@
 param($Timer)
 # Get the current universal time in the default string format
 $currentUTCtime = (Get-Date).ToUniversalTime()
-# The 'IsPastDue' porperty is 'true' when the current function invocation is later than scheduled.
+# The 'IsPastDue' property is 'true' when the current function invocation is later than scheduled.
 if ($Timer.IsPastDue) {
     Write-Host "PowerShell timer is running late!"
 }
@@ -87,7 +87,7 @@ Function Post-LogAnalyticsData($customerId, $sharedKey, $body, $logType)
 $recordCount = $response.Count
 
 if ($recordCount -gt 0) {
-    Write-Output "$recordCount record(s) are avaliable as of $startDate"
+    Write-Output "$recordCount record(s) are available as of $startDate"
     $domain = [regex]::matches($uri, 'https:\/\/([\w\.\-]+)\/').captures.groups[1].value
     $response | Add-Member -MemberType NoteProperty -Name "Domain" -Value $domain
     $json = $response | ConvertTo-Json -Depth 5
@@ -95,7 +95,7 @@ if ($recordCount -gt 0) {
 }
 else{
 
-    Write-Output "No new Okta logs are avaliable as of $startDate"
+    Write-Output "No new Okta logs are available as of $startDate"
 }
 
 # Write an information log with the current time.

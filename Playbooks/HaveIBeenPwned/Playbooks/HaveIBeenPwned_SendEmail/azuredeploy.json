@@ -515,7 +515,7 @@
                               "inputs": {
                                 "body": {
                                   "Message": {
-                                    "Body": "<table style=\"border:1px solid black;border-collapse: collpse;\">\n<td>@{body('Create_HTML_table_of_all_the_data_breaches')}</td>\n</table>\n<br/>\n<h4>Here's what you can do</h4>\n<p>1.Change your password for the above mentioned site(s).</p>\n<p>2.Navigate to the <a href=\"https://haveibeenpwned.com/\">HIBP Website </a> to verify the breach information.</p>",
+                                    "Body": "<table style=\"border:1px solid black;border-collapse: collapse;\">\n<td>@{body('Create_HTML_table_of_all_the_data_breaches')}</td>\n</table>\n<br/>\n<h4>Here's what you can do</h4>\n<p>1.Change your password for the above mentioned site(s).</p>\n<p>2.Navigate to the <a href=\"https://haveibeenpwned.com/\">HIBP Website </a> to verify the breach information.</p>",
                                     "HeaderText": "Your account has been identified in data breach(es).",
                                     "HideHTMLMessage": false,
                                     "Importance": "Normal",

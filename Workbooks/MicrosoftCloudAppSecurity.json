@@ -435,7 +435,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "let data = McasShadowItReporting\r\n| where '{Tags}' == '' or AppTags has \"{Tags}\"\r\n| where AppScore in ({Score}) or '{Score:label}' == \"All\"\r\n| where AppId == '{AppId}' or '{AppId}' == \"All\"\r\n| where  StreamName in ({DataStream}) or '{DataStream:label}' == \"All\";\r\ndata\r\n| summarize Sum = sum(TotalBytes)/1048576 by AppCategory\r\n| join kind = fullouter (datatable(AppCategory:string)['Medium', 'high', 'low']) on AppCategory\r\n| project AppCategory = iff(AppCategory == '', AppCategory1, AppCategory), Sum = iff(AppCategory == '', 0, Sum)\r\n| join kind = inner (data\r\n | make-series Trend = sum(TotalBytes)/1048576 default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by AppCategory)\r\n on AppCategory\r\n| project-away AppCategory1, TimeGenerated\r\n| extend AppCategorys = AppCategory\r\n| union (\r\n data \r\n | summarize Sum = sum(TotalBytes)/1048576\r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = sum(TotalBytes)/1048576 default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend AppCategory = 'All', AppCategorys = '*' \r\n)\r\n| order by Sum desc\r\n| take 10",
+        "query": "let data = McasShadowItReporting\r\n| where '{Tags}' == '' or AppTags has \"{Tags}\"\r\n| where AppScore in ({Score}) or '{Score:label}' == \"All\"\r\n| where AppId == '{AppId}' or '{AppId}' == \"All\"\r\n| where  StreamName in ({DataStream}) or '{DataStream:label}' == \"All\";\r\ndata\r\n| summarize Sum = sum(TotalBytes)/1048576 by AppCategory\r\n| join kind = fullouter (datatable(AppCategory:string)['Medium', 'high', 'low']) on AppCategory\r\n| project AppCategory = iff(AppCategory == '', AppCategory1, AppCategory), Sum = iff(AppCategory == '', 0, Sum)\r\n| join kind = inner (data\r\n | make-series Trend = sum(TotalBytes)/1048576 default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by AppCategory)\r\n on AppCategory\r\n| project-away AppCategory1, TimeGenerated\r\n| extend AppCategories = AppCategory\r\n| union (\r\n data \r\n | summarize Sum = sum(TotalBytes)/1048576\r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = sum(TotalBytes)/1048576 default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend AppCategory = 'All', AppCategories = '*' \r\n)\r\n| order by Sum desc\r\n| take 10",
         "size": 4,
         "exportFieldName": "AppCategory",
         "exportParameterName": "AppCategoryFilter",
@@ -698,7 +698,7 @@
         "query": "McasShadowItReporting\r\n| where '{Tags}' == '' or AppTags has \"{Tags}\"\r\n| where AppCategory == '{AppCategoryFilter}' or '{AppCategoryFilter}' == \"All\"\r\n| where UserName == '{UserNameFilter}' or '{UserNameFilter}' == \"All\"\r\n| where AppScore in ({Score}) or '{Score:label}' == \"All\"\r\n| where AppId == '{AppId}' or '{AppId}' == \"All\"\r\n| where  StreamName in ({DataStream}) or '{DataStream:label}' == \"All\"\r\n| summarize count() by AppName, UserName, IpAddress, AppScore, UploadedBytes, DownloadedBytes, bin(TimeGenerated, {TimeRange:grain})\r\n| order by AppScore asc",
         "size": 0,
         "exportToExcelOptions": "visible",
-        "title": "Descovery logs, by score",
+        "title": "Discovery logs, by score",
         "timeContext": {
           "durationMs": 0
         },

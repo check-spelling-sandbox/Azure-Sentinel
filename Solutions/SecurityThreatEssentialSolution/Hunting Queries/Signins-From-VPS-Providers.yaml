@@ -11,7 +11,7 @@ tactics:
 relevantTechniques:
   - T1078
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
   - DEV-0537
 query: |

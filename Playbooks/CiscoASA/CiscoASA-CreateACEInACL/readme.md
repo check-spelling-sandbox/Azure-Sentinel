@@ -6,7 +6,7 @@ This playbook allows blocking/unblocking of IPs in Cisco ASA, using **Access Con
 
 When a new Sentinel incident is created, this playbook gets triggered and performs below actions
 1. For the IPs we check if they are already directly blocked by an access control entry in the access control list
-2. An adaptive card is sent to a Teams channel with information about the incident and giving the option to ignore an IP, or depdening on it's current status block it by adding an access control entry or unblock it by removing an access control entry
+2. An adaptive card is sent to a Teams channel with information about the incident and giving the option to ignore an IP, or depending on it's current status block it by adding an access control entry or unblock it by removing an access control entry
     ![Adaptive card](./images/CreateACEInACL-AdaptiveCard.png)
 3. Comment is added to Azure Sentinel incident.
 ![playbook overview](./images/CreateACEInACL-AzureSentinel-Comments.png)
@@ -25,12 +25,12 @@ When a new Sentinel incident is created, this playbook gets triggered and perfor
 3. Cisco ASA needs to have an extended Access Control List configured. Create a new ACL or retrieve the name of an existing ACL. To use Cisco ASDM to configure Extended ACLs, see [Configure Extended ACLs](https://www.cisco.com/c/en/us/td/docs/security/asa/asa914/asdm714/firewall/asdm-714-firewall-config/access-acls.html#ID-2069-0000016d)
 
 ### Deployment instructions 
-1. Deploy the playbook by clicking on "Depoly to Azure" button. This will take you to deplyoing an ARM Template wizard.
+1. Deploy the playbook by clicking on "Deploy to Azure" button. This will take you to deploying an ARM Template wizard.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FCiscoASA%2FCiscoASA-CreateACEInACL%2Fazuredeploy.json)
 [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FCiscoASA%2FCiscoASA-CreateACEInACL%2Fazuredeploy.json)
 
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
     * Playbook Name: Enter the playbook name here (ex:CiscoASA-CreateACEInACL)
     * Cisco ASA Connector name : Enter the name of the Cisco ASA custom connector (default value:CiscoASAConnector)
     * Interface ID : The name of the interface you want to create the access rules on.

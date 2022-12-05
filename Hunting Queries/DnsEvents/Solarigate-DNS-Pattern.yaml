@@ -1,4 +1,4 @@
-id: 82c41ab6-3ec7-44f8-80fd-8b829a4b390d
-name: Solorigate Encoded Domain in URL
+id: ef055f03-858e-496e-8029-b99c59273966
+name: Solarigate DNS Pattern
 description: |
   'As part of content migration, this file is moved to new location. you can find here: https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Windows Server DNS'

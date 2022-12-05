@@ -3,7 +3,7 @@ name: Abnormally long DNS URI queries
 description: |
   'Length of DNS query can often be an indicator of suspicious activity. Typical domain name lengths are short whereas domain name query used 
   for data exfiltration or tunneling can often be very large in size. This is because they could be encoded using base 64/32 etc. The hunting query looks 
-  for Names that are more than 150 characters in length. Due to a lot of services using long DNS to communicate via prcodurally generated long domain names
+  for Names that are more than 150 characters in length. Due to a lot of services using long DNS to communicate via procedurally generated long domain names
   this can be prone, so a number of known services are excluded from this query. Additional items might need to be added to this exclusion dependent on your
   environment.'
 requiredDataConnectors:

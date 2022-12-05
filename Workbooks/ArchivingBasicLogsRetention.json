@@ -212,7 +212,7 @@
     {
       "type": 1,
       "content": {
-		"json": "### Workbook Change Log\r\n|Version|Description|\r\n|---|---|\r\n|v1.2| - Updated Usage Query calculaton from GiB to GB\r\n|v1.1| - Added Cost Estimation Tab to predict costs for enabling Basic Logs and data Archiving.<br> - Added Cost Estimation when updating table plans and Data Archive tiers.<br> - Added Time Range Selection.<br> - Added Change Log Notes.<br>- Fixed Basic Log Table Result Queries.<br>- Fixed Table Size Queries.| ",
+		"json": "### Workbook Change Log\r\n|Version|Description|\r\n|---|---|\r\n|v1.2| - Updated Usage Query calculator from GiB to GB\r\n|v1.1| - Added Cost Estimation Tab to predict costs for enabling Basic Logs and data Archiving.<br> - Added Cost Estimation when updating table plans and Data Archive tiers.<br> - Added Time Range Selection.<br> - Added Change Log Notes.<br>- Fixed Basic Log Table Result Queries.<br>- Fixed Table Size Queries.| ",
         "style": "warning"
       },
       "conditionalVisibility": {
@@ -2477,7 +2477,7 @@
           {
             "type": 1,
             "content": {
-              "json": "<span style= \"font-size:15px;\">You are about to modify the settings of the **{TableName}** table to enable **Archive Logs**.</span>\r\n\r\n<span style= \"font-size:15px;\">This will modify the **{TableName}** table with a different retention period from the default workspace retntion period of {workspaceRetention} days up to 7 years (2,555 days)</span>\r\n\r\n> **Note:** Tables will inherit the retention of workspace unless changed. \r\n- If a retention is set on a table and the workspace retention is changed, the table retention will not be affected. \r\n- To **reset** the table retention to the workspace retention, select the **Reset Retention** button\r\n- You can access archived data by running a **search job** or **restoring archived logs**\r\n- You can set the workspace default retention policy in the Azure portal to 30, 31, 60, 90, 120, 180, 270, 365, 550, and 730 days. \r\n",
+              "json": "<span style= \"font-size:15px;\">You are about to modify the settings of the **{TableName}** table to enable **Archive Logs**.</span>\r\n\r\n<span style= \"font-size:15px;\">This will modify the **{TableName}** table with a different retention period from the default workspace retention period of {workspaceRetention} days up to 7 years (2,555 days)</span>\r\n\r\n> **Note:** Tables will inherit the retention of workspace unless changed. \r\n- If a retention is set on a table and the workspace retention is changed, the table retention will not be affected. \r\n- To **reset** the table retention to the workspace retention, select the **Reset Retention** button\r\n- You can access archived data by running a **search job** or **restoring archived logs**\r\n- You can set the workspace default retention policy in the Azure portal to 30, 31, 60, 90, 120, 180, 270, 365, 550, and 730 days. \r\n",
               "style": "warning"
             },
             "customWidth": "50",
@@ -2538,7 +2538,7 @@
                 {
                   "type": 1,
                   "content": {
-                    "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span>\r\n\r\n- Updating the Total Retention in Days will automatically update estimated costs. \r\n- Ensure you have updated your the price paramaters for an accurate estimate. \r\n- Leverage the Show Help selector for more informaiton. \r\n",
+                    "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span>\r\n\r\n- Updating the Total Retention in Days will automatically update estimated costs. \r\n- Ensure you have updated your the price parameters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
                     "style": "upsell"
                   },
                   "conditionalVisibility": {
@@ -2985,7 +2985,7 @@
           {
             "type": 1,
             "content": {
-              "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span> \r\n- Ensure you have updated your the price paramaters for an accurate estimate. \r\n- Leverage the Show Help selector for more informaiton. \r\n",
+              "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span> \r\n- Ensure you have updated your the price parameters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
               "style": "upsell"
             },
             "conditionalVisibility": {
@@ -3462,7 +3462,7 @@
                 {
                   "type": 1,
                   "content": {
-                    "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span>\r\n\r\n- Updating the Total Retention in Days will automatically update estimated costs. \r\n- Ensure you have updated your the price paramaters for an accurate estimate. \r\n- Leverage the Show Help selector for more informaiton. \r\n",
+                    "json": "\r\n<span style= \"font-size:15px;\">See the below table on estimated costs</span>\r\n\r\n- Updating the Total Retention in Days will automatically update estimated costs. \r\n- Ensure you have updated your the price parameters for an accurate estimate. \r\n- Leverage the Show Help selector for more information. \r\n",
                     "style": "upsell"
                   },
                   "name": "text - 5 - Copy - Copy"

@@ -93,7 +93,7 @@ It’s only one-time step to collect consent
 		c. Click on "Add Access Policy"
 			i. Configure from template : Secret Management
 			ii. Key Permissions : GET, LIST, SET
-			iii. Select Prinicpal : <<Your Account>>
+			iii. Select Principal : <<Your Account>>
 			iv. Add
 		d. Click "Save"
 
@@ -111,7 +111,7 @@ It’s only one-time step to collect consent
 	```
 	   a. Go to your Resource Group --> Click on Function App `<<FunctionAppName>><<uniqueid>>`
 	   b. Click on Function App "Configuration" under Settings 
-	   c. Click on envionment variable that has value in KeyVault under "Application Settings"
+	   c. Click on environment variable that has value in KeyVault under "Application Settings"
 	   d. Update value @Microsoft.KeyVault(SecretUri=<<Step 1 copied Secret Identifier URI>>).
 	   e. Before clicking OK, make sure the status is "Resolved"
     ```
@@ -148,7 +148,7 @@ It’s only one-time step to collect consent
    a.	Go to your Resource Group --> Click on Function App `<<FunctionAppName>><<uniqueid>>`
    b.	Click on Function App "Configuration" under Settings 
    c.	Click on "DocuSignUserInfoBaseURI" under "Application Settings"
-   d.	By Default its "https://demo.docusign.net" targeting Demo envionment          `
+   d.	By Default its "https://demo.docusign.net" targeting Demo environment          `
 
    ```
 

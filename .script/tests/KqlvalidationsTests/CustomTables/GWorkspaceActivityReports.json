@@ -286,7 +286,7 @@
             "Type": "String"
         },
         {
-            "Name": "RegisterPrivelege",
+            "Name": "RegisterPrivilege",
             "Type": "String"
         },
         {

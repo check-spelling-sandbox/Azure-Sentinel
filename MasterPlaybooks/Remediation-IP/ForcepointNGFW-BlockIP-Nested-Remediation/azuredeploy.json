@@ -305,7 +305,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store IP address , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store IP address , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {},
@@ -430,7 +430,7 @@
                                                                         "columns": [
                                                                             {
                                                                                 "header": "IP-Address",
-                                                                                "value": "@item()?['IPAddres']"
+                                                                                "value": "@item()?['IPAddress']"
                                                                             },
                                                                             {
                                                                                 "header": "IP-List-Name",
@@ -491,7 +491,7 @@
                                                                                         "name": "Consolidatevrbl",
                                                                                         "value": {
                                                                                             "Action": "Already blocked",
-                                                                                            "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                            "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                             "IPStatus": "Blocked",
                                                                                             "IncidentSeverity": ""
                                                                                         }
@@ -534,7 +534,7 @@
                                                                                             "name": "Consolidatevrbl",
                                                                                             "value": {
                                                                                                 "Action": "Blocked by playbook",
-                                                                                                "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                                "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                                 "IPStatus": "Blocked",
                                                                                                 "IncidentSeverity": ""
                                                                                             }
@@ -554,7 +554,7 @@
                                                                                 ]
                                                                             },
                                                                             "type": "If",
-                                                                            "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                            "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                         }
                                                                     },
                                                                     "runAfter": {
@@ -665,7 +665,7 @@
                                                             "name": "Error",
                                                             "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                         },
-                                                        "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                        "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                                     },
                                                     "Terminate_if_login_is_unsuccessful": {
                                                         "runAfter": {

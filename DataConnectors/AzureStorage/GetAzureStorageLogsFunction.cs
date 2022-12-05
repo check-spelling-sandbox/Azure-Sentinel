@@ -419,7 +419,7 @@ namespace HoneyBucketLogParser
             }
             catch (Exception ex)
             {
-                log.LogError(ex, "An unexpected exception occured");
+                log.LogError(ex, "An unexpected exception occurred");
             }
         }
     }

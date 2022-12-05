@@ -1,7 +1,7 @@
 id: 261d966b-5c1a-4d28-b444-3a8caac6246e
 name: PowershellCommand footprint
 description: |
-  Find all machines running a given Powersehll cmdlet.
+  Find all machines running a given Powershell cmdlet.
   This covers all Powershell commands executed in the Powershell engine by any process.
 requiredDataConnectors:
 - connectorId: MicrosoftThreatProtection

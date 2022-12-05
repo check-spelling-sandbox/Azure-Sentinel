@@ -21,7 +21,7 @@ tactics:
 relevantTechniques:
   - T1562.001
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
   SecurityEvent

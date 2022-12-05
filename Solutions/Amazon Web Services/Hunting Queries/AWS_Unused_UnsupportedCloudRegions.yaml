@@ -33,7 +33,7 @@ query: |
   ) on AWSRegion, UserIdentityAccountId
   );
   EventInfo_Unseen
-  // Join Ununsed region seen with current data to gather context about API events seen
+  // Join Unused region seen with current data to gather context about API events seen
   | join kind= inner (
      EventInfo_CurrentDay
   ) on AWSRegion, UserIdentityAccountId

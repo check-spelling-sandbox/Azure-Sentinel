@@ -148,7 +148,7 @@
                   "id": "[variables('_uiConfigId1')]",
                   "title": "Qualys Vulnerability Management (using Azure Function)",
                   "publisher": "Qualys",
-                  "descriptionMarkdown": "The [Qualys Vulnerability Management (VM)](https://www.qualys.com/apps/vulnerability-management/) data connector provides the capability to ingest vulnerability host detection data into Microsoft Sentinel through the Qualys API. The connector provides visibility into host detection data from vulerability scans. This connector provides Microsoft Sentinel the capability to view dashboards, create custom alerts, and improve investigation ",
+                  "descriptionMarkdown": "The [Qualys Vulnerability Management (VM)](https://www.qualys.com/apps/vulnerability-management/) data connector provides the capability to ingest vulnerability host detection data into Microsoft Sentinel through the Qualys API. The connector provides visibility into host detection data from vulnerability scans. This connector provides Microsoft Sentinel the capability to view dashboards, create custom alerts, and improve investigation ",
                   "graphQueries": [
                     {
                       "metricName": "Total data received",
@@ -163,11 +163,11 @@
                   ],
                   "sampleQueries": [
                     {
-                      "description": "Top 10 Qualys V2 Vulerabilities detected",
+                      "description": "Top 10 Qualys V2 Vulnerabilities detected",
                       "query": "QualysHostDetectionV2_CL\n | extend Vulnerability = tostring(QID_s)\n | summarize count() by Vulnerability\n | top 10 by count_"
                     },
                     {
-                      "description": "Top 10 Vulerabilities detected",
+                      "description": "Top 10 Vulnerabilities detected",
                       "query": "QualysHostDetection_CL\n | mv-expand todynamic(Detections_s)\n | extend Vulnerability = tostring(Detections_s.Results)\n | summarize count() by Vulnerability\n | top 10 by count_"
                     }
                   ],
@@ -265,7 +265,7 @@
                       "description": ">**NOTE:** This connector has been updated, if you have previously deployed an earlier version, and want to update, please delete the existing Qualys VM Azure Function before redeploying this version. Please use Qualys V2 version Workbook, detections. "
                     },
                     {
-                      "description": "Use this method for automated deployment of the Qualys VM connector using an ARM Tempate.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-QualysVM-azuredeployV2)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n3. Enter the **Workspace ID**, **Workspace Key**, **API Username**, **API Password** , update the **URI**, and any additional URI **Filter Parameters** (each filter should be separated by an \"&\" symbol, no spaces.) \n> - Enter the URI that corresponds to your region. The complete list of API Server URLs can be [found here](https://www.qualys.com/docs/qualys-api-vmpc-user-guide.pdf#G4.735348) -- There is no need to add a time suffix to the URI, the Function App will dynamically append the Time Value to the URI in the proper format. \n - The default **Time Interval** is set to pull the last five (5) minutes of data. If the time interval needs to be modified, it is recommended to change the Function App Timer Trigger accordingly (in the function.json file, post deployment) to prevent overlapping data ingestion. \n> - Note: If using Azure Key Vault secrets for any of the values above, use the`@Microsoft.KeyVault(SecretUri={Security Identifier})`schema in place of the string values. Refer to [Key Vault references documentation](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references) for further details. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
+                      "description": "Use this method for automated deployment of the Qualys VM connector using an ARM Template.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-QualysVM-azuredeployV2)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n3. Enter the **Workspace ID**, **Workspace Key**, **API Username**, **API Password** , update the **URI**, and any additional URI **Filter Parameters** (each filter should be separated by an \"&\" symbol, no spaces.) \n> - Enter the URI that corresponds to your region. The complete list of API Server URLs can be [found here](https://www.qualys.com/docs/qualys-api-vmpc-user-guide.pdf#G4.735348) -- There is no need to add a time suffix to the URI, the Function App will dynamically append the Time Value to the URI in the proper format. \n - The default **Time Interval** is set to pull the last five (5) minutes of data. If the time interval needs to be modified, it is recommended to change the Function App Timer Trigger accordingly (in the function.json file, post deployment) to prevent overlapping data ingestion. \n> - Note: If using Azure Key Vault secrets for any of the values above, use the`@Microsoft.KeyVault(SecretUri={Security Identifier})`schema in place of the string values. Refer to [Key Vault references documentation](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references) for further details. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
                       "title": "Option 1 - Azure Resource Manager (ARM) Template"
                     },
                     {
@@ -375,7 +375,7 @@
         "connectorUiConfig": {
           "title": "Qualys Vulnerability Management (using Azure Function)",
           "publisher": "Qualys",
-          "descriptionMarkdown": "The [Qualys Vulnerability Management (VM)](https://www.qualys.com/apps/vulnerability-management/) data connector provides the capability to ingest vulnerability host detection data into Microsoft Sentinel through the Qualys API. The connector provides visibility into host detection data from vulerability scans. This connector provides Microsoft Sentinel the capability to view dashboards, create custom alerts, and improve investigation ",
+          "descriptionMarkdown": "The [Qualys Vulnerability Management (VM)](https://www.qualys.com/apps/vulnerability-management/) data connector provides the capability to ingest vulnerability host detection data into Microsoft Sentinel through the Qualys API. The connector provides visibility into host detection data from vulnerability scans. This connector provides Microsoft Sentinel the capability to view dashboards, create custom alerts, and improve investigation ",
           "graphQueries": [
             {
               "metricName": "Total data received",
@@ -409,11 +409,11 @@
           ],
           "sampleQueries": [
             {
-              "description": "Top 10 Qualys V2 Vulerabilities detected",
+              "description": "Top 10 Qualys V2 Vulnerabilities detected",
               "query": "QualysHostDetectionV2_CL\n | extend Vulnerability = tostring(QID_s)\n | summarize count() by Vulnerability\n | top 10 by count_"
             },
             {
-              "description": "Top 10 Vulerabilities detected",
+              "description": "Top 10 Vulnerabilities detected",
               "query": "QualysHostDetection_CL\n | mv-expand todynamic(Detections_s)\n | extend Vulnerability = tostring(Detections_s.Results)\n | summarize count() by Vulnerability\n | top 10 by count_"
             }
           ],
@@ -492,7 +492,7 @@
               "description": ">**NOTE:** This connector has been updated, if you have previously deployed an earlier version, and want to update, please delete the existing Qualys VM Azure Function before redeploying this version. Please use Qualys V2 version Workbook, detections. "
             },
             {
-              "description": "Use this method for automated deployment of the Qualys VM connector using an ARM Tempate.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-QualysVM-azuredeployV2)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n3. Enter the **Workspace ID**, **Workspace Key**, **API Username**, **API Password** , update the **URI**, and any additional URI **Filter Parameters** (each filter should be separated by an \"&\" symbol, no spaces.) \n> - Enter the URI that corresponds to your region. The complete list of API Server URLs can be [found here](https://www.qualys.com/docs/qualys-api-vmpc-user-guide.pdf#G4.735348) -- There is no need to add a time suffix to the URI, the Function App will dynamically append the Time Value to the URI in the proper format. \n - The default **Time Interval** is set to pull the last five (5) minutes of data. If the time interval needs to be modified, it is recommended to change the Function App Timer Trigger accordingly (in the function.json file, post deployment) to prevent overlapping data ingestion. \n> - Note: If using Azure Key Vault secrets for any of the values above, use the`@Microsoft.KeyVault(SecretUri={Security Identifier})`schema in place of the string values. Refer to [Key Vault references documentation](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references) for further details. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
+              "description": "Use this method for automated deployment of the Qualys VM connector using an ARM Template.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-QualysVM-azuredeployV2)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n3. Enter the **Workspace ID**, **Workspace Key**, **API Username**, **API Password** , update the **URI**, and any additional URI **Filter Parameters** (each filter should be separated by an \"&\" symbol, no spaces.) \n> - Enter the URI that corresponds to your region. The complete list of API Server URLs can be [found here](https://www.qualys.com/docs/qualys-api-vmpc-user-guide.pdf#G4.735348) -- There is no need to add a time suffix to the URI, the Function App will dynamically append the Time Value to the URI in the proper format. \n - The default **Time Interval** is set to pull the last five (5) minutes of data. If the time interval needs to be modified, it is recommended to change the Function App Timer Trigger accordingly (in the function.json file, post deployment) to prevent overlapping data ingestion. \n> - Note: If using Azure Key Vault secrets for any of the values above, use the`@Microsoft.KeyVault(SecretUri={Security Identifier})`schema in place of the string values. Refer to [Key Vault references documentation](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references) for further details. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
               "title": "Option 1 - Azure Resource Manager (ARM) Template"
             },
             {
@@ -756,7 +756,7 @@
               "kind": "Scheduled",
               "location": "[parameters('workspace-location')]",
               "properties": {
-                "description": "This creates an incident when a new high severity vulnerability is detected across multilple hosts",
+                "description": "This creates an incident when a new high severity vulnerability is detected across multiple hosts",
                 "displayName": "New High Severity Vulnerability Detected Across Multiple Hosts",
                 "enabled": false,
                 "query": "\nlet threshold = 10;\nQualysHostDetectionV2_CL\n| extend Status = tostring(Status_s), Vulnerability = tostring(QID_s), Severity = tostring(Severity_s)\n| where Status =~ \"New\" and Severity == \"5\"\n| summarize StartTime = min(TimeGenerated), EndTime = max(TimeGenerated), dcount(NetBios_s) by tostring(QID_s)\n| where dcount_NetBios_s >= threshold\n| extend timestamp = StartTime\n",

@@ -20,7 +20,7 @@ This integration allows automated response to Microsoft Sentinel incidents. It c
 # Prerequisites
 
 ### Authentication
-The custom connector supports **api authentication**. In Zero Networks Segment create an api token. Depending on the playbook used the the token may need Admin privleges.
+The custom connector supports **api authentication**. In Zero Networks Segment create an api token. Depending on the playbook used the token may need Admin privleges.
 
 <br><br>
 ### Options to establish a connection with Zero Networks Segment

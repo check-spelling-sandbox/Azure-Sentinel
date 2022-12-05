@@ -99,7 +99,7 @@
     },
     "variables": {
         "Meraki_Connection": "[concat('Meraki-', 'CiscoMerakiPlaybooks')]",
-        "AzureSentinel_Connection": "[concat('Azuresentienl-', 'CiscoMerakiPlaybooks')]"
+        "AzureSentinel_Connection": "[concat('Azuresentinel-', 'CiscoMerakiPlaybooks')]"
     },
     "resources": [
         {

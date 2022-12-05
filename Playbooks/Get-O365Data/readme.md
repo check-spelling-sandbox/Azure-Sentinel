@@ -15,13 +15,13 @@ In order to collected Audit events from an Office 365 subscription you first nee
 4. Click API Permissions Blade.
 5. Click Add a Permission.  
 6. Click Office 365 Management APIs.
-7. Click Appplication Permissions
+7. Click Application Permissions
 8. Check all permissions for each category.  Click Add permissions.
 9. Click grant admin consent for domain.com
 10. Click Certificates and Secrets
 11. Click New Client Secret
 12. Enter a description, select never.  Click Add.
-13. IMPORTANT.  Click copy next to the new secret and paste it somewhere temporaily.  You can not come back to get the secret once you leave the blade.
+13. IMPORTANT.  Click copy next to the new secret and paste it somewhere temporarily.  You can not come back to get the secret once you leave the blade.
 14. Copy the client Id from the application properties and paste it somewhere.
 15. Also copy the tenant Id from the AAD directory properties blade.
 
@@ -29,7 +29,7 @@ In order to collected Audit events from an Office 365 subscription you first nee
 1. Open Powershell
 2. Populate the following commands with the required elements (in <>) and run.
 
-```powerhshell
+```powershell
 $ClientID = "<AAD App clientID>"
 $ClientSecret = "<AAD App clientSecret>"
 $loginURL = "https://login.microsoftonline.com/"

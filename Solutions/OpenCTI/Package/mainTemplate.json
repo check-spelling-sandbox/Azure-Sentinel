@@ -2156,7 +2156,7 @@
                     },
                     "Initialize_variable_LabelIdOpenCTI": {
                       "runAfter": {
-                        "Initialize_variable_Lable": [
+                        "Initialize_variable_Label": [
                           "Succeeded"
                         ]
                       },
@@ -2170,7 +2170,7 @@
                         ]
                       }
                     },
-                    "Initialize_variable_Lable": {
+                    "Initialize_variable_Label": {
                       "runAfter": {
                         "Initialize_variable_OrgIdfromOpenCTI": [
                           "Succeeded"

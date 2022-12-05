@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "PlaybookName": {
-            "defaultValue": "TritonPlayook",
+            "defaultValue": "TritonPlaybook",
             "type": "String"
         },
         "SocEmailAddress": {
@@ -466,7 +466,7 @@
                                                                                                 "type": "ApiConnection",
                                                                                                 "inputs": {
                                                                                                     "body": {
-                                                                                                        "Value": "PLC Proggraming occured from a non-engineering workstation, that was remotly accessed by an unauthorized IT PC"
+                                                                                                        "Value": "PLC Programming occurred from a non-engineering workstation, that was remotely accessed by an unauthorized IT PC"
                                                                                                     },
                                                                                                     "host": {
                                                                                                         "connection": {
@@ -740,7 +740,7 @@
                                                                                 "body": {
                                                                                     "Body": "<p><span style=\"font-size: 14px\">Dear Customer,<br>\nYou have an incident from Azure Sentinel. Below is information:<br>\n<br>\n</span><span style=\"font-size: 14px\"><strong>Alert Name:</strong></span><span style=\"font-size: 14px\"></span><span style=\"font-size: 14px\">@{items('For_each_3')?['properties']?['alertDisplayName']}</span><span style=\"font-size: 14px\"><br>\n</span><span style=\"font-size: 14px\"><strong>Severity:</strong></span><span style=\"font-size: 14px\"></span><span style=\"font-size: 14px\">@{items('For_each_3')?['properties']?['severity']}</span><span style=\"font-size: 14px\"><br>\n</span><span style=\"font-size: 14px\"><strong>Start Time:</strong></span><span style=\"font-size: 14px\">@{items('For_each_3')?['properties']?['startTimeUtc']}</span><span style=\"font-size: 14px\"><br>\n</span><span style=\"font-size: 14px\"><strong>Source Device: </strong></span><span style=\"font-size: 14px\"></span><span style=\"font-size: 14px\">@{items('For_each_2')?['Address']}</span><span style=\"font-size: 14px\"><br>\n<br>\n</span><span style=\"font-size: 14px\"><strong>Description:</strong></span><span style=\"font-size: 14px\"><br>\n</span><span style=\"font-size: 14px\">@{items('For_each_3')?['properties']?['description']}</span><span style=\"font-size: 14px\"><br>\n<br>\nPlease review and let us know whether this incident is false positive.<br>\n<br>\nAzSec Team</span></p>",
                                                                                     "Importance": "High",
-                                                                                    "Subject": "Unauthorized PLC programming occured",
+                                                                                    "Subject": "Unauthorized PLC programming occurred",
                                                                                     "To": "@variables('SocEmailAddress')"
                                                                                 },
                                                                                 "host": {
@@ -846,7 +846,7 @@
                                                                         "body": {
                                                                             "Body": "<p><span style=\"font-size: 16px\">Dear Customer,<br>\nYou have an incident from Azure Sentinel. Below is information:<br>\n<br>\n</span><span style=\"font-size: 16px\"><strong>Alert Name</strong></span><span style=\"font-size: 16px\">:</span><span style=\"font-size: 16px\">@{items('For_each')?['properties']?['alertDisplayName']}</span><span style=\"font-size: 16px\"><br>\n</span><span style=\"font-size: 16px\"><strong>Severity</strong></span><span style=\"font-size: 16px\">:</span><span style=\"font-size: 16px\">@{items('For_each')?['properties']?['severity']}</span><span style=\"font-size: 16px\"><br>\n</span><span style=\"font-size: 16px\"><strong>Start Time:</strong></span><span style=\"font-size: 16px\"></span><span style=\"font-size: 16px\">@{items('For_each')?['properties']?['startTimeUtc']}</span><span style=\"font-size: 16px\"><br>\n</span><span style=\"font-size: 16px\"><strong>Source Device:</strong></span><span style=\"font-size: 16px\"> </span><span style=\"font-size: 16px\">@{items('For_each_2')?['Address']}</span><span style=\"font-size: 16px\"><br>\n<br>\n</span><span style=\"font-size: 16px\"><strong>Description</strong></span><span style=\"font-size: 16px\">:<br>\n</span><span style=\"font-size: 16px\">@{items('For_each')?['properties']?['description']}</span><span style=\"font-size: 16px\"><br>\n<br>\nPlease review and let us know whether this incident is false positive.<br>\n<br>\nAzSec Team</span></p>",
                                                                             "Importance": "High",
-                                                                            "Subject": "Unauthorized PLC programming occured not during working hours ",
+                                                                            "Subject": "Unauthorized PLC programming occurred not during working hours ",
                                                                             "To": "@variables('SocEmailAddress')"
                                                                         },
                                                                         "host": {

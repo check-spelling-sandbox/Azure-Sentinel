@@ -144,7 +144,7 @@ Follow these steps to run the application in Visual Studio.
 
     ![Start application](./Images/start-button.png)
 
-3. Once the app is running, a menu like the folowing screenshot appears in the console window.
+3. Once the app is running, a menu like the following screenshot appears in the console window.
     1. Each API call is represented by each option in the menu. Enter a number corresponding with your API request in the console. For example, next to the **Option**, enter number **22** to create an incident. The content of the incident comes from the **IncidentPayload.json** file you've filled in.
     2. Press ENTER  or Ctrl + C if you want to close the application.
 
@@ -171,7 +171,7 @@ The API currently has some limitations, and here are a few things to note regard
         {
             "properties": {
             "triggerUri": "<enter_Trigger_URI_of_your_playbook>",
-            "logicAppResourceId": "/subscriptions/<subscrition-ID>/resourceGroups/<resource-group-name>/providers/Microsoft.Logic/workflows/<logic-app-name>"
+            "logicAppResourceId": "/subscriptions/<subscription-ID>/resourceGroups/<resource-group-name>/providers/Microsoft.Logic/workflows/<logic-app-name>"
             }
         },
     ```

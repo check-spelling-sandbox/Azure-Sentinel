@@ -1,4 +1,4 @@
-# In order to test the idCahngeValidator do the following steps:
+# In order to test the idChangeValidator do the following steps:
 # 1. Change the id of some file in the Detections directory.
 # 2. Push this change and make a pull request.
 # 3. Verify that the detectionsValidations in your pull request failed. 

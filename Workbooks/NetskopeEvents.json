@@ -45,7 +45,7 @@
             "cellValue": "selTab",
             "linkTarget": "parameter",
             "linkLabel": "Web Transactions",
-            "subTarget": "Web Transcations",
+            "subTarget": "Web Transactions",
             "style": "link"
           }
         ]
@@ -828,7 +828,7 @@
                         "formatter": 1
                       },
                       "centerContent": {
-                        "columnMatch": "Recived MB",
+                        "columnMatch": "Received MB",
                         "formatter": 1,
                         "numberFormat": {
                           "unit": 17,
@@ -920,7 +920,7 @@
                         "formatter": 1
                       },
                       "centerContent": {
-                        "columnMatch": "Recived MB",
+                        "columnMatch": "Received MB",
                         "formatter": 1,
                         "numberFormat": {
                           "unit": 17,
@@ -1387,7 +1387,7 @@
                         },
                         {
                           "columnId": "ip_protocol_s",
-                          "label": "Protcol"
+                          "label": "Protocol"
                         },
                         {
                           "columnId": "policy_s",
@@ -2554,7 +2554,7 @@
                     "version": "KqlItem/1.0",
                     "query": "Netskope_Alerts_CL\n| where alert_type_s == \"DLP\"\n| where dlp_rule_severity_s == '{severity}'\n| project TimeGenerated, dlp_rule_s, dlp_rule_severity_s, dlp_file_s, object_type_s, activity_s, user_s, from_user_s",
                     "size": 2,
-                    "title": "DLP Incididents Details by Severity",
+                    "title": "DLP Incidents Details by Severity",
                     "noDataMessage": "Select Severity",
                     "timeContextFromParameter": "TimeRange",
                     "queryType": 0,
@@ -2598,7 +2598,7 @@
                       ]
                     }
                   },
-                  "name": "DLP Incididents Details by Severity"
+                  "name": "DLP Incidents Details by Severity"
                 },
                 {
                   "type": 3,
@@ -2695,7 +2695,7 @@
                     "version": "KqlItem/1.0",
                     "query": "Netskope_Alerts_CL\n| where alert_type_s == \"DLP\"\n| summarize Count = count() by policy_s\n| top 10 by Count\n",
                     "size": 2,
-                    "title": "Top 10 DLP Incidents by Policy Voilations",
+                    "title": "Top 10 DLP Incidents by Policy Violations",
                     "queryType": 0,
                     "resourceType": "microsoft.operationalinsights/workspaces",
                     "visualization": "piechart",
@@ -2704,7 +2704,7 @@
                     }
                   },
                   "customWidth": "33",
-                  "name": "Top 10 DLP Incidents by Policy Voilations"
+                  "name": "Top 10 DLP Incidents by Policy Violations"
                 },
                 {
                   "type": 3,
@@ -3282,7 +3282,7 @@
       "conditionalVisibility": {
         "parameterName": "selTab",
         "comparison": "isEqualTo",
-        "value": "Web Transcations"
+        "value": "Web Transactions"
       },
       "name": "Web Transactions"
     }

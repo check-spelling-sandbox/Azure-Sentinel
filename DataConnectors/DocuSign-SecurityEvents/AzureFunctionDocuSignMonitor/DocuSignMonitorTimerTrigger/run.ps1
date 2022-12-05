@@ -11,7 +11,7 @@
 
     DESCRIPTION
     This Function App calls the DocuSign Monitor REST API (https://lens.docusign.net/api/v2.0/datasets/monitor/stream/) to pull the security events for your DocuSign account. 
-    The response from the DocuSign Monitor REST API is recieved in JSON format. This function will build the signature and authorization header 
+    The response from the DocuSign Monitor REST API is received in JSON format. This function will build the signature and authorization header 
     needed to post the data to the Log Analytics workspace via the HTTP Data Connector API.
 #>
 

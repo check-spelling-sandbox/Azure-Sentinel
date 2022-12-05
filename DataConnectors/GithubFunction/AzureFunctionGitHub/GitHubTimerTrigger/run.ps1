@@ -7,7 +7,7 @@
     
     DESCRIPTION
     This Function App calls the GitHub REST API (https://api.github.com/) to pull the GitHub
-    Audit, Repo and Vulnerability logs. The response from the GitHub API is recieved in JSON format. This function will build the signature and authorization header 
+    Audit, Repo and Vulnerability logs. The response from the GitHub API is received in JSON format. This function will build the signature and authorization header 
     needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. The Function App will post each log type to their individual tables in Log Analytics, for example,
     Github_CL and GitHubRepoLogs_CL.
 #>

@@ -404,7 +404,7 @@
                 "name": "huntingquery4-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "An attacker altering pipelines may look to delete builds to reduce the footprint they leave on a system. This query looks for a build for a pipline being deleted within 1 hour of a pipeline being modified. This event may produce false positives but should not be so common that it can't be effectively used as part of hunting. "
+                  "text": "An attacker altering pipelines may look to delete builds to reduce the footprint they leave on a system. This query looks for a build for a pipeline being deleted within 1 hour of a pipeline being modified. This event may produce false positives but should not be so common that it can't be effectively used as part of hunting. "
                 }
               }
             ]

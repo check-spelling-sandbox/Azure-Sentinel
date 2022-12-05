@@ -159,7 +159,7 @@
                 "name": "analytic2-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "This creates an incident in the event that an excessive amount of DHCPREQUEST have been recieved by a DHCP Server and could potentially be an indication of a DHCP Starvation Attack."
+                  "text": "This creates an incident in the event that an excessive amount of DHCPREQUEST have been received by a DHCP Server and could potentially be an indication of a DHCP Starvation Attack."
                 }
               }
             ]

@@ -188,7 +188,7 @@ function Get-O365Data{
                 $data.Count
                 #Loop through each Record in the Content
                 foreach($event in $data){
-                    #Filtering for Recrord types
+                    #Filtering for Record types
                     #Get all Record Types
                     if($env:recordTypes -eq "0"){
                         #We dont need Cloud App Security Alerts due to MCAS connector
@@ -227,7 +227,7 @@ function Get-O365Data{
 # Get the current universal time in the default string format
 $currentUTCtime = (Get-Date).ToUniversalTime()
 
-# The 'IsPastDue' porperty is 'true' when the current function invocation is later than scheduled.
+# The 'IsPastDue' property is 'true' when the current function invocation is later than scheduled.
 if ($Timer.IsPastDue) {
     Write-Host "PowerShell timer is running late!"
 }

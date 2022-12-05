@@ -110,7 +110,7 @@
            "Type": "String"
        },
        {
-           "Name": "SourseSystem",
+           "Name": "SourceSystem",
            "Type": "String"
        }
    ]

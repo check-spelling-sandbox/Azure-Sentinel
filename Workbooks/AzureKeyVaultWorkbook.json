@@ -412,7 +412,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "AzureDiagnostics\r\n| where TimeGenerated > {BaselineTimeRange:start}\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| summarize DailyCount = count() by ResourceId, bin_at(TimeGenerated, 1d, now())\r\n| make-series metric = sum(DailyCount) on TimeGenerated in range({BaselineTimeRange:start}, now()-1d, 1d) by ResourceId\r\n| extend series_decompose_anomalies(metric) // Anomaly detection\r\n| project ResourceId, day = (TimeGenerated), DailyCounts = metric, AnomalyScore = series_decompose_anomalies_metric_ad_score\r\n| extend MaxAnomalyScore = AnomalyScore, MinAnomalyScore = AnomalyScore, AnomlyScoreTrend = AnomalyScore\r\n| mv-apply MaxAnomalyScore to typeof(real) on (top 1 by MaxAnomalyScore desc)\r\n| mv-apply MinAnomalyScore to typeof(real) on (top 1 by MinAnomalyScore asc)\r\n| mv-expand with_itemindex=Index AnomalyScore\r\n| where Index == array_length(DailyCounts)-1\r\n| project-away day, Index\r\n| extend AnomalyScoreAbs = abs(toreal(AnomalyScore))\r\n| extend WasAnomalous = iif(MaxAnomalyScore > 3 or MinAnomalyScore < -3, true, false)\r\n| extend Anomalous = iif(AnomalyScoreAbs > 3, true, false)\r\n| order by AnomalyScoreAbs desc\r\n\r\n",
+              "query": "AzureDiagnostics\r\n| where TimeGenerated > {BaselineTimeRange:start}\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| summarize DailyCount = count() by ResourceId, bin_at(TimeGenerated, 1d, now())\r\n| make-series metric = sum(DailyCount) on TimeGenerated in range({BaselineTimeRange:start}, now()-1d, 1d) by ResourceId\r\n| extend series_decompose_anomalies(metric) // Anomaly detection\r\n| project ResourceId, day = (TimeGenerated), DailyCounts = metric, AnomalyScore = series_decompose_anomalies_metric_ad_score\r\n| extend MaxAnomalyScore = AnomalyScore, MinAnomalyScore = AnomalyScore, AnomalyScoreTrend = AnomalyScore\r\n| mv-apply MaxAnomalyScore to typeof(real) on (top 1 by MaxAnomalyScore desc)\r\n| mv-apply MinAnomalyScore to typeof(real) on (top 1 by MinAnomalyScore asc)\r\n| mv-expand with_itemindex=Index AnomalyScore\r\n| where Index == array_length(DailyCounts)-1\r\n| project-away day, Index\r\n| extend AnomalyScoreAbs = abs(toreal(AnomalyScore))\r\n| extend WasAnomalous = iif(MaxAnomalyScore > 3 or MinAnomalyScore < -3, true, false)\r\n| extend Anomalous = iif(AnomalyScoreAbs > 3, true, false)\r\n| order by AnomalyScoreAbs desc\r\n\r\n",
               "size": 0,
               "title": "Daily anomaly scores, by key vault",
               "exportFieldName": "ResourceId",
@@ -474,7 +474,7 @@
                     "formatter": 5
                   },
                   {
-                    "columnMatch": "AnomlyScoreTrend",
+                    "columnMatch": "AnomalyScoreTrend",
                     "formatter": 9,
                     "formatOptions": {
                       "palette": "orange"
@@ -556,7 +556,7 @@
                     "label": "Anomaly Score"
                   },
                   {
-                    "columnId": "AnomlyScoreTrend",
+                    "columnId": "AnomalyScoreTrend",
                     "label": "Anomaly trend"
                   },
                   {
@@ -793,7 +793,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "let data = SecurityAlert\r\n| where \"{AlertSeverity:lable}\" == \"All\" or AlertSeverity in ({AlertSeverity})\r\n| where AlertType startswith \"KV_\"\r\n| where tolower(ResourceId) in ({KeyVault});\r\ndata\r\n| summarize Count = count() by AlertSeverity\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by AlertSeverity)\r\n on AlertSeverity\r\n | project-away TimeGenerated\r\n| extend AlertSeveritys = AlertSeverity\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend AlertSeverity = 'All', AlertSeveritys = '*' \r\n)\r\n| extend Severity = iif(AlertSeverity == \"All\", 0,iif(AlertSeverity == \"High\", 1, iif(AlertSeverity == \"Medium\", 2, iif(AlertSeverity == \"Low\", 3, 4))))\r\n| order by Severity asc\r\n",
+                    "query": "let data = SecurityAlert\r\n| where \"{AlertSeverity:label}\" == \"All\" or AlertSeverity in ({AlertSeverity})\r\n| where AlertType startswith \"KV_\"\r\n| where tolower(ResourceId) in ({KeyVault});\r\ndata\r\n| summarize Count = count() by AlertSeverity\r\n| join kind = inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by AlertSeverity)\r\n on AlertSeverity\r\n | project-away TimeGenerated\r\n| extend AlertSeverities = AlertSeverity\r\n| union (\r\n data \r\n | summarize Count = count() \r\n | extend jkey = 1\r\n | join kind=inner (data\r\n | make-series Trend = count() default = 0 on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain}\r\n | extend jkey = 1) on jkey\r\n | extend AlertSeverity = 'All', AlertSeverities = '*' \r\n)\r\n| extend Severity = iif(AlertSeverity == \"All\", 0,iif(AlertSeverity == \"High\", 1, iif(AlertSeverity == \"Medium\", 2, iif(AlertSeverity == \"Low\", 3, 4))))\r\n| order by Severity asc\r\n",
                     "size": 3,
                     "timeContext": {
                       "durationMs": 0
@@ -881,7 +881,7 @@
                     "query": "SecurityAlert\r\n| where TimeGenerated {TimeRange}\r\n| where \"{AlertSeverity}\" has AlertSeverity or isempty(\"{AlertSeverity}\")\r\n| where AlertType startswith \"KV_\"\r\n| where ResourceId in ({KeyVault})\r\n| make-series Count=count() on TimeGenerated from {TimeRange:start} to {TimeRange:end} step {TimeRange:grain} by ResourceId\r\n//| summarize Count=count() by ResourceId, bin(TimeGenerated,{TimeRange:grain})\r\n",
                     "size": 0,
                     "title": "Key vault alerts",
-                    "noDataMessage": "No alrets from Azure Defender for Key Vaults",
+                    "noDataMessage": "No alerts from Azure Defender for Key Vaults",
                     "timeContext": {
                       "durationMs": 7776000000
                     },
@@ -1449,7 +1449,7 @@
                               "type": 3,
                               "content": {
                                 "version": "KqlItem/1.0",
-                                "query": "AzureDiagnostics\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| extend User = identity_claim_http_schemas_xmlsoap_org_ws_2005_05_identity_claims_upn_s\r\n| extend ObjectId = identity_claim_http_schemas_microsoft_com_identity_claims_objectidentifier_g\r\n| extend ApplicationId = identity_claim_appid_g\r\n| summarize EventCount=count() by Identiy = iif(isempty(User), ObjectId, User)",
+                                "query": "AzureDiagnostics\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| extend User = identity_claim_http_schemas_xmlsoap_org_ws_2005_05_identity_claims_upn_s\r\n| extend ObjectId = identity_claim_http_schemas_microsoft_com_identity_claims_objectidentifier_g\r\n| extend ApplicationId = identity_claim_appid_g\r\n| summarize EventCount=count() by Identity = iif(isempty(User), ObjectId, User)",
                                 "size": 0,
                                 "title": "Events, by Identity distribution",
                                 "timeContext": {
@@ -1932,7 +1932,7 @@
                               "type": 3,
                               "content": {
                                 "version": "KqlItem/1.0",
-                                "query": "AzureDiagnostics\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| where HttpStatusCode = tostring(httpStatusCode_d) !startswith \"20\"\r\n| extend User = identity_claim_http_schemas_xmlsoap_org_ws_2005_05_identity_claims_upn_s\r\n| extend ObjectId = identity_claim_http_schemas_microsoft_com_identity_claims_objectidentifier_g\r\n| extend ApplicationId = identity_claim_appid_g\r\n| summarize EventCount=count() by Identiy = iif(isempty(User), ObjectId, User)",
+                                "query": "AzureDiagnostics\r\n| where ResourceType == \"VAULTS\"\r\n| where Category == \"AuditEvent\"\r\n| where tolower(ResourceId) in ({KeyVault})\r\n| where HttpStatusCode = tostring(httpStatusCode_d) !startswith \"20\"\r\n| extend User = identity_claim_http_schemas_xmlsoap_org_ws_2005_05_identity_claims_upn_s\r\n| extend ObjectId = identity_claim_http_schemas_microsoft_com_identity_claims_objectidentifier_g\r\n| extend ApplicationId = identity_claim_appid_g\r\n| summarize EventCount=count() by Identity = iif(isempty(User), ObjectId, User)",
                                 "size": 0,
                                 "title": "Events, by Identity distribution",
                                 "timeContext": {
@@ -2379,7 +2379,7 @@
                         "typeSettings": {
                           "additionalResourceOptions": []
                         },
-                        "jsonData": "[\r\n    { \"value\":\"all\", \"label\":\"All\" },\r\n    { \"value\":\"users\", \"label\":\"Users\" },\r\n    { \"value\":\"servicesr\", \"label\":\"Services\" }\r\n]",
+                        "jsonData": "[\r\n    { \"value\":\"all\", \"label\":\"All\" },\r\n    { \"value\":\"users\", \"label\":\"Users\" },\r\n    { \"value\":\"services\", \"label\":\"Services\" }\r\n]",
                         "timeContext": {
                           "durationMs": 86400000
                         }

@@ -8,7 +8,7 @@ Master playbook is integrated with multiple firewall Endpoint protection product
 
 Endpoint protection products are deployed as child/nested playbooks.
 
-If a malicious host is detected from the Azure sentinel, master playbook calls all the child/nested playbooks and each firewall product will take remidiation steps needed on that host and comments will be passed to the master playbook from the child/nested playbooks involving multiple products. 
+If a malicious host is detected from the Azure sentinel, master playbook calls all the child/nested playbooks and each firewall product will take remediation steps needed on that host and comments will be passed to the master playbook from the child/nested playbooks involving multiple products. 
 
 ## Summary
  When a new Azure Sentinel incident is created, this playbook gets triggered and performs the below actions:
@@ -22,10 +22,10 @@ If a malicious host is detected from the Azure sentinel, master playbook calls a
  ## Pre-requisites for deployment
 At least one of the below-mentioned nested playbooks must be deployed prior to deployment of this playbook under same subscription and same resource group and the same location/region. Capture the name of all the deployed playbooks during deployment.
 
-- [CarbonBlack-Remediation-Host](/MasterPlaybook-Host-Remediation/CarbonBlack-Remediation-Host/azuredeploy.json) is a nested playbook that handles remidiation for CarbonBlack.  
-- [Crowdstrike-Remediation-Host](/MasterPlaybook-Host-Remediation/Crowdstrike-Remediation-Host/azuredeploy.json) is a nested playbook that handles remidiation for Crowdstrike.
-- [CiscoMeraki-Remediation-Host](/MasterPlaybook-Host-Remediation/CiscoMeraki-Remediation-Host/azuredeploy.json) is a nested playbook that handles remidiation for CiscoMeraki.
-- [MDEIsolate-Remediation-Host](/MasterPlaybook-Host-Remediation/MDEIsolate-Remediation-Host/azuredeploy.json) is a nested playbook that handles remidiation for MDE.
+- [CarbonBlack-Remediation-Host](/MasterPlaybook-Host-Remediation/CarbonBlack-Remediation-Host/azuredeploy.json) is a nested playbook that handles remediation for CarbonBlack.  
+- [Crowdstrike-Remediation-Host](/MasterPlaybook-Host-Remediation/Crowdstrike-Remediation-Host/azuredeploy.json) is a nested playbook that handles remediation for Crowdstrike.
+- [CiscoMeraki-Remediation-Host](/MasterPlaybook-Host-Remediation/CiscoMeraki-Remediation-Host/azuredeploy.json) is a nested playbook that handles remediation for CiscoMeraki.
+- [MDEIsolate-Remediation-Host](/MasterPlaybook-Host-Remediation/MDEIsolate-Remediation-Host/azuredeploy.json) is a nested playbook that handles remediation for MDE.
 If any one of the above-mentioned playbooks are not deployed then default playbook will deploy in its place.
 
 ## Nested Playbook Structure
@@ -34,7 +34,7 @@ If any one of the above-mentioned playbooks are not deployed then default playbo
 
 Each of the nested playbooks of Host Remediation accepts following inputs:
 - Hosts: List of Hosts as entities from azure sentinel incident.
-- Workflow: Worklfow is identifier for the nested playbook which points to which subscription and which resource group the nested playbook belongs to.
+- Workflow: Workflow is identifier for the nested playbook which points to which subscription and which resource group the nested playbook belongs to.
 - Trigger: Tells how the playbook is invoked/triggered.
 
 The image below shows example of input schema for Crowdstrike nested playbook.

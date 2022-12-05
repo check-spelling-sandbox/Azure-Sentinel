@@ -6,7 +6,7 @@ This playbook will trigger a Microsoft Sentinel notebook to process newly create
 
 ## Prerequisites
 
-Before deploying the the playbook you will need 
+Before deploying the playbook you will need 
 - set up Sentinel notebook automation system with a Synapse workspace (more info coming), 
 - upload incident related notebooks and create pipelines for the notebooks (more info coming).  
 - gather Synapse workspace name and Synapse pipeline name for template deployment.

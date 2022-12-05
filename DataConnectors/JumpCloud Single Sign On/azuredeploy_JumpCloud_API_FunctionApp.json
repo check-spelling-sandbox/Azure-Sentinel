@@ -23,7 +23,7 @@
               "type": "string",
               "defaultValue": "directory;radius;sso;systems;ldap;mdm",
               "metadata":{
-                  "description": "The default value will provide all the logs and be spawn a seperate trigger for each type. You can replace select just the logs you want by removing the ones you don't want. Alternatively you can replace all the log types with 'all' which will use a single trigger to retrieve all events, in a high volume environment this may timeout the trigger 5 minute execution limit."
+                  "description": "The default value will provide all the logs and be spawn a separate trigger for each type. You can replace select just the logs you want by removing the ones you don't want. Alternatively you can replace all the log types with 'all' which will use a single trigger to retrieve all events, in a high volume environment this may timeout the trigger 5 minute execution limit."
               }
           },
           "JumpCloudUri": {

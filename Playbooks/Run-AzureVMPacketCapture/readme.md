@@ -8,7 +8,7 @@ This playbook will take start a packet capture on a Azure VM Windows or Linux us
 
 **Additional Post Install Notes:**
 
-The Logic App creates and uses a Managed System Identity (MSI) to authenticate and authorize against management.azure.com to searhch the hostname entity in Azure Resource Graph and execute a packet capture on the Azure VM. Your Azure VM must have the Network Watcher extension installed.
+The Logic App creates and uses a Managed System Identity (MSI) to authenticate and authorize against management.azure.com to search the hostname entity in Azure Resource Graph and execute a packet capture on the Azure VM. Your Azure VM must have the Network Watcher extension installed.
 
 Assign RBAC 'Reader' role to the Logic App at the Subscription level.
 Assign RBAC 'Virtual Machine Contributor' role to the Logic App at the Subscription level.

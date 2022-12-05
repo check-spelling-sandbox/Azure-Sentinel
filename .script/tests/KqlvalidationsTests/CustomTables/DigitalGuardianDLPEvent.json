@@ -62,7 +62,7 @@
             "Type": "String"
         },
         {
-            "Name": "DvcAvtion",
+            "Name": "DvcAction",
             "Type": "String"
         },
         {

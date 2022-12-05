@@ -34,14 +34,14 @@ ParserQuery: |
       SecurityIoTRawEvent  | where not(disabled)
       | where RawEventName == "Login"
     // ************************************************************************* 
-    //       <Prefilterring>
+    //       <Prefiltering>
     // *************************************************************************
     | where 
       (isnull(starttime)   or TimeGenerated >= starttime) 
       and (isnull(endtime)     or TimeGenerated <= endtime)
       and (targetusername_has=='*' or EventDetails has targetusername_has)
     // ************************************************************************* 
-    //       </Prefilterring>
+    //       </Prefiltering>
     // ************************************************************************* 
       | extend
         EventDetails = todynamic(EventDetails)

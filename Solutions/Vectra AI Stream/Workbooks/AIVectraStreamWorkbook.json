@@ -5076,7 +5076,7 @@
                           "additionalResourceOptions": [],
                           "showDefault": false
                         },
-                        "jsonData": "[\r\n    {\"lable\": \"1 Hour\", \"value\": \"1h\"},\r\n    {\"lable\": \"6 Hour\", \"value\": \"6h\"},\r\n    {\"lable\": \"12 Hour\", \"value\": \"12h\"},\r\n    {\"lable\": \"1 Day\", \"value\": \"24h\"}\r\n]",
+                        "jsonData": "[\r\n    {\"label\": \"1 Hour\", \"value\": \"1h\"},\r\n    {\"label\": \"6 Hour\", \"value\": \"6h\"},\r\n    {\"label\": \"12 Hour\", \"value\": \"12h\"},\r\n    {\"label\": \"1 Day\", \"value\": \"24h\"}\r\n]",
                         "timeContext": {
                           "durationMs": 86400000
                         },

@@ -168,7 +168,7 @@
                   "version": "KqlParameterItem/1.0",
                   "name": "WorkspaceIDguid",
                   "type": 1,
-                  "query": "resources\r\n| where type =~ 'microsoft.operationalinsights/workspaces'\r\n| extend customerID = trim(' ', tostring(properties.customerId))\r\n| project '{Workspace:name}', name, customerID\r\n| where '{Workspace:name}' has name\r\n//| project customerID, name\r\n// join two columns, seperate with a \":\"; ARG, will comma seperate each row by default\r\n| project strcat(customerID,\":\",name)",
+                  "query": "resources\r\n| where type =~ 'microsoft.operationalinsights/workspaces'\r\n| extend customerID = trim(' ', tostring(properties.customerId))\r\n| project '{Workspace:name}', name, customerID\r\n| where '{Workspace:name}' has name\r\n//| project customerID, name\r\n// join two columns, separate with a \":\"; ARG, will comma separate each row by default\r\n| project strcat(customerID,\":\",name)",
                   "crossComponentResources": [
                     "{Subscription}"
                   ],
@@ -275,7 +275,7 @@
           {
             "type": 1,
             "content": {
-              "json": "## Sentinel Central\r\n### Change Log\r\nUse this report to view Incident and Alert data across many workspaces (works with Azure Lighthouse)\r\n\r\n\r\n|Version|Description|\r\n|---|---|\r\n|v1.2| View Alerts from multiple workspaces (Azure Lighhouse compatiable)|\r\n|v1.3| MSSP release |\r\n|v1.4| Add Workspace info |\r\n|v1.5| Add Workspace info |\r\n|v2.0| Multi workspace hunting. per Region selection from main drop down. |\r\n|v2.1| Addition of Workspace and Table specific retention. |\r\n"
+              "json": "## Sentinel Central\r\n### Change Log\r\nUse this report to view Incident and Alert data across many workspaces (works with Azure Lighthouse)\r\n\r\n\r\n|Version|Description|\r\n|---|---|\r\n|v1.2| View Alerts from multiple workspaces (Azure Lighthouse compatible)|\r\n|v1.3| MSSP release |\r\n|v1.4| Add Workspace info |\r\n|v1.5| Add Workspace info |\r\n|v2.0| Multi workspace hunting. per Region selection from main drop down. |\r\n|v2.1| Addition of Workspace and Table specific retention. |\r\n"
             },
             "customWidth": "50",
             "conditionalVisibility": {
@@ -542,7 +542,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "resources\r\n | where type == \"microsoft.insights/workbooks\"\r\n | where properties.displayName has \"Security operations efficiency\" \r\n //| where properties.displayName has '{exportworkSpacename}'\r\n //| project properties.displayName, id\r\n | project id, note='Please select the Subscription and Workpsace names again in the new blade'\r\n | limit 1\r\n\r\n",
+              "query": "resources\r\n | where type == \"microsoft.insights/workbooks\"\r\n | where properties.displayName has \"Security operations efficiency\" \r\n //| where properties.displayName has '{exportworkSpacename}'\r\n //| project properties.displayName, id\r\n | project id, note='Please select the Subscription and Workspace names again in the new blade'\r\n | limit 1\r\n\r\n",
               "size": 4,
               "title": "Open [Security Operations Efficiency] Workbook - if the Workbook exists locally?",
               "queryType": 1,
@@ -1487,7 +1487,7 @@
           {
             "type": 1,
             "content": {
-              "json": "For further analysis I suggest you open the Azure Sentinel Incident Blade and _Investigate_ (use the hyper link provided in the table, if you have the correct RBAC).\r\n\r\nAlternatively open the [_Investigation Insights_] or [_Incident Overview_] Workbooks for guided and deeper investigation.  Open Incident Overview from the Portal, _Investigation Insights_ can be opened to the right --->.\r\n\r\n- You must have previoulsy SAVED these Workbooks in your workspace(s).  \r\n- Investigation Insights requires release v1.2 or above (you may have to manually select the Workspace), for prior versions you will have to select the matching Incident Number as well. \r\n- For the Workbooks to be listed, they need \"Investigation\" in the name when you save them."
+              "json": "For further analysis I suggest you open the Azure Sentinel Incident Blade and _Investigate_ (use the hyper link provided in the table, if you have the correct RBAC).\r\n\r\nAlternatively open the [_Investigation Insights_] or [_Incident Overview_] Workbooks for guided and deeper investigation.  Open Incident Overview from the Portal, _Investigation Insights_ can be opened to the right --->.\r\n\r\n- You must have previously SAVED these Workbooks in your workspace(s).  \r\n- Investigation Insights requires release v1.2 or above (you may have to manually select the Workspace), for prior versions you will have to select the matching Incident Number as well. \r\n- For the Workbooks to be listed, they need \"Investigation\" in the name when you save them."
             },
             "customWidth": "50",
             "name": "text - 7"

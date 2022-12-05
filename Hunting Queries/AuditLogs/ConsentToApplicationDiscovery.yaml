@@ -3,9 +3,9 @@ name: Consent to Application discovery
 description: |
   'This query looks at the last 14 days for any "Consent to application" operation
   occurs by a user or app. This could indicate that permissions to access the listed AzureApp
-  was provided to a malicious actor. Consent to appliction, Add service principal and
+  was provided to a malicious actor. Consent to application, Add service principal and
   Add OAuth2PermissionGrant events should be rare. If available, additional context is added
-  from the AuditLogs based on CorrleationId from the same account that performed "Consent to
+  from the AuditLogs based on CorrelationId from the same account that performed "Consent to
   application".
   For further information on AuditLogs please see
   https://docs.microsoft.com/azure/active-directory/reports-monitoring/reference-audit-activities
@@ -38,7 +38,7 @@ query: |
       | mvexpand ModProps
       | extend PropertyName = tostring(ModProps.displayName), newValue = replace('\"',"",tostring(ModProps.newValue));
   };
-  // Get just the InitiatedBy and CorrleationId so we can look at associated audit activity
+  // Get just the InitiatedBy and CorrelationId so we can look at associated audit activity
   // 2 other operations that can be part of malicious activity in this situation are
   // "Add OAuth2PermissionGrant" and "Add service principal", replace the below if you are interested in those as starting points for OperationName
   let HistoricalConsent = auditLogEvents(auditLookback)
@@ -54,7 +54,7 @@ query: |
   // "Add OAuth2PermissionGrant" and "Add service principal", replace the below if you changed the starting OperationName above
   let allOtherEvents = auditLogEvents(auditLookback)
   | where OperationName != "Consent to application";
-  // Gather associated activity based on audit activity for "Consent to application" and InitiatedBy and CorrleationId
+  // Gather associated activity based on audit activity for "Consent to application" and InitiatedBy and CorrelationId
   let CorrelatedEvents = Correlate
   | join allOtherEvents on InitiatedBy, CorrelationId
   | summarize StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated)
@@ -75,7 +75,7 @@ query: |
   | summarize StartTime = min(StartTimeUtc), EndTime = max(EndTimeUtc), PropertyUpdateSet = make_bag(PropertyUpdate) , make_set(scope)
     by InitiatedBy, IpAddress, TargetResourceName, OperationName, CorrelationId
   | extend timestamp = StartTime, AccountCustomEntity = InitiatedBy, IPCustomEntity = IpAddress
-  // uncommnet below to summarize by app if many results
+  // uncomment below to summarize by app if many results
   //| summarize make_set(InitiatedBy), make_set(IpAddress), make_set(PropertyUpdateSet) by TargetResourceName, tostring(set_scope)
 
 entityMappings:

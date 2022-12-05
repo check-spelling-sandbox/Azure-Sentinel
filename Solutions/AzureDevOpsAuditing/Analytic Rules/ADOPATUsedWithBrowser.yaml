@@ -16,7 +16,7 @@ tactics:
 query: |
   AzureDevOpsAuditing
   | where AuthenticationMechanism startswith "PAT"
-  // Look for useragents that include a redenring engine
+  // Look for useragents that include a rendering engine
   | where UserAgent has_any ("Gecko", "WebKit", "Presto", "Trident", "EdgeHTML", "Blink")
   | extend timestamp = TimeGenerated, AccountCustomEntity = ActorUPN, IPCustomEntity = IpAddress
 entityMappings:

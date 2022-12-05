@@ -271,7 +271,7 @@
           {
             "type": 1,
             "content": {
-              "json": "Clicking the Update Retenion button will run the API that will update the retention of the table, based on what has been set in the body. Please confirm which table you are about to modify above.",
+              "json": "Clicking the Update Retention button will run the API that will update the retention of the table, based on what has been set in the body. Please confirm which table you are about to modify above.",
               "style": "info"
             },
             "conditionalVisibility": {
@@ -444,7 +444,7 @@
           {
             "type": 1,
             "content": {
-              "json": "Clicking the Update Retenion button will run the API that will update the retention of the table, based on what has been set in the body. Please confirm which table you are about to modify above.",
+              "json": "Clicking the Update Retention button will run the API that will update the retention of the table, based on what has been set in the body. Please confirm which table you are about to modify above.",
               "style": "info"
             },
             "conditionalVisibility": {

@@ -137,7 +137,7 @@
                                     "inputs": {
                                         "body": {
                                             "Body": "<p><strong>In the following is more information about the new Azure Sentinel incident:</strong><br>\n@{variables('varHTMLTable')}<br>\n<br>\n*Note: Please review and let us know whether this incident is false positive.<br>\n<br>\nAzSec Team</p>",
-                                            "Subject": "An Incident trigered on Azure Sentinel",
+                                            "Subject": "An Incident triggered on Azure Sentinel",
                                             "To": "[parameters('MailList')]"
                                         },
                                         "host": {
@@ -181,7 +181,7 @@
                                     "type": "AppendToStringVariable",
                                     "inputs": {
                                         "name": "varHTMLTable",
-                                        "value": "<tr>\n     <td @{variables('varStyle').cellStyle}>@{items('For_each')?['IncidentNumber']}</td>\n     <td @{variables('varStyle').cellStyle}>@{items('For_each')?['CreatedTime']}</td>\n     <td @{variables('varSeverityColour')}>@{items('For_each')?['Severity']}</td>\n     <td @{variables('varStyle').cellStyle}>@{items('For_each')?['Title']}</td>\n     <td @{variables('varStyle').cellStyle}>@{items('For_each')?['Description']}</td>\n     <td @{variables('varStyle').cellStyle}><a href=\"@{items('For_each')?['IncidentUrl']}\">Incident in Azure Sentinal</a></td>\n</tr>"
+                                        "value": "<tr>\n     <td @{variables('varStyle').cellStyle}>@{items('For_each')?['IncidentNumber']}</td>\n     <td @{variables('varStyle').cellStyle}>@{items('For_each')?['CreatedTime']}</td>\n     <td @{variables('varSeverityColour')}>@{items('For_each')?['Severity']}</td>\n     <td @{variables('varStyle').cellStyle}>@{items('For_each')?['Title']}</td>\n     <td @{variables('varStyle').cellStyle}>@{items('For_each')?['Description']}</td>\n     <td @{variables('varStyle').cellStyle}><a href=\"@{items('For_each')?['IncidentUrl']}\">Incident in Azure Sentinel</a></td>\n</tr>"
                                     }
                                 },
                                 "Switch": {

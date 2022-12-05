@@ -1432,13 +1432,13 @@
                   },
                   "foreach": "@variables('repoResponse')",
                   "runAfter": {
-                    "Github_repos_paging": [
+                    "GitHub_repos_paging": [
                       "Succeeded"
                     ]
                   },
                   "type": "Foreach"
                 },
-                "Github_repos_paging": {
+                "GitHub_repos_paging": {
                   "actions": {
                     "Compose": {
                       "inputs": "@union(variables('repoResponse'), body('Parse_JSON'))",
@@ -1542,7 +1542,7 @@
                       "type": "SetVariable"
                     }
                   },
-                  "description": "By default Github api return only 30 repos per page, applying page parameter for the next repos until null",
+                  "description": "By default GitHub api return only 30 repos per page, applying page parameter for the next repos until null",
                   "expression": "@equals(variables('hasMoreRepos'), false)",
                   "limit": {
                     "count": 60,
@@ -2379,13 +2379,13 @@
                   },
                   "foreach": "@variables('reposResponse')",
                   "runAfter": {
-                    "Github_repos_paging": [
+                    "GitHub_repos_paging": [
                       "Succeeded"
                     ]
                   },
                   "type": "Foreach"
                 },
-                "Github_repos_paging": {
+                "GitHub_repos_paging": {
                   "actions": {
                     "Appending_Paging_responses_into_single_response": {
                       "inputs": {
@@ -2489,7 +2489,7 @@
                       "type": "ParseJson"
                     }
                   },
-                  "description": "By default Github api return only 30 repos per page, applying page parameter for the next 30 repos",
+                  "description": "By default GitHub api return only 30 repos per page, applying page parameter for the next 30 repos",
                   "expression": "@equals(variables('hasMoreRepos'), false)",
                   "limit": {
                     "count": 60,

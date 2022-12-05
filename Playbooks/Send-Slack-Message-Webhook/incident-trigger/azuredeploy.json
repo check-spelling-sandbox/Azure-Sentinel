@@ -3,8 +3,8 @@
     "contentVersion": "1.0.0.0",
         "metadata": {
         "title": "Post Message Slack Via Webhook",
-        "description": "This playbook will be sending Slack with basic incidents details (Incident title, severity, tactics, link,…) when incident is created in Microsoft Sentinel. The playbook includes functionality to:<br>Close Incident As False Positive<br>Close Incident As Benign Positve<br>Change Incident Status To Active<br>Add entities to allow list",
-        "prerequisites": ["Slack application with Webhook installed and Interactivity Enbaled"],
+        "description": "This playbook will be sending Slack with basic incidents details (Incident title, severity, tactics, link,…) when incident is created in Microsoft Sentinel. The playbook includes functionality to:<br>Close Incident As False Positive<br>Close Incident As Benign Positive<br>Change Incident Status To Active<br>Add entities to allow list",
+        "prerequisites": ["Slack application with Webhook installed and Interactivity Enabled"],
         "lastUpdateTime": "2022-03-15T00:00:00.000Z",
         "entities": [],
         "tags": [ "Notification" ],
@@ -132,7 +132,7 @@
                                         },
                                         {
                                             "text": {
-                                                "text": "Incident title: @{triggerBody()?['object']?['properties']?['title']}\nIncident Descripition: @{triggerBody()?['object']?['properties']?['description']}\nIncident ID:@{triggerBody()?['object']?['properties']?['incidentNumber']}\nCreation time:@{triggerBody()?['object']?['properties']?['createdTimeUtc']}\nSeverity:@{triggerBody()?['object']?['properties']?['severity']}\nAlert providers:@{join(triggerBody()?['object']?['properties']?['additionalData']?['alertProductNames'], '<br />')}\nTactics: @{join(triggerBody()?['object']?['properties']?['additionalData']?['tactics'], '<br />')}\nDescription: @{triggerBody()?['object']?['properties']?['description']}",
+                                                "text": "Incident title: @{triggerBody()?['object']?['properties']?['title']}\nIncident Description: @{triggerBody()?['object']?['properties']?['description']}\nIncident ID:@{triggerBody()?['object']?['properties']?['incidentNumber']}\nCreation time:@{triggerBody()?['object']?['properties']?['createdTimeUtc']}\nSeverity:@{triggerBody()?['object']?['properties']?['severity']}\nAlert providers:@{join(triggerBody()?['object']?['properties']?['additionalData']?['alertProductNames'], '<br />')}\nTactics: @{join(triggerBody()?['object']?['properties']?['additionalData']?['tactics'], '<br />')}\nDescription: @{triggerBody()?['object']?['properties']?['description']}",
                                                 "type": "mrkdwn"
                                             },
                                             "type": "section"

@@ -1,7 +1,7 @@
 id: 0cd51b2e-d3b2-4001-8e3f-5cbb604f69b2
 name: Attempts to sign in to disabled accounts by IP address
 description: |
-  'Failed attempts to sign in to disabled accounts summarized by the IP address from from the sign-in attempts originate'
+  'Failed attempts to sign in to disabled accounts summarized by the IP address from the sign-in attempts originate'
 requiredDataConnectors:
   - connectorId: AzureActiveDirectory
     dataTypes:

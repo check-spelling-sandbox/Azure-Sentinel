@@ -318,7 +318,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "CommonSecurityLog\r\n| where DeviceEventClassID  contains \"Allow\"\r\n| where DeviceProduct == \"NSSFWlog\" \r\n| where (SourceTranslatedAddress in ({SourceIP}) or '{SourceIP:label}' == \"All\") and (SourcePort in ({SourcePort}) or '{SourcePort:label}' == \"All\") and (DestinationIP in ({DestinationIP}) or '{DestinationIP:label}' == \"All\") and (DestinationPort in ({DestinationPort}) or '{DestinationPort:label}' == \"All\")\r\n| summarize ['Recived MB'] = sum(ReceivedBytes/1024.0/1024.0), ['Sent MB'] = sum(SentBytes/1024.0/1024.0) by bin(TimeGenerated, {TimeRange:grain}), SourceUserPrivileges\r\n| project-rename Location = SourceUserPrivileges \r\n| order by ['Recived MB'] desc, ['Sent MB'] desc",
+        "query": "CommonSecurityLog\r\n| where DeviceEventClassID  contains \"Allow\"\r\n| where DeviceProduct == \"NSSFWlog\" \r\n| where (SourceTranslatedAddress in ({SourceIP}) or '{SourceIP:label}' == \"All\") and (SourcePort in ({SourcePort}) or '{SourcePort:label}' == \"All\") and (DestinationIP in ({DestinationIP}) or '{DestinationIP:label}' == \"All\") and (DestinationPort in ({DestinationPort}) or '{DestinationPort:label}' == \"All\")\r\n| summarize ['Received MB'] = sum(ReceivedBytes/1024.0/1024.0), ['Sent MB'] = sum(SentBytes/1024.0/1024.0) by bin(TimeGenerated, {TimeRange:grain}), SourceUserPrivileges\r\n| project-rename Location = SourceUserPrivileges \r\n| order by ['Received MB'] desc, ['Sent MB'] desc",
         "size": 0,
         "exportFieldName": "",
         "exportParameterName": "LocationFilter",
@@ -350,7 +350,7 @@
               }
             },
             {
-              "columnMatch": "Recived MB",
+              "columnMatch": "Received MB",
               "formatter": 3,
               "formatOptions": {
                 "min": 0,
@@ -395,7 +395,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "CommonSecurityLog\r\n| where DeviceEventClassID  contains \"Allow\"\r\n| where DeviceProduct == \"NSSFWlog\" \r\n| where (SourceTranslatedAddress in ({SourceIP}) or '{SourceIP:label}' == \"All\") and (SourcePort in ({SourcePort}) or '{SourcePort:label}' == \"All\") and (DestinationIP in ({DestinationIP}) or '{DestinationIP:label}' == \"All\") and (DestinationPort in ({DestinationPort}) or '{DestinationPort:label}' == \"All\")\r\n| summarize ['Recived MB'] = sum(ReceivedBytes/1024.0/1024.0), ['Sent MB'] = sum(SentBytes/1024.0/1024.0) by bin(TimeGenerated, {TimeRange:grain}), SourceUserPrivileges\r\n| project-rename Location = SourceUserPrivileges \r\n| where Location == dynamic({LocationFilter}).childRows[0].Location or dynamic({LocationFilter}).Location == Location or dynamic({LocationFilter}).Location == \"*\"",
+        "query": "CommonSecurityLog\r\n| where DeviceEventClassID  contains \"Allow\"\r\n| where DeviceProduct == \"NSSFWlog\" \r\n| where (SourceTranslatedAddress in ({SourceIP}) or '{SourceIP:label}' == \"All\") and (SourcePort in ({SourcePort}) or '{SourcePort:label}' == \"All\") and (DestinationIP in ({DestinationIP}) or '{DestinationIP:label}' == \"All\") and (DestinationPort in ({DestinationPort}) or '{DestinationPort:label}' == \"All\")\r\n| summarize ['Received MB'] = sum(ReceivedBytes/1024.0/1024.0), ['Sent MB'] = sum(SentBytes/1024.0/1024.0) by bin(TimeGenerated, {TimeRange:grain}), SourceUserPrivileges\r\n| project-rename Location = SourceUserPrivileges \r\n| where Location == dynamic({LocationFilter}).childRows[0].Location or dynamic({LocationFilter}).Location == Location or dynamic({LocationFilter}).Location == \"*\"",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Non-http downloads and uploads in MB",

@@ -39,7 +39,7 @@ query: |
   | where Result =~ "success"
   | extend Target = tostring(TargetResources[0].["displayName"]) | extend Target = tostring(extract(@"UPN\:\s(.+)\,\sEmail",1,Target))
   | where isnotempty(Target);
-  // Union the inivtation and redeem data then run the sequence_detect kusto plugin
+  // Union the invitation and redeem data then run the sequence_detect kusto plugin
   invite
   | union redeem
   | order by TimeGenerated

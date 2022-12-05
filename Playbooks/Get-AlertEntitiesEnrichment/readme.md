@@ -23,7 +23,7 @@ This playbook allows you to enrich your alerts entities using solutions like:
 
 The main playbook (_Get-AlertEntitiesEnrichment_) calls other playbooks, acting as functions, which return details per entity type:
 
-- **UserEnrichment**: returns a JSON per user entiy containing the properties below:
+- **UserEnrichment**: returns a JSON per user entity containing the properties below:
 
 ```
 {

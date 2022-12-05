@@ -35,7 +35,7 @@ This package includes:
 *The Azure Function handles the Get calls on FortiOS API in the playbook templates. These calls are not part of the custom connector due to platform limitations.*
 
 
-You can choose to deploy the whole package: connector + Function App + all three playbook templates, or each one seperately from it's specific folder.
+You can choose to deploy the whole package: connector + Function App + all three playbook templates, or each one separately from it's specific folder.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FFortinet-FortiGate%2Fazuredeploy.json) [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FFortinet-FortiGate%2Fazuredeploy.json)
 
@@ -50,7 +50,7 @@ Authentication methods this connector supports- [API Key authentication](https:/
 
 ### Prerequisites for using and deploying Custom Connector
 
-- Function app must deploy before deploying consloidated template 
+- Function app must deploy before deploying consolidated template 
 - Fortinet end point should be known. [Fortinet Console](https://{https://fndn.fortinet.net/index.php?/category/1-fortianswers/})
 - Generate an API key ([learn how](https://www.insoftservices.uk/fortigate-rest-api-token-authentication)).
 - Create the key vaults and capture secret identifier
@@ -65,7 +65,7 @@ Authentication methods this connector supports- [API Key authentication](https:/
 
 | Parameter  | Description |
 | ------------- | ------------- |
-| **Endpoint URL**  | Enter the Fortinet end point (e.g. https://{FortnetTrafficManager})  |
+| **Endpoint URL**  | Enter the Fortinet end point (e.g. https://{FortinetTrafficManager})  |
 | **Secret identifier** | Enter the Secret identifier which is captured in key vaults secret |
 | **Fortinet-ResponseOnIP Playbook Name** | Enter the playbook name here for ResponseOnIP playbook (e.g. Fortinet-ResponseOnIP) |
 | **Fortinet-ResponseOnUrl Playbook Name** | Enter the playbook name here for ResponseOnURL (e.g. Fortinet-ResponseOnUrl) |

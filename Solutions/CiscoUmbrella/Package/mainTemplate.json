@@ -417,7 +417,7 @@
                       ]
                     },
                     {
-                      "description": "Use this method for automated deployment of the Cisco Umbrella data connector using an ARM Tempate.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinelciscoumbrellaazuredeploy)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n3. Enter the **Workspace ID**, **Workspace Key**, **S3Bucket**, **AWSAccessKeyId**, **AWSSecretAccessKey**\n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**.\n5. Click **Purchase** to deploy.",
+                      "description": "Use this method for automated deployment of the Cisco Umbrella data connector using an ARM Template.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinelciscoumbrellaazuredeploy)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n3. Enter the **Workspace ID**, **Workspace Key**, **S3Bucket**, **AWSAccessKeyId**, **AWSSecretAccessKey**\n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**.\n5. Click **Purchase** to deploy.",
                       "title": "Option 1 - Azure Resource Manager (ARM) Template"
                     },
                     {
@@ -656,7 +656,7 @@
               ]
             },
             {
-              "description": "Use this method for automated deployment of the Cisco Umbrella data connector using an ARM Tempate.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinelciscoumbrellaazuredeploy)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n3. Enter the **Workspace ID**, **Workspace Key**, **S3Bucket**, **AWSAccessKeyId**, **AWSSecretAccessKey**\n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**.\n5. Click **Purchase** to deploy.",
+              "description": "Use this method for automated deployment of the Cisco Umbrella data connector using an ARM Template.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinelciscoumbrellaazuredeploy)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n3. Enter the **Workspace ID**, **Workspace Key**, **S3Bucket**, **AWSAccessKeyId**, **AWSSecretAccessKey**\n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**.\n5. Click **Purchase** to deploy.",
               "title": "Option 1 - Azure Resource Manager (ARM) Template"
             },
             {
@@ -2233,7 +2233,7 @@
         "[resourceId('Microsoft.Resources/templateSpecs', variables('huntingQueryTemplateSpecName4'))]"
       ],
       "properties": {
-        "description": "CiscoUmbrellaDNSRequestsUunreliableCategory_HuntingQueries Hunting Query with template version 2.0.1",
+        "description": "CiscoUmbrellaDNSRequestsUnreliableCategory_HuntingQueries Hunting Query with template version 2.0.1",
         "mainTemplate": {
           "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
           "contentVersion": "[variables('huntingQueryVersion4')]",

@@ -26,7 +26,7 @@ relevantTechniques:
   - T1069
   - T1074
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
   let lookupwindow = 2m;

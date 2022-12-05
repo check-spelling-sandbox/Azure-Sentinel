@@ -1,7 +1,7 @@
 // GitLab Enterprise Edition Audit Logs Data Parser
 // Last Updated Date: Nov 30, 2021
 //
-// This parser parses GitLab standalone Enterprise Edition audit logs extract the infromation required for all audit queries on GitLab. 
+// This parser parses GitLab standalone Enterprise Edition audit logs extract the information required for all audit queries on GitLab. 
 // It is assumed that the syslog data connector to ingest GitLab audit entry data into Sentinel is enabled
 //
 // Parser Notes:

@@ -642,7 +642,7 @@
                 ],
                 "alertDetailsOverride": {
                   "alertDescriptionFormat": "The account {{saccount}} is in the {{level}} quadrant. Pivot to Detect UI with {{vectra_URL}}",
-                  "alertDisplayNameFormat": "Vectra AI Detect - Account {{sacccount}} reaches {{level}} severity",
+                  "alertDisplayNameFormat": "Vectra AI Detect - Account {{saccount}} reaches {{level}} severity",
                   "alertSeverityColumnName": "Severity"
                 }
               }

@@ -311,7 +311,7 @@ class DCRConfigurationVerifications:
     DCR_doc = "https://docs.microsoft.com/azure/azure-monitor/agents/data-collection-rule-overview"
     DCRA_doc = "https://docs.microsoft.com/rest/api/monitor/data-collection-rule-associations"
     CEF_stream_name = "SECURITY_CEF_BLOB"
-    DCR_missing_error_messgae = "Could not detect any data collection rule on the machine. The data reaching this server will not be forwarded to any workspace." \
+    DCR_missing_error_message = "Could not detect any data collection rule on the machine. The data reaching this server will not be forwarded to any workspace." \
                                 " For explanation on how to install a Data collection rule please browse- {} \n " \
                                 "In order to read about how to associate a DCR to a machine please review- {}".format(
         DCR_doc, DCRA_doc)
@@ -330,7 +330,7 @@ class DCRConfigurationVerifications:
         command_object = BasicCommand(command_name, command_to_run, result_keywords_array)
         command_object.run_full_test()
         if not command_object.is_successful:
-            command_object.print_error(self.DCR_missing_error_messgae)
+            command_object.print_error(self.DCR_missing_error_message)
             return False
         return True
 
@@ -501,7 +501,7 @@ class OperatingSystemVerifications:
     SELinux_documentation = "https://access.redhat.com/documentation/red_hat_enterprise_linux/8/html/using_selinux/changing-selinux-states-and-modes_using-selinux#changing-selinux-modes_changing-selinux-states-and-modes"
     SELinux_running_error_message = "Detected SELinux running on the machine. The CEF connector does not support any form of hardening at the moment," \
                                     "and having SELinux in Enforcing mode can harm the forwarding of data. Please disable SELinux by running the command \'setenforce 0\'." \
-                                    "This will disable SELinux temporarily. In order to disable permemently please follow this documentation- {}".format(
+                                    "This will disable SELinux temporarily. In order to disable permanently please follow this documentation- {}".format(
         SELinux_documentation)
     iptables_blocking_traffic_error_message = "Iptables might be blocking incoming traffic to the agent." \
                                               " Please verify there are no firewall rules blocking incoming traffic to port 514 and run again."

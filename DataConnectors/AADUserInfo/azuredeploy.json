@@ -18,7 +18,7 @@
         }
     },
     "variables": {
-            "LogAnaltyicsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
+            "LogAnalyticsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
     },
     "resources": [
         {
@@ -196,7 +196,7 @@
                         "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(parameters('FunctionName')),';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(parameters('FunctionName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                         "WEBSITE_CONTENTSHARE": "[toLower(parameters('FunctionName'))]",
                         "workspaceID": "[parameters('workspaceID')]",
-                        "logAnalyticsUri": "[variables('LogAnaltyicsUri')]",
+                        "logAnalyticsUri": "[variables('LogAnalyticsUri')]",
                         "workspaceKey": "[concat('@Microsoft.KeyVault(SecretUri=', reference(resourceId('Microsoft.KeyVault/vaults/secrets', parameters('FunctionName'), 'workspaceKey')).SecretUriWithVersion, ')')]",
                         "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinel-aaduserinfo-functionapp"
                     }

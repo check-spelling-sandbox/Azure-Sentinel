@@ -97,7 +97,7 @@ query: |
   | project DeviceVendor, TimeGeneratedHour, TimeGeneratedMax, SourceIP, DestinationIPList, DestinationPortList, TotalSentBytesinMB, TotalReceivedBytesinMB, Rank
   )
   );
-  // Join against base logs to retrive records associated with the hour of anomoly
+  // Join against base logs to retrieve records associated with the hour of anomaly
   TimeSeriesAlerts
   | where TimeGenerated > ago(2d)
   | join (

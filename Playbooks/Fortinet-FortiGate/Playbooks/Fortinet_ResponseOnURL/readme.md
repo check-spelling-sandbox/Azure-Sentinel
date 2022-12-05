@@ -5,7 +5,7 @@
 This playbook allows the SOC users to automatically response to Azure Sentinel incidents which includes URL's, by adding the URLs to the Sentinel URL blocked group.
  [Learn more about Threat Intelligence in Fortinet policy](https://www.fortinet.com/fortiguard/threat-intelligence/threat-research)
 
-![Fortinet](./DesginerResposeOnURL.png)<br>
+![Fortinet](./DesignerResponseOnURL.png)<br>
 
 
 **This is the adaptive card SOC will receive when playbook is triggered for each risky IP for taking actions like block/unblock/ignore ::**<br><br>
@@ -28,7 +28,7 @@ This playbook allows the SOC users to automatically response to Azure Sentinel i
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FFortinet-FortiGate%2FPlaybooks%2FFortinet_ResponseOnURL%2Fazuredeploy.json) [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FFortinet-FortiGate%2FPlaybooks%2FFortinet_ResponseOnURL%2Fazuredeploy.json)
 
 
-2. Fill the required parameteres:
+2. Fill the required parameters:
     * Playbook Name: Enter the playbook name here (ex:Fortinet_ResponseOnURL)
     * Team Channel ID: Enter the teams channel id
     * Teams group ID: Enter the teams channel id

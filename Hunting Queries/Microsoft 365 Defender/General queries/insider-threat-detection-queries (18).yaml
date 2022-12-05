@@ -45,7 +45,7 @@ query: |
           FileName endswith ".cc" or
           FileName endswith ".cxx" or
           FileName endswith ".py";
-  // get the emails associated with attachements
+  // get the emails associated with attachments
   eattach
   | join EmailEvents on NetworkMessageId
   // Remove (or change) this line for email direction

@@ -50,8 +50,8 @@ rsyslog_module_udp_content = "# provides UDP syslog reception\nmodule(load=\"imu
 rsyslog_module_tcp_content = "# provides TCP syslog reception\nmodule(load=\"imtcp\")\ninput(type=\"imtcp\" port=\"" + daemon_default_incoming_port + "\")\n"
 rsyslog_old_config_udp_content = "# provides UDP syslog reception\n$ModLoad imudp\n$UDPServerRun " + daemon_default_incoming_port + "\n"
 rsyslog_old_config_tcp_content = "# provides TCP syslog reception\n$ModLoad imtcp\n$InputTCPServerRun " + daemon_default_incoming_port + "\n"
-syslog_ng_documantation_path = "https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.26/administration-guide/34#TOPIC-1431029"
-rsyslog_documantation_path = "https://www.rsyslog.com/doc/master/configuration/actions.html"
+syslog_ng_documentation_path = "https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.26/administration-guide/34#TOPIC-1431029"
+rsyslog_documentation_path = "https://www.rsyslog.com/doc/master/configuration/actions.html"
 oms_agent_documentation = "https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent"
 log_forwarder_deployment_documentation = "https://docs.microsoft.com/azure/sentinel/connect-cef-agent?tabs=rsyslog"
 oms_agent_configuration_url = "https://raw.githubusercontent.com/microsoft/OMS-Agent-for-Linux/master/installer/conf/omsagent.d/security_events.conf"
@@ -125,7 +125,7 @@ def handle_error(e, error_response_str):
 
 def check_multi_homing(workspace_id):
     """
-    Check if there is already an agent install and connected to a different worksapce
+    Check if there is already an agent install and connected to a different workspace
     """
 
     grep1 = subprocess.Popen(["grep", "-ri", "WORKSPACE_ID=", oms_agent_extract_ws_id_url], stdout=subprocess.PIPE)
@@ -139,7 +139,7 @@ def check_multi_homing(workspace_id):
         current_ws_id = re.search("(?<=WORKSPACE_ID=).*", output_decoded).group(0)
         if current_ws_id != workspace_id:
             print_error("This server already has an omsagent installed and connected to a different workspace- {}. \nThe omsagent"
-                        " does not currently support sending data to multiple workspaces (multi-homing).\nIf you wish to overeide this workspace connection"
+                        " does not currently support sending data to multiple workspaces (multi-homing).\nIf you wish to override this workspace connection"
                         " please remove the existing omsagent using the command: \"{}\" \nand rerun this installation script"
                         .format(current_ws_id, oms_agent_purge_command))
             print_error("For more on this issue please visit " + oms_agent_documentation)
@@ -196,7 +196,7 @@ def create_daemon_forwarding_configuration(omsagent_incoming_port, daemon_config
     '''
     Create the daemon configuration to forward messages over TCP to the
     oms agent
-    :param omsagent_incoming_port: port for communication between the omsagent the the daemon
+    :param omsagent_incoming_port: port for communication between the omsagent the daemon
     :param daemon_configuration_path: path of the configuration file
     :param daemon_name: name of the daemon
     :return:
@@ -207,7 +207,7 @@ def create_daemon_forwarding_configuration(omsagent_incoming_port, daemon_config
     print("Path:")
     print_notice(daemon_configuration_path)
     file_content = get_daemon_configuration_content(daemon_name, omsagent_incoming_port)
-    append_content_to_file(file_content, daemon_configuration_path, overide=True)
+    append_content_to_file(file_content, daemon_configuration_path, override=True)
     print_ok("Configuration for " + daemon_name + " daemon was changed successfully.")
     return True
 
@@ -295,8 +295,8 @@ def set_rsyslog_new_configuration():
     return True
 
 
-def append_content_to_file(line, file_path, overide = False):
-    command_tokens = ["sudo", "bash", "-c", "printf '" + "\n" + line + "' >> " + file_path] if not overide else ["sudo", "bash", "-c", "printf '" + "\n" + line + "' > " + file_path]
+def append_content_to_file(line, file_path, override = False):
+    command_tokens = ["sudo", "bash", "-c", "printf '" + "\n" + line + "' >> " + file_path] if not override else ["sudo", "bash", "-c", "printf '" + "\n" + line + "' > " + file_path]
     write_new_content = subprocess.Popen(command_tokens, stdout=subprocess.PIPE)
     time.sleep(3)
     o, e = write_new_content.communicate()
@@ -527,7 +527,7 @@ def get_rsyslog_daemon_configuration_content(omsagent_incoming_port):
 
 
 def get_syslog_ng_damon_configuration_content(omsagent_incoming_port):
-    # we can sepcify the part searched with MESSAGE or MSGHDR (for the header) "filter f_oms_filter {match(\"CEF\" value(\"MESSAGE\"));};\n"
+    # we can specify the part searched with MESSAGE or MSGHDR (for the header) "filter f_oms_filter {match(\"CEF\" value(\"MESSAGE\"));};\n"
     oms_filter = "filter f_oms_filter {match(\"CEF\|ASA\" ) ;};"
     oms_destination = "destination oms_destination {tcp(\"127.0.0.1\" port(" + omsagent_incoming_port + "));};\n"
     log = "log {source(s_src);filter(f_oms_filter);destination(oms_destination);};\n"
@@ -613,11 +613,11 @@ def print_full_disk_warning():
 
     if process_check(rsyslog_daemon_name):
         if process_check(syslog_ng_daemon_name):
-            print_warning(warn_message + '\n' + rsyslog_documantation_path + '\n' + syslog_ng_documantation_path)
+            print_warning(warn_message + '\n' + rsyslog_documentation_path + '\n' + syslog_ng_documentation_path)
         else:
-            print_warning(warn_message + '\n' + rsyslog_documantation_path)
+            print_warning(warn_message + '\n' + rsyslog_documentation_path)
     elif process_check(syslog_ng_daemon_name):
-        print_warning(warn_message + '\n' + syslog_ng_documantation_path)
+        print_warning(warn_message + '\n' + syslog_ng_documentation_path)
     else:
         print_warning("No daemon was found on the machine")
 

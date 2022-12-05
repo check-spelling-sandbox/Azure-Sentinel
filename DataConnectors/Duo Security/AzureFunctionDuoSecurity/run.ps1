@@ -8,7 +8,7 @@
 
     DESCRIPTION
     This Function App calls the Duo Security Admin API (https://duo.com/docs/adminapi#logs) to pull the Duo
-    Authentication, Administrator, Telephony and Offline Enrollment logs. The response from the Duo Security API is recieved in JSON format. This function will build the signature and authorization headers 
+    Authentication, Administrator, Telephony and Offline Enrollment logs. The response from the Duo Security API is received in JSON format. This function will build the signature and authorization headers 
     needed to pull data from the Duo Security API and post the data to the Log Analytics workspace via the HTTP Data Connector API. The Function App will post each log type to their individual tables in Log Analytics, for example,
     DuoSecurityAuthentication_CL, DuoSecurityAdministrator_CL, DuoSecurityTelephony_CL, and DuoSecurityOfflineEnrollment_CL.
 #>
@@ -23,7 +23,7 @@ if ($Timer.IsPastDue) {
     
 }
 
-# Define the different Duo Security Log Types. These values are set by the Duo Security API and required to seperate the log types into the respective Log Analytics tables
+# Define the different Duo Security Log Types. These values are set by the Duo Security API and required to separate the log types into the respective Log Analytics tables
 $DuoSecuritylogTypes = @{
     Authentication    = "/admin/v2/logs/authentication" 
     Administrator     = "/admin/v1/logs/administrator"
@@ -91,8 +91,8 @@ function Convertto-DuoRequest() {
     $ASCII = [System.BitConverter]::ToString($hmacsha1.Hash).Replace("-", "").ToLower()
 
     #Create the new header and combing it with our iKey to use it as Authentication
-    $AuthHeadder = $iKey + ":" + $ASCII
-    [byte[]]$ASCIBytes = [System.Text.Encoding]::ASCII.GetBytes($AuthHeadder)
+    $AuthHeader = $iKey + ":" + $ASCII
+    [byte[]]$ASCIBytes = [System.Text.Encoding]::ASCII.GetBytes($AuthHeader)
 
     #Create our Parameters for the webrequest - Easy @Splatting!
     $DUOWebRequestParams = @{

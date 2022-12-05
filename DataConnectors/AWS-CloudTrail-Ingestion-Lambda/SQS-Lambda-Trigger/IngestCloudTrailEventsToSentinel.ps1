@@ -37,7 +37,7 @@ $IsCoreFieldsAllTable = $env:CoreFieldsAllTable
 $IsSplitAWSResourceTypes = $env:SplitAWSResourceTypeTables
 $ResourceID = ''  
 
-#The $eventobjectlist is the Json Parameter field names that form the core of the Json message that we want in the ALL Table in Log Ananlytics
+#The $eventobjectlist is the Json Parameter field names that form the core of the Json message that we want in the ALL Table in Log Analytics
 $eventobjectlist = @('eventTime', 'eventVersion', 'userIdentity', 'eventSource', 'eventName', 'awsRegion', 'sourceIPAddress', 'userAgent', 'errorCode', 'errorMessage', 'requestID', 'eventID', 'eventType', 'apiVersion', 'managementEvent', 'readOnly', 'resources', 'recipientAccountId', 'serviceEventDetails', 'sharedEventID', 'vpcEndpointId', 'eventCategory', 'additionalEventData')
 
 

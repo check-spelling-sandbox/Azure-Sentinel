@@ -219,7 +219,7 @@ Function Body-SentinelTI($GraphTenantId,$IoC_Type,$IoC,$Product,$expiry){
 if ($sgEnabled){
     # Set a 10 day expiry for the IoC
     $expiry=(Get-Date (get-date).addDays(10) -UFormat "+%Y-%m-%dT%H:00:00.00Z")
-    #Get the token for the Securty Graph API calls
+    #Get the token for the Security Graph API calls
         $uri = "https://login.microsoftonline.com/$GraphTenantId/oauth2/v2.0/token"
         $body = @{
             client_id     = $GraphClientId

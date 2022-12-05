@@ -8,7 +8,7 @@
     
     DESCRIPTION
     This Function App calls the MCAS Activity REST API (https://docs.microsoft.com/cloud-app-security/api-activities) to pull the MCAS
-    Activity logs. The response from the MCAS API is recieved in JSON format. This function will build the signature and authorization header 
+    Activity logs. The response from the MCAS API is received in JSON format. This function will build the signature and authorization header 
     needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. The Function App will post the data to MCASActivity_CL.
 #>
 
@@ -18,7 +18,7 @@ param($Timer)
 # Get the current universal time in the default string format
 $currentUTCtime = (Get-Date).ToUniversalTime()
 
-# The 'IsPastDue' porperty is 'true' when the current function invocation is later than scheduled.
+# The 'IsPastDue' property is 'true' when the current function invocation is later than scheduled.
 if ($Timer.IsPastDue) {
     Write-Host "PowerShell timer is running late!"
 }

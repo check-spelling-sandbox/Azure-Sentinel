@@ -59,7 +59,7 @@
     },
     "variables": {
         "Forcepoint_Connector": "[concat('ForcepointSMCApiConnector-',parameters('PlaybookName'))]",
-        "azureSentinel_Connection": "[concat('azuresentienl-',parameters('PlaybookName'))]"
+        "azureSentinel_Connection": "[concat('azuresentinel-',parameters('PlaybookName'))]"
     },
     "resources": [
         {
@@ -213,7 +213,7 @@
                                                                 "columns": [
                                                                     {
                                                                         "header": "URL",
-                                                                        "value": "@item()?['URLAddres']"
+                                                                        "value": "@item()?['URLAddress']"
                                                                     },
                                                                     {
                                                                         "header": "URL-List-Name",
@@ -275,7 +275,7 @@
                                                                                 "value": {
                                                                                     "Action": "Already blocked",
                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
-                                                                                    "URLAddres": "@{items('Looping_URLs')?['Url']}",
+                                                                                    "URLAddress": "@{items('Looping_URLs')?['Url']}",
                                                                                     "URLStatus": "Blocked"
                                                                                 }
                                                                             }
@@ -318,7 +318,7 @@
                                                                                     "value": {
                                                                                         "Action": "Blocked by playbook",
                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
-                                                                                        "URLAddres": "@{items('Looping_URLs')?['Url']}",
+                                                                                        "URLAddress": "@{items('Looping_URLs')?['Url']}",
                                                                                         "URLStatus": "Blocked"
                                                                                     }
                                                                                 },
@@ -337,7 +337,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on URL. And If result ouput is having some information related to URL then there is a policy with respect to URL"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on URL. And If result output is having some information related to URL then there is a policy with respect to URL"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -463,7 +463,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -696,7 +696,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store URL , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store URL , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {

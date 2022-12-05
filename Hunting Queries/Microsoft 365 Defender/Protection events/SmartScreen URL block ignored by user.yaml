@@ -1,7 +1,7 @@
 id: 172e5bee-9298-4c59-bd2a-e96d87e8e6d8
 name: SmartScreen URL block ignored by user
 description: |
-  Query for SmartScreen URL blocks, where the user has decided to run the malware nontheless.
+  Query for SmartScreen URL blocks, where the user has decided to run the malware nonetheless.
   An additional optional filter is applied to query only for cases where Microsoft Edge has downloaded a file shortly after the ignored block.
   Read more about SmartScreen here: https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview.
   Data availability: These events are available only on Windows 10 version 1703 and onwards.

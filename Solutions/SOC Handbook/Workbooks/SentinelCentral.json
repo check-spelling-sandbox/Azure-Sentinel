@@ -542,7 +542,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "resources\r\n | where type == \"microsoft.insights/workbooks\"\r\n | where properties.displayName has \"Security operations efficiency\" \r\n //| where properties.displayName has '{exportworkSpacename}'\r\n //| project properties.displayName, id\r\n | project id, note='Please select the Subscription and Workpsace names again in the new blade'\r\n | limit 1\r\n\r\n",
+              "query": "resources\r\n | where type == \"microsoft.insights/workbooks\"\r\n | where properties.displayName has \"Security operations efficiency\" \r\n //| where properties.displayName has '{exportworkSpacename}'\r\n //| project properties.displayName, id\r\n | project id, note='Please select the Subscription and Workspace names again in the new blade'\r\n | limit 1\r\n\r\n",
               "size": 4,
               "title": "Open [Security Operations Efficiency] Workbook - if the Workbook exists locally?",
               "queryType": 1,

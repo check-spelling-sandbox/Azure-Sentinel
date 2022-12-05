@@ -22,7 +22,7 @@ Add new yaml file under [.azure-pipelines](https://github.com/Azure/Azure-Sentin
 
 4. Add the new job to [azure-pipelines.yml](https://github.com/Azure/Azure-Sentinel/blob/master/azure-pipelines.yml) file as a new template under jobs property
 
-5. Create script file for the new validation. The job from step #3 has reference to this file. See instructions in [How to add script validation](#how-to-add-scipt-validation) section.  
+5. Create script file for the new validation. The job from step #3 has reference to this file. See instructions in [How to add script validation](#how-to-add-script-validation) section.  
    A step is a failure if it either explicitly reports failure (using a ##vso command) or ends the script with a non-zero exit code
 
 6. Test the new validation. See instruction in [How to test the new validation](#How-to-test-the-new-validation) section
@@ -38,14 +38,14 @@ By default, the logs color is white. In case you want another color you can use 
    - Create an async validation function that gets the file path.  
    In case the validation pass the function returns success, otherwise throws an exception (don't return an error, this will handle by the infrastructure).
    - Create CheckOptions object with 3 properties:  
-     - onCheckFile: the validation validetion function that will run on each file (from step one)  
+     - onCheckFile: the validation function that will run on each file (from step one)  
      - onExecError: error behavior in case that the file validation failed  
      - onFinalFailed:  error behavior at the end of the validation, execute in case one of the validation failed
    - Call runCheckOverChangedFiles with properties:
      - checkOptions:  the object you create in the earlier step 2  
      - fileKinds: file kind filter, there are 3 kinds- "Added", "Modified", "Deleted"
      - fileTypeSuffixes : file type filter, example: ["yaml", "yml"]
-     - filePathFolderPreffixes: folder path filter, example: ["Detections"]
+     - filePathFolderPrefixes: folder path filter, example: ["Detections"]
    - Run prettier command to fix type script files format.  
      - install "npm install -g prettier" if needed
      - Run cmd: prettier --write --print-width 200 ".script/**/*.ts"

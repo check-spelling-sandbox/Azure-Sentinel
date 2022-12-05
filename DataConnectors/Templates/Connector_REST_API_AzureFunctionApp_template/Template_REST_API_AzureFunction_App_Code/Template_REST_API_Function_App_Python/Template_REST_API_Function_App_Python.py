@@ -35,8 +35,8 @@ def main(mytimer: func.TimerRequest) -> None:
 
 # The following variables are required by the Log Analytics Data Collector API functions below. Reference: https://docs.microsoft.com/azure/azure-monitor/platform/data-collector-api
 customer_id = os.environ['workspaceId'] 
-shared_key = os.envviron['workspaceKey']
-log_type = os.envviron['tableName']
+shared_key = os.environ['workspaceKey']
+log_type = os.environ['tableName']
 logAnalyticsUri = os.environ.get('logAnalyticsUri')
 if ((logAnalyticsUri in (None, '') or str(logAnalyticsUri).isspace())):    
     logAnalyticsUri = 'https://' + customerId + '.ods.opinsights.azure.com'
@@ -69,7 +69,7 @@ json_data = response.text.encode('utf8')
 
 */
 
-/* Used this block to transform the data recieved from the <PROVIDER NAME APPLIANCE NAME> API into JSON format, which is acceptable format for the Azure Log Analytics Data Collector API
+/* Used this block to transform the data received from the <PROVIDER NAME APPLIANCE NAME> API into JSON format, which is acceptable format for the Azure Log Analytics Data Collector API
 
 For example:
 body = json.dumps(json_data)

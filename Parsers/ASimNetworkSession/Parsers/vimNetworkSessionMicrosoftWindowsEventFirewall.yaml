@@ -118,7 +118,7 @@ ParserQuery: |
           and  (isnull(endtime) or TimeGenerated<=endtime)
         | where not(disabled)
         | where EventID==5152
-        // ***************  Prefilterring *****************************************************************
+        // ***************  Prefiltering *****************************************************************
         |where  (isnull(dstportnumber) or EventData has tostring(dstportnumber) ) 
           and  (array_length(ip_any)==0 
                 or has_any_ipv4_prefix(EventData ,ip_any)
@@ -126,7 +126,7 @@ ParserQuery: |
           and (array_length(dvcaction)==0 or (dvcaction=='Deny') ) 
           and (array_length(hostname_has_any)==0 )
           and (eventresult=='*' or eventresult=='Failure')
-          // *************** / Prefilterring *****************************************************************
+          // *************** / Prefiltering *****************************************************************
         | extend EventResult =  "Failure"
           | parse EventData with * 
               '<Data Name="ProcessId">'ProcessId:string'</Data>'
@@ -158,7 +158,7 @@ ParserQuery: |
             and  (isnull(endtime) or TimeGenerated<=endtime)
           | where not(disabled)
           | where EventID in (5154, 5155, 5158, 5159)
-          // ***************  Prefilterring *****************************************************************
+          // ***************  Prefiltering *****************************************************************
           |where   (array_length(dstipaddr_has_any_prefix)==0 ) 
             and  (array_length(hostname_has_any)==0 ) 
             and  (isnull(dstportnumber) ) 
@@ -171,7 +171,7 @@ ParserQuery: |
                 ) 
          | extend EventResult = iff(EventID in (5154, 5158), "Success", "Failure")
           | extend (eventresult=='*' or EventResult==eventresult)
-          // *************** / Prefilterring *****************************************************************
+          // *************** / Prefiltering *****************************************************************
           | parse EventData with * '<Data Name="ProcessId">'ProcessId:string'</Data>' 
               '\x0d\x0a  <Data Name="Application">'Application:string'</Data>'
               '\x0d\x0a  <Data Name="SourceAddress">'SourceAddress:string'</Data>'
@@ -200,7 +200,7 @@ ParserQuery: |
           | where not(disabled)
           | where EventID in (5156, 5157)
            | extend EventResult = iff(EventID == 5156, "Success", "Failure")
-          // ***************  Prefilterring *****************************************************************
+          // ***************  Prefiltering *****************************************************************
           | where (isnull(starttime) or TimeGenerated>=starttime)
             and  (isnull(endtime) or TimeGenerated<=endtime)
                         and  (array_length(ip_any)==0 
@@ -213,7 +213,7 @@ ParserQuery: |
                 )
             and (array_length(hostname_has_any)==0 )
             and (eventresult=='*' or EventResult==eventresult) 
-          // *************** / Prefilterring *****************************************************************
+          // *************** / Prefiltering *****************************************************************
           | parse EventData with * '<Data Name="ProcessID">'ProcessID:string'</Data>'
               '\x0d\x0a  <Data Name="Application">'Application:string'</Data>'
               '\x0d\x0a  <Data Name="Direction">'DirectionCode:string'</Data>'
@@ -277,7 +277,7 @@ ParserQuery: |
       |where not(disabled)
       | where EventID between (5150 .. 5159)
       | extend EventResult = iff(EventID in (5154, 5156, 5158), "Success", "Failure")
-      // ***************  Prefilterring *****************************************************************
+      // ***************  Prefiltering *****************************************************************
       | where  (isnull(dstportnumber) or EventData has tostring(dstportnumber)) 
               and (array_length(ip_any)==0 
                       or has_any_ipv4_prefix(EventData,ip_any)
@@ -285,7 +285,7 @@ ParserQuery: |
               and (array_length(hostname_has_any)==0 ) 
               and (array_length(dvcaction)==0  ) 
               and (eventresult=='*' or EventResult==eventresult)
-      // *************** Prefilterring *****************************************************************
+      // *************** Prefiltering *****************************************************************
        | extend SrcIpAddr = tostring(EventData.SourceAddress)
                 , DstIpAddr = tostring(EventData.DestAddress)
        | extend temp_isSrcMatch=has_any_ipv4_prefix(SrcIpAddr,src_or_any)

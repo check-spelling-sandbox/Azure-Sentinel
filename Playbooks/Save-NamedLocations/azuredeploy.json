@@ -245,7 +245,7 @@
                                                 }
                                             }
                                         },
-                                        "Loop_function_reuslts": {
+                                        "Loop_function_results": {
                                             "foreach": "@body('CidrRanges')",
                                             "actions": {
                                                 "Append_to_array_variable_2": {
@@ -254,7 +254,7 @@
                                                     "inputs": {
                                                         "name": "IPList",
                                                         "value": {
-                                                            "ip": "@{items('Loop_function_reuslts')}",
+                                                            "ip": "@{items('Loop_function_results')}",
                                                             "location": "@{items('Loop_named_locations')['DisplayName']}"
                                                         }
                                                     }

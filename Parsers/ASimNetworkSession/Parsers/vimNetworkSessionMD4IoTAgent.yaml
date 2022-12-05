@@ -69,13 +69,13 @@ ParserQuery: |
         and (isnull(endtime) or TimeGenerated<=endtime)
     | where not(disabled)
     | where RawEventName == "NetworkActivity"
-    // ***************  Prefilterring *****************************************************************
+    // ***************  Prefiltering *****************************************************************
     |where  (eventresult=='*' or eventresult=='Success')
         and (array_length(hostname_has_any)==0) 
         and (array_length(dvcaction) ==0  )     /// if filtered by action return nothing
         and EventDetails has tostring(dstportnumber)
         and (array_length (ip_any)==0 or has_any_ipv4_prefix(EventDetails,ip_any))
-        // *************** Prefilterring *****************************************************************
+        // *************** Prefiltering *****************************************************************
     | parse EventDetails with * ',"LocalPort":' LocalPort:int ',"RemotePort":' RemotePort:int ',' *
     | extend outbound = LocalPort > RemotePort
     | where (isnull(dstportnumber) or (not(outbound) and dstportnumber == LocalPort) or (outbound and dstportnumber == RemotePort) ) 

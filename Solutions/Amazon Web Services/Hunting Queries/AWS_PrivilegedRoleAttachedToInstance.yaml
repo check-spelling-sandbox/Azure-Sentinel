@@ -2,7 +2,7 @@ id: 0db42a94-e7c8-4bf1-99a7-1a2fb4158212
 name: Privileged role attached to Instance
 description: |
   'Identity and Access Management (IAM) securely manages access to AWS services and resources. 
-  Identifies when a Privileged role is attached to an existing instance or new instance at deployment. This instance may be used by an adversary to escalate a normal user privileges to an adminsitrative level.
+  Identifies when a Privileged role is attached to an existing instance or new instance at deployment. This instance may be used by an adversary to escalate a normal user privileges to an administrative level.
   and AWS API AddRoleToInstanceProfile at https://docs.aws.amazon.com/IAM/latest/APIReference/API_AddRoleToInstanceProfile.html'
 requiredDataConnectors:
   - connectorId: AWS
@@ -29,7 +29,7 @@ query: |
   | extend PolicyArn = tostring(parse_json(RequestParameters).policyArn), RoleName = tostring(parse_json(RequestParameters).roleName)
   | where PolicyArn in (PolicyArnList)
   | distinct PolicyArn, UserIdentityType, UserIdentityUserName,RoleName;
-  // Joining the list of identities having Privileged roles with the API call AddRoleToInstanceProfile to indentify the instances which may be used by adversaries as pivot point for privilege escalation.
+  // Joining the list of identities having Privileged roles with the API call AddRoleToInstanceProfile to identify the instances which may be used by adversaries as pivot point for privilege escalation.
   PrivilegedRoleorUsers
   | join (
   AWSCloudTrail

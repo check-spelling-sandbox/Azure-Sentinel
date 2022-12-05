@@ -139,7 +139,7 @@ Click on the “Edit” button. This will bring us into the Logic Apps Designer.
 
 ![Edit](Images/logicappedit.png)
 
-Click on the bar labled “Connections”.  
+Click on the bar labeled “Connections”.  
 
 ![Logicapp1](Images/logicapp1.png)
 
@@ -169,7 +169,7 @@ Click the "Run" button.
 
 ![run3](Images/run3.png)
 
-As you can see below - the domain/subdomains were parsed from the URL Entity in the Incident and added to the the Custom URL Category. 
+As you can see below - the domain/subdomains were parsed from the URL Entity in the Incident and added to the Custom URL Category. 
 
 ![](Images/gitinc.png)
 ![](Images/gitinc1.png)

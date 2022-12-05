@@ -406,7 +406,7 @@
         "version": "KqlItem/1.0",
         "query": "securityresources\r\n| where type == \"microsoft.security/assessments\"\r\n| where properties contains '{Computer}'\r\n| project Resource = properties.displayName, Status = trim(@\"[^\\w]+\",tostring(split(properties.status,\":\",1))), Location =  trim(@\"[^\\w]+\",tostring(split(properties.resourceDetails,\":\",1)))\r\n| extend Status  = iif(Status has \",\",trim(@\"[^\\w]+\",tostring(split(Status,\",\",0))),Status)\r\n| extend Location = iif(Location has \"\\\\\",trim(@\"[^\\w]+\",tostring(split(Location,\"\\\\\",0))),Location)\r\n| summarize count() by Status, tostring(Resource), Location",
         "size": 1,
-        "title": "Security Asessment findings for {Computer}",
+        "title": "Security Assessment findings for {Computer}",
         "queryType": 1,
         "resourceType": "microsoft.resourcegraph/resources",
         "crossComponentResources": [
@@ -430,7 +430,7 @@
         "version": "KqlItem/1.0",
         "query": "securityresources\r\n| where type == \"microsoft.security/assessments\"\r\n| where properties contains '{Computer}'\r\n| project Resource = properties.displayName, Status = trim(@\"[^\\w]+\",tostring(split(properties.status,\":\",1))), Location =  trim(@\"[^\\w]+\",tostring(split(properties.resourceDetails,\":\",1)))\r\n| extend Status   = iif(Status has \",\",trim(@\"[^\\w]+\",tostring(split(Status,\",\",0))),Status)\r\n| extend Location = iif(Location has \"\\\\\",trim(@\"[^\\w]+\",tostring(split(Location,\"\\\\\",0))),Location)\r\n| summarize count() by Status, tostring(Resource), Location\r\n| order by count_ desc",
         "size": 0,
-        "title": "Security Asessment findings for {Computer}",
+        "title": "Security Assessment findings for {Computer}",
         "queryType": 1,
         "resourceType": "microsoft.resourcegraph/resources",
         "crossComponentResources": [
@@ -465,7 +465,7 @@
         "version": "KqlItem/1.0",
         "query": "SecurityEvent\r\n| where Computer startswith \"{Computer}\"\r\n| summarize count() by Activity\r\n",
         "size": 1,
-        "title": "Securtity Events for: {Computer} ",
+        "title": "Security Events for: {Computer} ",
         "timeContext": {
           "durationMs": 0
         },

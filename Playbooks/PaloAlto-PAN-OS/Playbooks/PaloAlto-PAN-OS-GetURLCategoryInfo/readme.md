@@ -1,6 +1,6 @@
 # PaloAlto-PAN-OS-GetURLCategoryInfo Playbook
  ## Summary
- When a new sentinal incident is created, this playbook gets triggered and performs below actions:
+ When a new sentinel incident is created, this playbook gets triggered and performs below actions:
  1. Fetches the address group details and URL filtering category information from PAN-OS
  2. Updates all the collected information in incident
 
@@ -59,7 +59,7 @@ Iterates on the URLs found in this incident (probably one) and performs the foll
 
  3. Add a comment to the incident with the information below:
 
-     a. User information collected by "List address obects" action from PAN-OS such as
+     a. User information collected by "List address objects" action from PAN-OS such as
 
     *  name, location, description and URL
     

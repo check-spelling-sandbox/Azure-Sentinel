@@ -8,7 +8,7 @@ tactics:
 relevantTechniques:
   - T1072
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
   imProcessCreate

@@ -5,7 +5,7 @@ description: |
    In order to use this query you need to be collecting Sysmon EventIDs 19, 20, and 21.
    If you do not have Sysmon data in your workspace this query will raise an error stating:
         Failed to resolve scalar expression named "[@Name]"
-   For more on how WMI was used in Solorigate see https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/.
+   For more on how WMI was used in Solarigate see https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/.
    The query contains some features from the following detections to look for potentially malicious ADFS activity. See them for more details.
    - ADFS Key Export (Sysmon): https://github.com/Azure/Azure-Sentinel/blob/master/Detections/SecurityEvent/ADFSKeyExportSysmon.yaml
    - ADFS DKM Master Key Export: https://github.com/Azure/Azure-Sentinel/blob/master/Detections/MultipleDataSources/ADFS-DKM-MasterKey-Export.yaml'
@@ -29,7 +29,7 @@ tactics:
 relevantTechniques:
   - T1210
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
   let timeframe = 1d;

@@ -8,7 +8,7 @@
     "prerequisites": [
       "1. Carbon Black connector needs to be deployed prior to the deployment of this playbook under the same subscription.",
       "2. Generate an API key to connect with carbon black connector. ",
-      "3. Find Organziation key by refering this link [ Find Organization key by refering this link ](https://defense.conferdeploy.net/settings/connectors) "
+      "3. Find Organization key by referring this link [ Find Organization key by referring this link ](https://defense.conferdeploy.net/settings/connectors) "
     ],
     "lastUpdateTime": "2022-08-29T10:43:00Z",
     "entities": [ "Host" ],
@@ -152,14 +152,14 @@
               },
               "else": {
                 "actions": {
-                  "Compose_HTTP_Failed_Resposne": {
+                  "Compose_HTTP_Failed_Response": {
                     "runAfter": {
                       "Create_HTML_table": [
                         "Succeeded"
                       ]
                     },
                     "type": "Compose",
-                    "inputs": "@{outputs('Compose')}  CarbonBlack QuarantineDevice Playbook\n\nException occured while Quarantining the Device. Please find the below exception information:\n\n@{body('Create_HTML_table')}"
+                    "inputs": "@{outputs('Compose')}  CarbonBlack QuarantineDevice Playbook\n\nException occurred while Quarantining the Device. Please find the below exception information:\n\n@{body('Create_HTML_table')}"
                   },
                   "Create_HTML_table": {
                     "runAfter": {
@@ -189,14 +189,14 @@
                   },
                   "Response_if_playbook_get(s)_failed": {
                     "runAfter": {
-                      "Compose_HTTP_Failed_Resposne": [
+                      "Compose_HTTP_Failed_Response": [
                         "Succeeded"
                       ]
                     },
                     "type": "Response",
                     "kind": "Http",
                     "inputs": {
-                      "body": "@outputs('Compose_HTTP_Failed_Resposne')",
+                      "body": "@outputs('Compose_HTTP_Failed_Response')",
                       "statusCode": 500
                     },
                     "operationOptions": "Asynchronous"

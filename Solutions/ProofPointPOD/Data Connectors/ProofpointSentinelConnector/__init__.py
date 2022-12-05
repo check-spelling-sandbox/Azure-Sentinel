@@ -82,8 +82,8 @@ class Proofpoint_api:
                 'Websocket connection established to cluster_id={}, event_type={}'.format(self.cluster_id, event_type))
             return ws
         except Exception as err:
-            logging.error('Error while connectiong to websocket {}'.format(err))
-            print('Error while connectiong to websocket {}'.format(err))
+            logging.error('Error while connecting to websocket {}'.format(err))
+            print('Error while connecting to websocket {}'.format(err))
             return None
 
     def gen_chunks_to_object(self,data,chunksize=100):

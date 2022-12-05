@@ -23,7 +23,7 @@ tactics:
 relevantTechniques:
   - T1005
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
   - SimuLand
 query: |

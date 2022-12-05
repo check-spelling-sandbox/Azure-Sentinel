@@ -8,7 +8,7 @@ This watchlist is meant to be used in tandem with the Deployment and Migration w
 To deploy, users will need:
 1. An Azure Subscription.
 2. An Microsoft Sentinel workspace and instance.
-3. A user that has Microsoft Sentinel Contirbutor permissions on the Resource Group that Microsoft Sentinel is located in and the name of the workspace that this watchlist should be tied to.
+3. A user that has Microsoft Sentinel Contributor permissions on the Resource Group that Microsoft Sentinel is located in and the name of the workspace that this watchlist should be tied to.
 Note: If deploying any Microsoft Defender or Azure Active Directory connector, Global Administrator or Security Administrator will be needed at the tenant level.
 
 ## **Deployment Process**

@@ -15,7 +15,7 @@ namespace Kqlvalidations.Tests.FunctionSchemasLoaders
         }
 
         /// <summary>
-        /// Extracts the fuction's name, parameters and result columns from the yaml file and creates the FunctionSchema.
+        /// Extracts the function's name, parameters and result columns from the yaml file and creates the FunctionSchema.
         /// </summary>
         /// <param name="fileName">The parser's yaml file</param>
         /// <returns>The function schema</returns>
@@ -27,7 +27,7 @@ namespace Kqlvalidations.Tests.FunctionSchemasLoaders
         }
 
         /// <summary>
-        /// Extract fuction parameters from ymal file
+        /// Extract function parameters from yaml file
         /// </summary>
         /// <param name="yaml">The yaml file</param>
         /// <returns>The function parameters</returns>

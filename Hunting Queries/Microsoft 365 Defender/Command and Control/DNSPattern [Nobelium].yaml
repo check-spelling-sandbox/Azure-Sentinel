@@ -3,7 +3,7 @@ name: DNSPattern [Nobelium]
 description: |
   This query looks for the DGA pattern of the domain associated with the Nobelium campaign, in order to find other domains with the same activity pattern.
   This query is inspired by an Azure Sentinel detection.
-  Reference - https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Hunting%20Queries/DnsEvents/Solorigate-DNS-Pattern.yaml
+  Reference - https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Hunting%20Queries/DnsEvents/Solarigate-DNS-Pattern.yaml
 requiredDataConnectors:
 - connectorId: MicrosoftThreatProtection
   dataTypes:

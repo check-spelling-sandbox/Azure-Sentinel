@@ -28,7 +28,7 @@ query: |
   | where OperationName has "Update a partner cross-tenant access setting"
   | where B2BType = TargetResources[0].modifiedProperties[0].displayName has "b2bDirectOutbound"
   | extend InitiatedByActionUserInformation = iff(isnotempty(InitiatedBy.user.userPrincipalName), InitiatedBy.user.userPrincipalName, InitiatedBy.app.displayName)
-  | extend InitiatedByIPAdress = InitiatedBy.user.ipAddress
+  | extend InitiatedByIPAddress = InitiatedBy.user.ipAddress
   | mv-expand PremodifiedInboundSettings = TargetResources[0].modifiedProperties[0].oldValue to typeof(string)
   | mv-expand ModifiedInboundSettings = TargetResources[0].modifiedProperties[0].newValue to typeof(string)
   | where PremodifiedInboundSettings != ModifiedInboundSettings
@@ -40,6 +40,6 @@ entityMappings:
   - entityType: IP
     fieldMappings:
       - identifier: Address
-        columnName: InitiatedByIPAdress
+        columnName: InitiatedByIPAddress
 version: 1.0.0
 kind: Scheduled

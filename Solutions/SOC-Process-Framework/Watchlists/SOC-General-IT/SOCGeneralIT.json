@@ -11,13 +11,13 @@
     },
       "resources": [
           {
-          "name": "[concat(parameters('workspaceName'), '/Microsoft.SecurityInsights/SOCgeneralIT')]",
+          "name": "[concat(parameters('workspaceName'), '/Microsoft.SecurityInsights/SOCGeneralIT')]",
           "type": "Microsoft.OperationalInsights/workspaces/providers/Watchlists",
           "kind": "",
           "properties": {
               "displayName": "SOC General IT",
-              "watchlistAlias": "SOCgeneralIT",
-              "source": "SOCgeneralIT.csv",
+              "watchlistAlias": "SOCGeneralIT",
+              "source": "SOCGeneralIT.csv",
               "description": "SOC General IT within Org.",
               "provider": "Microsoft",
               "isDeleted": false,

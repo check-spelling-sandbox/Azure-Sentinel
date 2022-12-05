@@ -78,7 +78,7 @@ ParserQuery: |
     | where not(disabled)
     | lookup DirectionLookup on ActionType
     | where Outbound == select_outbound
-    // ***************  Prefilterring *****************************************************************
+    // ***************  Prefiltering *****************************************************************
     |where  (array_length(dvcaction)==0 )     /// if filtered by action return nothing
            and (isnull(dstportnumber) or dstportnumber == LocalPort or dstportnumber == RemotePort)
            and (array_length(hostname_has_any)==0 
@@ -105,7 +105,7 @@ ParserQuery: |
     | project-away temp_*
     | extend EventResult = iff(ActionType=='ConnectionFailed','Failure','Success')
     | where (eventresult=='*' or EventResult==eventresult)
-    // *************** / Prefilterring *****************************************************************
+    // *************** / Prefiltering *****************************************************************
     | extend
       // Event
       EventOriginalUid = tostring(ReportId),

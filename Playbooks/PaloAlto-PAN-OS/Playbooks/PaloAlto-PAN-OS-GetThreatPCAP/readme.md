@@ -79,7 +79,7 @@ Sets the PCAP ID, time generated, Session ID and the device name, and queries th
 
 
 ###### Create Blob (V2)
-Creates a blob in aV2 blob storage account, denoted by Storage Account Name, in the folder denoted by the Folder Path with a name of the the type "paloalto1235678920220101102000.pcap" where the name is a concatenation of the  "paloalto"+pcapid+timegenerated+".pcap"
+Creates a blob in aV2 blob storage account, denoted by Storage Account Name, in the folder denoted by the Folder Path with a name of the type "paloalto1235678920220101102000.pcap" where the name is a concatenation of the  "paloalto"+pcapid+timegenerated+".pcap"
 
 ###### Alert - Get Incident
 Creates Incident for the alert

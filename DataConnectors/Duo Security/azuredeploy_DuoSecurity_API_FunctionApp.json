@@ -35,7 +35,7 @@
     },
     "variables": {
         "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",
-        "LogAnaltyicsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
+        "LogAnalyticsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
     },
     "resources": [
         {
@@ -184,7 +184,7 @@
                         "sKey": "[parameters('SecretKey')]",
                         "apiServer": "[parameters('APIServer')]",
                         "timeInterval": "[parameters('TimeInterval')]",
-                        "logAnalyticsUri": "[variables('LogAnaltyicsUri')]",
+                        "logAnalyticsUri": "[variables('LogAnalyticsUri')]",
                         "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinel-duosecurity-functionapp"
                     }
                 }

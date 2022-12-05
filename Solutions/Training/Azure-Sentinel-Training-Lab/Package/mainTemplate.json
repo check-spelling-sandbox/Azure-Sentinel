@@ -54,7 +54,7 @@
         "_sourceId": "[variables('sourceId')]",
         "workbookContentId": "ATLInvestigationInsights",
         "_workbookContentId": "[variables('workbookContentId')]",
-        "alertRuleContentId1": "ATLSolorigateNetworkBeacon",
+        "alertRuleContentId1": "ATLSolarigateNetworkBeacon",
         "_alertRuleContentId1": "[variables('alertRuleContentId1')]",
         "alertRuleContentId2": "ATLSign-insfromIPsthatattemptsign-instodisabledaccounts",
         "_alertRuleContentId2": "[variables('alertRuleContentId2')]",

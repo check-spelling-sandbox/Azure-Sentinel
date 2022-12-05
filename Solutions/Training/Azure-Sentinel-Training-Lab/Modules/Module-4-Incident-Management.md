@@ -116,11 +116,11 @@ We have 2 options to open the workbook:
 M5-close-incident
 
 
-### Exercise 3: Handling **"Solorigate Network Beacon"** incident
+### Exercise 3: Handling **"Solarigate Network Beacon"** incident
 
 1. If not already there, navigate to *Incidents* view in Microsoft Sentinel
 
-2. From the list of active incidents, select "Solorigate Network Beacon" incident. If you can't find it, use the search bar or adjust the time filter at the top. Don't worry if you see more than one.
+2. From the list of active incidents, select "Solarigate Network Beacon" incident. If you can't find it, use the search bar or adjust the time filter at the top. Don't worry if you see more than one.
 
 ![incident1](../Images/incident1.png)
 
@@ -128,7 +128,7 @@ M5-close-incident
 
 ![incident2](../Images/incident2.png)
 
-4. Read the description of the incident. As you can see, one of the domain IOCs related to Solorigate attack has been found. In this case, domain **avsvmcloud.com** is involved. 
+4. Read the description of the incident. As you can see, one of the domain IOCs related to Solarigate attack has been found. In this case, domain **avsvmcloud.com** is involved. 
 
 5. Optionally, you can click on *View full details* to drill down to inspect the raw events that triggered this alert. For that, click on *Link to LA* as shown in the screenshot:
 
@@ -146,7 +146,7 @@ M5-close-incident
 
 ![incident3](../Images/incident3.png)
 
-3. In the search box, type "solorigate". Select *Solorigate Inventory check* query and click on *Run Query*.
+3. In the search box, type "solorigate". Select *Solarigate Inventory check* query and click on *Run Query*.
 
 ![incident4](../Images/incident4.png)
 
@@ -166,7 +166,7 @@ M5-close-incident
 
 ![incident8](../Images/incident8.png)
 
-8. From the list, pick the Solorigate incident that is assigned to you, and click *Add*.
+8. From the list, pick the Solarigate incident that is assigned to you, and click *Add*.
 
 ![incident9](../Images/incident9.png)
 
@@ -177,7 +177,7 @@ Now, we will add the IP address related to the incident to our list of IOCs, so 
 
 1. Go back to *Incidents* view.
 
-2. Select the Solorigate incident and copy the IP address entity involved. Notice that you have now more computer entities available (the ones coming from the bookmarks).
+2. Select the Solarigate incident and copy the IP address entity involved. Notice that you have now more computer entities available (the ones coming from the bookmarks).
 
 ![incident10](../Images/incident10.png)
 
@@ -192,7 +192,7 @@ Now, we will add the IP address related to the incident to our list of IOCs, so 
 ### Exercise 6: Handover incident
 We will now prepare the incident for handover to forensics team.
 
-1. Go to *Incidents* and select the Solorigate incident assigned to you. Click on *View full details*.
+1. Go to *Incidents* and select the Solarigate incident assigned to you. Click on *View full details*.
 
 2. Move to the *Comments* tab.
 

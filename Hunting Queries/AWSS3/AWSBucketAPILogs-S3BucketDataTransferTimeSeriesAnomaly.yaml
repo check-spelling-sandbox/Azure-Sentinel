@@ -27,13 +27,13 @@ query: |
   | where EventTime between (lookback..endtime)
   | where EventName == "GetObject"
   | make-series Total=sum(BytesTransferredOut) on EventTime from startofday(starttime) to startofday(endtime) step timeframe;
-  // Use the time series data prepared in previous step with time series aomaly function to generate baseline pattern and flag the outlier based on scorethreshold value.
+  // Use the time series data prepared in previous step with time series anomaly function to generate baseline pattern and flag the outlier based on scorethreshold value.
   let TimeSeriesAlerts = TimeSeriesData
   | extend (anomalies, score, baseline) = series_decompose_anomalies(Total, scorethreshold, -1, 'linefit')
   | mv-expand Total to typeof(double), EventTime to typeof(datetime), anomalies to typeof(double), score to typeof(double), baseline to typeof(long)
   | where anomalies > 0
   | project EventTime, Total, baseline, anomalies, score;
-  // Joining the flagged outlier from the previous step with the original dataset to present contextual information during the anomalyhour to analysts to conduct investigation or informed decistions.
+  // Joining the flagged outlier from the previous step with the original dataset to present contextual information during the anomalyhour to analysts to conduct investigation or informed decisions.
   TimeSeriesAlerts
   | join
   (

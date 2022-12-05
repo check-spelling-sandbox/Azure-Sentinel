@@ -6,7 +6,7 @@ This playbook allows blocking/unblocking of IPs in Cisco ASA, using **Access Rul
 
 When a new Sentinel incident is created, this playbook gets triggered and performs below actions
 1. For the IPs we check if they are already directly blocked by an access rule on the interface
-2. An adaptive card is sent to a Teams channel with information about the incident and giving the option to ignore an IP, or depdening on it's current status block it by adding an access rule or unblock it by removing an access rule
+2. An adaptive card is sent to a Teams channel with information about the incident and giving the option to ignore an IP, or depending on it's current status block it by adding an access rule or unblock it by removing an access rule
     ![Adaptive card](./images/CreateInboundAccessRuleOnInterface-AdaptiveCard.png)
 3. Comment is added to Azure Sentinel incident.
 ![playbook overview](./images/CreateInboundAccessRuleOnInterface-AzureSentinel-Comments.png)
@@ -25,14 +25,14 @@ When a new Sentinel incident is created, this playbook gets triggered and perfor
 3. Cisco ASA needs to have an interface configured. When enabling the interface you have to give it a name, since that is used by the API calls. To use Cisco ASDM to edit an interface, see [Enable the Physical Interface and Configure Ethernet Parameters](https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/asdm76/general/asdm-76-general-config/interface-basic.html#ariaid-title14)
 
 ### Deployment instructions 
-1. Deploy the playbook by clicking on "Depoly to Azure" button. This will take you to deplyoing an ARM Template wizard.
+1. Deploy the playbook by clicking on "Deploy to Azure" button. This will take you to deploying an ARM Template wizard.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Flaurens1984%2FAzure-Sentinel%2Ffeature%2FCiscoASAConnector%2FPlaybooks%2FCiscoASAConnector%2FCiscoASA-CreateInboundAccessRuleOnInterface%2Fazuredeploy.json)
 [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Flaurens1984%2FAzure-Sentinel%2Ffeature%2FCiscoASAConnector%2FPlaybooks%2FCiscoASAConnector%2FCiscoASA-CreateInboundAccessRuleOnInterface%2Fazuredeploy.json)
 
 
 
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
     * Playbook Name: Enter the playbook name here (ex:CiscoASA-CreateInboundAccessRuleOnInterface)
     * Cisco ASA Connector name : Enter the name of the Cisco ASA custom connector (default value:CiscoASAConnector)
     * Interface ID : The name of the interface you want to create the access rules on.

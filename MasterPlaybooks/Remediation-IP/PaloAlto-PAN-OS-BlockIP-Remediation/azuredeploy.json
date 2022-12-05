@@ -151,7 +151,7 @@
                                     "type": "Response",
                                     "kind": "Http",
                                     "inputs": {
-                                        "body": "@{outputs('Compose_Image_to_add_to_the_Incident')}  PAN-OS -Remidiation Playbook Error\n@{body('Create_HTML_table_for_error')}",
+                                        "body": "@{outputs('Compose_Image_to_add_to_the_Incident')}  PAN-OS -Remediation Playbook Error\n@{body('Create_HTML_table_for_error')}",
                                         "statusCode": 500
                                     },
                                     "operationOptions": "Asynchronous"
@@ -689,7 +689,7 @@
                                     "type": "Response",
                                     "kind": "Http",
                                     "inputs": {
-                                        "body": "@{outputs('Compose_Image_to_add_to_the_Incident')}  PAN-OS -Remidiation Playbook ran and performed the following actions:@{body('Create_HTML_table_to_comment_in_the_Incident')}",
+                                        "body": "@{outputs('Compose_Image_to_add_to_the_Incident')}  PAN-OS -Remediation Playbook ran and performed the following actions:@{body('Create_HTML_table_to_comment_in_the_Incident')}",
                                         "statusCode": 200
                                     },
                                     "operationOptions": "Asynchronous"

@@ -97,7 +97,7 @@ def change_events_timegenerated():
     create_to_collect = "s|'Timestamp' => OMS::Common::fast_utc_to_iso8601_format(Time.at(time).utc),|'Timestamp' =>" \
                         " OMS::Common::fast_utc_to_iso8601_format(Time.now.utc),|g"
     print_notice(
-        "Ateempting to change TimeGenerated configuration configuration")
+        "Attempting to change TimeGenerated configuration configuration")
     if check_logs_timestamp():
         sed = subprocess.Popen(["sed", "-i", collect_to_create,
                                 oms_agent_field_mapping_configuration], stdout=subprocess.PIPE)

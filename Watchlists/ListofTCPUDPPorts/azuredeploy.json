@@ -23,7 +23,7 @@
         "kind": "",
         "properties": {
             "displayName": "ListofTCPUDPPorts",
-            "source": "ListofTCPandUDPportnumbers.csv",
+            "source": "ListofTCPandUDPPortnumbers.csv",
             "description": "[parameters('watchlistdescription')]",
             "provider": "Custom",
             "isDeleted": false,

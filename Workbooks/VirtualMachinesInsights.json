@@ -154,7 +154,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| summarize TotalBytesSent = sum(BytesSent) by Computer, TimeGenerated\r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| summarize TotalBytesSent = sum(BytesSent) by Computer, TimeGenerated\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Bytes sent, by computer",
@@ -173,7 +173,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| extend Computer = iif(isempty(_ResourceId), Computer, _ResourceId)\r\n| summarize Total_Traffic = sum(BytesSent) + sum(BytesReceived), TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by Computer \r\n| sort by Total_Traffic desc | project-away Total_Traffic \r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| extend Computer = iif(isempty(_ResourceId), Computer, _ResourceId)\r\n| summarize Total_Traffic = sum(BytesSent) + sum(BytesReceived), TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by Computer \r\n| sort by Total_Traffic desc | project-away Total_Traffic \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Top communicating computers",
@@ -218,7 +218,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\"==\"All\" or Computer in ({Computer})\r\n| summarize TotalBytesReceived = sum(BytesReceived) by Computer, TimeGenerated\r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\"==\"All\" or Computer in ({Computer})\r\n| summarize TotalBytesReceived = sum(BytesReceived) by Computer, TimeGenerated\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Bytes received, by computer",
@@ -237,7 +237,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "ServiceMapComputer_CL\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| summarize by Computer, Region = iff(HostingProvider_s == \"azure\", AzureLocation_s, \"non-azure\")\r\n| project Region \r\n| summarize count() by Region\r\n",
+        "query": "ServiceMapComputer_CL\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| summarize by Computer, Region = iff(HostingProvider_s == \"azure\", AzureLocation_s, \"non-azure\")\r\n| project Region \r\n| summarize count() by Region\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Computers, by region",
@@ -259,7 +259,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "ServiceMapComputer_CL\r\n| where Computer in ('ADE-Linux1','ADE-Linux2','DockerTest','FortiCEF','FortiWin','LoginTest','mor-dns-test','PaloAltoEF','Romeo-GoldenBox','TianderCEF','WIN01') and (\"{Computer:lable}\" == \"All\" or Computer in ({Computer}))\r\n| where HostingProvider_s == \"azure\"\r\n| extend Computer = _ResourceId\r\n| summarize by Computer, Region = AzureLocation_s, IPv4Addresses = Ipv4Addresses_s, IPv6Addresses = Ipv6Addresses_s\r\n| extend GroupId = strcat(Computer, Region), IPv4Addresses = todynamic(IPv4Addresses), IPv6Addresses = todynamic(IPv6Addresses)\r\n",
+        "query": "ServiceMapComputer_CL\r\n| where Computer in ('ADE-Linux1','ADE-Linux2','DockerTest','FortiCEF','FortiWin','LoginTest','mor-dns-test','PaloAltoEF','Romeo-GoldenBox','TianderCEF','WIN01') and (\"{Computer:label}\" == \"All\" or Computer in ({Computer}))\r\n| where HostingProvider_s == \"azure\"\r\n| extend Computer = _ResourceId\r\n| summarize by Computer, Region = AzureLocation_s, IPv4Addresses = Ipv4Addresses_s, IPv6Addresses = Ipv6Addresses_s\r\n| extend GroupId = strcat(Computer, Region), IPv4Addresses = todynamic(IPv4Addresses), IPv6Addresses = todynamic(IPv6Addresses)\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Azure computers",
@@ -317,7 +317,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "ServiceMapComputer_CL\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where HostingProvider_s == \"azure\"\r\n| summarize by AzureResourceID = AzureResourceId_s\r\n| project Subscription = split(AzureResourceID, \"/\")[2]\r\n| summarize count() by tostring(Subscription)\r\n",
+        "query": "ServiceMapComputer_CL\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where HostingProvider_s == \"azure\"\r\n| summarize by AzureResourceID = AzureResourceId_s\r\n| project Subscription = split(AzureResourceID, \"/\")[2]\r\n| summarize count() by tostring(Subscription)\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Computers, by subscription",
@@ -339,7 +339,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "ServiceMapComputer_CL\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where HostingProvider_s != \"azure\"\r\n| summarize by Computer, IPv4Addresses = Ipv4Addresses_s, IPv6Addresses = Ipv6Addresses_s\r\n",
+        "query": "ServiceMapComputer_CL\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where HostingProvider_s != \"azure\"\r\n| summarize by Computer, IPv4Addresses = Ipv4Addresses_s, IPv6Addresses = Ipv6Addresses_s\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Non-Azure computers",
@@ -364,7 +364,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalBytesCommunicated = sum(BytesSent) + sum(BytesReceived), TotalSent = sum(BytesSent), TotalReceived = sum(BytesReceived) by MaliciousIP = strcat(MaliciousIp, ' (', RemoteCountry, ')') | sort by TotalBytesCommunicated desc\r\n| where TotalBytesCommunicated > 0 \r\n\r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalBytesCommunicated = sum(BytesSent) + sum(BytesReceived), TotalSent = sum(BytesSent), TotalReceived = sum(BytesReceived) by MaliciousIP = strcat(MaliciousIp, ' (', RemoteCountry, ')') | sort by TotalBytesCommunicated desc\r\n| where TotalBytesCommunicated > 0 \r\n\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Top communicating malicious IPs",
@@ -422,7 +422,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalTraffic = sum(BytesSent) + sum(BytesReceived) by Country = RemoteCountry | sort by TotalTraffic desc\r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalTraffic = sum(BytesSent) + sum(BytesReceived) by Country = RemoteCountry | sort by TotalTraffic desc\r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Malicious traffic, by country",
@@ -441,7 +441,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalTraffic = sum(BytesSent) + sum(BytesReceived) by IndicatorThreatType | sort by TotalTraffic  desc \r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalTraffic = sum(BytesSent) + sum(BytesReceived) by IndicatorThreatType | sort by TotalTraffic  desc \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Malicious traffic, by threat type",
@@ -460,7 +460,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by MaliciousIP = strcat(MaliciousIp, ' (', RemoteCountry, ')') | sort by TotalBytesReceived desc \r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by MaliciousIP = strcat(MaliciousIp, ' (', RemoteCountry, ')') | sort by TotalBytesReceived desc \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Malicious IP addresses",
@@ -512,7 +512,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by Computer | sort by TotalBytesReceived desc \r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by Computer | sort by TotalBytesReceived desc \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Most attacked computers",
@@ -531,7 +531,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by Process = strcat (ProcessName, ' (', DestinationPort, ',', Protocol, ')') | sort by TotalBytesReceived desc \r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by Process = strcat (ProcessName, ' (', DestinationPort, ',', Protocol, ')') | sort by TotalBytesReceived desc \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Most attacked processes",
@@ -550,7 +550,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalTraffic = sum(BytesSent) + sum(BytesReceived) by Target = strcat (Computer, '/', ProcessName, '/', DestinationIp, '/', DestinationPort) | sort by TotalTraffic  desc \r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| summarize TotalTraffic = sum(BytesSent) + sum(BytesReceived) by Target = strcat (Computer, '/', ProcessName, '/', DestinationIp, '/', DestinationPort) | sort by TotalTraffic  desc \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Attack targets, by computer, process, IP address, and port",
@@ -569,7 +569,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:lable}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| extend Computer = iif(isempty(_ResourceId), Computer, _ResourceId)\r\n| summarize TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by Computer, ProcessName, DestinationIp, DestinationPort | sort by TotalBytesReceived desc \r\n",
+        "query": "VMConnection \r\n| where Type == \"VMConnection\"\r\n| where \"{Computer:label}\" == \"All\" or Computer in ({Computer})\r\n| where isnotempty(MaliciousIp)\r\n| where Direction == \"inbound\"\r\n| extend Computer = iif(isempty(_ResourceId), Computer, _ResourceId)\r\n| summarize TotalBytesSent = sum(BytesSent), TotalBytesReceived = sum(BytesReceived) by Computer, ProcessName, DestinationIp, DestinationPort | sort by TotalBytesReceived desc \r\n",
         "size": 0,
         "exportToExcelOptions": "visible",
         "title": "Attacked targets",

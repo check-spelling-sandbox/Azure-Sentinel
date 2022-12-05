@@ -701,7 +701,7 @@
                 "name": "huntingquery19-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Based on recent investigations related to Solorigate, adversaries were seen to obtain and abuse credentials of multiple accounts \n to connect to multiple machines. This query uses Security Event 4648 (A logon was attempted using explicit credentials) \n to find machines in an environment, from where different accounts were used to connect to multiple hosts. Scoring is done based on \n protocols seen in Solorigate. While this mentions Solorigate, this hunting query can be used to identify this type of pattern for \n any attacker.\n Reference - https://docs.microsoft.com/windows/security/threat-protection/auditing/event-4648 It depends on the SecurityEvents WindowsSecurityEvents data connector and SecurityEvent SecurityEvent data type and SecurityEvents WindowsSecurityEvents parser."
+                  "text": "Based on recent investigations related to Solarigate, adversaries were seen to obtain and abuse credentials of multiple accounts \n to connect to multiple machines. This query uses Security Event 4648 (A logon was attempted using explicit credentials) \n to find machines in an environment, from where different accounts were used to connect to multiple hosts. Scoring is done based on \n protocols seen in Solarigate. While this mentions Solarigate, this hunting query can be used to identify this type of pattern for \n any attacker.\n Reference - https://docs.microsoft.com/windows/security/threat-protection/auditing/event-4648 It depends on the SecurityEvents WindowsSecurityEvents data connector and SecurityEvent SecurityEvent data type and SecurityEvents WindowsSecurityEvents parser."
                 }
               }
             ]
@@ -813,7 +813,7 @@
                 "name": "huntingquery27-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Entropy calculation used to help identify Hosts where they have a high variety of processes(a high entropy process list on a given Host over time).\nThis helps us identify rare processes on a given Host. Rare here means a process shows up on the Host relatively few times in the the last 7days.\nThe Weight is calculated based on the Entropy, Process Count and Distinct Hosts with that Process. The lower the Weight/ProcessEntropy the, more interesting.\nThe Weight calculation increases the Weight if the process executes more than once on the Host or has executed on more than 1 Hosts.\nIn general, this should identify processes on a Host that are rare and rare for the environment.\nReferences: https://medium.com/udacity/shannon-entropy-information-gain-and-picking-balls-from-buckets-5810d35d54b4\nhttps://en.wiktionary.org/wiki/Shannon_entropy It depends on the SecurityEvents WindowsSecurityEvents data connector and SecurityEvent SecurityEvent data type and SecurityEvents WindowsSecurityEvents parser."
+                  "text": "Entropy calculation used to help identify Hosts where they have a high variety of processes(a high entropy process list on a given Host over time).\nThis helps us identify rare processes on a given Host. Rare here means a process shows up on the Host relatively few times in the last 7days.\nThe Weight is calculated based on the Entropy, Process Count and Distinct Hosts with that Process. The lower the Weight/ProcessEntropy the, more interesting.\nThe Weight calculation increases the Weight if the process executes more than once on the Host or has executed on more than 1 Hosts.\nIn general, this should identify processes on a Host that are rare and rare for the environment.\nReferences: https://medium.com/udacity/shannon-entropy-information-gain-and-picking-balls-from-buckets-5810d35d54b4\nhttps://en.wiktionary.org/wiki/Shannon_entropy It depends on the SecurityEvents WindowsSecurityEvents data connector and SecurityEvent SecurityEvent data type and SecurityEvents WindowsSecurityEvents parser."
                 }
               }
             ]
@@ -925,7 +925,7 @@
                 "name": "huntingquery35-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "ooking for suspiciopus interactive logon events which are outside normal logon hours for the user. Current day logon events are comapred with last 14 days activity\nand filtered for events which are above or below of historical logon hour range seen for the user It depends on the SecurityEvents WindowsSecurityEvents data connector and SecurityEvent SecurityEvent data type and SecurityEvents WindowsSecurityEvents parser."
+                  "text": "ooking for suspicious interactive logon events which are outside normal logon hours for the user. Current day logon events are compared with last 14 days activity\nand filtered for events which are above or below of historical logon hour range seen for the user It depends on the SecurityEvents WindowsSecurityEvents data connector and SecurityEvent SecurityEvent data type and SecurityEvents WindowsSecurityEvents parser."
                 }
               }
             ]

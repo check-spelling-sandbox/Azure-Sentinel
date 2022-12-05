@@ -163,7 +163,7 @@
                                     "type": "Response",
                                     "kind": "Http",
                                     "inputs": {
-                                        "body": "@{outputs('Compose_Image_to_add_the_incident')}Fortinet FortiGate Block IP Address Remidiation Playbook Error\n@{body('Create_HTML_table_for_error')}",
+                                        "body": "@{outputs('Compose_Image_to_add_the_incident')}Fortinet FortiGate Block IP Address Remediation Playbook Error\n@{body('Create_HTML_table_for_error')}",
                                         "statusCode": 500
                                     },
                                     "operationOptions": "Asynchronous"
@@ -694,7 +694,7 @@
                                                                 "type": "string"
                                                             },
                                                             "color": {
-                                                                "description": "color of an adddress object",
+                                                                "description": "color of an address object",
                                                                 "type": "integer"
                                                             },
                                                             "comment": {
@@ -3701,7 +3701,7 @@
                                     "type": "Response",
                                     "kind": "Http",
                                     "inputs": {
-                                        "body": "@{outputs('Compose_Image_to_add_the_incident')}Fortinet FortiGate Block IP Address Remidiation Playbook ran and performed the following actions:\n@{body('Create_HTML_table_comment')}",
+                                        "body": "@{outputs('Compose_Image_to_add_the_incident')}Fortinet FortiGate Block IP Address Remediation Playbook ran and performed the following actions:\n@{body('Create_HTML_table_comment')}",
                                         "statusCode": 200
                                     },
                                     "operationOptions": "Asynchronous"

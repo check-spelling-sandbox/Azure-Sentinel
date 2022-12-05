@@ -118,7 +118,7 @@ Create an input file and place it in the path `C:\One\Azure-Sentinel\Tools\Creat
     "Solutions/CiscoUmbrella/Hunting Queries/CiscoUmbrellaAnomalousFQDNsforDomain.yaml",
     "Solutions/CiscoUmbrella/Hunting Queries/CiscoUmbrellaBlockedUserAgents.yaml",
     "Solutions/CiscoUmbrella/Hunting Queries/CiscoUmbrellaDNSErrors.yaml",
-    "Solutions/CiscoUmbrella/Hunting Queries/CiscoUmbrellaDNSRequestsUunreliableCategory.yaml",
+    "Solutions/CiscoUmbrella/Hunting Queries/CiscoUmbrellaDNSRequestsUnreliableCategory.yaml",
     "Solutions/CiscoUmbrella/Hunting Queries/CiscoUmbrellaHighCountsOfTheSameBytesInSize.yaml",
     "Solutions/CiscoUmbrella/Hunting Queries/CiscoUmbrellaHighValuesOfUploadedData.yaml",
     "Solutions/CiscoUmbrella/Hunting Queries/CiscoUmbrellaPossibleConnectionC2.yaml",

@@ -40,7 +40,7 @@ syslog_ng_security_config_omsagent_conf_content_tokens = ["f_oms_filter", "oms_d
                                                           "source", "s_src", "oms_destination"]
 oms_agent_configuration_content_tokens = [daemon_port, "127.0.0.1"]
 oms_agent_process_name = "opt/microsoft/omsagent"
-oms_agent_plugin_securiy_config = '/opt/microsoft/omsagent/plugin/security_lib.rb'
+oms_agent_plugin_security_config = '/opt/microsoft/omsagent/plugin/security_lib.rb'
 oms_agent_field_mapping_configuration = '/opt/microsoft/omsagent/plugin/filter_syslog_security.rb'
 oms_agent_omsconfig_directory = "/etc/opt/omi/conf/omsconfig/"
 oms_agent_selinux_documentation = "https://docs.microsoft.com/azure/azure-monitor/platform/agent-linux"
@@ -55,8 +55,8 @@ rsyslog_daemon_name = "rsyslog.d"
 rsyslog_process_name = "rsyslogd"
 syslog_ng_process_name = "syslog-ng"
 syslog_ng_default_config_path = "/etc/syslog-ng/syslog-ng.conf"
-syslog_ng_documantation_path = "https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.26/administration-guide/34#TOPIC-1431029"
-rsyslog_documantation_path = "https://www.rsyslog.com/doc/master/configuration/actions.html"
+syslog_ng_documentation_path = "https://www.syslog-ng.com/technical-documents/doc/syslog-ng-open-source-edition/3.26/administration-guide/34#TOPIC-1431029"
+rsyslog_documentation_path = "https://www.rsyslog.com/doc/master/configuration/actions.html"
 log_forwarder_deployment_documentation = "https://docs.microsoft.com/azure/sentinel/connect-cef-agent?tabs=rsyslog"
 OMI_patch_docs_path = "https://msrc-blog.microsoft.com/2021/09/16/additional-guidance-regarding-omi-vulnerabilities-within-azure-vm-management-extensions/"
 tcpdump_time_restriction = 60
@@ -343,7 +343,7 @@ def check_file_in_directory(file_name, path):
 def locate_check(process_name):
     '''
     Check if the process_name is installed using the locate command
-    :param process_name:onfiguration under the nam
+    :param process_name:Configuration under the name
     :return: True if locate has returned a valid value else False
     '''
     try:
@@ -418,13 +418,13 @@ def check_omsagent_cisco_asa_configuration(workspace_id):
         :return: True if the configuration is updated, false otherwise
         '''
         grep = subprocess.Popen(["grep", "-i", "return ident if ident.include?('%ASA')",
-                                 oms_agent_plugin_securiy_config], stdout=subprocess.PIPE)
+                                 oms_agent_plugin_security_config], stdout=subprocess.PIPE)
         o, e = grep.communicate()
         if not o:
             print_warning("Warning: Current content of the omsagent security configuration doesn't support"
                           " Cisco ASA parsing.\nTo enable Cisco ASA firewall events parsing run the following: \n"
                           "\"sed -i \"s|return \'%ASA\' if ident.include?(\'%ASA\')"
-                          "|return ident if ident.include?(\'%ASA\')|g\" " + oms_agent_plugin_securiy_config +
+                          "|return ident if ident.include?(\'%ASA\')|g\" " + oms_agent_plugin_security_config +
                           " && sudo /opt/microsoft/omsagent/bin/service_control restart " + workspace_id + "\"\n")
             return False
         else:
@@ -488,8 +488,8 @@ def sudo_read_file_contains_string(file_tokens, file_path):
 
 
 def check_token(tokens, file_content):
-    splited_tokens = tokens.split("|")
-    return any(token in file_content for token in splited_tokens)
+    splitted_tokens = tokens.split("|")
+    return any(token in file_content for token in splitted_tokens)
 
 
 def test_daemon_configuration(daemon_name):
@@ -744,11 +744,11 @@ def print_full_disk_warning():
 
     if check_daemon(rsyslog_process_name):
         if check_daemon(syslog_ng_process_name):
-            print_warning(warn_message + '\n' + rsyslog_documantation_path + '\n' + syslog_ng_documantation_path)
+            print_warning(warn_message + '\n' + rsyslog_documentation_path + '\n' + syslog_ng_documentation_path)
         else:
-            print_warning(warn_message + '\n' + rsyslog_documantation_path)
+            print_warning(warn_message + '\n' + rsyslog_documentation_path)
     elif check_daemon(syslog_ng_process_name):
-        print_warning(warn_message + '\n' + syslog_ng_documantation_path)
+        print_warning(warn_message + '\n' + syslog_ng_documentation_path)
     else:
         print_warning("No daemon was found on the machine")
 

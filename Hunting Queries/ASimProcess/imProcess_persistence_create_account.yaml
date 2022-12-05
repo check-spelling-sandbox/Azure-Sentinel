@@ -15,7 +15,7 @@ relevantTechniques:
   - T1110
 query: |
   imProcessCreate
-  | where Process has_any ("net.exe", "net1.exe") // preformance pre-filtering
+  | where Process has_any ("net.exe", "net1.exe") // performance pre-filtering
   | extend FileName = tostring(split(Process, '\\')[-1]) 
   | extend ActingProcessFileName= tostring(split(ActingProcessName, '\\')[-1]) 
   | where FileName in~ ("net.exe", "net1.exe")

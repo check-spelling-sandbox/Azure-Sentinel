@@ -21,7 +21,7 @@
 
 
     DESCRIPTION
-    This Function App calls the Okta System Log API (https://developer.okta.com/docs/reference/api/system-log/) to pull the Okta System logs. The response from the Okta API is recieved in JSON format. 
+    This Function App calls the Okta System Log API (https://developer.okta.com/docs/reference/api/system-log/) to pull the Okta System logs. The response from the Okta API is received in JSON format. 
     This function will build the signature and authorization header needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. 
     The Function App will post the Okta logs to the Okta_CL table in the Log Analytics workspace.
 
@@ -35,7 +35,7 @@
 param($Timer)
 # Get the current universal time in the default string format
 $currentUTCtime = (Get-Date).ToUniversalTime()
-# The 'IsPastDue' porperty is 'true' when the current function invocation is later than scheduled.
+# The 'IsPastDue' property is 'true' when the current function invocation is later than scheduled.
 if ($Timer.IsPastDue) {
     Write-Host "OKTASSO: Azure Function triggered at: $currentUTCtime - timer is running late!"
 }
@@ -74,7 +74,7 @@ if($logAnalyticsUri -notmatch 'https:\/\/([\w\-]+)\.ods\.opinsights\.azure.([a-z
 $resource = "/api/logs"
 $logAnalyticsUri = $logAnalyticsUri + $resource + "?api-version=2016-04-01"
 # Retrieve Timestamp from last records received from Okta 
-# Check if Tabale has already been created and if not create it to maintain state between executions of Function
+# Check if Table has already been created and if not create it to maintain state between executions of Function
 $storage =  New-AzStorageContext -ConnectionString $AzureWebJobsStorage
 $StorageTable = Get-AzStorageTable -Name $Tablename -Context $Storage -ErrorAction Ignore
 if($null -eq $StorageTable.Name){  

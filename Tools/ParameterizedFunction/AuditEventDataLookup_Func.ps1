@@ -1,5 +1,5 @@
 #Purpose: This is to create a parameterized function called AuditEventDataLookup_Func in the Log Analytics workspace.
-#	  This function accepts Category/Subcategory/Change ID for Windows Event Auditing logs as string paramenter, and will return the value associate with the ID.
+#	  This function accepts Category/Subcategory/Change ID for Windows Event Auditing logs as string parameter, and will return the value associate with the ID.
 
 #Sample Usage: SecurityEvent | where EventID == 4719 | extend Category = AuditEventDataLookup_Func(CategoryId)
 

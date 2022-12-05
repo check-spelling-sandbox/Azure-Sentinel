@@ -7,7 +7,7 @@
     Comment:        First Release
 
     DESCRIPTION
-    This Function App calls the JumpCloud Directory Insights API (https://jumpcloud-insights.api-docs.io/1.0/api-overview/directory-insights) to pull the JumpCloud logs. The response from the JumpCloud API is recieved in JSON format. This function will build the signature and authorization header 
+    This Function App calls the JumpCloud Directory Insights API (https://jumpcloud-insights.api-docs.io/1.0/api-overview/directory-insights) to pull the JumpCloud logs. The response from the JumpCloud API is received in JSON format. This function will build the signature and authorization header 
     needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. The Function App will post the JumpCloud logs to the JumpCloud_CL table in the Log Analytics workspace.
 #>
 
@@ -20,7 +20,7 @@ Write-Output "JumpCloud: Queue trigger for work item: $QueueItem, Queue item ins
 import-module AzTable
 
 # Retrieve Environment Variables and prep other Variables for the JumpCloud API request
-$JCService = $QueueItem                         #Which eventlog set to rerieve from JumpCloud
+$JCService = $QueueItem                         #Which eventlog set to retrieve from JumpCloud
 $JCapiToken = $env:JumpCloudApiToken            #JumpCloud API
 $JCuri = $env:JumpCloudUri                      #Standard JumpCloud URI
 #$JCStartTime = $env:JumpCloudStartTime          #Initial Start time to collect logs
@@ -119,7 +119,7 @@ do {
             $result = Invoke-WebRequest -Uri $uri -Method $method -ContentType $contentType -Headers $headers1 -Body $body -UseBasicParsing
     }
     else{
-        Write-Output "JumpCloud: No new $JCService JumpCloud logs are avaliable as at $currentUTCtime"
+        Write-Output "JumpCloud: No new $JCService JumpCloud logs are available as at $currentUTCtime"
         break
     }
     write-output " Limit: $JCLimit; ResultCount: $JCResultCount; Totalsofar: $totalrecordcount"

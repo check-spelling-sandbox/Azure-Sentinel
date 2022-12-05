@@ -20,7 +20,7 @@ tactics:
 relevantTechniques:
   - T1114
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
 
@@ -29,7 +29,7 @@ query: |
   let timeframe = 1h;
   let scorethreshold = 1.5;
   let percentthreshold = 50;
-  // Preparing the time series data aggregated hourly count of MailItemsAccessd Operation in the form of multi-value array to use with time series anomaly function.
+  // Preparing the time series data aggregated hourly count of MailItemsAccessed Operation in the form of multi-value array to use with time series anomaly function.
   let TimeSeriesData =
   OfficeActivity
   | where TimeGenerated  between (startofday(ago(starttime))..startofday(ago(endtime)))
@@ -44,20 +44,20 @@ query: |
   // Joining the flagged outlier from the previous step with the original dataset to present contextual information
   // during the anomalyhour to analysts to conduct investigation or informed decisions.
   TimeSeriesAlerts | where TimeGenerated > ago(2d)
-  // Join against base logs since specified timeframe to retrive records associated with the hour of anomoly
+  // Join against base logs since specified timeframe to retrieve records associated with the hour of anomaly
   | join (
       OfficeActivity
       | where TimeGenerated > ago(2d)
       | extend DateHour = bin(TimeGenerated, 1h)
       | where OfficeWorkload=~ "Exchange" and Operation =~ "MailItemsAccessed" and ResultStatus =~ "Succeeded"
-      | summarize HourlyCount=count(), TimeGeneratedMax = arg_max(TimeGenerated, *), IPAdressList = make_set(Client_IPAddress), SourceIPMax= arg_max(Client_IPAddress, *), ClientInfoStringList= make_set(ClientInfoString) by MailboxOwnerUPN, Logon_Type, TenantId, UserType, TimeGenerated = bin(TimeGenerated, 1h) 
-      | where HourlyCount > 25 // Only considering operations with more than 25 hourly count to reduce False Positivies
+      | summarize HourlyCount=count(), TimeGeneratedMax = arg_max(TimeGenerated, *), IPAddressList = make_set(Client_IPAddress), SourceIPMax= arg_max(Client_IPAddress, *), ClientInfoStringList= make_set(ClientInfoString) by MailboxOwnerUPN, Logon_Type, TenantId, UserType, TimeGenerated = bin(TimeGenerated, 1h) 
+      | where HourlyCount > 25 // Only considering operations with more than 25 hourly count to reduce False Positives
       | order by HourlyCount desc 
   ) on TimeGenerated
   | extend PercentofTotal = round(HourlyCount/Total, 2) * 100 
   | where PercentofTotal > percentthreshold // Filter Users with count of less than 5 percent of TotalEvents per Hour to remove FPs/ users with very low count of MailItemsAccessed events
   | order by PercentofTotal desc 
-  | project-reorder TimeGeneratedMax, Type, OfficeWorkload, Operation, UserId,SourceIPMax ,IPAdressList, ClientInfoStringList, HourlyCount, PercentofTotal, Total, baseline, score, anomalies
+  | project-reorder TimeGeneratedMax, Type, OfficeWorkload, Operation, UserId,SourceIPMax ,IPAddressList, ClientInfoStringList, HourlyCount, PercentofTotal, Total, baseline, score, anomalies
   | extend timestamp = TimeGenerated, AccountCustomEntity = UserId
 entityMappings:
   - entityType: Account

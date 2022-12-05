@@ -88,14 +88,14 @@ ParserQuery: |
       let WinLogon=(starttime:datetime=datetime(null), endtime:datetime=datetime(null), targetusername_has:string="*", disabled:bool=false){ 
           WindowsEvent | where not(disabled)
           // ************************************************************************* 
-          //       <Prefilterring>
+          //       <Prefiltering>
           // *************************************************************************
           | where 
             (isnull(starttime)   or TimeGenerated >= starttime)
             and (isnull(endtime)     or TimeGenerated <= endtime)
             and (targetusername_has=='*' or EventData.TargetUserName has targetusername_has)
           // ************************************************************************* 
-          //       </Prefilterring>
+          //       </Prefiltering>
           // ************************************************************************* 
           | where Provider == 'Microsoft-Windows-Security-Auditing'
           | where     EventID in (LogonEvents) or EventID in (LogoffEvents)
@@ -157,14 +157,14 @@ ParserQuery: |
   let SecEventLogon =(starttime:datetime=datetime(null), endtime:datetime=datetime(null), targetusername_has:string="*", disabled:bool=false){
     SecurityEvent | where not(disabled)
     // ************************************************************************* 
-    //       <Prefilterring>
+    //       <Prefiltering>
     // *************************************************************************
     | where 
       (isnull(starttime)   or TimeGenerated >= starttime)
       and (isnull(endtime)     or TimeGenerated <= endtime)
       and (targetusername_has=='*' or TargetUserName has targetusername_has)
     // ************************************************************************* 
-    //       </Prefilterring>
+    //       </Prefiltering>
     // ************************************************************************* 
     | where EventID in (LogonEvents) or 
             EventID in (LogoffEvents)

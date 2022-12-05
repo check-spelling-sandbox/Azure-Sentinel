@@ -28,7 +28,7 @@ parser.add_argument('-d', '--dest', type=str, default='ARM', metavar='destinatio
 parser.add_argument('-t', '--templates', type=str, default=scriptdir, metavar='templates folder', dest='templates_dir',
                     help='The path of the templates for ARM templates and readme files. Defaults to the script directory')
 parser.add_argument('-b', '--branch', type=str, default='#', metavar='branch', dest='branch',
-                    help='For asim mode, the ARM templates links in the full deployment and readme files point to this github branch. The Github repository itself is embedded in the template files. Defaults to "master".')
+                    help='For asim mode, the ARM templates links in the full deployment and readme files point to this github branch. The GitHub repository itself is embedded in the template files. Defaults to "master".')
 parser.add_argument('-u', '--uri', type=str, default='#', metavar='uri', dest='uri',
                     help='For package mode, the based uri under which the package will be available. Used to generate the full deployment and readme files. If using package mode, this field is mandatory and has no default.')
 parser.add_argument('-l', '--loglevel', default="warning",  metavar='debug', dest='loglevel', help='Specify the logging level.Defaults to warning.')
@@ -117,7 +117,7 @@ for f in folders:
 files = list(dict.fromkeys(files))  # -- remove duplicates
 
 if len(files) == 0:
-    raise SystemExit ('No files to prcess.')
+    raise SystemExit ('No files to process.')
 
 # -- Read and prepare templates
 func_arm_template = json.load(open(os.path.join(templates_dir, 'func_arm_template.json'), 'r'))

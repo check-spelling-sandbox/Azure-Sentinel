@@ -13,7 +13,7 @@ References:
 - Title: ASIM
   Link: https:/aka.ms/AboutASIM
 Description: |
-      This Query Parser maps Windows Active Directory sign in logs (SecurityEvent) to the Advanced Security Information Model authenticaion schema.
+      This Query Parser maps Windows Active Directory sign in logs (SecurityEvent) to the Advanced Security Information Model authentication schema.
 ParserName: vimAuthenticationWindowsSecurityEvent
 ParserParams:
   - Name: starttime
@@ -89,14 +89,14 @@ ParserQuery: |
   let WinLogon=(starttime:datetime=datetime(null), endtime:datetime=datetime(null), targetusername_has:string="*", disable:bool=false){
     SecurityEvent | where not(disabled)
     // ************************************************************************* 
-    //       <Prefilterring>
+    //       <Prefiltering>
     // *************************************************************************
     | where 
       (isnull(starttime)   or TimeGenerated >= starttime)
       and (isnull(endtime)     or TimeGenerated <= starttime)
       and (targetusername_has=='*' or TargetUserName has targetusername_has)
     // ************************************************************************* 
-    //       </Prefilterring>
+    //       </Prefiltering>
     // ************************************************************************* 
     | where EventID in (LogonEvents) or 
             EventID in (LogoffEvents)

@@ -14,7 +14,7 @@ When this playbook gets triggered performs below actions:
 <br>
 ![Cisco Firepower Network Group object](./Images/BlockIP-NetworkGroup-CiscoFirepowerAdd.png)
 
-**Plabook overview:**
+**Playbook overview:**
 
 ![Playbook overview](./Images/designerOverviewLight1.png)
 ![Playbook overview](./Images/designerOverviewLight2.png)
@@ -27,12 +27,12 @@ When this playbook gets triggered performs below actions:
 
 <a name="deployment-instructions"></a>
 ### Deployment instructions 
-1. Deploy the playbook by clicking on "Depoly to Azure" button. This will take you to deplyoing an ARM Template wizard.
+1. Deploy the playbook by clicking on "Deploy to Azure" button. This will take you to deploying an ARM Template wizard.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsocprime%2FAzure-Sentinel%2Fmaster%2FMasterPlaybooks%2FRemediation-IP%2FCiscoFirepower-BlockIP-Nested-Remediation%2Fazuredeploy.json)
 [![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsocprime%2FAzure-Sentinel%2Fmaster%2FMasterPlaybooks%2FRemediation-IP%2FCiscoFirepower-BlockIP-Nested-Remediation%2Fazuredeploy.json)
 
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
     * Playbook Name: Enter the playbook name here (ex:CiscoFirepower-BlockIP-NetworkGroup)
     * Cisco Firepower Connector name: Enter the name of the Cisco Firepower custom connector (default value:CiscoFirepowerConnector)
     * Network Group object name: The name of the Network Group object.

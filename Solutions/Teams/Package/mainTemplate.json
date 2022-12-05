@@ -2238,7 +2238,7 @@
               "kind": "shared",
               "apiVersion": "2021-08-01",
               "metadata": {
-                "description": "This workbook is intended to identify the activities on Microrsoft Teams."
+                "description": "This workbook is intended to identify the activities on Microsoft Teams."
               },
               "properties": {
                 "displayName": "[parameters('workbook1-name')]",
@@ -2253,7 +2253,7 @@
               "apiVersion": "2022-01-01-preview",
               "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/',concat('Workbook-', last(split(variables('workbookId1'),'/'))))]",
               "properties": {
-                "description": "@{workbookKey=MicrorosftTeams; logoFileName=microsoftteams.svg; description=This workbook is intended to identify the activities on Microrsoft Teams.; dataTypesDependencies=System.Object[]; dataConnectorsDependencies=System.Object[]; previewImagesFileNames=System.Object[]; version=1.0.0; title=Microsoft Teams; templateRelativePath=MicrosoftTeams.json; subtitle=; provider=Azure Sentinel Community}.description",
+                "description": "@{workbookKey=MicrorosftTeams; logoFileName=microsoftteams.svg; description=This workbook is intended to identify the activities on Microsoft Teams.; dataTypesDependencies=System.Object[]; dataConnectorsDependencies=System.Object[]; previewImagesFileNames=System.Object[]; version=1.0.0; title=Microsoft Teams; templateRelativePath=MicrosoftTeams.json; subtitle=; provider=Azure Sentinel Community}.description",
                 "parentId": "[variables('workbookId1')]",
                 "contentId": "[variables('_workbookContentId1')]",
                 "kind": "Workbook",

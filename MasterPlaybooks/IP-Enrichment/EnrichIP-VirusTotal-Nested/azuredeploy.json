@@ -152,7 +152,7 @@
                                         "type": "AppendToStringVariable",
                                         "inputs": {
                                             "name": "Consolidated comment",
-                                            "value": "Virus Total IP Report found for @{items('For_each')?['Address']}\nReputation is: @{body('Get_an_IP_report')?['data']?['attributes']?['reputation']} which indicates likely malicous\nQuery: VTIPReport_CL | where id_s == \"@{items('For_each')?['Address']}\"\n"
+                                            "value": "Virus Total IP Report found for @{items('For_each')?['Address']}\nReputation is: @{body('Get_an_IP_report')?['data']?['attributes']?['reputation']} which indicates likely malicious\nQuery: VTIPReport_CL | where id_s == \"@{items('For_each')?['Address']}\"\n"
                                         }
                                     }
                                 }

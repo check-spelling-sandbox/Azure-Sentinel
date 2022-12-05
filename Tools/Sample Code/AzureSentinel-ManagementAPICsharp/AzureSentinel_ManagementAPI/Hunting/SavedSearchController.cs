@@ -123,9 +123,9 @@ namespace AzureSentinel_ManagementAPI.Hunting
                 JObject jobject = JObject.Parse(savedSearch);
                 var savedSearchObj = JsonConvert.DeserializeObject<SavedSearchPayload>(jobject.ToString());
 
-                var savedSearchs = Utils.LoadPayload<SavedSearchPayload[]>("SavedSearchPayload.json", cliMode);
+                var savedSearches = Utils.LoadPayload<SavedSearchPayload[]>("SavedSearchPayload.json", cliMode);
                 // Get the first one to update
-                var payload = savedSearchs[0];
+                var payload = savedSearches[0];
                 payload.Etag = savedSearchObj.Etag;
 
                 var url = $"{azureConfigs[insId].OperationInsightBaseUrl}/savedSearches/{savedSearchId}?api-version={savedSearchApiVersion}";

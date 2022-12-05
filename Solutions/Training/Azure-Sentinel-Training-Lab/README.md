@@ -43,7 +43,7 @@ Below you can see all the [modules](#Modules) that are part of this lab. Althoug
 [**Module 4 – Incident Management**](./Modules/Module-4-Incident-Management.md)
 - [Review Microsoft Sentinel incident tools and capabilities](./Modules/Module-4-Incident-Management.md#exercise-1-review-azure-sentinel-incident-tools-and-capabilities)
 - [Handling Incident "Sign-ins from IPs that attempt sign-ins to disabled accounts"](./Modules/Module-4-Incident-Management.md#exercise-2-handling-incident-sign-ins-from-ips-that-attempt-sign-ins-to-disabled-accounts)
-- [Handling "Solorigate Network Beacon" incident](./Modules/Module-4-Incident-Management.md#exercise-3-Handling-solorigate-network-beacon-incident)
+- [Handling "Solarigate Network Beacon" incident](./Modules/Module-4-Incident-Management.md#exercise-3-Handling-solorigate-network-beacon-incident)
 - [Hunting for more evidence](./Modules/Module-4-Incident-Management.md#exercise-4-Hunting-for-more-evidence)
 - [Add IOC to Threat Intelligence](./Modules/Module-4-Incident-Management.md#exercise-5-Add-IOC-to-Threat-Intelligence)
 - [Handover incident](./Modules/Module-4-Incident-Management.md#exercise-6-Handover-incident)

@@ -257,7 +257,7 @@
                                                             "type": "ApiConnection",
                                                             "inputs": {
                                                                 "body": {
-                                                                    "classification": " @{if(equals(items('For_each')?['properties']?['classification'],'BegignPostive'),'TruePostive',if(equals(items('For_each')?['properties']?['classification'],'Undetermined'),'Unknown', items('For_each')?['properties']?['classification']))}",
+                                                                    "classification": " @{if(equals(items('For_each')?['properties']?['classification'],'BenignPostive'),'TruePostive',if(equals(items('For_each')?['properties']?['classification'],'Undetermined'),'Unknown', items('For_each')?['properties']?['classification']))}",
                                                                     "status": "Resolved"
                                                                 },
                                                                 "host": {

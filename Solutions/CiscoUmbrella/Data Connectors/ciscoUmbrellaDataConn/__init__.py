@@ -30,7 +30,7 @@ sentinel_log_type = 'Cisco_Umbrella'
 
 aws_s3_bucket = os.environ.get('S3Bucket')
 aws_access_key_id = os.environ.get('AWSAccessKeyId')
-aws_secret_acces_key = os.environ.get('AWSSecretAccessKey')
+aws_secret_access_key = os.environ.get('AWSSecretAccessKey')
 logAnalyticsUri = os.environ.get('logAnalyticsUri')
 
 if ((logAnalyticsUri in (None, '') or str(logAnalyticsUri).isspace())):    
@@ -48,7 +48,7 @@ def main(mytimer: func.TimerRequest) -> None:
 
     logging.info('Starting program')
 
-    cli = UmbrellaClient(aws_access_key_id, aws_secret_acces_key, aws_s3_bucket)
+    cli = UmbrellaClient(aws_access_key_id, aws_secret_access_key, aws_s3_bucket)
     ts_from, ts_to = cli.get_time_interval()
     logging.info('Searching files last modified from {} to {}'.format(ts_from, ts_to))
     obj_list = cli.get_files_list(ts_from, ts_to)
@@ -128,9 +128,9 @@ def convert_list_to_csv_line(ls):
 
 class UmbrellaClient:
 
-    def __init__(self, aws_access_key_id, aws_secret_acces_key, aws_s3_bucket):
+    def __init__(self, aws_access_key_id, aws_secret_access_key, aws_s3_bucket):
         self.aws_access_key_id = aws_access_key_id
-        self.aws_secret_acces_key = aws_secret_acces_key
+        self.aws_secret_access_key = aws_secret_access_key
         self.aws_s3_bucket = self._get_s3_bucket_name(aws_s3_bucket)
         self.aws_s3_prefix = self._get_s3_prefix(aws_s3_bucket)
         self.total_events = 0
@@ -140,7 +140,7 @@ class UmbrellaClient:
         self.s3 = boto3.client(
             's3',
             aws_access_key_id=self.aws_access_key_id,
-            aws_secret_access_key=self.aws_secret_acces_key
+            aws_secret_access_key=self.aws_secret_access_key
         )
 
     def _get_s3_bucket_name(self, aws_s3_bucket):

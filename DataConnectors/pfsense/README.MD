@@ -1,7 +1,7 @@
 # pfSense Data Connecter
 Author: Nicholas DiCola
 
-This connector collects filterlog and nginx logs via RSYSLOG and parses them to CEF format so that they are ingested into Azure Sentinel in CommonEventFortmat.
+This connector collects filterlog and nginx logs via RSYSLOG and parses them to CEF format so that they are ingested into Azure Sentinel in CommonEventFormat.
 
 ## Instructions
 1. Install the CEF collection agent from the Azure Sentinel Data connectors blade.

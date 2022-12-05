@@ -48,7 +48,7 @@
     }
   },
   "variables": {
-    "AzureSentinel_Connection": "[concat('Azuresentienl-', parameters('PlaybookName'))]",
+    "AzureSentinel_Connection": "[concat('Azuresentinel-', parameters('PlaybookName'))]",
     "F5BigIP_Base_id": "[concat('/subscriptions/',subscription().subscriptionId,'/resourceGroups/',resourceGroup().name,'/providers/Microsoft.Logic/workflows/',parameters('BasePlaybookName'))]"
   },
   "resources": [

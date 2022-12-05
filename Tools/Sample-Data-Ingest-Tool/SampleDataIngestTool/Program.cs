@@ -99,7 +99,7 @@ namespace SampleDataIngestTool
             }
             catch (Exception excep)
             {
-                Console.WriteLine("Authenticaton Error: " + excep.Message);
+                Console.WriteLine("Authentication Error: " + excep.Message);
                 return "Authentication Error" + excep.Message;
             }
 

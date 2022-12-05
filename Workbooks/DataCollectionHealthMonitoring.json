@@ -1809,10 +1809,10 @@
                 {
                   "id": "7e985447-1426-44cc-9c80-75aad9458b93",
                   "version": "KqlParameterItem/1.0",
-                  "name": "LastLogRecivedThreshold",
+                  "name": "LastLogReceivedThreshold",
                   "label": "Last log received threshold",
                   "type": 2,
-                  "description": "Select the last log recived threshold, to filter the table below",
+                  "description": "Select the last log received threshold, to filter the table below",
                   "isRequired": true,
                   "value": "3600",
                   "typeSettings": {
@@ -1835,7 +1835,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "union withsource = _TableName *\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by _TableName\r\n| where last_log > {LastLogRecivedThreshold}\r\n| project ['Table Name'] = _TableName,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n\r\n ",
+              "query": "union withsource = _TableName *\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by _TableName\r\n| where last_log > {LastLogReceivedThreshold}\r\n| project ['Table Name'] = _TableName,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n\r\n ",
               "size": 0,
               "showAnalytics": true,
               "title": "Last data received, by table",
@@ -1997,7 +1997,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "CommonSecurityLog\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by DeviceVendor\r\n| where last_log > {LastLogRecivedThreshold}\r\n| project ['Device Vendor'] = DeviceVendor,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n\r\n ",
+              "query": "CommonSecurityLog\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by DeviceVendor\r\n| where last_log > {LastLogReceivedThreshold}\r\n| project ['Device Vendor'] = DeviceVendor,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n\r\n ",
               "size": 0,
               "showAnalytics": true,
               "title": "Last data received, by CEF device vendor",
@@ -2148,7 +2148,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "CommonSecurityLog\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by _ResourceId, Computer\r\n| where last_log > {LastLogRecivedThreshold}\r\n| project ['Azure resource'] = _ResourceId, Computer,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n ",
+              "query": "CommonSecurityLog\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by _ResourceId, Computer\r\n| where last_log > {LastLogReceivedThreshold}\r\n| project ['Azure resource'] = _ResourceId, Computer,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n ",
               "size": 0,
               "showAnalytics": true,
               "title": "CommonSecurityLog (CEF): Last data received, by computer",
@@ -2297,7 +2297,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "Syslog\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by _ResourceId, Computer\r\n| where last_log > {LastLogRecivedThreshold}\r\n| project ['Azure resource'] = _ResourceId, Computer,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n\r\n ",
+              "query": "Syslog\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by _ResourceId, Computer\r\n| where last_log > {LastLogReceivedThreshold}\r\n| project ['Azure resource'] = _ResourceId, Computer,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n\r\n ",
               "size": 0,
               "showAnalytics": true,
               "title": "Syslog: Last data received, by computer",
@@ -2446,7 +2446,7 @@
             "type": 3,
             "content": {
               "version": "KqlItem/1.0",
-              "query": "SecurityEvent\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by _ResourceId, Computer\r\n| where last_log > {LastLogRecivedThreshold}\r\n| project ['Azure resource'] = _ResourceId, Computer,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n ",
+              "query": "SecurityEvent\r\n| where TimeGenerated {TimeRange:query}\r\n| summarize last_log = datetime_diff(\"second\",now(), max(TimeGenerated))  by _ResourceId, Computer\r\n| where last_log > {LastLogReceivedThreshold}\r\n| project ['Azure resource'] = _ResourceId, Computer,  ['Last Record Received'] =  last_log \r\n | order by ['Last Record Received']  desc\r\n ",
               "size": 0,
               "showAnalytics": true,
               "title": "SecurityEvent: Last data received, by computer",
@@ -2629,7 +2629,7 @@
           {
             "type": 1,
             "content": {
-              "json": "In this section you will be able to detect anomalies in the data collection process. \r\nEach tab presents anomalies for a particular table.\r\nThe anomlies are calculated using the **series_decompose_anomalies()** function that returns an **anomaly score**. [Learn more about this function](https://docs.microsoft.com/azure/data-explorer/kusto/query/series-decompose-anomaliesfunction).\r\n\r\n#### Parameters:\r\n- **AnomaliesTimeRange**: This time picker applies only to the data collection anomalies view.\r\n- **SampleInterval**: The time interval in which data is sampled in the given time range. The anomaly score is calculated only on the last interval's data.\r\n- **PositiveAlertThreshold**: This value defines the positive **anomaly score** threshold. Accepts decimal values.\r\n- **NegativeAlertThreshold**: This value defines the negative **anomaly score** threshold. Accepts decimal values.\r\n\r\n",
+              "json": "In this section you will be able to detect anomalies in the data collection process. \r\nEach tab presents anomalies for a particular table.\r\nThe anomalies are calculated using the **series_decompose_anomalies()** function that returns an **anomaly score**. [Learn more about this function](https://docs.microsoft.com/azure/data-explorer/kusto/query/series-decompose-anomaliesfunction).\r\n\r\n#### Parameters:\r\n- **AnomaliesTimeRange**: This time picker applies only to the data collection anomalies view.\r\n- **SampleInterval**: The time interval in which data is sampled in the given time range. The anomaly score is calculated only on the last interval's data.\r\n- **PositiveAlertThreshold**: This value defines the positive **anomaly score** threshold. Accepts decimal values.\r\n- **NegativeAlertThreshold**: This value defines the negative **anomaly score** threshold. Accepts decimal values.\r\n\r\n",
               "style": "info"
             },
             "conditionalVisibilities": [
@@ -2959,7 +2959,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "union withsource= _TableName *\r\n| where _TableName == '{Table}'\r\n| make-series Trend = count() on TimeGenerated from {AnomaliesTimeRange:start} to {AnomaliesTimeRange:end} step {SampleInterval:value}  by _TableName, _ResourceId, SourceSystem\r\n| extend (anomalies, score, baseline) = series_decompose_anomalies(Trend, 1.5, 7, 'linefit', 1, 'ctukey', 0.01)\r\n| where anomalies[-1] == 1 or anomalies[-1] == -1  \r\n| extend Score = score[-1]\r\n| where Score >= {PositiveAlertThreshold:value} or Score <= {NegativeAlertThreshold:value}\r\n| project _ResourceId, SourceSystem, expectedCounts=baseline[-1], actualCount=Trend[-1], score = round(todouble(score[-1]),2), Trend, Baselaine = baseline",
+                    "query": "union withsource= _TableName *\r\n| where _TableName == '{Table}'\r\n| make-series Trend = count() on TimeGenerated from {AnomaliesTimeRange:start} to {AnomaliesTimeRange:end} step {SampleInterval:value}  by _TableName, _ResourceId, SourceSystem\r\n| extend (anomalies, score, baseline) = series_decompose_anomalies(Trend, 1.5, 7, 'linefit', 1, 'ctukey', 0.01)\r\n| where anomalies[-1] == 1 or anomalies[-1] == -1  \r\n| extend Score = score[-1]\r\n| where Score >= {PositiveAlertThreshold:value} or Score <= {NegativeAlertThreshold:value}\r\n| project _ResourceId, SourceSystem, expectedCounts=baseline[-1], actualCount=Trend[-1], score = round(todouble(score[-1]),2), Trend, Baseline = baseline",
                     "size": 0,
                     "title": "Anomalies by source system and resource",
                     "noDataMessage": "No anomalies found",
@@ -3017,7 +3017,7 @@
                           }
                         },
                         {
-                          "columnMatch": "Baselaine",
+                          "columnMatch": "Baseline",
                           "formatter": 21,
                           "formatOptions": {
                             "min": 0,
@@ -3051,7 +3051,7 @@
                           "columnId": "Trend"
                         },
                         {
-                          "columnId": "Baselaine",
+                          "columnId": "Baseline",
                           "label": "Baseline"
                         }
                       ]
@@ -3262,7 +3262,7 @@
                   "type": 3,
                   "content": {
                     "version": "KqlItem/1.0",
-                    "query": "CommonSecurityLog\r\n| make-series Trend = count() on TimeGenerated from {AnomaliesTimeRange:start} to {AnomaliesTimeRange:end} step {SampleInterval:value} by DeviceVendor, DeviceProduct, _ResourceId, Computer\r\n| extend (anomalies, score, baseline) = series_decompose_anomalies(Trend, 1.5, 7, 'linefit', 1, 'ctukey', 0.01)\r\n| where anomalies[-1] == 1 or anomalies[-1] == -1  \r\n| extend Score = score[-1]\r\n| where Score >= {PositiveAlertThreshold:value} or Score <= {NegativeAlertThreshold:value}\r\n| project DeviceVendor,  DeviceProduct, Machime = _ResourceId, [\"Computer Name\"] = Computer, expectedCounts=baseline[-1], actualCount=Trend[-1], score = score[-1], Trend, Baseline = baseline",
+                    "query": "CommonSecurityLog\r\n| make-series Trend = count() on TimeGenerated from {AnomaliesTimeRange:start} to {AnomaliesTimeRange:end} step {SampleInterval:value} by DeviceVendor, DeviceProduct, _ResourceId, Computer\r\n| extend (anomalies, score, baseline) = series_decompose_anomalies(Trend, 1.5, 7, 'linefit', 1, 'ctukey', 0.01)\r\n| where anomalies[-1] == 1 or anomalies[-1] == -1  \r\n| extend Score = score[-1]\r\n| where Score >= {PositiveAlertThreshold:value} or Score <= {NegativeAlertThreshold:value}\r\n| project DeviceVendor,  DeviceProduct, Machine = _ResourceId, [\"Computer Name\"] = Computer, expectedCounts=baseline[-1], actualCount=Trend[-1], score = score[-1], Trend, Baseline = baseline",
                     "size": 0,
                     "showAnalytics": true,
                     "title": "Detections by vendor, product and machine",
@@ -3341,7 +3341,7 @@
                           "label": "Device product"
                         },
                         {
-                          "columnId": "Machime",
+                          "columnId": "Machine",
                           "label": "Machine"
                         },
                         {

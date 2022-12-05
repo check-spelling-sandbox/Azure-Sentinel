@@ -1,7 +1,7 @@
 # Watchlist-SendSQLData-Watchlist
 author: Yaniv Shasha
 
-This playbook levarages Azure Sentinel Watchlists in order to get the relevant date from Azure SQL, and create a new watchlist or update an exsisting watchlsit with the query output.
+This playbook levarages Azure Sentinel Watchlists in order to get the relevant date from Azure SQL, and create a new watchlist or update an exsisting watchlist with the query output.
 
 
 Prerequisites
@@ -45,7 +45,7 @@ Step 1: Deploy the Logic App on Azure Sentinel.
 3.	Azure Sentinel Workspace Name
 4.	Azure Sentinel ResourceGroup
 5.	The WatchList name
-6.	SQL Query that will run aginst the DB
+6.	SQL Query that will run against the DB
 7.	Check the terms and conditions and click purchase.
 8.	The ARM template, contains the Logic App workflow (playbook) and API connections is now deploying to Azure. When finished, you will be taken to the Azure ARM Template summary page.
 9.	Click on the Logic Apps name. you will be taken to the Logic Apps resource of this playbook.

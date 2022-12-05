@@ -13,7 +13,7 @@ References:
   - Title: ASIM
     Link: https://aka.ms/AboutASIM
 Description: |
-  This ASIM parser supports normalizing and filtering Azure Azure Network Security Groups (NSG) flows to the ASIM Network Session normalized schema.
+  This ASIM parser supports normalizing and filtering Azure Network Security Groups (NSG) flows to the ASIM Network Session normalized schema.
 ParserName: vimNetworkSessionAzureNSG
 EquivalentBuiltInParser: _Im_NetworkSession_AzureNSG
 ParserParams:

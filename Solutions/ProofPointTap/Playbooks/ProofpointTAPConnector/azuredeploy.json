@@ -245,7 +245,7 @@
                                                             "threatTime": {
                                                                 "type": "string",
                                                                 "x-ms-summary": "threat time",
-                                                                "description": "an  ISO8601-formatted datetime corresponding to the the threat variant was first recognized as malicious"
+                                                                "description": "an  ISO8601-formatted datetime corresponding to the threat variant was first recognized as malicious"
                                                             }
                                                         }
                                                     }

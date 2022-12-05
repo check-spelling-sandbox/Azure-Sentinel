@@ -13,11 +13,11 @@
     "Hunting Queries/TrendMicroCASFilesOnShares.yaml",
     "Hunting Queries/TrendMicroCASInfectedFilesInEmails.yaml",
     "Hunting Queries/TrendMicroCASRansomwareThreats.yaml",
-    "Hunting Queries/TrendMicroCASRareFilesRecievedViaEmail.yaml",
+    "Hunting Queries/TrendMicroCASRareFilesReceivedViaEmail.yaml",
     "Hunting Queries/TrendMicroCASRiskyUsers.yaml",
     "Hunting Queries/TrendMicroCASScanDiscoveredThreats.yaml",
     "Hunting Queries/TrendMicroCASSuspiciousFilesSharepoint.yaml",
-    "Hunting Queries/TrendMicroCASTopFilesRecievedViaEmail.yaml",
+    "Hunting Queries/TrendMicroCASTopFilesReceivedViaEmail.yaml",
     "Hunting Queries/TrendMicroCASUserDLPViolations.yaml",
     "Hunting Queries/TrendMicroCASVAThreats.yaml"
   ],

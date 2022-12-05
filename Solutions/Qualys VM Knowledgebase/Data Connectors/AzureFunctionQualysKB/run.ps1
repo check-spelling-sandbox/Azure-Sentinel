@@ -8,7 +8,7 @@
 
     DESCRIPTION
     This Function App calls the Qualys Vulnerability Management (VM) - KnowledgeBase (KB) API (https://www.qualys.com/docs/qualys-api-vmpc-user-guide.pdf) to pull vulnerability data from the Qualys KB.
-    The response from the Qualys API is recieved in XML format. This function will build the signature and authorization header
+    The response from the Qualys API is received in XML format. This function will build the signature and authorization header
     needed to post the data to the Log Analytics workspace via the HTTP Data Connector API. This Function App will the vulnerability records to the QualysKB_CL table in Azure Sentinel/Log Analytics
 #>
 
@@ -174,7 +174,7 @@ function QualysKB {
     if($null -ne $response.KNOWLEDGE_BASE_VULN_LIST_OUTPUT.RESPONSE.VULN_LIST.VULN){
         Write-Host "Number of records returned after published Date $($startDate) : " $response.KNOWLEDGE_BASE_VULN_LIST_OUTPUT.RESPONSE.VULN_LIST.VULN.Length
         try {
-            # Iterate through each vulnerability recieved from the API call and assign the variables (Column Names in LA) to each XML variable and place each vulnerability as an object in the $objs array.
+            # Iterate through each vulnerability received from the API call and assign the variables (Column Names in LA) to each XML variable and place each vulnerability as an object in the $objs array.
             $objs = @()
             0 .. $response.KNOWLEDGE_BASE_VULN_LIST_OUTPUT.RESPONSE.VULN_LIST.VULN.Length | ForEach-Object {
                 if($null -eq $response.KNOWLEDGE_BASE_VULN_LIST_OUTPUT.RESPONSE.VULN_LIST.VULN[$_].QID) {     # if the vuln ID is mull which will mean the entry is null, this occurs on the last entry of the response. Should only occur once.

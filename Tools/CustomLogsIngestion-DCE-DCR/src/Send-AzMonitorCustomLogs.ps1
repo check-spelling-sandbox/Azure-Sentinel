@@ -32,7 +32,7 @@
     Uri of the data collection endpoint used to host the data collection rule.
 
     .PARAMETER StreamName
-    Name of stream to send data to before being procesed and sent to an Azure Monitor data table.
+    Name of stream to send data to before being processed and sent to an Azure Monitor data table.
 
     .EXAMPLE
     PS> Send-AzMonitorCustomLogs -LogPath C:\WinEvents.json -AADAppId 'XXXX' -AADAppSecret 'XXXXXX' -TenantId 'XXXXXX' -DcrImmutableId 'dcr-XXXX' -DceURI 'https://XXXX.westus2-1.ingest.monitor.azure.com' -StreamName 'Custom-WindowsEvent'
@@ -142,7 +142,7 @@ Function Get-BearerToken {
         return $bearerToken
     }
     catch {
-        Write-Log -Message "Error occured in Obtain-Token :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in Obtain-Token :$($_)" -LogFileName $LogFileName -Severity Error
         exit
     }
 }
@@ -168,7 +168,7 @@ Function Send-DataToDCE {
         Write-Log -Message "Status : $IngestionStatus" -LogFileName $LogFileName -Severity Information
     }
     catch {
-        Write-Log -Message "Error occured in Send-DataToDCE :$($_)" -LogFileName $LogFileName -Severity Error
+        Write-Log -Message "Error occurred in Send-DataToDCE :$($_)" -LogFileName $LogFileName -Severity Error
     }
 }
 #endregion

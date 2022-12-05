@@ -8,10 +8,10 @@
 
     DESCRIPTION
     This Function App calls the Qualys Vulnerability Management (VM) API (https://www.qualys.com/docs/qualys-api-vmpc-user-guide.pdf) specifically for Host List Detection data (/api/2.0/fo/asset/host/vm/detection/).
-    The response from the Qualys API is recieved in XML format. This function will parse the XML into JSON format, build the signature and authorization header needed to post the data
+    The response from the Qualys API is received in XML format. This function will parse the XML into JSON format, build the signature and authorization header needed to post the data
     to the Log Analytics workspace via the HTTP Data Connector API. The Function App will omit API responses that with an empty host list, which indicates there were no records for that
     time interval. Often, there are Hosts with numerous scan detections, which causes the record submitted to the Data Connector API to be truncated and improperly ingested, The Function App
-    will also identify those records greater than the 32Kb limit per record and seperate them into individual records.
+    will also identify those records greater than the 32Kb limit per record and separate them into individual records.
 #>
 
 # Input bindings are passed in via param block
@@ -44,7 +44,7 @@ $param = @{'status'='New,Active,Fixed,Re-Opened'; 'action'='list'; 'show_results
 
 # ISO:8601-compliant DateTime required.
 $time = $env:timeInterval
-# the $time will be reduced from the current UTC time to achive incremental pull.
+# the $time will be reduced from the current UTC time to achieve incremental pull.
 $vm_processed_before = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
 $vm_processed_after = ([System.DateTime]::UtcNow.AddMinutes(-$($time))).ToString('yyyy-MM-ddTHH:mm:ssZ')
 
@@ -101,7 +101,7 @@ try {
 	Exit
 }
 # print the request details
-Write-Host "Session creation is successfull `nUsing API Server: $uri `nUsing Host Detection API: $api `nUsing Username: $username `nUsing Parameters : $all_params, `nTable name: $TableName"
+Write-Host "Session creation is successful `nUsing API Server: $uri `nUsing Host Detection API: $api `nUsing Username: $username `nUsing Parameters : $all_params, `nTable name: $TableName"
 
 #===================================== Function Definitions =====================================#
 
@@ -156,11 +156,11 @@ Function Post-LogAnalyticsData($customerId, $sharedKey, $body, $logType)
 
 } # Post-LogAnalyticsData
 
-# Iterate through each detection recieved from the API call and assign the variables (Column Names in LA) to each XML variable
+# Iterate through each detection received from the API call and assign the variables (Column Names in LA) to each XML variable
 Function Parse-and-Send($qualysResponse){
 	$detections = @()
 	$results = "NA"
-	#iterate over the HOST LIST AND DETECTION LIST to have gerenralised detections
+	#iterate over the HOST LIST AND DETECTION LIST to have generalised detections
 	$qualysResponse.HOST_LIST_VM_DETECTION_OUTPUT.RESPONSE.HOST_LIST.HOST | ForEach-Object {
         $hostObject = New-Object -TypeName PSObject
         Add-Member -InputObject $hostObject -MemberType NoteProperty -Name "HostId" -Value $_.ID
@@ -291,7 +291,7 @@ Do {
 			}else{
 				Write-Output "All data fetched!"
 				[bool] $keep_running = $false
-			}# end of pegination if
+			}# end of pagination if
 		}
 	} catch{
 		$exp = $_.Exception

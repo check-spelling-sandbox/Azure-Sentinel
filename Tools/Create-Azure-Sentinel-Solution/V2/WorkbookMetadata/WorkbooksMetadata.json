@@ -529,7 +529,7 @@
     "provider": "Microsoft"
   },
   {
-    "workbookKey": "F5BIGIPSytemMetricsWorkbook",
+    "workbookKey": "F5BIGIPSystemMetricsWorkbook",
     "logoFileName": "f5_logo.svg",
     "description": "Gain insight into F5 BIG-IP health and performance.  This workbook provides visibility of various metrics including CPU, memory, connectivity, throughput and disk utilization.",
     "dataTypesDependencies": [
@@ -1115,7 +1115,7 @@
     "provider": "Microsoft Sentinel community"
   },
   {
-    "workbookKey": "EventAnalyzerwWorkbook",
+    "workbookKey": "EventAnalyzerWorkbook",
     "logoFileName": "",
     "description": "The Event Analyzer workbook allows to explore, audit and speed up analysis of Windows Event Logs, including all event details and attributes, such as security, application, system, setup, directory service, DNS and others.",
     "dataTypesDependencies": [
@@ -1136,7 +1136,7 @@
     "provider": "Microsoft Sentinel community"
   },
   {
-    "workbookKey": "ASC-ComplianceandProtection",
+    "workbookKey": "ASC-ComplianceAndProtection",
     "logoFileName": "",
     "description": "Gain insight into regulatory compliance, alert trends, security posture, and more with this workbook based on Azure Security Center data.",
     "dataTypesDependencies": [
@@ -1157,7 +1157,7 @@
     ],
     "version": "1.2.0",
     "title": "ASC Compliance and Protection",
-    "templateRelativePath": "ASC-ComplianceandProtection.json",
+    "templateRelativePath": "ASC-ComplianceAndProtection.json",
     "subtitle": "",
     "provider": "Microsoft Sentinel community"
   },
@@ -1923,7 +1923,7 @@
     ],
     "version": "1.0.0",
     "title": "Forcepoint Cloud Security Gateway Workbook",
-    "templateRelativePath": "ForcepointCloudSecuirtyGatewayworkbook.json",
+    "templateRelativePath": "ForcepointCloudSecurityGatewayworkbook.json",
     "subtitle": "",
     "provider": "Forcepoint"
   },
@@ -2013,7 +2013,7 @@
   {
     "workbookKey": "SolarWindsPostCompromiseHuntingWorkbook",
     "logoFileName": "MSTIC-Logo.svg",
-    "description": "This hunting workbook is intended to help identify activity related to the Solorigate compromise and subsequent attacks discovered in December 2020",
+    "description": "This hunting workbook is intended to help identify activity related to the Solarigate compromise and subsequent attacks discovered in December 2020",
     "dataTypesDependencies": [
       "CommonSecurityLog",
       "SigninLogs",
@@ -2198,7 +2198,7 @@
   {
     "workbookKey": "ExchangeCompromiseHunting",
     "logoFileName": "MSTIC-Logo.svg",
-    "description": "This workbook is intended to help defenders in responding to the Exchange Server vulnerabilities disclosed in March 2021, as well as hunting for potential compromise activity. More details on these vulnearbilities can be found at: https://aka.ms/exchangevulns",
+    "description": "This workbook is intended to help defenders in responding to the Exchange Server vulnerabilities disclosed in March 2021, as well as hunting for potential compromise activity. More details on these vulnerabilities can be found at: https://aka.ms/exchangevulns",
     "dataTypesDependencies": [
       "SecurityEvent",
       "W3CIISLog"
@@ -2657,9 +2657,9 @@
     "provider": "Azure Sentinel Community"
   },
   {
-    "workbookKey": "MicrorosftTeams",
+    "workbookKey": "MicrosoftTeams",
     "logoFileName": "microsoftteams.svg",
-    "description": "This workbook is intended to identify the activities on Microrsoft Teams.",
+    "description": "This workbook is intended to identify the activities on Microsoft Teams.",
     "dataTypesDependencies": [
       "OfficeActivity"
     ],
@@ -3067,7 +3067,7 @@
     "provider": "Microsoft"
   },
   {
-    "workbookKey": "vArmourAppContollerWorkbook",
+    "workbookKey": "vArmourAppControllerWorkbook",
     "logoFileName": "varmour-logo.svg",
     "description": "Sets the time name for analysis",
     "dataTypesDependencies": [
@@ -3096,7 +3096,7 @@
     ],
     "version": "1.0.0",
     "title": "vArmour Application Controller",
-    "templateRelativePath": "vArmour_AppContoller_Workbook.json",
+    "templateRelativePath": "vArmour_AppController_Workbook.json",
     "subtitle": "",
     "provider": "vArmour"
   },
@@ -3583,7 +3583,7 @@
     "logoFileName": "Azure_Sentinel.svg",
     "description": "Choose your subscription and workspace in which PCI assets are deployed",
     "dataTypesDependencies": [
-      "AzureDaignostics",
+      "AzureDiagnostics",
       "SecurityEvent",
       "SecurityAlert",
       "OracleDatabaseAuditEvent",
@@ -4246,7 +4246,7 @@
     "provider": "Microsoft"
   },
   {
-    "workbookKey": "AtlasianJiraAuditWorkbook",
+    "workbookKey": "AtlassianJiraAuditWorkbook",
     "logoFileName": "",
     "description": "Select the time range for this Overview.",
     "dataTypesDependencies": [
@@ -4260,8 +4260,8 @@
       "AtlassianJiraAuditWhite.png"
     ],
     "version": "1.0.0",
-    "title": "AtlasianJiraAuditWorkbook",
-    "templateRelativePath": "AtlasianJiraAuditWorkbook.json",
+    "title": "AtlassianJiraAuditWorkbook",
+    "templateRelativePath": "AtlassianJiraAuditWorkbook.json",
     "subtitle": "",
     "provider": "Microsoft"
   },
@@ -4289,7 +4289,7 @@
     "provider": "Microsoft"
   },
   {
-    "workbookKey": "ZNAccessOchestratorAudit",
+    "workbookKey": "ZNAccessOrchestratorAudit",
     "logoFileName": "",
     "description": "None.",
     "dataTypesDependencies": [
@@ -4438,7 +4438,7 @@
     "provider": "ARGOS Cloud Security"
   },
   {
-    "workbookKey": "SAP-InitialAccessAttemptstoBypassSAPSecurityMechanisms",
+    "workbookKey": "SAP-InitialAccessAttemptsToBypassSAPSecurityMechanisms",
     "logoFileName": "SAP_LOGO.svg",
     "description": "SAP - Initial Access & Attempts to Bypass SAP Security Mechanisms",
     "dataTypesDependencies": [
@@ -4516,7 +4516,7 @@
   {
     "workbookKey": "JamfProtectWorkbook",
     "logoFileName": "jamf_logo.svg",
-    "description": "This Jamf Protect Workbook for Microsoft Sentinel enables you to ingest Jamf Protect events forwarded into Microsoft Sentinel.\n Providing reports into all alerts, device controls and Unfied Logs.",
+    "description": "This Jamf Protect Workbook for Microsoft Sentinel enables you to ingest Jamf Protect events forwarded into Microsoft Sentinel.\n Providing reports into all alerts, device controls and Unified Logs.",
     "dataTypesDependencies": [
       "jamfprotect_CL"
     ],
@@ -4719,7 +4719,7 @@
     "AnomaliesVisualizationWorkbookBlack.png"
   ],
   "version": "1.0.0",
-  "title": "AnomaliesVisulization",
+  "title": "AnomaliesVisualization",
   "templateRelativePath": "AnomaliesVisualization.json",
   "subtitle": "",
   "provider": "Microsoft Sentinel Community"

@@ -695,7 +695,7 @@
         "[resourceId('Microsoft.Resources/templateSpecs', variables('huntingQueryTemplateSpecName4'))]"
       ],
       "properties": {
-        "description": "TrendMicroCASRareFilesRecievedViaEmail_HuntingQueries Hunting Query with template version 2.0.0",
+        "description": "TrendMicroCASRareFilesReceivedViaEmail_HuntingQueries Hunting Query with template version 2.0.0",
         "mainTemplate": {
           "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
           "contentVersion": "[variables('huntingQueryVersion4')]",
@@ -716,7 +716,7 @@
                 "tags": [
                   {
                     "name": "description",
-                    "value": "Query searches for rare files recieved via email services."
+                    "value": "Query searches for rare files received via email services."
                   },
                   {
                     "name": "tactics",
@@ -1063,7 +1063,7 @@
         "[resourceId('Microsoft.Resources/templateSpecs', variables('huntingQueryTemplateSpecName8'))]"
       ],
       "properties": {
-        "description": "TrendMicroCASTopFilesRecievedViaEmail_HuntingQueries Hunting Query with template version 2.0.0",
+        "description": "TrendMicroCASTopFilesReceivedViaEmail_HuntingQueries Hunting Query with template version 2.0.0",
         "mainTemplate": {
           "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
           "contentVersion": "[variables('huntingQueryVersion8')]",
@@ -1084,7 +1084,7 @@
                 "tags": [
                   {
                     "name": "description",
-                    "value": "Query searches for top files recieved via email services."
+                    "value": "Query searches for top files received via email services."
                   },
                   {
                     "name": "tactics",
@@ -1461,7 +1461,7 @@
                       ]
                     },
                     {
-                      "description": "Use this method for automated deployment of the Trend Micro Cloud App Security data connector using an ARM Tempate.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-TrendMicroCAS-azuredeploy)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.\n3. Enter the **TrendMicroCASToken**, **TrendMicroCASServiceURL**  and deploy. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
+                      "description": "Use this method for automated deployment of the Trend Micro Cloud App Security data connector using an ARM Template.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-TrendMicroCAS-azuredeploy)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.\n3. Enter the **TrendMicroCASToken**, **TrendMicroCASServiceURL**  and deploy. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
                       "title": "Option 1 - Azure Resource Manager (ARM) Template"
                     },
                     {
@@ -1651,7 +1651,7 @@
               ]
             },
             {
-              "description": "Use this method for automated deployment of the Trend Micro Cloud App Security data connector using an ARM Tempate.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-TrendMicroCAS-azuredeploy)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.\n3. Enter the **TrendMicroCASToken**, **TrendMicroCASServiceURL**  and deploy. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
+              "description": "Use this method for automated deployment of the Trend Micro Cloud App Security data connector using an ARM Template.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-TrendMicroCAS-azuredeploy)\n2. Select the preferred **Subscription**, **Resource Group** and **Location**. \n> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.\n3. Enter the **TrendMicroCASToken**, **TrendMicroCASServiceURL**  and deploy. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
               "title": "Option 1 - Azure Resource Manager (ARM) Template"
             },
             {
@@ -2368,7 +2368,7 @@
               "kind": "Scheduled",
               "location": "[parameters('workspace-location')]",
               "properties": {
-                "description": "Detects when unexpected file recieved via mail.",
+                "description": "Detects when unexpected file received via mail.",
                 "displayName": "Trend Micro CAS - Unexpected file via mail",
                 "enabled": false,
                 "query": "let f_types = dynamic(['ps1', 'bat', 'scr', 'sh', 'exe', 'js', 'lnk']);\nTrendMicroCAS\n| where EventCategoryType in~ ('exchange', 'gmail', 'exchangeserver')\n| where isnotempty(SrcFileName)\n| extend file_type = extract(@'\\.(\\w+)$', 1, SrcFileName)\n| where file_type in~ (f_types)\n| extend AccountCustomEntity = DstUserName\n",

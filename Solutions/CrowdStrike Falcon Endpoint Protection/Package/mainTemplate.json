@@ -262,7 +262,7 @@
                       ]
                     },
                     {
-                      "description": "Use this method for automated deployment of the Crowdstrike Falcon Data Replicator connector using an ARM Tempate.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-CrowdstrikeReplicator-azuredeploy)\n2. Select the preferred **AWS_SECRET**, **AWS_REGION_NAME**, **AWS_KEY**, **QUEUE_URL**. \n> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.\n3. Enter the **AWS_SECRET**, **AWS_REGION_NAME**, **AWS_KEY**, **QUEUE_URL** and deploy. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
+                      "description": "Use this method for automated deployment of the Crowdstrike Falcon Data Replicator connector using an ARM Template.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-CrowdstrikeReplicator-azuredeploy)\n2. Select the preferred **AWS_SECRET**, **AWS_REGION_NAME**, **AWS_KEY**, **QUEUE_URL**. \n> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.\n3. Enter the **AWS_SECRET**, **AWS_REGION_NAME**, **AWS_KEY**, **QUEUE_URL** and deploy. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
                       "title": "Option 1 - Azure Resource Manager (ARM) Template"
                     },
                     {
@@ -452,7 +452,7 @@
               ]
             },
             {
-              "description": "Use this method for automated deployment of the Crowdstrike Falcon Data Replicator connector using an ARM Tempate.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-CrowdstrikeReplicator-azuredeploy)\n2. Select the preferred **AWS_SECRET**, **AWS_REGION_NAME**, **AWS_KEY**, **QUEUE_URL**. \n> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.\n3. Enter the **AWS_SECRET**, **AWS_REGION_NAME**, **AWS_KEY**, **QUEUE_URL** and deploy. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
+              "description": "Use this method for automated deployment of the Crowdstrike Falcon Data Replicator connector using an ARM Template.\n\n1. Click the **Deploy to Azure** button below. \n\n\t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-CrowdstrikeReplicator-azuredeploy)\n2. Select the preferred **AWS_SECRET**, **AWS_REGION_NAME**, **AWS_KEY**, **QUEUE_URL**. \n> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.\n3. Enter the **AWS_SECRET**, **AWS_REGION_NAME**, **AWS_KEY**, **QUEUE_URL** and deploy. \n4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. \n5. Click **Purchase** to deploy.",
               "title": "Option 1 - Azure Resource Manager (ARM) Template"
             },
             {
@@ -4040,7 +4040,7 @@
                                       "type": "AppendToStringVariable",
                                       "inputs": {
                                         "name": "Comment",
-                                        "value": "Host Status : Contained\nActions taken on devices : The playbook sucessfully contained the host"
+                                        "value": "Host Status : Contained\nActions taken on devices : The playbook successfully contained the host"
                                       },
                                       "description": "This appends the variable comment if host is contained by playbook"
                                     },

@@ -18,7 +18,7 @@
 | **Carbon Black Cloud Platform (PSC)** | Alerts API, Devices API | /appservices/ | Custom (must add an access level with appropriate permissions) |
 | **Carbon Black Cloud Platform (PSC)** | Platform Search API for Processes | /investigate/ | Custom (must add an access level with appropriate permissions) |
 
-3. Find Organziation key by refering this link [ Find Organization key by refering this link ](https://defense.conferdeploy.net/settings/connectors)
+1. Find Organization key by referring this link [ Find Organization key by referring this link ](https://defense.conferdeploy.net/settings/connectors)
 
 ### Deploy Custom Connector
 
@@ -27,13 +27,13 @@ To deploy CarbonBlack Custom connector click on the below button.
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FCarbonBlack%2FCarbonBlackConnector%2Fazuredeploy.json) [![Deploy to Azure](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FPlaybooks%2FCarbonBlack%2FCarbonBlackConnector%2Fazuredeploy.json)
 
 ### Deployment instructions 
-1. Deploy the playbook by clicking on "Deploy to Azure" button. This will take you to deplyoing an ARM Template wizard.
+1. Deploy the playbook by clicking on "Deploy to Azure" button. This will take you to deploying an ARM Template wizard.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Ftree%2Fmaster%2FMasterPlaybooks%2FRemediation-Host%2FCarbonBlack-Remediation-Host%2Fazuredeploy.json)
 [![Deploy to Azure](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Ftree%2Fmaster%2FMasterPlaybooks%2FRemediation-Host%2FCarbonBlack-Remediation-Host%2Fazuredeploy.json)
 
 
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
 
 |Parameter|Description|
 |--------------|--------------|
@@ -74,7 +74,7 @@ Initialize an array variable to assign the quarantined devices information used 
 
 ### For each-Hosts
 This action will perform the below actions
- a. Make a call to CarbonBlack API with the parameters such as Organization Key and Quary [ Contains device name ]
+ a. Make a call to CarbonBlack API with the parameters such as Organization Key and Query [ Contains device name ]
  b. Verify the CarbonBlack returned the results and Check the device is quarantined
  c. If the device is not quarantined then isolate it.
 

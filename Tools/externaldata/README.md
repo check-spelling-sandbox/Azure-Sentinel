@@ -1,7 +1,7 @@
 # externaldata project
 author: Nathan Swift
 
-The following project will provide the example externaldata()[] KQL queries and schema to use agaisnt Azure Storage, where Data Export rules are sending the Azure Sentinel logs to for long term retention.
+The following project will provide the example externaldata()[] KQL queries and schema to use against Azure Storage, where Data Export rules are sending the Azure Sentinel logs to for long term retention.
 
 To leverage the solution create a Azure storage account where you will store long term retention security logs into. Create and deploy a data export rule to azure storage onto the Log analytics workspace, updating the deployment template to include the table names that need to have the logs stored in log term retention.
 
@@ -20,7 +20,7 @@ StartDate 	: 09/11/2021 02:00 AM
 EndDate 	: 09/12/2021 12:00 PM
 ```
 
-The script generates a kql query .yaml file and opens the file in notepade.exe.
+The script generates a kql query .yaml file and opens the file in notepad.exe.
 
 ```
 externaldata(TenantId:string, AttachmentCount:int, ConfidenceLevel:string, Connectors:string, DetectionMethods:string, DeliveryAction:string, DeliveryLocation:string, EmailClusterId:long, EmailDirection:string, EmailLanguage:string, EmailAction:string, EmailActionPolicy:string, EmailActionPolicyGuid:string, OrgLevelAction:string, OrgLevelPolicy:string, InternetMessageId:string, NetworkMessageId:string, RecipientEmailAddress:string, RecipientObjectId:string, ReportId:string, SenderDisplayName:string, SenderObjectId:string, SenderIPv4:string, SenderIPv6:string, SenderMailFromAddress:string, SenderMailFromDomain:string, Subject:string, ThreatTypes:string, ThreatNames:string, TimeGenerated:datetime, Timestamp:datetime, UrlCount:int, UserLevelAction:string, UserLevelPolicy:string, SourceSystem:string, Type:string)

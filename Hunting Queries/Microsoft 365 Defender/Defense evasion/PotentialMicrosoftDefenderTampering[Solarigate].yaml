@@ -2,7 +2,7 @@ id: 3f16e2c2-c0ba-4286-be9a-f22d001d2de7
 name: PotentialMicrosoftDefenderTampering[Solarigate]
 description: |
   Identifies potential service tampering related to Microsoft Defender services.
-  Query insprired by Azure Sentinel detection https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/MultipleDataSources/PotentialMicrosoftDefenderTampering.yaml
+  Query inspired by Azure Sentinel detection https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/MultipleDataSources/PotentialMicrosoftDefenderTampering.yaml
 requiredDataConnectors:
 - connectorId: MicrosoftThreatProtection
   dataTypes:

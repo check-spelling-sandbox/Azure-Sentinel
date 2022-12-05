@@ -20,7 +20,7 @@
       "defaultValue": "Enter the resource group name for the Azure Sentinel workspace",
       "type": "string",
       "metadata": {
-        "description": "The resource group name where the Azure Sentinel workspae resides"
+        "description": "The resource group name where the Azure Sentinel workspace resides"
       }
     },
     "ASWorkspaceName": {

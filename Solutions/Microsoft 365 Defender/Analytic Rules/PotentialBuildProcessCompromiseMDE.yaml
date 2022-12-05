@@ -19,7 +19,7 @@ tactics:
 relevantTechniques:
   - T1554
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
   // How far back to look for events from

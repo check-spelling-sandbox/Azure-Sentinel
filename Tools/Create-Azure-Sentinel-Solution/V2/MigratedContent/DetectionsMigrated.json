@@ -60,7 +60,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/QualysVM/Analytic%20Rules/"
     },
     {
-        "FileName": "NewHighSeverityVulnDetectedAcrossMulitpleHostsV2.yaml",
+        "FileName": "NewHighSeverityVulnDetectedAcrossMultipleHostsV2.yaml",
         "DetectionId": "da498ea0-f3bd-437f-9f36-eaf5ba5e0a6c",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/QualysVMV2/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/QualysVM/Analytic%20Rules"
@@ -168,13 +168,13 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "NRT_PrivlegedRoleAssignedOutsidePIM.yaml",
+        "FileName": "NRT_PrivilegedRoleAssignedOutsidePIM.yaml",
         "DetectionId": "14f6da04-2f96-44ee-9210-9ccc1be6401e",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/AuditLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "NRT_UseraddedtoPrivilgedGroups.yaml",
+        "FileName": "NRT_UseraddedtoPrivilegedGroups.yaml",
         "DetectionId": "70fc7201-f28e-4ba7-b9ea-c04b96701f13",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/AuditLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
@@ -186,7 +186,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "PrivlegedRoleAssignedOutsidePIM.yaml",
+        "FileName": "PrivilegedRoleAssignedOutsidePIM.yaml",
         "DetectionId": "269435e3-1db8-4423-9dfc-9bf59997da1c",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/AuditLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
@@ -210,7 +210,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "UseraddedtoPrivilgedGroups.yaml",
+        "FileName": "UseraddedtoPrivilegedGroups.yaml",
         "DetectionId": "4d94d4a9-dc96-410a-8dea-4d4d4584188b",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/AuditLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
@@ -300,13 +300,13 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "MFARejectedbyUser.yaml",
+        "FileName": "MFARejectedByUser.yaml",
         "DetectionId": "d99cf5c3-d660-436c-895b-8a8f8448da23",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/SigninLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"
     },
     {
-        "FileName": "NRT_MFARejectedbyUser.yaml",
+        "FileName": "NRT_MFARejectedByUser.yaml",
         "DetectionId": "3617d76d-b15e-4c6f-985e-a1dac73c592d",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Detections/SigninLogs/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Active%20Directory/Analytic%20Rules"

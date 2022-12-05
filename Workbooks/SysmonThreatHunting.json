@@ -995,7 +995,7 @@
                   ]
                 }
               },
-              "name": "netwrok-connection-query",
+              "name": "network-connection-query",
               "styleSettings": {
                 "progressStyle": "loader"
               }
@@ -4931,7 +4931,7 @@
             {
               "type": 1,
               "content": {
-                "json": "This tab provides insights into Sysmon pipe create and connect (Event ID 17 and 18) indicators within the specified timespan. Consult [this documentation](https://github.com/BlueTeamLabs/sentinel-attack/wiki/Pipe-name-drilldown-tab) for additional informatio.\n\n**Note:** With the exception of the \"Raw events\" table all data in this tab excludes whitelisted pipe created and connected events."
+                "json": "This tab provides insights into Sysmon pipe create and connect (Event ID 17 and 18) indicators within the specified timespan. Consult [this documentation](https://github.com/BlueTeamLabs/sentinel-attack/wiki/Pipe-name-drilldown-tab) for additional information.\n\n**Note:** With the exception of the \"Raw events\" table all data in this tab excludes whitelisted pipe created and connected events."
               },
               "name": "text - 2"
             },

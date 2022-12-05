@@ -294,13 +294,13 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Server%20DNS/Hunting%20Queries/"
     },
 	{
-        "FileName": "Solorigate-DNS-Pattern.yaml",
+        "FileName": "Solarigate-DNS-Pattern.yaml",
         "DetectionId": "0fb54a5c-5599-4ff9-80a2-f788c3ed285e",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/DnsEvents/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Server%20DNS/Hunting%20Queries/"
     },
 	{
-        "FileName": "Solorigate-Encoded-Domain-URL.yaml",
+        "FileName": "Solarigate-Encoded-Domain-URL.yaml",
         "DetectionId": "29a1815a-3ada-4182-a178-e52c483d2f95",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/DnsEvents/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Server%20DNS/Hunting%20Queries/"
@@ -360,7 +360,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Security%20Events/Hunting%20Queries/"
     },
 	{
-        "FileName": "GroupAddedToPrivlegeGroup.yaml",
+        "FileName": "GroupAddedToPrivilegeGroup.yaml",
         "DetectionId": "cb47a115-2616-4d56-890d-b28c14bc83e4",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/SecurityEvent/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Security%20Events/Hunting%20Queries/"
@@ -468,7 +468,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Security%20Events/Hunting%20Queries/"
     },
 	{
-        "FileName": "RareProcbyServiceAccount.yaml",
+        "FileName": "RareProcByServiceAccount.yaml",
         "DetectionId": "af02987c-949d-47d5-b0ae-64d8e1b674e2",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/SecurityEvent/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Security%20Events/Hunting%20Queries/"
@@ -528,7 +528,7 @@
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Security%20Events/Hunting%20Queries/"
     },
 	{
-        "FileName": "UserAccountAddedToPrivlegeGroup.yaml",
+        "FileName": "UserAccountAddedToPrivilegeGroup.yaml",
         "DetectionId": "8d69a665-074a-443b-aae6-5dd9bdd5cfb1",
         "OldPath": "https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/SecurityEvent/",
         "NewPath": "https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Windows%20Security%20Events/Hunting%20Queries/"

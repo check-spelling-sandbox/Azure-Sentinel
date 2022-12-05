@@ -237,7 +237,7 @@ union isfuzzy=true
                               Priority == 1, "High",
                               Priority == 2, "Medium",
                               Priority == 3, "Low",
-                              Priority == 4, "Infomational",
+                              Priority == 4, "Informational",
                               ""),
         Disposition = case(
                             EventType contains "File Scanned", tolower(column_ifexists("EventOriginalSeverity","")),

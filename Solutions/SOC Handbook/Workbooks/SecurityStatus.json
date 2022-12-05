@@ -465,7 +465,7 @@
         "version": "KqlItem/1.0",
         "query": "SecurityEvent\r\n| where Computer startswith \"{Computer}\"\r\n| summarize count() by Activity\r\n",
         "size": 1,
-        "title": "Securtity Events for: {Computer} ",
+        "title": "Security Events for: {Computer} ",
         "timeContext": {
           "durationMs": 0
         },

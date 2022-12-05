@@ -1,7 +1,7 @@
 id: 11b4c19d-2a79-4da3-af38-b067e1273dee
-name: Solorigate Named Pipe 
+name: Solarigate Named Pipe 
 description: |
-  'Identifies a match across various data feeds for named pipe IOCs related to the Solorigate incident.
+  'Identifies a match across various data feeds for named pipe IOCs related to the Solarigate incident.
    For the sysmon events required for this detection, logging for Named Pipe Events needs to be configured in Sysmon config (Event ID 17 and Event ID 18)
    Reference: https://techcommunity.microsoft.com/t5/azure-sentinel/solarwinds-post-compromise-hunting-with-azure-sentinel/ba-p/1995095'
 severity: High
@@ -25,7 +25,7 @@ tactics:
 relevantTechniques:
   - T1055
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 query: |
 

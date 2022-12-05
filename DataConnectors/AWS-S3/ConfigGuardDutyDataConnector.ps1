@@ -241,7 +241,7 @@ function Enable-GuardDuty
     }
     else
     {
-        [String[]]$selectedRegionsArray = Read-ValidatedHost -Prompt "Please enter list of regions seperated by space"
+        [String[]]$selectedRegionsArray = Read-ValidatedHost -Prompt "Please enter list of regions separated by space"
         $selectedRegionsArray = $selectedRegionsArray.Split(' ') | Select-Object -Unique
 
         for($i = 0; $i -lt $selectedRegionsArray.length; $i++)

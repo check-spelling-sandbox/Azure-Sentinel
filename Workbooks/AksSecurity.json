@@ -423,7 +423,7 @@
           {
             "type": 1,
             "content": {
-              "json": "### Seucirty alerts details\r\n\r\nTo filter, press on the severities below.\r\nYou can also filter based on a specific resource."
+              "json": "### Security alerts details\r\n\r\nTo filter, press on the severities below.\r\nYou can also filter based on a specific resource."
             },
             "name": "text - 18"
           },
@@ -680,7 +680,7 @@
                     "links": [
                       {
                         "id": "3f616701-fd4b-482c-aff1-a85414daa05c",
-                        "cellValue": "dispalyedGraph",
+                        "cellValue": "displayedGraph",
                         "linkTarget": "parameter",
                         "linkLabel": "Masterclient operations",
                         "subTarget": "masterclient",
@@ -689,7 +689,7 @@
                       },
                       {
                         "id": "e6fa55f1-7d57-4f5e-8e83-429740853731",
-                        "cellValue": "dispalyedGraph",
+                        "cellValue": "displayedGraph",
                         "linkTarget": "parameter",
                         "linkLabel": "Pod creation operations",
                         "subTarget": "podCreation",
@@ -697,7 +697,7 @@
                       },
                       {
                         "id": "f4c46251-0090-4ca3-a81c-0686bff3ff35",
-                        "cellValue": "dispalyedGraph",
+                        "cellValue": "displayedGraph",
                         "linkTarget": "parameter",
                         "linkLabel": "Secret get\\list operations",
                         "subTarget": "secretOperation",
@@ -747,7 +747,7 @@
                     }
                   },
                   "conditionalVisibility": {
-                    "parameterName": "dispalyedGraph",
+                    "parameterName": "displayedGraph",
                     "comparison": "isEqualTo",
                     "value": "masterclient"
                   },
@@ -770,7 +770,7 @@
                     "visualization": "timechart"
                   },
                   "conditionalVisibility": {
-                    "parameterName": "dispalyedGraph",
+                    "parameterName": "displayedGraph",
                     "comparison": "isEqualTo",
                     "value": "podCreation"
                   },
@@ -811,7 +811,7 @@
                     ]
                   },
                   "conditionalVisibility": {
-                    "parameterName": "dispalyedGraph",
+                    "parameterName": "displayedGraph",
                     "comparison": "isEqualTo",
                     "value": "secretOperation"
                   },

@@ -16,7 +16,7 @@ Also should be able to perform some actions like:
 1. Defender for Endpoint / MDATP / EDR
 2. Microsoft SharePoint online
 3. Microsoft Teams
-4. Azure AD App registerd with the following permissions under "WindowsDefenderATP"
+4. Azure AD App registered with the following permissions under "WindowsDefenderATP"
     - Alert.Read.Add
     - Alert.ReadWrite.All
     - Machine.Read.All
@@ -39,7 +39,7 @@ API connections for the above mentioned prerequisites are created as a part of A
     - Create a secret called "ClientAppSecret" in the Azure Keyvault and store the App Secret of the Azure AD Application
 4. Deploy the template
     - Give an appropriate name for the Playbook.
-    - All the dependent API connections shall automatically be created as a part of the ARM tempate deployment.
+    - All the dependent API connections shall automatically be created as a part of the ARM template deployment.
 5. Once deployed, open the logic app and authorize and configure API connectors
     - Ensure all functions have been authorized with their appropriate connectors
     - Setup HTTP connector - Provide the Tenant ID, client/app ID of the app you registered
@@ -47,7 +47,7 @@ API connections for the above mentioned prerequisites are created as a part of A
     - SharePoint connection - To store all the reports
     - Teams connection - To send the notification
 6. Select the SharePoint site at the "Create new subfolder under Documents to store all csv files" block of the logic app and select "List or Library" as "Documents"
-7. Make sure to give to same SharePoint site URL given in the above step at the blocks "Create missing KBs csv file", "Create installed software csv file", "Create alerts csv file", "Create recommendation csv file" and "Create vulnerabilities csv file" under the "For each MDATP host - get missing KBs", "For each MDATP host - get software inventory", "For each MDATP host - get alerts", "For each MDATP host - get recommendations" and "For each MDATP host - get vulnerabilities" blocks respectivly.
+7. Make sure to give to same SharePoint site URL given in the above step at the blocks "Create missing KBs csv file", "Create installed software csv file", "Create alerts csv file", "Create recommendation csv file" and "Create vulnerabilities csv file" under the "For each MDATP host - get missing KBs", "For each MDATP host - get software inventory", "For each MDATP host - get alerts", "For each MDATP host - get recommendations" and "For each MDATP host - get vulnerabilities" blocks respectively.
 8. Also make sure "Create sharing link for the subfolder which contains all csv files" is given the same SharePoint site URL and the Library Name  (Documents) in (6)
 
 ## Deploy to Azure

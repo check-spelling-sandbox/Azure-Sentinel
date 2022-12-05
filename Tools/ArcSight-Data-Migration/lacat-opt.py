@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-#  MODIFIED VERSION FOR ACHMEA ArcSight Migration to MicroSoft Sentinel
+#  MODIFIED VERSION FOR ACHMEA ArcSight Migration to Microsoft Sentinel
 #  ABLE TO READ AND CONVERT MORE MODERN LOGGER .dat FORMATS
-#  Performace Optimized
+#  Performance Optimized
 #
 #  TODO:
 #    What is the meaning/significance of the skipped data?  Search for "## SKIP:"  in this file
@@ -11,7 +11,7 @@
 #    Verify input and output (i.e. bring logger archive online and compare to json files; count events etc) 
 #    Record types? (ChunkVersion, SourceType, Flags):  ('6', '0', '5') is processed, ('100', '0', '1') and ('5', '0', '5') are skipped.
 #	100=ROS - Read Optimized Search (some indexing data?) 
-#         5=Internal logger events, not of interestt (?)
+#         5=Internal logger events, not of interest (?)
 #       . 6=CEF records we can process 
 #    ...
 #

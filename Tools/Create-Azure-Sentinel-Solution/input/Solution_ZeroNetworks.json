@@ -2,13 +2,13 @@
   "Name": "ZeroNetworks",
   "Author": "Nicholas DiCola - nicholas@zeronetworks.com",
   "Logo": "<img src=\"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Logos/ZeroNetworks.svg\" width=\"75px\" height=\"75px\">",
-  "Description": "[Zero Networks Access Orchestator](https://zeronetworks.com/product/) is a automated microsegmentation solution.",
-  "WorkbookDescription": "Gain insights into Zero Networks Access Orchestator Audit logs.",
+  "Description": "[Zero Networks Access Orchestrator](https://zeronetworks.com/product/) is a automated microsegmentation solution.",
+  "WorkbookDescription": "Gain insights into Zero Networks Access Orchestrator Audit logs.",
   "Workbooks": [
     "Workbooks/ZNAccessOrchestratorAudit.json"
   ],
   "Analytic Rules": [
-    "Analytics Rules/ZNAccessOrchestratorMachineRemovedfromProtection.yaml",
+    "Analytics Rules/ZNAccessOrchestratorMachineRemovedFromProtection.yaml",
     "Analytics Rules/ZNAccessOrchestratorNewAPIToken.yaml",
     "Analytics Rules/ZNAccessOrchestratorRareJITRuleCreation.yaml"
   ],
@@ -27,9 +27,9 @@
   ],
   "Playbooks": [
     "Playbooks/CustomConnector/azuredeploy.json",
-    "Playbooks/ZeroNetworksAcccessOrchestrator-AddAssettoProtection/azuredeploy.json",
-    "Playbooks/ZeroNetworksAcccessOrchestrator-AddBlockOutboundRule/azuredeploy.json",
-    "Playbooks/ZeroNetworksAcccessOrchestrator-EnrichIncident/azuredeploy.json"
+    "Playbooks/ZeroNetworksAccessOrchestrator-AddAssettoProtection/azuredeploy.json",
+    "Playbooks/ZeroNetworksAccessOrchestrator-AddBlockOutboundRule/azuredeploy.json",
+    "Playbooks/ZeroNetworksAccessOrchestrator-EnrichIncident/azuredeploy.json"
   ],
   "BasePath": "https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/ZeroNetworks/",
   "Version": "1.0.0",

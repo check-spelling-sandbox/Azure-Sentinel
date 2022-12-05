@@ -38,7 +38,7 @@ query: |
     // Higher risk score are for Defender alerts related to threat actor
     | extend AlertRiskScore = iif(ThreatName has_any ("Zebracon", "Trojan:MSIL/Gacker.A!dha", "Backdoor:MSIL/Kokishell.A!dha"), 1.0, 0.5)
     | project DeviceId, AlertRiskScore) on DeviceId
-    // Create agregate risk score
+    // Create aggregate risk score
     | extend RiskScore = RiskScore + AlertRiskScore
     | extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = AccountName
 entityMappings:

@@ -58,7 +58,7 @@ The Playbook modifies an Incident in two ways:
 
 **Created Resources:**
 
-1. {Plabook Name}: Logic App
+1. {Playbook Name}: Logic App
 1. sen-{Playbook Name}: API Connection - to connect to Sentinel
 1. kva-{Playbook Name}: API Connection - to connect to the KeyVault
 

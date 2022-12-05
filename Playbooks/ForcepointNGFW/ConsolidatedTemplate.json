@@ -124,7 +124,7 @@
     "variables": {
         "Forcepoint_Connector": "[concat('ForcepointSMCApiConnector-','ForcepointPlaybooks')]",
         "ForcepointFUID_Connector": "[concat('ForcepointFUIDConnector-','ForcepointPlaybooks')]",
-        "azureSentinel_Connection": "[concat('azuresentienl-','ForcepointPlaybooks')]",
+        "azureSentinel_Connection": "[concat('azuresentinel-','ForcepointPlaybooks')]",
         "teams_connector": "[concat('teamsconnector-','ForcepointPlaybooks')]"
     },
     "resources": [
@@ -1503,9 +1503,9 @@
                                                             "type": "string",
                                                             "description": "log_level"
                                                         },
-                                                        "log_payload_additionnal": {
+                                                        "log_payload_additional": {
                                                             "type": "boolean",
-                                                            "description": "log_payload_additionnal"
+                                                            "description": "log_payload_additional"
                                                         },
                                                         "log_payload_excerpt": {
                                                             "type": "boolean",
@@ -2472,7 +2472,7 @@
                                                                                                 "name": "Consolidatevrbl",
                                                                                                 "value": {
                                                                                                     "Action": "Blocked by SOC",
-                                                                                                    "IPAddres": "@{items('For_each_IP_Address')?['Address']}",
+                                                                                                    "IPAddress": "@{items('For_each_IP_Address')?['Address']}",
                                                                                                     "IPStatus": "Blocked",
                                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                                 }
@@ -2583,7 +2583,7 @@
                                                                                                 "name": "Consolidatevrbl",
                                                                                                 "value": {
                                                                                                     "Action": "Unblocked by SOC",
-                                                                                                    "IPAddres": "@{items('For_each_IP_Address')?['Address']}",
+                                                                                                    "IPAddress": "@{items('For_each_IP_Address')?['Address']}",
                                                                                                     "IPStatus": "Unblocked",
                                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                                 }
@@ -2712,7 +2712,7 @@
                                                                                                     "name": "Consolidatevrbl",
                                                                                                     "value": {
                                                                                                         "Action": "Ignored by SOC",
-                                                                                                        "IPAddres": "@{items('For_each_IP_Address')?['Address']}",
+                                                                                                        "IPAddress": "@{items('For_each_IP_Address')?['Address']}",
                                                                                                         "IPStatus": "Blocked",
                                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                                     }
@@ -2797,7 +2797,7 @@
                                                                                                         "name": "Consolidatevrbl",
                                                                                                         "value": {
                                                                                                             "Action": "Ignored by SOC",
-                                                                                                            "IPAddres": "@{items('For_each_IP_Address')?['Address']}",
+                                                                                                            "IPAddress": "@{items('For_each_IP_Address')?['Address']}",
                                                                                                             "IPStatus": "Unblocked",
                                                                                                             "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                                         }
@@ -3072,7 +3072,7 @@
                                                                 "columns": [
                                                                     {
                                                                         "header": "IP-Address",
-                                                                        "value": "@item()?['IPAddres']"
+                                                                        "value": "@item()?['IPAddress']"
                                                                     },
                                                                     {
                                                                         "header": "IP-List-Name",
@@ -3210,7 +3210,7 @@
                                                                                 "name": "Consolidatevrbl",
                                                                                 "value": {
                                                                                     "Action": "Already blocked",
-                                                                                    "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                    "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                     "IPStatus": "Blocked",
                                                                                     "IncidentSeverity": ""
                                                                                 }
@@ -3317,7 +3317,7 @@
                                                                                     "name": "Consolidatevrbl",
                                                                                     "value": {
                                                                                         "Action": "IP does not exist in policy",
-                                                                                        "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                        "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                         "IPStatus": "Unblocked",
                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                                     }
@@ -3337,7 +3337,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -3511,7 +3511,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -3812,7 +3812,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store IP address , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store IP address , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {
@@ -4135,7 +4135,7 @@
                                                                     "name": "Consolidatevrbl",
                                                                     "value": {
                                                                         "Action": "@{items('Appending_Usernames')} does not have IP address",
-                                                                        "IPAddres": "",
+                                                                        "IPAddress": "",
                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                                     }
                                                                 },
@@ -4212,7 +4212,7 @@
                                                             "name": "Consolidatevrbl",
                                                             "value": {
                                                                 "Action": "@{items('Appending_Usernames')} does not exist",
-                                                                "IPAddres": "",
+                                                                "IPAddress": "",
                                                                 "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}"
                                                             }
                                                         }
@@ -4234,7 +4234,7 @@
                                         },
                                         "Get_IP_Address_by_Domain_and_Username_-_Forcepoint_FUID": {
                                             "runAfter": {
-                                                "Seperator": [
+                                                "Separator": [
                                                     "Succeeded"
                                                 ]
                                             },
@@ -4250,10 +4250,10 @@
                                                     }
                                                 },
                                                 "method": "get",
-                                                "path": "/api/uid/@{encodeURIComponent(variables('FUID Version'))}/user/ntlm-identity/@{encodeURIComponent(split(last(split(items('Appending_Usernames')?['AadUserId'],'@')),'.')[0],outputs('Seperator'),split(items('Appending_Usernames')?['AadUserId'],'@')[0])}"
+                                                "path": "/api/uid/@{encodeURIComponent(variables('FUID Version'))}/user/ntlm-identity/@{encodeURIComponent(split(last(split(items('Appending_Usernames')?['AadUserId'],'@')),'.')[0],outputs('Separator'),split(items('Appending_Usernames')?['AadUserId'],'@')[0])}"
                                             }
                                         },
-                                        "Seperator": {
+                                        "Separator": {
                                             "runAfter": {},
                                             "type": "Compose",
                                             "inputs": "\\"
@@ -4402,7 +4402,7 @@
                                                                     },
                                                                     {
                                                                         "header": "IP-Address",
-                                                                        "value": "@item()?['IPAddres']"
+                                                                        "value": "@item()?['IPAddress']"
                                                                     },
                                                                     {
                                                                         "header": "IP-List-Name",
@@ -4463,7 +4463,7 @@
                                                                                 "name": "Consolidatevrbl",
                                                                                 "value": {
                                                                                     "Action": "Already blocked",
-                                                                                    "IPAddres": "@{items('Looping_IP_Address')['IPaddress']}",
+                                                                                    "IPAddress": "@{items('Looping_IP_Address')['IPaddress']}",
                                                                                     "IPStatus": "Blocked",
                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
                                                                                     "Username": "@{items('Looping_IP_Address')['Usernames']}"
@@ -4507,7 +4507,7 @@
                                                                                     "name": "Consolidatevrbl",
                                                                                     "value": {
                                                                                         "Action": "Blocked by playbook",
-                                                                                        "IPAddres": "@{items('Looping_IP_Address')['IPaddress']}",
+                                                                                        "IPAddress": "@{items('Looping_IP_Address')['IPaddress']}",
                                                                                         "IPStatus": "Blocked",
                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
                                                                                         "Username": "@{items('Looping_IP_Address')['Usernames']}"
@@ -4528,7 +4528,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -4627,7 +4627,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -4881,7 +4881,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store IP address , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store IP address , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {
@@ -5110,7 +5110,7 @@
                                                                 "columns": [
                                                                     {
                                                                         "header": "IP-Address",
-                                                                        "value": "@item()?['IPAddres']"
+                                                                        "value": "@item()?['IPAddress']"
                                                                     },
                                                                     {
                                                                         "header": "IP-List-Name",
@@ -5171,7 +5171,7 @@
                                                                                 "name": "Consolidatevrbl",
                                                                                 "value": {
                                                                                     "Action": "Already blocked",
-                                                                                    "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                    "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                     "IPStatus": "Blocked",
                                                                                     "IncidentSeverity": ""
                                                                                 }
@@ -5214,7 +5214,7 @@
                                                                                     "name": "Consolidatevrbl",
                                                                                     "value": {
                                                                                         "Action": "Blocked by playbook",
-                                                                                        "IPAddres": "@{items('Looping_IP_Address')?['Address']}",
+                                                                                        "IPAddress": "@{items('Looping_IP_Address')?['Address']}",
                                                                                         "IPStatus": "Blocked",
                                                                                         "IncidentSeverity": ""
                                                                                     }
@@ -5234,7 +5234,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -5345,7 +5345,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -5578,7 +5578,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store IP address , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store IP address , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {
@@ -5775,7 +5775,7 @@
                                                                 "columns": [
                                                                     {
                                                                         "header": "URL",
-                                                                        "value": "@item()?['URLAddres']"
+                                                                        "value": "@item()?['URLAddress']"
                                                                     },
                                                                     {
                                                                         "header": "URL-List-Name",
@@ -5837,7 +5837,7 @@
                                                                                 "value": {
                                                                                     "Action": "Already blocked",
                                                                                     "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
-                                                                                    "URLAddres": "@{items('Looping_URLs')?['Url']}",
+                                                                                    "URLAddress": "@{items('Looping_URLs')?['Url']}",
                                                                                     "URLStatus": "Blocked"
                                                                                 }
                                                                             }
@@ -5880,7 +5880,7 @@
                                                                                     "value": {
                                                                                         "Action": "Blocked by playbook",
                                                                                         "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
-                                                                                        "URLAddres": "@{items('Looping_URLs')?['Url']}",
+                                                                                        "URLAddress": "@{items('Looping_URLs')?['Url']}",
                                                                                         "URLStatus": "Blocked"
                                                                                     }
                                                                                 },
@@ -5899,7 +5899,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on URL. And If result ouput is having some information related to URL then there is a policy with respect to URL"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on URL. And If result output is having some information related to URL then there is a policy with respect to URL"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -6025,7 +6025,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -6258,7 +6258,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store URL , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store URL , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {
@@ -6426,7 +6426,7 @@
                                                         "columns": [
                                                             {
                                                                 "header": "IP-Address",
-                                                                "value": "@item()?['IPAddres']"
+                                                                "value": "@item()?['IPAddress']"
                                                             },
                                                             {
                                                                 "header": "IP-Element-Name",
@@ -6614,7 +6614,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -6672,7 +6672,7 @@
                                                                             "value": {
                                                                                 "Action": "Not Found in any policy and IP address is unblocked state",
                                                                                 "Elementname": "--",
-                                                                                "IPAddres": "@{outputs('IP')?['Address']}",
+                                                                                "IPAddress": "@{outputs('IP')?['Address']}",
                                                                                 "IPStatus": "Unblocked",
                                                                                 "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
                                                                                 "Policy": "--",
@@ -6704,7 +6704,7 @@
                                                             "type": "Query",
                                                             "inputs": {
                                                                 "from": "@variables('Arrayforallactions')",
-                                                                "where": "@contains(item()?['IPAddres'], outputs('IP')?['Address'])"
+                                                                "where": "@contains(item()?['IPAddress'], outputs('IP')?['Address'])"
                                                             }
                                                         },
                                                         "IP": {
@@ -6756,7 +6756,7 @@
                                                                                         "value": {
                                                                                             "Action": "Found in policy and IP address is blocked state",
                                                                                             "Elementname": "@{items('For_each_element')?['Element']}",
-                                                                                            "IPAddres": "@{items('For_each_element')?['IPaddress']}",
+                                                                                            "IPAddress": "@{items('For_each_element')?['IPaddress']}",
                                                                                             "IPStatus": "Blocked",
                                                                                             "IncidentSeverity": "@{triggerBody()?['object']?['properties']?['severity']}",
                                                                                             "Policy": "@{items('For_each_element_type')?['name']}",
@@ -6797,7 +6797,7 @@
                                                                                             "name": "Consolidatevrbl",
                                                                                             "value": {
                                                                                                 "Elementname": "@{outputs('Bind_element_type')}",
-                                                                                                "IPAddres": "@{items('For_each_element')?['IPaddress']}",
+                                                                                                "IPAddress": "@{items('For_each_element')?['IPaddress']}",
                                                                                                 "Name": "@{items('For_each_element_type')?['name']}",
                                                                                                 "Type": "@{items('For_each_element')?['Type']}"
                                                                                             }
@@ -6926,7 +6926,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -7158,7 +7158,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store IP address , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store IP address , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {
@@ -7326,7 +7326,7 @@
                                                         "columns": [
                                                             {
                                                                 "header": "URL",
-                                                                "value": "@item()?['URLAddres']"
+                                                                "value": "@item()?['URLAddress']"
                                                             },
                                                             {
                                                                 "header": "URL-Element-Name",
@@ -7422,7 +7422,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on  URL. And If result ouput is having some information related to URL then there is a policy with respect to URL"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on  URL. And If result output is having some information related to URL then there is a policy with respect to URL"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -7488,7 +7488,7 @@
                                                                                             "Policy": "@{items('For_each_element_type')?['name']}",
                                                                                             "Policytype": "@{outputs('Bind_element_type')}",
                                                                                             "Type": "@{items('For_each_element')?['Type']}",
-                                                                                            "URLAddres": "@{items('For_each_element')?['URL']}",
+                                                                                            "URLAddress": "@{items('For_each_element')?['URL']}",
                                                                                             "URLStatus": "Blocked"
                                                                                         }
                                                                                     },
@@ -7527,7 +7527,7 @@
                                                                                                 "Elementname": "@{outputs('Bind_element_type')}",
                                                                                                 "Name": "@{items('For_each_element_type')?['name']}",
                                                                                                 "Type": "@{items('For_each_element')?['Type']}",
-                                                                                                "URLAddres": "@{items('For_each_element')?['URL']}"
+                                                                                                "URLAddress": "@{items('For_each_element')?['URL']}"
                                                                                             }
                                                                                         },
                                                                                         "description": "Set consolidate variable if URL is present list or host"
@@ -7645,7 +7645,7 @@
                                                                                 "Policy": "--",
                                                                                 "Policytype": "--",
                                                                                 "Type": "--",
-                                                                                "URLAddres": "@{outputs('URL')?['Url']}",
+                                                                                "URLAddress": "@{outputs('URL')?['Url']}",
                                                                                 "URLStatus": "unblocked"
                                                                             }
                                                                         }
@@ -7673,7 +7673,7 @@
                                                             "type": "Query",
                                                             "inputs": {
                                                                 "from": "@variables('Arrayforallactions')",
-                                                                "where": "@contains(item()?['URLAddres'], outputs('URL')?['Url'])"
+                                                                "where": "@contains(item()?['URLAddress'], outputs('URL')?['Url'])"
                                                             }
                                                         },
                                                         "URL": {
@@ -7733,7 +7733,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -7965,7 +7965,7 @@
                                     }
                                 ]
                             },
-                            "description": "To store URL , severity , action to be taken into one array varriable and we can create a table."
+                            "description": "To store URL , severity , action to be taken into one array variable and we can create a table."
                         },
                         "SMC_API_Key": {
                             "runAfter": {

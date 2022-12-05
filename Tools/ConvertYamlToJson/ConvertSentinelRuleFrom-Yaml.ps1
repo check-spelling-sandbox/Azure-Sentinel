@@ -8,7 +8,7 @@
     In This example all the YAML files in the folder will be converted to the right JSON format in the same folder
 .EXAMPLE
     ConvertSentinelRuleFrom-Yaml -Path './pathToYAMLFolder' -OutputFolder ./PathToJsonFolder
-    In this example all the YAML files in the fodler will be converted to JSON and exported to the OutPutFolder
+    In this example all the YAML files in the folder will be converted to JSON and exported to the OutPutFolder
 .EXAMPLE
     ConvertSentinelRuleFrom-Yaml -Path './.tmp/ASimDNS/imDns_DomainEntity_DnsEvents.yaml'
     In this example one specific YAML file will be converted to the right JSON format

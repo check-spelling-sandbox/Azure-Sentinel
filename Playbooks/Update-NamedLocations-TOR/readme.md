@@ -18,7 +18,7 @@ This Logic App will require Graph API Permissions to [Update ipNamedlocation](ht
 
 This Logic App will require Sign-up (free) and an API Key generated for Big Data Cloud - https://www.bigdatacloud.com/insights-apis/tor-exit-nodes-geolocated-api. Store this Key in Azure Key Vault that your Managed Identity has access to and note the URI for secret retrieval.
 
-You will need an [Azure AD Named Location](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-configure-named-locations) created to store Tor Exit Node IP Addresses. Each Named Location is only capable of holding 1000 IP Addresses. As a result you will need at least 3 to hold all the TOR Exit Node IP Addresses (~2800 at time of publishing this Playbook). Once you create them, use Graph Explorer to retireve the Named Location ID using [Get namedLocation](https://docs.microsoft.com/graph/api/namedlocation-get?view=graph-rest-1.0&tabs=http).
+You will need an [Azure AD Named Location](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-configure-named-locations) created to store Tor Exit Node IP Addresses. Each Named Location is only capable of holding 1000 IP Addresses. As a result you will need at least 3 to hold all the TOR Exit Node IP Addresses (~2800 at time of publishing this Playbook). Once you create them, use Graph Explorer to retrieve the Named Location ID using [Get namedLocation](https://docs.microsoft.com/graph/api/namedlocation-get?view=graph-rest-1.0&tabs=http).
 
 ![Deploy](./media/GraphExplorer.PNG)
 

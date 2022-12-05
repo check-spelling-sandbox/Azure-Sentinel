@@ -286,7 +286,7 @@
       "Type": "String"
     },
     {
-      "Name": "PermittedApplicationReaso",
+      "Name": "PermittedApplicationReason",
       "Type": "String"
     },
     {

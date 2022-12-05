@@ -1,5 +1,5 @@
 # AWS Lambda Function to import S3 Files to Azure Sentinel
-This Lambda function is desgined to read S3 Files on upload and send them to Azure Sentinel using the Log Analytics API.
+This Lambda function is designed to read S3 Files on upload and send them to Azure Sentinel using the Log Analytics API.
 
 ## Deployment
 ### Machine Setup
@@ -89,7 +89,7 @@ You might need –ProfileName if your configuration of .aws/credentials file doe
 1. To test your function, upload a support file to the S3 bucket defined in the trigger. 
 ![Picture4](./Graphics/Picture4.png)
 2. To see the logs, go the Lambda function.  Click Monitoring tab.  Click view logs in CloudWatch. 
-![Pciture5](./Graphics/Picture5.png)
+![Picture5](./Graphics/Picture5.png)
 3. In CloudWatch, you will see each log stream from the runs.  Select the latest.   
 ![Picture6](./Graphics/Picture6.png)
 4. Here you can see anything from the script from the Write-Host cmdlet. 

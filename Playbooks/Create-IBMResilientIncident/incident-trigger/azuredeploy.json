@@ -29,7 +29,7 @@
         },
         "variables": {
             "AzureSentinelConnectionName": "[concat('azuresentinel-', parameters('PlaybookName'))]",
-            "IBMReslientConnectionName": "[concat('ibmresilient-', parameters('PlaybookName'))]"
+            "IBMResilientConnectionName": "[concat('ibmresilient-', parameters('PlaybookName'))]"
         },
         "resources": [
             {
@@ -55,7 +55,7 @@
             {
                 "type": "Microsoft.Web/connections",
                 "apiVersion": "2016-06-01",
-                "name": "[variables('IBMReslientConnectionName')]",
+                "name": "[variables('IBMResilientConnectionName')]",
                 "location": "[resourceGroup().location]",
                 "dependsOn": [
                     "[resourceId('Microsoft.Resources/deployments', 'linkedTemplate')]"
@@ -98,7 +98,7 @@
                 },
                 "dependsOn": [
                     "[resourceId('Microsoft.Web/connections', variables('AzureSentinelConnectionName'))]",
-                    "[resourceId('Microsoft.Web/connections', variables('IBMReslientConnectionName'))]",
+                    "[resourceId('Microsoft.Web/connections', variables('IBMResilientConnectionName'))]",
                     "[resourceId('Microsoft.Resources/deployments', 'linkedTemplate')]"
                 ],
                 "properties": {
@@ -331,7 +331,7 @@
                                 "inputs": {
                                     "variables": [
                                         {
-                                            "name": "ReslientVariable",
+                                            "name": "ResilientVariable",
                                             "type": "string",
                                             "value": "null"
                                         }
@@ -405,7 +405,7 @@
                                         "actions": {
                                             "Set_variable_2": {
                                                 "inputs": {
-                                                    "name": "ReslientVariable",
+                                                    "name": "ResilientVariable",
                                                     "value": "High"
                                                 },
                                                 "runAfter": {},
@@ -418,7 +418,7 @@
                                         "actions": {
                                             "Set_variable_3": {
                                                 "inputs": {
-                                                    "name": "ReslientVariable",
+                                                    "name": "ResilientVariable",
                                                     "value": "Medium"
                                                 },
                                                 "runAfter": {},
@@ -431,7 +431,7 @@
                                         "actions": {
                                             "Set_variable_4": {
                                                 "inputs": {
-                                                    "name": "ReslientVariable",
+                                                    "name": "ResilientVariable",
                                                     "value": "Low"
                                                 },
                                                 "runAfter": {},
@@ -444,7 +444,7 @@
                                         "actions": {
                                             "Set_variable_5": {
                                                 "inputs": {
-                                                    "name": "ReslientVariable",
+                                                    "name": "ResilientVariable",
                                                     "value": "No Risk"
                                                 },
                                                 "runAfter": {},
@@ -458,7 +458,7 @@
                                     "actions": {
                                         "Set_variable": {
                                             "inputs": {
-                                                "name": "ReslientVariable",
+                                                "name": "ResilientVariable",
                                                 "value": "Informational"
                                             },
                                             "runAfter": {},
@@ -481,7 +481,7 @@
                                         "discovered_date": "@outputs('GetIncidentTimeInEpoch')",
                                         "name": "AS: @{triggerBody()?['object']?['properties']?['incidentNumber']}- @{triggerBody()?['object']?['properties']?['title']}",
                                         "severity_code": {
-                                            "name": "@variables('ReslientVariable')"
+                                            "name": "@variables('ResilientVariable')"
                                         }
                                     },
                                     "host": {
@@ -539,8 +539,8 @@
                                     }
                                 },
                                 "Resilient-Incidents": {
-                                    "connectionId": "[resourceId('Microsoft.Web/connections', variables('IBMReslientConnectionName'))]",
-                                    "connectionName": "[variables('IBMReslientConnectionName')]",
+                                    "connectionId": "[resourceId('Microsoft.Web/connections', variables('IBMResilientConnectionName'))]",
+                                    "connectionName": "[variables('IBMResilientConnectionName')]",
                                    "id": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/customApis/Resilient-Incidents')]"
 
                                 }

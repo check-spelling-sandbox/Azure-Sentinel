@@ -274,7 +274,7 @@
                 "name": "huntingquery4-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Clients with a high NXDomain count could be indicative of a DGA (cycling through possible C2 domains\nwhere most C2s are not live). Based on quartile precent analysis aglorithm. It depends on the DNS data connector and DnsEvents data type and DNS parser."
+                  "text": "Clients with a high NXDomain count could be indicative of a DGA (cycling through possible C2 domains\nwhere most C2s are not live). Based on quartile precent analysis algorithm. It depends on the DNS data connector and DnsEvents data type and DNS parser."
                 }
               }
             ]
@@ -302,7 +302,7 @@
                 "name": "huntingquery6-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Length of DNS query can often be an indicator of suspicious activity. Typical domain name lengths are short whereas domain name query used \nfor data exfiltration or tunneling can often be very large in size. This is because they could be encoded using base 64/32 etc. The hunting query looks \nfor Names that are more than 150 characters in length. Due to a lot of services using long DNS to communicate via prcodurally generated long domain names\nthis can be prone, so a number of known services are excluded from this query. Additional items might need to be added to this exclusion dependent on your\nenvironment. It depends on the DNS data connector and DnsEvents data type and DNS parser."
+                  "text": "Length of DNS query can often be an indicator of suspicious activity. Typical domain name lengths are short whereas domain name query used \nfor data exfiltration or tunneling can often be very large in size. This is because they could be encoded using base 64/32 etc. The hunting query looks \nfor Names that are more than 150 characters in length. Due to a lot of services using long DNS to communicate via procedurally generated long domain names\nthis can be prone, so a number of known services are excluded from this query. Additional items might need to be added to this exclusion dependent on your\nenvironment. It depends on the DNS data connector and DnsEvents data type and DNS parser."
                 }
               }
             ]
@@ -324,13 +324,13 @@
           {
             "name": "huntingquery8",
             "type": "Microsoft.Common.Section",
-            "label": "Solorigate DNS Pattern",
+            "label": "Solarigate DNS Pattern",
             "elements": [
               {
                 "name": "huntingquery8-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Looks for DGA pattern of the domain associated with Solorigate in order to find other domains with the same activity pattern. It depends on the DNS data connector and DnsEvents data type and DNS parser."
+                  "text": "Looks for DGA pattern of the domain associated with Solarigate in order to find other domains with the same activity pattern. It depends on the DNS data connector and DnsEvents data type and DNS parser."
                 }
               }
             ]
@@ -338,13 +338,13 @@
           {
             "name": "huntingquery9",
             "type": "Microsoft.Common.Section",
-            "label": "Solorigate Encoded Domain in URL",
+            "label": "Solarigate Encoded Domain in URL",
             "elements": [
               {
                 "name": "huntingquery9-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "Looks for a logon domain seen in Azure AD logs appearing in a DNS query encoded with the DGA encoding used in the Solorigate incident.\nReference: https://blogs.microsoft.com/on-the-issues/2020/12/13/customers-protect-nation-state-cyberattacks/ It depends on the DNS AzureActiveDirectory data connector and DnsEvents SigninLogs data type and DNS AzureActiveDirectory parser."
+                  "text": "Looks for a logon domain seen in Azure AD logs appearing in a DNS query encoded with the DGA encoding used in the Solarigate incident.\nReference: https://blogs.microsoft.com/on-the-issues/2020/12/13/customers-protect-nation-state-cyberattacks/ It depends on the DNS AzureActiveDirectory data connector and DnsEvents SigninLogs data type and DNS AzureActiveDirectory parser."
                 }
               }
             ]

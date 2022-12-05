@@ -63,7 +63,7 @@ The template performs the following tasks:
 
 It takes around **10 minutes** to deploy if enabling Scheduled analytics rules is selected. If Scheduled rules are not needed it will complete in less than 1 minute.
 
-In order to create the Scheduled analytics rules, the deployment template uses an [ARM deployment script](https://docs.microsoft.com/azure/azure-resource-manager/templates/deployment-script-template) which requires a [user assigned identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). You will see this resource in your resource group when the deployment finishes. You can remove after depployment if desired.
+In order to create the Scheduled analytics rules, the deployment template uses an [ARM deployment script](https://docs.microsoft.com/azure/azure-resource-manager/templates/deployment-script-template) which requires a [user assigned identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). You will see this resource in your resource group when the deployment finishes. You can remove after deployment if desired.
 
 ### Try it now
 

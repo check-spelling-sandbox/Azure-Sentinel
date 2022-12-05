@@ -43,7 +43,7 @@
     "LogAnalyticsWorkspaceKey": "LogAnalyticsWorkspaceKey",
     "StorageContainerName": "github-repo-logs",
 	"StorageSuffix":"[environment().suffixes.storage]",
-    "LogAnaltyicsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceId')), '.ods.opinsights'))]"
+    "LogAnalyticsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceId')), '.ods.opinsights'))]"
   },
   "resources": [
     {
@@ -195,7 +195,7 @@
             "WorkspaceId": "[parameters('WorkspaceId')]",
             "WorkspaceKey": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('LogAnalyticsWorkspaceKey')).secretUriWithVersion, ')')]",
 			"Schedule": "[parameters('FunctionSchedule')]",
-			"LAURI": "[variables('LogAnaltyicsUri')]",
+			"LAURI": "[variables('LogAnalyticsUri')]",
             "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/githubazurefunctionzip"
           }
         }

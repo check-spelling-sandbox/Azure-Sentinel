@@ -3,7 +3,7 @@ name: Anomalous Resource Creation and related Network Activity
 description: |
   'Indicates when an anomalous number of resources are created successfully in Azure via the AzureActivity log.
   This is then joined with the AzureNetworkAnalytics_CL data to identify any network related activity for the created resource.
-  The anomaly detection identifies activities that have occured both since the start of the day 1 day ago and the start of the day 7 days ago.
+  The anomaly detection identifies activities that have occurred both since the start of the day 1 day ago and the start of the day 7 days ago.
   The start of the day is considered 12am UTC time.
   Resource creation could indicated malicious or spurious use of your Azure Resource allocation.  Resources can be abused in relation to digital
   currency mining, command and control, exfiltration, distributed attacks and propagation of malware, among others. Verify that this resource creation

@@ -36,14 +36,14 @@ ParserQuery: |
     // https://developer.okta.com/docs/reference/api/event-types/#catalog
     Okta_CL | where not(disabled)
     // ************************************************************************* 
-    //       <Prefilterring>
+    //       <Prefiltering>
     // *************************************************************************
     | where 
       (isnull(starttime)   or TimeGenerated >= starttime) 
       and (isnull(endtime)     or TimeGenerated <= endtime)
       and (targetusername_has=='*' or (actor_alternateId_s has targetusername_has))
     // ************************************************************************* 
-    //       </Prefilterring>
+    //       </Prefiltering>
     // ************************************************************************* 
     | where eventType_s in (OktaSigninEvents)
     | extend 

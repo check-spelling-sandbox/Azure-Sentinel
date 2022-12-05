@@ -142,7 +142,7 @@
                 "name": "analytic3-text",
                 "type": "Microsoft.Common.TextBlock",
                 "options": {
-                  "text": "This alert is triggered when a Microsoft Purview Insider Risk Management alert is recieved in Microsoft Sentinel via the Microsoft Purview Insider Risk Management Connector. The alert extracts usernames from security alerts to provide UserPrincipalName, Alert Name, Reporting Product Name, Status, Alert Link, Previous Alerts Links, Time Generated. There is an option for configuration of correlations against Microsoft Sentinel watchlists. For more information, see [Learn about insider risk management](https://docs.microsoft.com/microsoft-365/compliance/insider-risk-management)"
+                  "text": "This alert is triggered when a Microsoft Purview Insider Risk Management alert is received in Microsoft Sentinel via the Microsoft Purview Insider Risk Management Connector. The alert extracts usernames from security alerts to provide UserPrincipalName, Alert Name, Reporting Product Name, Status, Alert Link, Previous Alerts Links, Time Generated. There is an option for configuration of correlations against Microsoft Sentinel watchlists. For more information, see [Learn about insider risk management](https://docs.microsoft.com/microsoft-365/compliance/insider-risk-management)"
                 }
               }
             ]

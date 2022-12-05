@@ -36,10 +36,10 @@ query: |
     DeviceFileEvents
     | where ActionType =~ "FileCreated"
     | where isnotempty(MD5)
-    | extend p = pack("FileCreateTime", TimeGenerated, "Device", DeviceName, "DeviceId", DeviceId, "FileName", FileName, "InititatingProcess", InitiatingProcessFileName)
+    | extend p = pack("FileCreateTime", TimeGenerated, "Device", DeviceName, "DeviceId", DeviceId, "FileName", FileName, "InitiatingProcess", InitiatingProcessFileName)
     | summarize make_bag(p), dcount(DeviceName) by MD5
   ) on $left.Md5Hash == $right.MD5
-  | project TimeGenerated, FileName, FileHashCustomEntity=Md5Hash, AccountName, SourceTable, DevicesImpacted=dcount_DeviceName, Entitites=bag_p
+  | project TimeGenerated, FileName, FileHashCustomEntity=Md5Hash, AccountName, SourceTable, DevicesImpacted=dcount_DeviceName, Entities=bag_p
 entityMappings:
   - entityType: FileHash
     fieldMappings:

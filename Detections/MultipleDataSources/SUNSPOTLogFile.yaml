@@ -28,7 +28,7 @@ tactics:
 relevantTechniques:
   - T1554
 tags:
-  - Solorigate
+  - Solarigate
   - NOBELIUM 
   - Schema: ASIMFileEvent
     SchemaVersion: 0.1.0

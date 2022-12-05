@@ -74,7 +74,7 @@ Function Post-LogAnalyticsData($body, $LogAnalyticsTableName) {
 
 function Run-MainScript {
 
-    # Checks Tenant - If not logged into the configured tenant script will establish az-context to appropate tenant
+    # Checks Tenant - If not logged into the configured tenant script will establish az-context to appropriate tenant
     $ChckTenantID = Get-AzContext
     if(($ChckTenantID.Tenant.Id) -eq $TenantId) { } else { Clear-AzContext -Force
     Connect-AzAccount -Tenant $TenantId }

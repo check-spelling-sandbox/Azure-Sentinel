@@ -2,7 +2,7 @@
 
 ARM template for ASIM NetworkSession schema parser for Azure NSG flows.
 
-This ASIM parser supports normalizing and filtering Azure Azure Network Security Groups (NSG) flows to the ASIM Network Session normalized schema.
+This ASIM parser supports normalizing and filtering Azure Network Security Groups (NSG) flows to the ASIM Network Session normalized schema.
 
 
 The Advanced Security Information Model (ASIM) enables you to use and create source-agnostic content, simplifying your analysis of the data in your Microsoft Sentinel workspace.

@@ -44,7 +44,7 @@
             "defaultValue": "WorkspaceName",
             "type": "String",
             "metadata": {
-                "description": "Name of the worksapce where related alerts are found"
+                "description": "Name of the workspace where related alerts are found"
             }
         }
     },

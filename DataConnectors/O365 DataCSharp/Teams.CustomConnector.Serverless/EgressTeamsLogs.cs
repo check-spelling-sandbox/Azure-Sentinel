@@ -81,7 +81,7 @@ namespace Teams.CustomConnector.Serverless
                 {
                     //upload to the container
                     var reports = JsonConvert.SerializeObject(auditDetailedReports);
-                    if (Convert.ToBoolean(Environment.GetEnvironmentVariable(Constants.EnableDirectInjestionToWorkSpace)))
+                    if (Convert.ToBoolean(Environment.GetEnvironmentVariable(Constants.EnableDirectIngestionToWorkSpace)))
                     {
                         string SentinelWkSpaceId = string.Empty;
                         string SentinelSharedkey = string.Empty;

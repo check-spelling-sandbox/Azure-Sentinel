@@ -25,7 +25,7 @@
     "Hunting Queries/CiscoUmbrellaAnomalousFQDNsforDomain.yaml",
     "Hunting Queries/CiscoUmbrellaBlockedUserAgents.yaml",
     "Hunting Queries/CiscoUmbrellaDNSErrors.yaml",
-    "Hunting Queries/CiscoUmbrellaDNSRequestsUunreliableCategory.yaml",
+    "Hunting Queries/CiscoUmbrellaDNSRequestsUnreliableCategory.yaml",
     "Hunting Queries/CiscoUmbrellaHighCountsOfTheSameBytesInSize.yaml",
     "Hunting Queries/CiscoUmbrellaHighValuesOfUploadedData.yaml",
     "Hunting Queries/CiscoUmbrellaPossibleConnectionC2.yaml",

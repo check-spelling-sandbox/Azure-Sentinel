@@ -172,7 +172,7 @@
     #
     # Returns immediately if flushing is not necessary/possible at the moment:
     # * :max_items or :flush_each have not been accumulated
-    # * :max_interval seconds have not elapased since the last flush
+    # * :max_interval seconds have not elapsed since the last flush
     # * another flush is in progress
     #
     # <code>buffer_flush(:force => true)</code> will cause a flush to occur even

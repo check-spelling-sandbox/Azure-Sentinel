@@ -38,7 +38,7 @@ if ($host.Version.Major -lt 5) {
 $AzSecurityInsightsModule = Get-InstalledModule -Name Az.SecurityInsights -ErrorAction SilentlyContinue
 if ($AzSecurityInsightsModule -eq $null) {
     Write-Warning "The Az.SecurityInsights PowerShell module is not found"
-        #check for Admin Privleges
+        #check for Admin Privileges
         $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 
         if (-not ($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) {
@@ -76,7 +76,7 @@ if ($subIdContext -ne $subscriptionId) {
 $powershellYamlModule = Get-Module -Name "powershell-yaml" -ErrorAction SilentlyContinue
 if ($powershellYamlModule -eq $null) {
     Write-Warning "The PowerShell-YAML module is not found"
-        #check for Admin Privleges
+        #check for Admin Privileges
         $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 
         if (-not ($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) {

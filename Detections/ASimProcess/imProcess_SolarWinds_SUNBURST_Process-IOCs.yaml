@@ -20,7 +20,7 @@ tags:
     version: 1.0.0
   - Schema: ASIMProcessEvent
     SchemaVersion: 0.1.0
-  - Solorigate
+  - Solarigate
   - NOBELIUM
 
 query:  |

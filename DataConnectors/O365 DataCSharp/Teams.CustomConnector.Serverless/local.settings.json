@@ -35,7 +35,7 @@
     
     "EnableArchiving": "true",
 
-    "EnableDirectInjestionToWorkSpace": "true",
+    "EnableDirectIngestionToWorkSpace": "true",
     
     "SentinelCustomerId": "<Add Your Sentinel workspace id here>",
     

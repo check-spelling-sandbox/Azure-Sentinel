@@ -18,11 +18,11 @@ query: |
     | extend FileName = replace("[0-9A-Fa-f]{8}[-][0-9A-Fa-f]{4}[-][0-9A-Fa-f]{4}[-][0-9A-Fa-f]{4}[-][0-9A-Fa-f]{12}", "<guid>", FileName)
     | extend FileName = replace(@'\d', 'n', FileName)
     | summarize frequency=count(), Since=min(TimeGenerated), LastSeen=max(TimeGenerated) by FileName , EventVendor, EventProduct;
-  let precentile_5 = toscalar ( freqs | summarize percentiles(frequency, 5));
+  let percentile_5 = toscalar ( freqs | summarize percentiles(frequency, 5));
   freqs
-    | where frequency <= precentile_5
+    | where frequency <= percentile_5
     | order by frequency asc
-    | project FileName, frequency, precentile_5, Since, LastSeen , EventVendor, EventProduct
+    | project FileName, frequency, percentile_5, Since, LastSeen , EventVendor, EventProduct
     // restrict results to unusual processes seen in last day 
     | where LastSeen >= ago(1d)
     | extend timestamp = LastSeen

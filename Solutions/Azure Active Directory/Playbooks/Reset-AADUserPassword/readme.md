@@ -30,7 +30,7 @@ After deployment, you can run this playbook manually on an alert or attach it to
  Run the following code replacing the managed identity object id.  You find the managed identity object ID on the "Identity" blade under "Settings" for the Logic App.
 ```powershell
 $MIGuid = "<Enter your managed identity guid here>"
-$SubscriptionId = "<Enter your subsciption id here>"
+$SubscriptionId = "<Enter your subscription id here>"
 $ResourceGroupName = "<Enter your resource group name here>"
 
 $MI = Get-AzureADServicePrincipal -ObjectId $MIGuid

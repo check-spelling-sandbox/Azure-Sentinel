@@ -123,7 +123,7 @@
                       ]
                     },
                     "type": "Compose",
-                    "inputs": "[concat('@{outputs(''Compose_Crowdstrike_Logo'')} ', parameters('Playbook_Name'), ' Playbook\n\nException occured while Quarantining the Device. Please find the below exception information:\n\n@{body(''Create_HTML_table_to_capture_error_information'')}')]"
+                    "inputs": "[concat('@{outputs(''Compose_Crowdstrike_Logo'')} ', parameters('Playbook_Name'), ' Playbook\n\nException occurred while Quarantining the Device. Please find the below exception information:\n\n@{body(''Create_HTML_table_to_capture_error_information'')}')]"
                   },
                   "Create_HTML_table_to_capture_error_information": {
                     "runAfter": {
@@ -767,7 +767,7 @@
                                     }
                                   }
                                 },
-                                "Set_variable_success_from_crowdstirke_in_case_of_host_is_already_contained": {
+                                "Set_variable_success_from_crowdstrike_in_case_of_host_is_already_contained": {
                                   "runAfter": {
                                     "Append_to_string_variable_comment_if_host_is_contained": [
                                       "Succeeded"
@@ -817,7 +817,7 @@
                                     }
                                   }
                                 },
-                                "Set_variable_success_from_crowdstirke_in_case_of_containment_pending": {
+                                "Set_variable_success_from_crowdstrike_in_case_of_containment_pending": {
                                   "runAfter": {
                                     "Append_to_string_variable_comment_if_host_status_is_containment_pending": [
                                       "Succeeded"
@@ -867,7 +867,7 @@
                                     }
                                   }
                                 },
-                                "Set_variable_success_from_crowdstirke_in_case_of_lift_containment_pending": {
+                                "Set_variable_success_from_crowdstrike_in_case_of_lift_containment_pending": {
                                   "runAfter": {
                                     "Append_to_string_variable_comment_if_host_status_is_lift_containment_pending": [
                                       "Succeeded"
@@ -906,7 +906,7 @@
                                       "inputs": {
                                         "name": "CommentObjVar",
                                         "value": {
-                                          "action": "The playbook sucessfully contained the host",
+                                          "action": "The playbook successfully contained the host",
                                           "device_id": "@{body('Parse_JSON_device_information_response')?['resources']?['device_id']}",
                                           "external_ip": "@{body('Parse_JSON_device_information_response')?['resources']?['external_ip']}",
                                           "first_seen": "@{body('Parse_JSON_device_information_response')?['resources']?['first_seen']}",
@@ -919,7 +919,7 @@
                                         }
                                       }
                                     },
-                                    "Set_variable_success_from_crowdstirke_in_case_of_success": {
+                                    "Set_variable_success_from_crowdstrike_in_case_of_success": {
                                       "runAfter": {
                                         "Append_to_string_variable_comment_if_host_is_contained_by_playbook": [
                                           "Succeeded"
@@ -930,7 +930,7 @@
                                         "name": "Successfromcrowdstike",
                                         "value": "Success"
                                       },
-                                      "description": "This sets variable success from crowdstirke in case of success"
+                                      "description": "This sets variable success from crowdstrike in case of success"
                                     }
                                   },
                                   "runAfter": {
@@ -959,7 +959,7 @@
                                         "inputs": {
                                           "name": "CommentObjVar",
                                           "value": {
-                                            "action": "The playbook sucessfully contained the host",
+                                            "action": "The playbook successfully contained the host",
                                             "device_id": "@{body('Parse_JSON_device_information_response')?['resources']?['device_id']}",
                                             "external_ip": "@{body('Parse_JSON_device_information_response')?['resources']?['external_ip']}",
                                             "first_seen": "@{body('Parse_JSON_device_information_response')?['resources']?['first_seen']}",
@@ -983,7 +983,7 @@
                                           "name": "Successfromcrowdstike",
                                           "value": "Failure"
                                         },
-                                        "description": "This sets variable success from crowdstirke in case of Failure"
+                                        "description": "This sets variable success from crowdstrike in case of Failure"
                                       }
                                     }
                                   },

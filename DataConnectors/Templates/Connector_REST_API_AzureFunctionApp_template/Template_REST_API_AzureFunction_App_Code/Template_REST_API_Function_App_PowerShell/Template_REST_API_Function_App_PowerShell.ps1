@@ -61,7 +61,7 @@ if($logAnalyticsUri -notmatch 'https:\/\/([\w\-]+)\.ods\.opinsights\.azure.([a-z
 
 #>
 
-<# Used this block to transform the data recieved from the <PROVIDER NAME APPLIANCE NAME> API into JSON format, which is acceptable format for the Log Anlaytics Data Collector API
+<# Used this block to transform the data received from the <PROVIDER NAME APPLIANCE NAME> API into JSON format, which is acceptable format for the Log Analytics Data Collector API
 
     For example:
     $json = $response | ConvertTo-Json -Compress -Depth 3 

@@ -26,7 +26,7 @@ query: |
   AuditLogs
   | where OperationName has "Add a partner to cross-tenant access setting"
   | extend InitiatedByActionUserInformation = iff(isnotempty(InitiatedBy.user.userPrincipalName), InitiatedBy.user.userPrincipalName, InitiatedBy.app.displayName)
-  | extend InitiatedByIPAdress = InitiatedBy.user.ipAddress
+  | extend InitiatedByIPAddress = InitiatedBy.user.ipAddress
   | extend ExtTenantIDAdded = TargetResources[0].modifiedProperties[0].newValue
   | mv-expand ExtTenantIDAdded = TargetResources[0].modifiedProperties[0].newValue to typeof(string)
   | where ExtTenantIDAdded !in (ExpectedTenantIDs)
@@ -42,6 +42,6 @@ entityMappings:
   - entityType: IP
     fieldMappings:
       - identifier: Address
-        columnName: InitiatedByIPAdress
+        columnName: InitiatedByIPAddress
 version: 1.0.0
 kind: Scheduled

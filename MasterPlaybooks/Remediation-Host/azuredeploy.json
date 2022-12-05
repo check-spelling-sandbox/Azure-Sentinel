@@ -11,10 +11,10 @@
         ],
         "prerequisites": [
             "At least one of the below mentioned nested playbooks must be deployed prior to deployment of this playbook under same subscription and same resource group. Capture the name of all deployed playbooks during deployment.",
-            "- CarbonBlack-QuarantineHost-Nested is a nested playbook that handles remidiation for Azure Firewall.",
-            "- Crowdstrike-BlockHost-Nested is a nested playbook that handles remidiation for Forcepoint.",
-            "- MDE-IsolateMachine-Nested is a nested playbook that handles remidiation for MDE.",
-            "- CiscoMeraki-BlockDevice-Nested is a nested playbook that handles remidiation for Meraki."
+            "- CarbonBlack-QuarantineHost-Nested is a nested playbook that handles remediation for Azure Firewall.",
+            "- Crowdstrike-BlockHost-Nested is a nested playbook that handles remediation for Forcepoint.",
+            "- MDE-IsolateMachine-Nested is a nested playbook that handles remediation for MDE.",
+            "- CiscoMeraki-BlockDevice-Nested is a nested playbook that handles remediation for Meraki."
         ],
         "lastUpdateTime": "2022-08-29T10:43:00Z",
         "entities": [ "Host" ],
@@ -28,7 +28,7 @@
     },
     "parameters": {
         "MasterPlaybookName": {
-            "defaultValue": "MasterPlaybook_Host_Remidiation",
+            "defaultValue": "MasterPlaybook_Host_Remediation",
             "type": "String",
             "metadata": {
                 "description": "Enter name for master playbook without spaces"
@@ -65,7 +65,7 @@
         }
     },
     "variables": {
-        "AzureSentinelConnectionName": "[concat('azuresentienl-',parameters('MasterPlaybookName'))]",
+        "AzureSentinelConnectionName": "[concat('azuresentinel-',parameters('MasterPlaybookName'))]",
         "Defaultplaybookname": "MSDefaultNestedPlaybook",
         "CarbonBlackID": "[ if(not(empty(parameters('CarbonBlackPlaybookName'))),parameters('CarbonBlackPlaybookName'),variables('Defaultplaybookname'))]",
         "CrowdstrikeID": "[ if(not(empty(parameters('CrowdstrikePlaybookName'))),parameters('CrowdstrikePlaybookName'),variables('Defaultplaybookname'))]",
@@ -248,7 +248,7 @@
                                     "runAfter": {},
                                     "type": "Workflow"
                                 },
-                                "Verify_CiscoMerkai_response_body": {
+                                "Verify_CiscoMeraki_response_body": {
                                     "actions": {
                                         "Add_comment_to_incident_(V3)_CiscoMeraki": {
                                             "inputs": {

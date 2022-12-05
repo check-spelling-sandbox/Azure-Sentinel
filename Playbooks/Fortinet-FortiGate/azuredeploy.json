@@ -9,7 +9,7 @@
         "description": "enter the Fortinet endpoint (ex: https://{yourfortinetDomain})"
       }
     },
-    "Secret Identifier of Keyvalut": {
+    "Secret Identifier of Keyvault": {
       "type": "string",
       "defaultValue": "",
       "metadata": {
@@ -76,7 +76,7 @@
       "defaultValue": "",
       "type": "String",
       "metadata": {
-        "description": "Function app Name which is unique and should not contain special symbole"
+        "description": "Function app Name which is unique and should not contain special symbols"
       }
     }
   },
@@ -113,8 +113,8 @@
           "Function App Name": {
             "Value": "[parameters('Function App Name')]"
           },
-          "Secret Identifier of Keyvalut": {
-            "Value": "[parameters('Secret Identifier of Keyvalut')]"
+          "Secret Identifier of Keyvault": {
+            "Value": "[parameters('Secret Identifier of Keyvault')]"
           },
           "service_EndPoint": {
             "Value": "[parameters('Service_EndPoint')]"

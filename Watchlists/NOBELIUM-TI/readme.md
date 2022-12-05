@@ -1,7 +1,7 @@
 # Ingest and Reference Nobelium Threat Intelligence
 Author: Matt Lowe
 
-This Watchlist is meant to host IoC's from the recent NOBELIUM hack. This data can be refernced for threat hunting and analytic rules to ensure that malicious activity has not taken place within the environment. These IoCs were published by the Microsoft Threat Intelligence Center (MSTIC).
+This Watchlist is meant to host IoC's from the recent NOBELIUM hack. This data can be referenced for threat hunting and analytic rules to ensure that malicious activity has not taken place within the environment. These IoCs were published by the Microsoft Threat Intelligence Center (MSTIC).
 
 https://www.microsoft.com/security/blog/2021/05/27/new-sophisticated-email-based-attack-from-nobelium/
 
@@ -11,7 +11,7 @@ https://www.microsoft.com/security/blog/2021/05/27/new-sophisticated-email-based
 To deploy, users will need:
 1. An Azure Subscription.
 2. An Azure Sentinel workspace and instance.
-3. A user that has Azure Sentinel Contirbutor permissions on the Resource Group that Azure Sentinel is located in.
+3. A user that has Azure Sentinel Contributor permissions on the Resource Group that Azure Sentinel is located in.
 
 ## **Deployment Process**
 ## Option 1

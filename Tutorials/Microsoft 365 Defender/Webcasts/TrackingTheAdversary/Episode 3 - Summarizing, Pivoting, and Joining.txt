@@ -33,7 +33,7 @@ EmailEvents
 
 // --------------------------------------------
 
-// min() - obtains the minimim value from the set
+// min() - obtains the minimum value from the set
 // max() - obtains the maximum value from the set
 
 // SQL Equivalent: 
@@ -130,7 +130,7 @@ EmailEvents
 // series_decompose_anomalies adds three new columns
 // - flag: is the datapoint normal, an abnormal increase (1), or an abnormal decrease (-1)
 // - score: how anomalous is this data point?
-// - baseline: the forecaseted value the algorithm expected
+// - baseline: the forecasted value the algorithm expected
 
 // Let's look for spikes in e-mail traffic from a domain.  To do this, we need to expand
 // the flag column.  Expanding takes an array and creates one row for each value in it.

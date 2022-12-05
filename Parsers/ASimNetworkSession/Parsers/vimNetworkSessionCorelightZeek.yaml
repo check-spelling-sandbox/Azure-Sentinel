@@ -60,7 +60,7 @@ ParserQuery: |
      'S0', 'Success', '', 'Connection attempt seen, no reply', 'Informational',
      'S1', 'Success', '', 'Connection established, not terminated', 'Informational',
      'SF', 'Success', 'Terminated', 'Normal establishment and termination', 'Informational', // Note that this is the same symbol as for state S1. You can tell the two apart because for S1 there will not be any byte counts in the summary, while for SF there will be.
-     'REJ', 'Failure', 'Rejeced', 'Connection attempt rejected', 'Low',
+     'REJ', 'Failure', 'Rejected', 'Connection attempt rejected', 'Low',
      'S2', 'Failure', 'Terminated', 'Connection established and close attempt by originator seen (but no reply from responder)', 'Low',
      'S3', 'Failure', 'Terminated', 'Connection established and close attempt by responder seen (but no reply from originator)', 'Low',
      'RSTO', 'Failure', 'Reset', 'Connection established, originator aborted (sent a RST)', 'Low',

@@ -27,7 +27,7 @@ description: |
   6. Network communication (grouped by 2nd level-domain, ie 'microsoft.com' in 'www.microsoft.com' and 'web.microsoft.com', additional data has the full list of URLs).
   7. Process creation (additional data has the full paths of the files).
   8. Powershell Commands (grouped by the cmdlet that was ran, additional data has the processes that ran the cmdlet).
-  9. Reigstry Events (disabled by default due to volume, grouped by the registry key, additional data has the value data).
+  9. Registry Events (disabled by default due to volume, grouped by the registry key, additional data has the value data).
   10. Raw IP Connection Events (additional data has the initiating processes).
   List of "known good" hosts - populate with your baseline, must be FQDNs.
 requiredDataConnectors:
